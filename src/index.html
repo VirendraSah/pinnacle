@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pinnacle apartment</title>
+    <link rel="stylesheet" href="./output.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- assistance sticky button Desktop -->
+    <div class="hidden sm:block">
+        <div class="fixed right-[20.13px] bottom-[21.99px] z-20 flex items-end">
+            <div class="w-[428px] h-[351px] bg-cover bg-center pt-[41.6px] relative hidden"
+                style="background-image: var(--home-image); " id="assistance_ractangular_box">
+                <button class="cursor-pointer absolute right-[20.64px] top-[19.63px] w-[15.6px] h-[16.05px]" id="assistanceBox_close_btn">
+                    <i class="fa-solid fa-xmark text-[#4B5956]"></i>
+                </button>
+                <div class="w-full px-[26.12px] flex flex-col gap-[10px] h-full">
+                    <div class="w-full px-[calc(41px-26.12px)] flex flex-col gap-[10px]">
+                        <h3 class="font-jost font-medium text-[27.49px] leading-[41.23px] text-[#173150] text-center">
+                            Need
+                            immediate assistance?</h3>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center justify-between w-[210.85px] h-[64.13px]">
+                                <div
+                                    class="w-[64.13px] h-[64.13px] flex items-center justify-center border-white rounded-full bg-white">
+                                    <img src="./mediaFiles/Home page/Counter number/user_profile_pic.png"
+                                        alt="user_profile_img">
+                                </div>
+                                <div class="flex flex-col items-start">
+                                    <p class="font-jost font-medium text-[20.49px] leading-[119%] text-[#003253]">Pawan
+                                        Kumar</p>
+                                    <p class="font-jost font-normal text-[13.71px] leading-[119%] text-[#484646]">Realty
+                                        Nivesh</p>
+                                </div>
+                            </div>
+                            <img src="./mediaFiles/Home page/Counter number/Start your homebuying Journey/The Pinnacle PPT short 1.webp"
+                                alt="horse-icon" class="w-[62.95px] h-[68.19px]">
+                        </div>
+                        <button
+                            class="w-full h-[48px] rounded-[4px] bg-[#003253] font-jost font-medium text-[20px] tracking-[2%] text-[#FFFFFF] cursor-pointer">Contact
+                            us
+                        </button>
+                    </div>
+                    <div class="flex gap-[9.77px]">
+                        <button
+                            class="w-[183px] h-[48px] flex items-center justify-center gap-[20.5px] border border-[#003253] rounded-[4px] cursor-pointer">
+                            <i class="fa-solid fa-phone-volume w-[17px] h-[16px] text-[#003253]"></i>
+                            <span class="font-jost font-medium text-[20px] tracking-[2%] text-[#003253]">Call Now
+                            </span>
+                        </button>
+
+                        <button
+                            class="w-[183px] h-[48px] flex items-center justify-center gap-[20.5px] border border-[#003253] rounded-[4px] cursor-pointer">
+                            <i class="fa-brands fa-whatsapp text-[23px] w-[23px] h-[23.16px] text-[#21945A]"></i>
+                            <span class="font-jost font-medium text-[20px] tracking-[2%] text-[#003253]">WhatsApp
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <!-- decorative items -->
+                    <div class="absolute bottom-[3px] right-1/2 translate-1/2 w-[350.68px] h-[7.36px] rounded-t-[5px] bg-gradient-to-b from-[#FFC267] to-[#99753E]"></div>
+            </div>
+            <div class="w-[122px] h-[175.31px]  flex items-start" id="assistancebtn">
+                <div class="w-full h-full flex flex-col items-end">
+                    <div class="w-[103px] h-[167.84px] ">
+                        <p class="font-jost font-medium text-[13.47px] leading-[119%] text-center text-[#003253]">Need
+                            immediate
+                            assistance?</p>
+                        <div class="flex flex-col items-center justify-center gap-[5.6px] cursor-pointer" id="assistance_circle_btn">
+                            <div
+                                class=" w-[92.7px] h-[92.7px] bg-[linear-gradient(180deg,rgba(255,194,103,0.5)_0%,rgba(153,117,62,0.5)_100%)] rounded-full m-auto flex items-center justify-center">
+                                <div
+                                    class="w-[81.95px] h-[81.95px] bg-[linear-gradient(270deg,rgba(255,194,103,0.6)_0%,rgba(153,117,62,0.6)_100%)] rounded-full flex items-center justify-center">
+                                    <div
+                                        class="w-[73.82px] h-[73.82px] bg-[linear-gradient(180deg,#FFC267_0%,#99753E_100%)] rounded-full flex items-center justify-center">
+                                        <div
+                                            class="w-[64.13px] h-[64.13px] m-auto flex items-center justify-center border border-white rounded-full bg-white">
+                                            <img src="./mediaFiles/Home page/Counter number/user_profile_pic.png"
+                                                alt="user_profile_img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col items-center justify-center">
+                                <span class="font-jost font-medium text-[12.68px] leading-[119%] text-[#003253]">Pawan
+                                    Kumar</span>
+                                <span class="font-jost font-normal text-[8.49px] leading-[119%] text-[#484646]">Realty
+                                    Nivesh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="cursor-pointer" id="assistanceremovebtn">
+                    <img src="./mediaFiles/Home page/Counter number/mdi_remove.png" alt="remove_btn">
+                </button>
+            </div>
+        </div>
+    </div>
+    <header class="fixed h-[70.12px] sm:h-auto bg-white sm:bg-transparent sm:absolute z-10 w-full overflow-x-clip">
+        <div class="max-w-[1240px] flex items-center m-auto p-4 justify-between">
+            <!-- desktop logo -->
+            <figure class="hidden sm:block">
+                <img src="mediaFiles/Home page/Counter number/Hero section and logos/Logo.webp"
+                    alt="pinnacle apartment logo" class="w-[162.72px]">
+            </figure>
+            <!-- Mobile logo -->
+            <figure class="block sm:hidden">
+                <img src="mediaFiles/Home page/Counter number/Hero section and logos/mobile logo.svg"
+                    alt="pinnacle apartment logo" class="w-[162.72px]">
+            </figure>
+            <div class="flex items-center justify-between gap-[50px]">
+                <div class="hidden lg:block">
+                    <ul
+                        class="flex items-center gap-[23px] lg:text-[12px] xl:text-[17px] font-medium uppercase text-white font-jost">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Plans</a></li>
+                        <li><a href="#">Location</a></li>
+                        <li><a href="#">Price</a></li>
+                        <li><a href="#">Amenities</a></li>
+                        <li><a href="#">Specification</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <!-- desktop btn -->
+                <button id="desktopmegamenuopenBtn" class="lg:block hidden">
+                    <i class="fa-solid fa-bars text-2xl cursor-pointer text-black sm:text-white"></i>
+                </button>
+                <!-- mobile btn -->
+                <button id="mobilemegamenutoggleBtn" class="lg:hidden block">
+                    <i class="fa-solid fa-bars text-2xl cursor-pointer text-black sm:text-white"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Maga Menu -->
+        <section class="w-full h-[328.61px] z-20 absolute top-0 left-0  hidden" id="megaMenu">
+            <div class="lg:block hidden">
+                <!-- Base background -->
+                <div class="absolute inset-0 bg-[#11385E]"></div>
+
+                <!-- Semi-transparent overlay -->
+                <div class="absolute inset-0 bg-black/20"></div>
+
+                <!-- decorative part -->
+                <figure>
+                    <img src="./mediaFiles/Home page/Counter number/image 350.png" alt="decorative items"
+                        class="absolute top-0 left-0">
+                </figure>
+                <div class="max-w-[1240px] m-auto h-full relative z-10 p-4 ">
+                    <div class="w-full  flex justify-between">
+                        <figure class=" max-w-[180px]">
+                            <img src="./mediaFiles/Home page/Counter number/Hero section and logos/Logo.webp"
+                                alt="pinnacle_logo" class="w-full">
+                        </figure>
+                        <figure class=" p-2">
+                            <img src="./mediaFiles/Home page/Counter number/Vector.png" alt="take down icon"
+                                class="w-[14.1px] h-[13.27px] cursor-pointer" id="closeMenu">
+                        </figure>
+                    </div>
+                    <div class="w-full h-[184px]  py-4 flex justify-between items-center">
+                        <div class="flex items-start justify-between lg:w-full  xl:w-[181px] h-full relative">
+                            <div class="lg:m-auto xl:m-0 h-full">
+                                <div class="flex flex-col gap-2.5 flex-start h-full">
+                                    <h3
+                                        class="font-jost font-medium text-[18px] bg-gradient-to-b from-[#FFC267] to-[#99753E] bg-clip-text text-transparent leading-[100%]">
+                                        Products</h3>
+                                    <ul
+                                        class="text-white font-jost font-medium text-[16px] leading-[25px] capitalize flex flex-col gap-2">
+                                        <li><a href="" class="">3 BHK Apartment</a></li>
+                                        <li><a href="">4 BHK Apartment</a></li>
+                                        <li><a href="">5 BHK Apartment</a></li>
+                                        <li><a href="">Penthouse</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="h-[90%] border border-[#D6D6D633] absolute bottom-0 right-0"></div>
+                        </div>
+                        <div class="flex items-start justify-between lg:w-full xl:w-[181px] h-full relative">
+                            <div class="lg:m-auto xl:m-0 h-full">
+                                <div class="flex flex-col gap-2.5 flex-start h-full">
+                                    <h3
+                                        class="font-jost font-medium text-[18px] bg-gradient-to-b from-[#FFC267] to-[#99753E] bg-clip-text text-transparent leading-[100%]">
+                                        Plans</h3>
+                                    <ul
+                                        class="text-white font-jost font-medium text-[16px] leading-[25px] flex flex-col gap-2 capitalize ">
+                                        <li><a href="" class="">Unit Plan</a></li>
+                                        <li><a href="">site Plan</a></li>
+                                        <li><a href="">tower Plan</a></li>
+                                        <li><a href="">Amenities</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="h-[90%] border border-[#D6D6D633] absolute bottom-0 right-0"></div>
+                        </div>
+                        <div class="flex items-start justify-between lg:w-full xl:w-[181px] h-full relative">
+                            <div class="lg:m-auto xl:m-0 h-full">
+                                <div class="flex flex-col gap-2.5 flex-start h-full">
+                                    <h3
+                                        class="font-jost font-medium text-[18px] bg-gradient-to-b from-[#FFC267] to-[#99753E] bg-clip-text text-transparent leading-[100%]">
+                                        Location Map</h3>
+                                    <ul
+                                        class="text-white font-jost font-medium text-[16px] leading-[25px] capitalize flex flex-col gap-2">
+                                        <li><a href="" class="">Near by</a></li>
+                                        <li><a href="">Find Distance</a></li>
+                                        <li><a href="">Key Highlights</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="h-[90%] border border-[#D6D6D633] absolute bottom-0 right-0"></div>
+                        </div>
+                        <div class="flex items-start justify-between lg:w-full xl:w-[181px] h-full relative">
+                            <div class="lg:m-auto xl:m-0 h-full">
+                                <div class="flex flex-col gap-2.5 h-full">
+                                    <h3
+                                        class="font-jost font-medium text-[18px] bg-gradient-to-b from-[#FFC267] to-[#99753E] bg-clip-text text-transparent leading-[100%]">
+                                        Price</h3>
+                                    <ul
+                                        class="text-white font-jost font-medium text-[16px] leading-[25px] capitalize flex flex-col gap-2">
+                                        <li><a href="" class="">Price List</a></li>
+                                        <li><a href="">Payment Structure</a></li>
+                                        <li><a href="">Current Offers</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="h-[90%] border border-[#D6D6D633] absolute bottom-0 right-0"></div>
+                        </div>
+                        <div class="flex items-start justify-between lg:w-full xl:w-[181px] h-full relative">
+                            <div class="lg:m-auto xl:m-0 h-full">
+                                <div class="flex flex-col gap-2.5 h-full">
+                                    <h3
+                                        class="font-jost font-medium text-[18px] bg-gradient-to-b from-[#FFC267] to-[#99753E] bg-clip-text text-transparent leading-[100%]">
+                                        Gallery</h3>
+                                    <ul
+                                        class="text-white font-jost font-medium text-[16px] leading-[25px] capitalize flex flex-col gap-2">
+                                        <li><a href="" class="">Project Walk-Through</a></li>
+                                        <li><a href="">Sample Flat</a></li>
+                                        <li><a href="">Project gallery</a></li>
+                                        <li><a href="">Construction Updates</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="h-[90%] border border-[#D6D6D633] absolute bottom-0 right-0"></div>
+                        </div>
+                        <div class="flex items-start justify-between lg:w-full xl:w-[181px] h-full relative">
+                            <div class="lg:m-auto xl:m-0 h-full">
+                                <div class="flex flex-col gap-2.5 h-full">
+                                    <h3
+                                        class="font-jost font-medium text-[18px] bg-gradient-to-b from-[#FFC267] to-[#99753E] bg-clip-text text-transparent leading-[100%]">
+                                        Contact us</h3>
+                                    <ul
+                                        class="text-white font-jost font-medium text-[16px] leading-[25px] capitalize flex flex-col gap-2">
+                                        <li><a href="" class="">+91 89680 66698</a></li>
+                                        <li><a href="">+91 9697300066</a></li>
+                                        <li class="mt-[19.15px]">
+                                            <button
+                                                class="w-[142.25px] h-[31.08px] bg-[#21945A] border border-white rounded-[4px] flex items-center gap-2 justify-center cursor-pointer">
+                                                <figure class="w-[17.43px] h-[17.51px]">
+                                                    <img src="./mediaFiles/Home page/Counter number/Start your homebuying Journey/Vector.webp"
+                                                        alt="">
+                                                </figure>
+                                                <span class="font-jost font-medium text-[13.17px] leading-[100%]">Whats
+                                                    app
+                                                    Now</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- decorative part -->
+                <figure">
+                    <img src="./mediaFiles/Home page/Counter number/Hero section and logos/The Pinnacle PPT short 1.png"
+                        alt="decorative items" class="absolute bottom-0 right-0 ">
+                    </figure>
+                    <div class="w-full h-[4.27px] absolute bottom-0 bg-gradient-to-b from-[#FFC267] to-[#99753E];">
+                    </div>
+            </div>
+        </section>
+
+        <!-- Mobile Mega Menu -->
+        <section class="w-[300px] h-[90vh] transition-all z-20 absolute top-0 right-0  hidden  lg:hidden"
+            id="mobilemegaMenu">
+            <div class="lg:hidden block ">
+                <!-- Base background -->
+                <div class="absolute inset-0 bg-[#11385E]"></div>
+
+                <!-- Semi-transparent overlay -->
+                <div class="absolute inset-0 bg-black/20"></div>
+
+                <!-- decorative part -->
+                <figure class="">
+                    <img src="./mediaFiles/Home page/Counter number/image 350.png" alt="decorative items"
+                        class="absolute top-0 left-0 w-[85.84px] h-[51.53px]">
+                </figure>
+
+                <!-- close Icon -->
+                <figure class=" pt[19.73] px[17.9px]  h-max absolute right-2 top-2">
+                    <img src="./mediaFiles/Home page/Counter number/Vector.png" alt="x icon"
+                        class="w-[14.1px] h-[13.27px] cursor-pointer" id="MobilemegacloseIcon">
+                </figure>
+                <div class=" w-full absolute h-[80vh] bottom-0 px-[22.37px]">
+                    <!-- Mobile logo -->
+                    <figure class=" max-w-[162.47px]">
+                        <img src="./mediaFiles/Home page/Counter number/Hero section and logos/Logo.webp"
+                            alt="pinnacle_logo" class="w-full">
+                    </figure>
+
+                    <div
+                        class="w-full h-[calc(100%-90.52px)] py-[13.08px] flex flex-col gap-[8px] overflow-y-scroll scrollbar-none">
+                        <div
+                            class="flex justify-between items-center cursor-pointer border-b border-[#60606080] py-[6px]">
+                            <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                Home</h3>
+                            <a href="">
+                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.png"
+                                    alt="link icon" class="w-[15.09px] h-[11.89px] inline-block">
+                            </a>
+                        </div>
+
+                        <div
+                            class="flex justify-between items-center cursor-pointer border-b border-[#60606080] py-[6px]">
+                            <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                About</h3>
+                            <a href="">
+                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.png"
+                                    alt="link icon" class="w-[15.09px] h-[11.89px] inline-block">
+                            </a>
+                        </div>
+
+                        <div class="flex flex-col border-b border-[#60606080] py-[6px]">
+                            <div class="flex justify-between items-center cursor-pointer">
+                                <h3
+                                    class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                    Products</h3>
+
+                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/arrow-down.png"
+                                    alt="arrow-down icon"
+                                    class="w-[11.95px] h-[5.97px] inline-block mobilearrow-downbtn">
+                            </div>
+                            <div class="hidden mobilearrow-downcontent">
+                                <ul class="flex flex-col mt-[10px] gap-[6px]" id="mobilearrow-downmenu">
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">3
+                                            BHK Apartment</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">4
+                                            BHK Apartment</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">5
+                                            BHK Apartment</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Penthouse</a>
+                                    </li>
+
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col border-b border-[#60606080] py-[6px]">
+                            <div class="flex justify-between items-center cursor-pointer">
+                                <h3
+                                    class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                    Plans</h3>
+
+                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/arrow-down.png"
+                                    alt="arrow-down icon"
+                                    class="w-[11.95px] h-[5.97px] inline-block mobilearrow-downbtn">
+                            </div>
+                            <div class="hidden mobilearrow-downcontent">
+                                <ul class="flex flex-col mt-[10px] gap-[6px] mobilearrow-downmenu">
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Unit
+                                            Plan</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">
+                                            site Plan</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">tower
+                                            Plan</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Amenities</a>
+                                    </li>
+
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col border-b border-[#60606080] py-[6px]">
+                            <div class="flex justify-between items-center cursor-pointer">
+                                <h3
+                                    class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                    Location</h3>
+
+                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/arrow-down.png"
+                                    alt="arrow-down icon"
+                                    class="w-[11.95px] h-[5.97px] inline-block mobilearrow-downbtn">
+                            </div>
+                            <div class="hidden mobilearrow-downcontent">
+                                <ul class="flex flex-col mt-[10px] gap-[6px] mobilearrow-downmenu">
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Near
+                                            by</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Find
+                                            Distance</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Key
+                                            Highlights</a>
+                                    </li>
+
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col border-b border-[#60606080] py-[6px]">
+                            <div class="flex justify-between items-center cursor-pointer">
+                                <h3
+                                    class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                    Price</h3>
+
+                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/arrow-down.png"
+                                    alt="arrow-down icon"
+                                    class="w-[11.95px] h-[5.97px] inline-block mobilearrow-downbtn">
+                            </div>
+                            <div class="hidden mobilearrow-downcontent">
+                                <ul class="flex flex-col mt-[10px] gap-[6px] mobilearrow-downmenu">
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Price
+                                            List</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Payment
+                                            Structure</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Current
+                                            Offers</a>
+                                    </li>
+
+                            </div>
+                        </div>
+                        <div
+                            class="flex justify-between items-center cursor-pointer border-b border-[#60606080] py-[6px]">
+                            <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                Amenities </h3>
+                            <a href="">
+                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.png"
+                                    alt="link icon" class="w-[15.09px] h-[11.89px] inline-block">
+                            </a>
+                        </div>
+                        <div
+                            class="flex justify-between items-center cursor-pointer border-b border-[#60606080] py-[6px]">
+                            <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                Specifications </h3>
+                            <a href="">
+                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.png"
+                                    alt="link icon" class="w-[15.09px] h-[11.89px] inline-block">
+                            </a>
+                        </div>
+
+                        <div class="flex flex-col border-b border-[#60606080] py-[6px]">
+                            <div class="flex justify-between items-center cursor-pointer">
+                                <h3
+                                    class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                    Gallery</h3>
+
+                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/arrow-down.png"
+                                    alt="arrow-down icon"
+                                    class="w-[11.95px] h-[5.97px] inline-block mobilearrow-downbtn">
+                            </div>
+                            <div class="hidden mobilearrow-downcontent">
+                                <ul class="flex flex-col mt-[10px] gap-[6px] mobilearrow-downmenu">
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Project
+                                            Walk-Through</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Sample
+                                            Flat</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Project
+                                            gallery </a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Construction
+                                            Updates </a>
+                                    </li>
+
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col border-b border-[#60606080] py-[6px]">
+                            <div class="flex justify-between items-center cursor-pointer">
+                                <h3
+                                    class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                    Contact us</h3>
+
+                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/arrow-down.png"
+                                    alt="arrow-down icon"
+                                    class="w-[11.95px] h-[5.97px] inline-block mobilearrow-downbtn">
+                            </div>
+                            <div class="hidden mobilearrow-downcontent">
+                                <ul class="flex flex-col mt-[10px] gap-[6px] mobilearrow-downmenu">
+                                    <li><a href="" class="text-white">+91 89680 66698</a></li>
+                                    <li><a href="" class="text-white">+91 9697300066</a></li>
+                                    <li class="mt-[19.15px]">
+                                        <button
+                                            class="w-[142.25px] h-[31.08px] bg-[#21945A] border border-white rounded-[4px] flex items-center gap-2 justify-center cursor-pointer">
+                                            <figure class="w-[17.43px] h-[17.51px]">
+                                                <img src="./mediaFiles/Home page/Counter number/Start your homebuying Journey/Vector.webp"
+                                                    alt="">
+                                            </figure>
+                                            <span
+                                                class="font-jost font-medium text-[13.17px] text-white leading-[100%]">Whats
+                                                app
+                                                Now</span>
+                                        </button>
+                                    </li>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 right-0">
+                <img src="./mediaFiles/Home page/Counter number/Hero section and logos/The Pinnacle PPT short 1.png"
+                    alt="decorative items" class="w-[83.55px] h-[90.52px] opacity-50">
+            </div>
+            <div class="w-full h-[3.27px] absolute bottom-0 bg-gradient-to-b from-[#FFC267] to-[#99753E];">
+            </div>
+
+            </div>
+        </section>
+
+        <!-- mobile fixed bottom menu -->
+        <section class="fixed bottom-[9.56px]  w-full z-20 sm:hidden">
+            <div class="w-max relative m-auto">
+                <figure class="m-auto">
+                    <img src="./mediaFiles/Home page/Counter number/Vector.svg" alt="bottom fixed bg" class="m-auto">
+                </figure>
+
+                <div class="absolute top-1/2 -translate-y-1/2 left-[30px] flex items-center flex-col">
+                    <img src="./mediaFiles/Home page/Counter number/mobile toggle/phone.png" alt="phone icon"
+                        class="w-[15.55px] h-[15.55px]">
+                    <p class="font-jost font-medium text-[11px] text-[#154A6F]">Call</p>
+                </div>
+
+                <div
+                    class="absolute top-[10%] -translate-y-1/2 left-1/2 -translate-x-1/2 flex items-center flex-col z-30">
+                    <img src="./mediaFiles/Home page/Counter number/mobile toggle/Frame 2095588637.png"
+                        alt="safari icon" class="w-[53.36px] h-[53.36px] transition-all" id="mobilemegamenuopenBtn">
+                    <p class="font-jost font-medium text-[11px] text-[#154A6F] pt-3">Book a site visit</p>
+                </div>
+
+                <div class="absolute top-1/2 -translate-y-1/2 right-[30px] flex items-center flex-col">
+                    <img src="./mediaFiles/Home page/Counter number/mobile toggle/whatsaap.png" alt="whatsaap icon"
+                        class="w-[15.55px] h-[15.55px]">
+                    <p class="font-jost font-medium text-[11px] text-[#154A6F]">Whatsapp</p>
+                </div>
+
+                <div class="absolute bottom-[110%]  left-1/2 -translate-x-1/2 w-[331.66px] h-[156px] rounded-full px-[20px] hidden"
+                    id="mobiletogglemenu">
+                    <div class="w-full h-full flex items-end justify-between">
+                        <div class="w-[68.33px] h-[90px] flex flex-col items-center z-20">
+                            <div
+                                class="w-[68.33px] h-[68.33px] rounded-full p-[2px]  bg-gradient-to-b from-[#FFC267] to-[#99753E]">
+                                <div class="w-full h-full bg-white rounded-full flex items-center justify-center ">
+                                    <img src="./mediaFiles/Home page/Counter number/mobile toggle/ph_building.png"
+                                        alt="ph_building icon" class="w-[30px] h-[31px]">
+                                </div>
+                            </div>
+                            <p class="uppercase font-jost font-medium text-[13px] text-white">products</p>
+                        </div>
+
+                        <div class="w-max h-full flex gap-2">
+                            <div class="w-[68.33px] h-[90px] flex flex-col items-center z-20">
+                                <div
+                                    class="w-[68.33px] h-[68.33px] rounded-full p-[2px]  bg-gradient-to-b from-[#FFC267] to-[#99753E]">
+                                    <div class="w-full h-full bg-white rounded-full flex items-center justify-center ">
+                                        <img src="./mediaFiles/Home page/Counter number/mobile toggle/price.png"
+                                            alt="price icon" class="w-[30px] h-[31px]">
+                                    </div>
+                                </div>
+                                <p class="uppercase font-jost font-medium text-[13px] text-white">price</p>
+                            </div>
+
+                            <div class="w-[68.33px] h-auto flex flex-col items-center z-20">
+                                <div
+                                    class="w-[68.33px] h-[68.33px] rounded-full p-[2px]  bg-gradient-to-b from-[#FFC267] to-[#99753E]">
+                                    <div class="w-full h-full bg-white rounded-full flex items-center justify-center ">
+                                        <img src="./mediaFiles/Home page/Counter number/mobile toggle/current_offer.png"
+                                            alt="current_offer icon" class="w-[30px] h-[31px]">
+                                    </div>
+                                </div>
+                                <p class="uppercase font-jost font-medium text-[13px] text-center text-white">current
+                                    <br> Offer
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="w-[68.33px] h-auto flex flex-col items-center z-20">
+                            <div
+                                class="w-[68.33px] h-[68.33px] rounded-full p-[2px]  bg-gradient-to-b from-[#FFC267] to-[#99753E]">
+                                <div class="w-full h-full bg-white rounded-full flex items-center justify-center ">
+                                    <img src="./mediaFiles/Home page/Counter number/mobile toggle/amenities.png"
+                                        alt="amenities icon" class="w-[30px] h-[31px]">
+                                </div>
+                            </div>
+                            <p class="uppercase font-jost font-medium text-[13px] text-white">amenities</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </header>
+    <main>
+        <!-- Swiper -->
+        <section class="w-full h-[100vh] sm:h-lvh relative">
+            <div class="swiper mySwiper h-full sm:h-vh">
+                <div class="swiper-wrapper h-full">
+                    <div class="swiper-slide relative h-full">
+                        <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+                            <source src="./mediaFiles/Home page/hero.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <!--Dark background overlap -->
+                        <div class="absolute z-10 w-full h-full bg-[#0000004D]"></div>
+                        <!-- content -->
+                        <div class="absolute z-20 w-full h-full flex flex-col items-center justify-center gap-12">
+                            <div
+                                class=" w-max-[1064px] box-border px-[20.4px] flex flex-col items-center justify-center">
+                                <h3
+                                    class="max-w-[716px] font-jost font-semibold lg:font-medium lg:leading-[61.43px] text-[30px] leading-[38px] lg:text-[50px] text-center text-white">
+                                    Where Hospitality Meets Home in Mohali’s Tallest Icon</h3>
+
+                                <p
+                                    class="max-w-[1031px] font-jost text-[18px] lg:text-[23px] leading-[160%] text-center text-white font-normal">
+                                    Experience luxury like never before at The Pinnacle Mohali by STJ Group — the
+                                    tallest residential landmark IT City, Mohali. Explore 3, 4 & 5 BHK residences that
+                                    redefine skyline living.
+                                </p>
+                            </div>
+                            <div class="max-w-[516.92px] h-[102.65px] flex flex-col items-center justify-between">
+                                <button
+                                    class="bg-white w-[250px] h-[48px] flex items-center justify-center gap-[13.5px] rounded-[4px] cursor-pointer">
+                                    <span class="font-jost font-semibold text-[17px] leading-4 text-[#003253]">Download
+                                        Brochure</span>
+                                    <span class="w-[18px] h-[18px]">
+                                        <i class="fa-solid fa-arrow-right text-[#003253]"></i>
+                                    </span>
+                                </button>
+
+                                <p class="font-jost font-normal text-[18px] leading-[160%] text-white">Rera No -
+                                    PBRERA-SAS81-PR1166</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide relative h-full">
+                        <figure class="absolute inset-0">
+                            <img src="./mediaFiles/Home page/Counter number/Hero section and logos/Frame 2095586641 1.webp"
+                                alt="slider-2" class="w-full h-full object-cover object-center">
+                        </figure>
+                        <!--Dark background overlap -->
+                        <div class="absolute z-10 w-full h-full bg-[#0000004D]"></div>
+                        <!-- content -->
+                        <div class="absolute z-20 w-full h-full flex flex-col items-center justify-center gap-12">
+                            <div
+                                class=" w-max-[1064px] box-border px-[20.4px] flex flex-col items-center justify-center">
+                                <h3
+                                    class="max-w-[716px] font-jost font-semibold lg:font-medium lg:leading-[61.43px] text-[30px] leading-[38px] lg:text-[50px] text-center text-white">
+                                    Live Above It All — The Pinnacle by STJ Group, Mohali</h3>
+
+                                <p
+                                    class="max-w-[1031px] font-jost text-[18px] lg:text-[23px] leading-[160%] text-center text-white font-normal">
+                                    Standing tall at 36 floors, The Pinnacle offers panoramic views, futuristic
+                                    engineering, and an elite lifestyle in the heart of Mohali’s booming urban
+                                    landscape.
+                                </p>
+                            </div>
+                            <div class="max-w-[516.92px] h-[102.65px] flex flex-col items-center justify-between">
+                                <button
+                                    class="bg-white w-[250px] h-[48px] flex items-center justify-center gap-[13.5px] rounded-[4px] cursor-pointer">
+                                    <span class="font-jost font-semibold text-[17px] leading-4 text-[#003253]">Download
+                                        Brochure</span>
+                                    <span class="w-[18px] h-[18px]">
+                                        <i class="fa-solid fa-arrow-right text-[#003253]"></i>
+                                    </span>
+                                </button>
+
+                                <p class="font-jost font-normal text-[18px] leading-[160%] text-white">Rera No -
+                                    PBRERA-SAS81-PR1166</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide relative h-full">
+                        <figure class="absolute inset-0">
+                            <img src="./mediaFiles/Home page/Counter number/Hero section and logos/Frame 2095588596.webp"
+                                alt="slider-3" class="w-full h-full object-cover object-center">
+                        </figure>
+                        <!--Dark background overlap -->
+                        <div class="absolute z-10 w-full h-full bg-[#0000004D]"></div>
+                        <!-- content -->
+                        <div class="absolute z-20 w-full h-full flex flex-col items-center justify-center gap-12">
+                            <div
+                                class=" w-max-[1064px] box-border px-[20.4px] flex flex-col items-center justify-center">
+                                <h3
+                                    class="max-w-[716px] font-jost font-semibold lg:font-medium lg:leading-[61.43px] text-[30px] leading-[38px] lg:text-[50px] text-center text-white">
+                                    A New Benchmark for 3/4/5 BHK Luxury Apartments in Mohali</h3>
+
+                                <p
+                                    class="max-w-[1031px] font-jost text-[18px] lg:text-[23px] leading-[160%] text-center text-white font-normal">
+                                    Crafted by STJ Group and exclusively marketed by Realty Nivesh, The Pinnacle brings
+                                    you world-class amenities, iconic skywalks, and unmatched elegance across every
+                                    square foot.
+                                </p>
+                            </div>
+                            <div class="max-w-[516.92px] h-[102.65px] flex flex-col items-center justify-between">
+                                <button
+                                    class="bg-white w-[250px] h-[48px] flex items-center justify-center gap-[13.5px] rounded-[4px] cursor-pointer">
+                                    <span class="font-jost font-semibold text-[17px] leading-4 text-[#003253]">Download
+                                        Brochure</span>
+                                    <span class="w-[18px] h-[18px]">
+                                        <i class="fa-solid fa-arrow-right text-[#003253]"></i>
+                                    </span>
+                                </button>
+
+                                <p class="font-jost font-normal text-[18px] leading-[160%] text-white">Rera No -
+                                    PBRERA-SAS81-PR1166</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controls Row -->
+                <div
+                    class="w-full max-w-[1280px] absolute bottom-[103.4px] sm:bottom-[10px] left-1/2 -translate-x-1/2 z-10 text-white flex">
+
+                    <div class=" max-w-[357px] flex items-center gap-6 m-auto sm:mr-[10px]">
+                        <div class=" z-10">
+                            <div class="flex items-center gap-4">
+                                <div class="sm:hidden block">
+                                    <!-- Prev Button -->
+                                    <div
+                                        class="custom-button-prev flex items-center gap-1 cursor-pointer font-normal text-[15.31px] max-w-[39.69px]">
+                                        <i class="fa-solid fa-caret-right rotate-180 text-xs"></i>
+                                        Prev
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <!-- Fraction Pagination -->
+                                    <div class="swiper-fraction  text-white z-10"></div>
+                                    <!-- Progressbar -->
+                                    <div class="swiper-pagination-progress !relative !w-[178.55px] bg-[#EDE9E9]">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sm:w-[100px] w-max flex justify-between">
+                            <!-- Prev Button -->
+                            <div class="hidden sm:block">
+                                <div
+                                    class="custom-button-prev flex items-center cursor-pointer font-jost font-normal max-w-[39.69px] ">
+                                    <i class="fa-solid fa-caret-right rotate-180 text-xs"></i>
+                                    Prev
+                                </div>
+                            </div>
+                            <!-- Next Button -->
+                            <div
+                                class="custom-button-next font-normal flex items-center font-jost max-w-[39.69px]  cursor-pointer text-[15.31px]">
+                                Next
+                                <i class="fa-solid fa-caret-right text-xs font-normal"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- start home buying journey -->
+        <section class="w-full h-max">
+            <div class="w-full xl:h-[694px] h-full relative  bg-cover bg-center py-[40px]"
+                style="background-image: var(--homebuying-bg);">
+                <div class="w-full h-full flex xl:flex-row flex-col gap-y-[23.2px] items-center">
+                    <div class="w-full h-full grow-[1] flex flex-col gap-y-[18.15px] items-center justify-center">
+                        <figure class="w-max">
+                            <img src="./mediaFiles/Home page/Counter number/Hero section and logos/Frame 2095587590.webp"
+                                alt="" class="z-10 w-[243.42px] md:w-[361.54px] h-[253.42px] md:h-[375.83px] m-auto">
+                        </figure>
+                        <p
+                            class="font-jost font-medium text-[26px] md:text-[38.62px] uppercase space-y-[14.29px] md:space-y-[21.22px] text-[#003253] leading-[28.6px] md:leading-[42.48px]">
+                            Luxury Apartments</p>
+                    </div>
+                    <div class="w-full grow-[1] flex justify-center">
+                        <div class="max-w-[634px] m-auto flex flex-col gap-[24px] pb-[40px] px-[16.2px]">
+                            <div class="flex flex-col gap-[20px]">
+                                <h3
+                                    class="font-jost font-medium text-[24px]  md:text-[40px] leading-[130%] text-[#003253]">
+                                    The Pinnacle
+                                    Mohali – An Iconic Landmark of Luxury Living</h3>
+                                <p class="font-jost font-normal leading-[160%] text-[#474A49] ">Where Prestige,
+                                    Architecture, and
+                                    Lifestyle
+                                    Come <br>Together in IT City, Mohali </p>
+                            </div>
+
+                            <p class="font-jost font-normal text-[16px] leading-[137%] text-[#2C2C2C]">
+                                The Pinnacle Developed by STJ Group under the Mohali City Centre (MCC) umbrella. Mohali
+                                is more than a luxury apartment—it’s an architectural masterpiece rising in the heart of
+                                IT City, Mohali. Designed by India’s legendary architect Hafeez Contractor and styled by
+                                celebrity interior designer Zafar Choudhary, The Pinnacle sets a new standard in urban
+                                living.
+                                <br />
+                                With expansive 3 BHK, 4 BHK apartments, and exclusive penthouses starting from ₹3 Crore,
+                                this G+35 icon offers breathtaking views, modern engineering, and unmatched elegance.
+                            </p>
+                            <button
+                                class="w-[117px] h-[38px] md:w-[139px] md:h-[48px] px-[13px] py-[7px] md:px-[24px] md:py-[12px] bg-[#003253] uppercase font-jost font-medium text-[16px] leading-[24px] text-white">
+                                read more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--The Pinnacle in Numbers  -->
+        <section class="w-full h-max py-[80px] bg-cover bg-center" style="background: var(--Pinnacle-in-Numbers-bg);">
+            <div class="w-[1240px]">
+                
+            </div>
+        </section>
+
+    </main>
+
+</body>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="module" src="./script/main.js"></script>
+
+</html>
