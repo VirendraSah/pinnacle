@@ -19,8 +19,9 @@
     <div class="hidden sm:block">
         <div class="fixed right-[20.13px] bottom-[21.99px] z-20 flex items-end">
             <div class="w-[428px] h-[351px] bg-cover bg-center pt-[41.6px] relative hidden"
-                style="background-image: var(--home-image); " id="assistance_ractangular_box">
-                <button class="cursor-pointer absolute right-[20.64px] top-[19.63px] w-[15.6px] h-[16.05px]" id="assistanceBox_close_btn">
+                style="background-image: var(--assistance-decorative-bg); " id="assistance_ractangular_box">
+                <button class="cursor-pointer absolute right-[20.64px] top-[19.63px] w-[15.6px] h-[16.05px]"
+                    id="assistanceBox_close_btn">
                     <i class="fa-solid fa-xmark text-[#4B5956]"></i>
                 </button>
                 <div class="w-full px-[26.12px] flex flex-col gap-[10px] h-full">
@@ -67,7 +68,9 @@
                     </div>
                 </div>
                 <!-- decorative items -->
-                    <div class="absolute bottom-[3px] right-1/2 translate-1/2 w-[350.68px] h-[7.36px] rounded-t-[5px] bg-gradient-to-b from-[#FFC267] to-[#99753E]"></div>
+                <div
+                    class="absolute bottom-[3px] right-1/2 translate-1/2 w-[350.68px] h-[7.36px] rounded-t-[5px] bg-gradient-to-b from-[#FFC267] to-[#99753E]">
+                </div>
             </div>
             <div class="w-[122px] h-[175.31px]  flex items-start" id="assistancebtn">
                 <div class="w-full h-full flex flex-col items-end">
@@ -75,7 +78,8 @@
                         <p class="font-jost font-medium text-[13.47px] leading-[119%] text-center text-[#003253]">Need
                             immediate
                             assistance?</p>
-                        <div class="flex flex-col items-center justify-center gap-[5.6px] cursor-pointer" id="assistance_circle_btn">
+                        <div class="flex flex-col items-center justify-center gap-[5.6px] cursor-pointer"
+                            id="assistance_circle_btn">
                             <div
                                 class=" w-[92.7px] h-[92.7px] bg-[linear-gradient(180deg,rgba(255,194,103,0.5)_0%,rgba(153,117,62,0.5)_100%)] rounded-full m-auto flex items-center justify-center">
                                 <div
@@ -656,7 +660,7 @@
     <main>
         <!-- Swiper -->
         <section class="w-full h-[100vh] sm:h-lvh relative">
-            <div class="swiper mySwiper h-full sm:h-vh">
+            <div class="swiper mySwiperBanner h-full sm:h-vh">
                 <div class="swiper-wrapper h-full">
                     <div class="swiper-slide relative h-full">
                         <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
@@ -664,7 +668,7 @@
                             Your browser does not support the video tag.
                         </video>
                         <!--Dark background overlap -->
-                        <div class="absolute z-10 w-full h-full bg-[#0000004D]"></div>
+                        <div class="absolute top-0 left-0 z-10 w-full h-full bg-[#0000004D]"></div>
                         <!-- content -->
                         <div class="absolute z-20 w-full h-full flex flex-col items-center justify-center gap-12">
                             <div
@@ -734,7 +738,7 @@
                     </div>
                     <div class="swiper-slide relative h-full">
                         <figure class="absolute inset-0">
-                            <img src="./mediaFiles/Home page/Counter number/Hero section and logos/Frame 2095588596.webp"
+                            <img src="./mediaFiles/Home page/Counter number/Hero section and logos/banner-3.webp"
                                 alt="slider-3" class="w-full h-full object-cover object-center">
                         </figure>
                         <!--Dark background overlap -->
@@ -811,15 +815,14 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
         <!-- start home buying journey -->
         <section class="w-full h-max">
-            <div class="w-full xl:h-[694px] h-full relative  bg-cover bg-center py-[40px]"
+            <div class="w-full h-full relative  bg-cover bg-center py-[40px]"
                 style="background-image: var(--homebuying-bg);">
-                <div class="w-full h-full flex xl:flex-row flex-col gap-y-[23.2px] items-center">
+                <div class="w-full h-full flex xl:flex-row flex-col gap-y-[23.2px] items-center justify-center">
                     <div class="w-full h-full grow-[1] flex flex-col gap-y-[18.15px] items-center justify-center">
                         <figure class="w-max">
                             <img src="./mediaFiles/Home page/Counter number/Hero section and logos/Frame 2095587590.webp"
@@ -829,7 +832,7 @@
                             class="font-jost font-medium text-[26px] md:text-[38.62px] uppercase space-y-[14.29px] md:space-y-[21.22px] text-[#003253] leading-[28.6px] md:leading-[42.48px]">
                             Luxury Apartments</p>
                     </div>
-                    <div class="w-full grow-[1] flex justify-center">
+                    <div class="w-full grow-[1] flex justify-center items-center">
                         <div class="max-w-[634px] m-auto flex flex-col gap-[24px] pb-[40px] px-[16.2px]">
                             <div class="flex flex-col gap-[20px]">
                                 <h3
@@ -841,19 +844,41 @@
                                     Lifestyle
                                     Come <br>Together in IT City, Mohali </p>
                             </div>
-
-                            <p class="font-jost font-normal text-[16px] leading-[137%] text-[#2C2C2C]">
-                                The Pinnacle Developed by STJ Group under the Mohali City Centre (MCC) umbrella. Mohali
-                                is more than a luxury apartment—it’s an architectural masterpiece rising in the heart of
-                                IT City, Mohali. Designed by India’s legendary architect Hafeez Contractor and styled by
-                                celebrity interior designer Zafar Choudhary, The Pinnacle sets a new standard in urban
-                                living.
-                                <br />
-                                With expansive 3 BHK, 4 BHK apartments, and exclusive penthouses starting from ₹3 Crore,
-                                this G+35 icon offers breathtaking views, modern engineering, and unmatched elegance.
-                            </p>
-                            <button
-                                class="w-[117px] h-[38px] md:w-[139px] md:h-[48px] px-[13px] py-[7px] md:px-[24px] md:py-[12px] bg-[#003253] uppercase font-jost font-medium text-[16px] leading-[24px] text-white">
+                            <div class="w-full ">
+                                <p class="font-jost font-normal text-[16px] leading-[137%] text-[#2C2C2C]">
+                                    The Pinnacle Developed by STJ Group under the Mohali City Centre (MCC) umbrella.
+                                    Mohali
+                                    is more than a luxury apartment—it’s an architectural masterpiece rising in the
+                                    heart of
+                                    IT City, Mohali. Designed by India’s legendary architect Hafeez Contractor and
+                                    styled by
+                                    celebrity interior designer Zafar Choudhary, The Pinnacle sets a new standard in
+                                    urban
+                                    living. <br class="" id="paragraphBr" />With expansive 3 BHK, 4 BHK apartments, and
+                                    exclusive penthouses starting from ₹3
+                                    Crore,
+                                    this G+35 icon offers breathtaking views, modern engineering, and unmatched
+                                    elegance.
+                                </p>
+                                <br class="hidden">
+                                <p class="hidden font-jost font-normal text-[16px] leading-[137%] text-[#2C2C2C]"
+                                    id="readMoreData">
+                                    Step into a world where every detail is crafted to impress—from the grand
+                                    double-height entrance lobby to the stunning 36th-floor Sky Walk offering panoramic
+                                    views of Mohali and the Shivalik range. Residents enjoy access to a 1 lakh sq.ft
+                                    luxury clubhouse featuring a spa, infinity pool, fitness center, indoor sports,
+                                    banquet, and 5-star level hospitality services. Located opposite Plaksha University
+                                    in the most premium zone of Mohali, The Pinnacle is where lifestyle meets legacy.
+                                    <br>
+                                    Whether you’re seeking a status-defining residence or a future-ready investment, The
+                                    Pinnacle by Mohali City Center Group stands as the top 1% of luxury projects in
+                                    North India. <br> <br>
+                                    Developed by the renowned *STJ Group, part of the prestigious **Mohali City Centre
+                                    (MCC)* ecosystem.
+                                </p>
+                            </div>
+                            <button id="readMoreBtn"
+                                class="w-[117px] h-[38px] md:w-[139px] md:h-[48px] px-[13px] py-[7px] md:px-[24px] md:py-[12px] bg-[#003253] uppercase font-jost font-medium text-[16px] leading-[24px] text-white cursor-pointer">
                                 read more
                             </button>
                         </div>
@@ -864,8 +889,1082 @@
 
         <!--The Pinnacle in Numbers  -->
         <section class="w-full h-max py-[80px] bg-cover bg-center" style="background: var(--Pinnacle-in-Numbers-bg);">
-            <div class="w-[1240px]">
-                
+            <div
+                class="max-w-[1240px] m-auto  flex flex-col items-center justify-center gap-[48px] px-[18.5px] sm:px-2.5 ">
+                <div class="flex flex-col items-center justify-center gap-[8px]">
+                    <h2
+                        class="font-jost font-semibold sm:font-medium text-[24px]  sm:text-[40px] leading-[31px] sm:leading-[60px] tracking-[0px] text-white text-center">
+                        The Pinnacle in Numbers</h2>
+                    <p
+                        class="font-jost text-[15px] sm:text-[20px] text-white font-normal leading-[23px] sm:leading-[28px] tracking-[2%] text-center">
+                        A quick look at the scale, design, and exclusivity that defines luxury living at The Pinnacle
+                        Mohali.</p>
+                </div>
+                <!-- counter Number -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:flex items-center gap-y-[18.03px] w-full place-items-center justify-between relative lg:border-0"
+                    id="pinnacle-numbers-section">
+                    <div class="flex flex-col items-center justify-center w-full relative">
+                        <div
+                            class="w-[127.28px] sm:w-[177px] h-[124.97px] sm:h-[173.79px] flex flex-col items-center justify-center">
+                            <img src="./mediaFiles/Home page/Counter number/tinify/carbon_area-custom.webp"
+                                alt="carbon-area-custom"
+                                class="w-[42.93px] sm:w-[52.24px] h-[42.93px] sm:h-[52.21px] m-auto" />
+                            <span id="odometer-acre"
+                                class="font-jost font-medium text-[35px] sm:text-[50px] text-white">8</span>
+                            <span
+                                class="font-jost font-medium text-[16px] sm:text-[21.69px] tracking-[2%] text-center text-white">Acres
+                                Land Area</span>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="absolute right-0 w-px h-4/5 bg-[#CFCFCF]"></div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center w-full relative">
+                        <div
+                            class="w-[127.28px] sm:w-[177px] h-[124.97px] sm:h-[173.79px] flex flex-col items-center justify-center">
+                            <img src="./mediaFiles/Home page/Counter number/tinify/residence.webp" alt="residence icon"
+                                class="w-[43.15px] sm:w-[52.24px] h-[38.11px] sm:h-[52.21px] m-auto" />
+                            <span id="odometer-residence"
+                                class="font-jost font-medium text-[35px] sm:text-[50px] text-white">700</span>
+                            <span
+                                class="font-jost font-medium text-[16px] sm:text-[21.69px] tracking-[2%] text-center text-white">Residences</span>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="hidden sm:block absolute right-0 w-px h-4/5 bg-[#CFCFCF]"></div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center w-full relative">
+                        <div
+                            class="w-[127.28px] sm:w-[177px] h-[124.93px] sm:h-[173.79px] flex flex-col items-center justify-center">
+                            <img src="./mediaFiles/Home page/Counter number/tinify/tower.webp" alt="tower icon"
+                                class="w-[42.93px] sm:w-[52.24px] h-[42.93px] sm:h-[52.21px] m-auto" />
+                            <span id="odometer-tower"
+                                class="font-jost font-medium text-[35px] sm:text-[50px] text-white">6</span>
+                            <span
+                                class="font-jost font-medium text-[16px] sm:text-[21.69px] tracking-[2%] text-center text-white">6
+                                Towers G+36</span>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="block sm:hidden lg:block absolute right-0 w-px h-4/5 bg-[#CFCFCF]"></div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center w-full relative">
+                        <div
+                            class="w-[127.28px] sm:w-[177px] h-[124.97px] sm:h-[173.79px] flex flex-col items-center justify-center">
+                            <img src="./mediaFiles/Home page/Counter number/tinify/shop.webp" alt="shop icon"
+                                class="w-[42.93px] sm:w-[52.24px] h-[42.93px] sm:h-[52.21px] m-auto" />
+                            <span id="odometer-clubhouse"
+                                class="font-jost font-medium text-[35px] sm:text-[50px] text-white">1,00000</span>
+                            <span
+                                class="font-jost font-medium text-[16px] sm:text-[21.69px] tracking-[2%] text-center text-white">Sq
+                                ft Club House</span>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="hidden sm:block absolute right-0 w-px h-4/5 bg-[#CFCFCF]"></div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center w-full relative">
+                        <div
+                            class="w-[127.28px] sm:w-[177px] h-[124.97px] sm:h-[173.79px] flex flex-col items-center justify-center">
+                            <img src="./mediaFiles/Home page/Counter number/tinify/car_parking.webp"
+                                alt="car parking icon"
+                                class="w-[44.67px] sm:w-[52.24px] h-[44.67px] sm:h-[52.21px] m-auto" />
+                            <span id="odometer-parking"
+                                class="font-jost font-medium text-[35px] sm:text-[50px] text-white">1400+</span>
+                            <span
+                                class="font-jost font-medium text-[16px] sm:text-[21.69px] tracking-[2%] text-center text-white">Car
+                                Parking</span>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="block lg:hidden absolute right-0 w-px h-4/5 bg-[#CFCFCF]"></div>
+                    </div>
+                    <div class="block lg:hidden">
+                        <div class="flex flex-col items-center justify-center w-full">
+                            <div
+                                class="w-[127.28px] sm:w-[177px] h-[124.97px] sm:h-[173.79px] flex flex-col items-center justify-center">
+                                <img src="./mediaFiles/Home page/Counter number/Start your homebuying Journey/The Pinnacle PPT short 1.webp"
+                                    alt="Pinnacle PPT" class="w-[78.27px] h-[84.79px] m-auto" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- The Pride of MOHALI -->
+        <section class="w-full h-max">
+            <div class="w-full h-[800px] bg-cover bg-no-repeat bg-center relative px-[17px] pb-[22px] flex flex-col gap-y-[10px] justify-end"
+                style="background-image: var(--The-Pride-Mohali-bg);">
+                <div
+                    class=" w-max  md:absolute bottom-[94.54px] md:left-[30px] xl:left-[99.9px] flex flex-col items-start gap-[5px]">
+                    <span
+                        class="font-jost font-medium text-[34.65px] leading-[51.97px] md:text-[40px] md:leading-[60px] text-white">The
+                        Pride of </span>
+                    <div class="flex flex-col items-start gap-[17.61px]">
+                        <img src="./mediaFiles/Home page/Counter number/Mohali-text.png" alt="Mohali-text"
+                            class="w-[247.18px] h-[49.3px] md:w-[285.36px] md:h-[56.92px]">
+                        <div class="w-[204.82px] h-[3.44px] bg-gradient-to-b from-[#FFC267] to-[#99753E]"></div>
+                    </div>
+
+                    <p class="font-jost text-[17.32px] md:text-[20px] leading-[160%] text-white">
+                        A skyline-defining landmark in
+                        <br>
+                        Sector 83 Alpha, IT City Mohali
+                    </p>
+                </div>
+                <div
+                    class="w-[290.27px] h-max md:absolute md:right-[30px] xl:right-[100px] bottom-[65.33px] flex flex-col gap-[30.39px]">
+                    <div class="w-full flex flex-col items-start gap-[18px]">
+                        <div class="w-full flex flex-col gap-[3.06px]">
+                            <div class="flex items-center gap-[10.13px]">
+                                <img src="./mediaFiles/the_pride_mohali_icons/spread_Across.png" alt="icon"
+                                    class="w-[30.9px] md:w-[35.99px] h-[29.63px] md:h-[34.51px]">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-jost font-medium text-[12.02px] md:text-[14px] leading-[13.61px] md:leading-[15.85px] uppercase text-white">SPREAD
+                                        ACROSS</span>
+                                    <span
+                                        class="font-jost font-medium text-[19.88px] tracking-[3.64px] leading-[100%] text-white uppercase">08
+                                        acres
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="w-[122.22px] h-[2.39px] bg-gradient-to-b from-[#FFC267] to-[#99753E]"></div>
+                        </div>
+
+                        <div class="w-full flex flex-col gap-[3.06px]">
+                            <div class="flex items-center gap-[10.13px]">
+                                <img src="./mediaFiles/the_pride_mohali_icons/Tower.png" alt="icon-2"
+                                    class="w-[30.9px] md:w-[35.99px] h-[29.63px] md:h-[34.51px]">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-jost font-medium text-[12.02px] md:text-[14px] leading-[13.61px] md:leading-[15.85px] uppercase text-white ">Configuration</span>
+                                    <span
+                                        class="font-jost font-medium text-[19.88px] tracking-[3.64px] leading-[100%] text-white uppercase">6
+                                        Towers | G+36</span>
+                                </div>
+                            </div>
+                            <div class="w-[122.22px] h-[2.39px] bg-gradient-to-b from-[#FFC267] to-[#99753E]"></div>
+                        </div>
+
+                        <div class="w-full flex flex-col gap-[3.06px]">
+                            <div class="flex items-center gap-[10.13px]">
+                                <img src="./mediaFiles/the_pride_mohali_icons/open_area_icon.png" alt="icon-3"
+                                    class="w-[30.9px] md:w-[35.99px] h-[29.63px] md:h-[34.51px]">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-jost font-medium text-[12.02px] md:text-[14px] leading-[13.61px] md:leading-[15.85px] uppercase text-white ">Open
+                                        Area</span>
+                                    <span
+                                        class="font-jost font-medium text-[19.88px] tracking-[3.64px] leading-[100%] text-white uppercase">90%
+                                        Green Space</span>
+                                </div>
+                            </div>
+                            <div class="w-[122.22px] h-[2.39px] bg-gradient-to-b from-[#FFC267] to-[#99753E]"></div>
+                        </div>
+
+                        <div class="w-full flex flex-col gap-[3.06px]">
+                            <div class="flex items-center gap-[10.13px]">
+                                <img src="./mediaFiles/the_pride_mohali_icons/key.png" alt="icon-4"
+                                    class="w-[30.9px] md:w-[35.99px] h-[29.63px] md:h-[34.51px]">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-jost font-medium text-[12.02px] md:text-[14px] leading-[13.61px] md:leading-[15.85px] uppercase text-white ">Handover</span>
+                                    <span
+                                        class="font-jost font-medium text-[19.88px] tracking-[3.64px] leading-[100%] text-white uppercase">December
+                                        2028</span>
+                                </div>
+                            </div>
+                            <div class="w-[122.22px] h-[2.39px] bg-gradient-to-b from-[#FFC267] to-[#99753E]"></div>
+                        </div>
+
+                        <div class="w-full flex flex-col gap-[3.06px]">
+                            <div class="flex items-center gap-[10.13px]">
+                                <img src="./mediaFiles/the_pride_mohali_icons/verified_icon.png" alt="icon-5"
+                                    class="h-[29.63px] md:h-[34.51px]">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-jost font-medium text-[12.02px] md:text-[14px] leading-[13.61px] md:leading-[15.85px] uppercase text-white ">RERA
+                                        No:</span>
+                                    <span
+                                        class="font-jost font-medium text-[19.88px] leading-[100%] text-white uppercase">PBRERA-SAS81-PR0693</span>
+                                </div>
+                            </div>
+                            <div class="w-[122.22px] h-[2.39px] bg-gradient-to-b from-[#FFC267] to-[#99753E]"></div>
+                        </div>
+                    </div>
+                    <button type="button"
+                        class="w-[165.18px] h-[39.32px] cursor-pointer border border-[#A27D27] bg-white flex items-center gap-[8.4px] justify-center">
+                        <img src="./mediaFiles/Home page/Counter number/download_icon.png" alt="download_icon"
+                            class="w-[15.89px] h-[15.89px]">
+                        <span
+                            class="font-jost font-semibold leading[100%] text-[14.22px] text-[#003253]">Brochure</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Crafted For the Top 1% -->
+        <section class="w-full h-max">
+            <div class="w-full h-max px-[16px] bg-cover bg-center bg-no-repeat pt-[40.55px] md:pt-[85.63px] pb-[21.69px] md:pb-[61.37px]"
+                style="background-image: var(--Crafted-for-Top-bg);">
+                <div class="m-auto max-w-[1006px] flex flex-col items-center md:gap-[24px]">
+                    <h3
+                        class="bg-gradient-to-b from-[#FFC267] to-[#99753E] bg-clip-text text-transparent font-jost font-semibold md:font-medium text-[24px] md:text-[40px] leading-[60px]">
+                        Crafted for the Top 1%
+                    </h3>
+
+                    <p
+                        class="font-jost font-normal text-[15px] md:text-[20px] leading-[28px] tracking-[2%] text-center text-white">
+                        Discover what makes The Pinnacle not just another residential tower, but a rare statement in
+                        modern Indian luxury. Designed by icons, defined by vision, delivered with precision.</p>
+                </div>
+            </div>
+            <!-- Crafted Banner -->
+            <div class="w-full h-full relative">
+                <div class="swiper mySwiperBanner2 h-full">
+                    <div class="swiper-wrapper h-full">
+                        <div class="swiper-slide relative h-full flex">
+                            <div class="w-full h-auto flex lg:flex-row flex-col">
+                                <!-- image -->
+                                <div class="grow lg:flex-[2.7]">
+                                    <img src="./mediaFiles/Home page/Counter number/slider 01145/Frame 2095588792.webp"
+                                        alt="banner-1" class="w-full h-full">
+                                </div>
+                                <!-- content -->
+                                <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
+                                    style="background-image: var(--paper-crashes-BG);">
+                                    <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[16px]">
+                                        <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
+                                            Crafted by Hafeez Contractor</h3>
+                                        <p class="font-jost font-normal text-[17px] leading-[150%] text-[#003253]">
+                                            India’s most renowned architect — Padma Bhushan awardee Hafeez Contractor —
+                                            has
+                                            envisioned The Pinnacle to redefine the skyline of Mohali. His legacy of
+                                            designing India's most iconic buildings now adds prestige to your address.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide relative h-full flex">
+                            <div class="w-full h-auto flex lg:flex-row flex-col">
+                                <!-- image -->
+                                <div class="grow lg:flex-[2.7]">
+                                    <img src="./mediaFiles/Home page/Counter number/slider 01145/Frame 2095588037-3.webp"
+                                        alt="banner-1" class="w-full h-full">
+                                </div>
+                                <!-- content -->
+                                <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
+                                    style="background-image: var(--paper-crashes-BG);">
+                                    <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[16px]">
+                                        <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
+                                            Interiors by Zafar Choudhary</h3>
+                                        <p class="font-jost font-normal text-[17px] leading-[150%] text-[#003253]">
+                                            From the entrance lobby to the master suite, every space is designed by
+                                            Zafar Choudhary — one of India’s elite luxury interior consultants. Expect
+                                            finely balanced aesthetics, comfort, and timeless class in every corner.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls Row -->
+                    <div
+                        class=" m-0 absolute bottom-[35.46px] right-1/2 translate-x-1/2 sm:translate-0  sm:right-10 sm:bottom-[56.94px] z-10 text-white flex">
+                        <div class=" w-max sm:max-w-[357px] flex items-center gap-6">
+                            <div class=" z-10">
+                                <div class="flex items-center gap-4">
+                                    <div class="sm:hidden block">
+                                        <!-- Prev Button -->
+                                        <div
+                                            class="custom-button-prev2 flex items-center gap-1 cursor-pointer font-normal text-[15.31px] max-w-[39.69px] text-[#003253]">
+                                            <i class="fa-solid fa-caret-right rotate-180 text-xs"></i>
+                                            Prev
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <!-- Fraction Pagination -->
+                                        <div class="swiper-fraction2  text-[#003253] z-10"></div>
+                                        <!-- Progressbar -->
+                                        <div class="swiper-pagination-progress2 !relative !w-[178.55px] bg-[#EDE9E9]">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sm:w-[100px] w-max flex justify-between">
+                                <!-- Prev Button -->
+                                <div class="hidden sm:block">
+                                    <div
+                                        class="custom-button-prev2 flex items-center cursor-pointer font-jost font-normal max-w-[39.69px] text-[#003253]">
+                                        <i class="fa-solid fa-caret-right rotate-180 text-xs "></i>
+                                        Prev
+                                    </div>
+                                </div>
+                                <!-- Next Button -->
+                                <div
+                                    class="custom-button-next2 font-normal flex items-center font-jost max-w-[39.69px]  cursor-pointer text-[15.31px] text-[#003253]">
+                                    Next
+                                    <i class="fa-solid fa-caret-right text-xs font-normal"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- decorative items-->
+                        <img src="./mediaFiles/Home page/Counter number/slider 01145/The Pinnacle PPT short 3.png"
+                            alt="decoratives"
+                            class="w-[45.1px] h-[48.86px] sm:w-[112.27px] sm:h-[121.67px]  lg:w-[45.1px] lg:h-[48.86px] xl:w-[112.27px] xl:h-[121.67px] absolute -right-[12px] bottom-[20px] z-10">
+                    </div>
+                </div>
+            </div>
+            <!-- Explore Our Signature Residence -->
+            <div
+                class="max-w-[1243.63px] px-[16px] xl:px-0 h-max m-auto pt-[40px] lg:pt-[106.85px] flex flex-col gap-[15.67px]">
+                <div class="flex lg:flex-row flex-col gap-y-[24px] px-[16px] lg:px-0 items-center">
+                    <!-- Left Content -->
+                    <div class="flex flex-col gap-[9px] grow max-w-[668px] ">
+                        <h3
+                            class="text-center lg:text-start font-jost font-medium text-[24px] lg:text-[40px] leading:[31px] tracking-[0%] lg:leading-[60px] text-[#173150]">
+                            Explore Our <br class="lg:hidden block">Signature Residences
+                        </h3>
+                        <p
+                            class="text-center lg:text-start font-jost font-normal text-[15px] lg:text-[20px] leading-[23px] lg:leading-[28px] tracking-[2%] text-[#474A49]">
+                            Choose from an exclusive collection of 3, 4 & 5 BHK residences and Cloud Villas
+                            at The Pinnacle Mohali. Each home is a masterpiece designed for connoisseurs of
+                            luxury — where timeless elegance meets modern living in Mohali’s most prestigious address.
+                        </p>
+                    </div>
+
+                    <!-- Right Buttons -->
+                    <div class="flex grow gap-[10.14px] sm:gap-4 justify-center items-center">
+                        <button id="4BHKbtn" type="button"
+                            class="sm:w-max  h-[29.77]  sm:h-[36px] px-[19.85px] sm:px-[24px] border border-[#173F63] cursor-pointer text-[#003253] text-[13.23px] sm:text-[16px] font-jost BHKResidence">
+                            4BHK
+                        </button>
+                        <button id="3BHKbtn" type="button"
+                            class="sm:w-max  h-[29.77]  sm:h-[36px] px-[19.85px] sm:px-[24px] border border-[#173F63] cursor-pointer text-[#003253] leading-[150%] font-jost text-[13.23px] sm:text-[16px] BHKResidence">
+                            3BHK
+                        </button>
+                        <button id="5BHKbtn" type="button"
+                            class="sm:w-max  h-[29.77]  sm:h-[36px] px-[19.85px] sm:px-[24px] border border-[#173F63] cursor-pointer text-[#003253] leading-[150%] font-jost text-[13.23px] sm:text-[16px] BHKResidence">
+                            5BHK
+                        </button>
+                        <button id="pentHouse" type="button"
+                            class="sm:w-max  h-[29.77]  sm:h-[36px] px-[19.85px] sm:px-[24px] border border-[#173F63] cursor-pointer text-[#003253] leading-[150%] font-jost text-[13.23px] sm:text-[16px] BHKResidence">
+                            PENTHOUSE
+                        </button>
+                    </div>
+                </div>
+                <div class="flex h-max lg:flex-row flex-col dynamicData">
+                    <div class="grow w-auto lg:max-w-[909.67px]">
+                        <!-- Swiper -->
+                        <div class="swiper SignatureResidenceSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./mediaFiles/Home page/Counter number/signature Residance.png"
+                                        alt="Signature residance" class=" h-full w-full object-cover dynamic-image">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img id="dynamic-image1"
+                                        src="./mediaFiles/Home page/Counter number/signature Residance.png"
+                                        alt="Signature residance" class=" h-full w-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" bg-no-repeat bg-cover lg:w-[331.18px] h-auto flex flex-col gap-[21.97px] pt-[29.67px] pb-[15px] items-start lg:items-center"
+                        style="background-image: var(--signature_residance-r-BG);">
+                        <div
+                            class="w-full lg:w-full h-full lg:px-0 px-[27.59px] flex flex-col items-center sm:items-start lg:items-center justify-center gap-[22.32px]">
+                            <h3 id="dynamic-title"
+                                class="font-jost text-center sm:text-start font-medium text-[28px] lg:px-[18.2px] leading-[127%] tracking-[3%] space-y-[3.8px] text-white">
+                                Executive Residences 3 BHK Apartments </h3>
+                            <div class="w-max flex flex-col gap-[22.32px] items-center justify-center">
+                                <div class="w-full h-max bg-white flex flex-col">
+                                    <div
+                                        class="w-full h-[47.3px] pt-[13.64px] px-[8.5px] flex gap-[11.88px] items-center justify-start shadow-[0px_3.1px_3.1px_0px_#00000040]">
+                                        <figure class="w-[22.25px] h-[22.25px]">
+                                            <img src="./mediaFiles/Home page/Counter number/signature_Residance/Area_icon.png"
+                                                alt="Area icon" class="w-[22.25px] h-[22.25px]">
+                                        </figure>
+
+                                        <p id="dynamic-area"
+                                            class="font-jost font-semibold text-[17px] leading-[100%] -tracking-[2%] text-[#003253]">
+                                            Area: Approx. 2,400–2,650sq.ft</p>
+                                    </div>
+                                    <div
+                                        class="w-full h-[47.3px] flex gap-[11.88px] px-[8.5px] items-center justify-start border-b border-[#CACACA4D]">
+                                        <figure class="w-[22.25px] h-[22.25px]">
+                                            <img src="./mediaFiles/Home page/Counter number/signature_Residance/Tower_icon.png"
+                                                alt="Tower icon" class="w-[22.25px] h-[22.25px]">
+                                        </figure>
+                                        <p id="dynamic-tower"
+                                            class="font-jost font-normal text-[17px] leading-[100%] -tracking-[2%] text-[#003253] capitalize">
+                                            Tower: Apex</p>
+                                    </div>
+                                    <div
+                                        class="w-full h-[47.3px] flex gap-[11.88px] px-[8.5px] items-center justify-start border-b border-[#CACACA4D]">
+                                        <figure class="w-[22.25px] h-[22.25px]">
+                                            <img src="./mediaFiles/Home page/Counter number/signature_Residance/status_icon.png"
+                                                alt="Status icon" class="w-[22.25px] h-[22.25px]">
+                                        </figure>
+                                        <p id="dynamic-status"
+                                            class="font-jost font-normal text-[17px] leading-[100%] -tracking-[2%] text-[#003253] capitalize">
+                                            Status: Under Construction</p>
+                                    </div>
+                                    <div
+                                        class="w-full h-[47.3px] flex gap-[11.88px] px-[8.5px] items-center justify-start border-b border-[#CACACA4D]">
+                                        <figure class="w-[22.25px] h-[22.25px]">
+                                            <img src="./mediaFiles/Home page/Counter number/signature_Residance/key_icon.png"
+                                                alt="Key icon" class="w-[11.9px] h-[23.98px]">
+                                        </figure>
+
+                                        <p id="dynamic-handover"
+                                            class="font-jost font-normal text-[17px] leading-[100%] -tracking-[2%] text-[#003253] capitalize">
+                                            Expected Handover: 2028</p>
+                                    </div>
+                                    <div
+                                        class="w-full h-[47.3px] flex gap-[11.88px] px-[8.5px] items-center justify-start border-b border-[#CACACA4D]">
+                                        <figure class="w-[22.25px] h-[22.25px]">
+                                            <img src="./mediaFiles/Home page/Counter number/signature_Residance/furnishing_icon.png"
+                                                alt="furnishing_icon" class="w-[25px] h-[14.53px]">
+                                        </figure>
+
+                                        <p id="dynamic-furnishing"
+                                            class="font-jost font-normal text-[17px] leading-[100%] -tracking-[2%] text-[#003253] capitalize">
+                                            Furnishing: SEMI FURNISHED</p>
+                                    </div>
+                                    <div
+                                        class="w-full h-[47.3px] flex gap-[11.88px] px-[8.5px] items-center justify-start border-b border-[#CACACA4D]">
+                                        <figure class="w-[22.25px] h-[22.25px]">
+                                            <img src="./mediaFiles/Home page/Counter number/signature_Residance/rupees_icon.png"
+                                                alt="rupees_icon" class="w-[12.68px] h-[19.2px]">
+                                        </figure>
+
+                                        <p id="dynamic-availability"
+                                            class="font-jost font-normal text-[17px] leading-[100%] -tracking-[2%] text-[#003253] capitalize">
+                                            Availability: Coming Soon</p>
+                                    </div>
+
+                                </div>
+                                <div class="w-max h-[102.74px] flex-col items-center">
+                                    <!-- Swiper Buttons -->
+                                    <div class="flex gap-[13.91px] items-center">
+                                        <button
+                                            class="cursor-pointer w-[133.24px] h-[39.62px] text-[#173F63] font-jost font-medium text-[13.08px] leading-[19.62px] uppercase border bg-white">
+                                            Enquire Now
+                                        </button>
+                                        <button
+                                            class="cursor-pointer w-[133.24px] h-[39.62px] text-white font-jost font-medium text-[13.08px] leading-[19.62px] uppercase border bg-transparent flex items-center justify-center gap-[6.54px]">
+                                            <img src="./mediaFiles/Home page/Counter number/ri_download-line.png"
+                                                alt="download_icon" class="w-[18px] h-[18px]">
+                                            Floor Plan
+                                        </button>
+                                    </div>
+                                    <div class="hidden lg:block ">
+                                        <div class="flex py-[27.26px] items-center gap-[21.26px] carousel-controls">
+                                            <button type="button"
+                                                class=" left_arrow_btn SignatureResidence-custom-prev-button cursor-pointer w-[35.89px] h-[35.89px] border border-white rounded-full">
+                                                <i class="fa-solid fa-arrow-left text-white"></i>
+                                            </button>
+                                            <button type="button"
+                                                class="left_arrow_btn SignatureResidence-custom-next-button cursor-pointer  w-[35.89px] h-[35.89px] border border-white rounded-full">
+                                                <i class="fa-solid fa-arrow-right text-white"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span
+                    class="font-jost md:px-[10px] lg:px-0 text-center md:text-start font-normal text-[14px] lg:text-[17px] leading-[28px] tracking-[2%] text-[#474A49] ">A
+                    Signature Residence by STJ Group, part of <br class="block md:hidden"> MCC Mohali’s elite
+                    portfolio</span>
+            </div>
+        </section>
+        <!-- Construction Milestones at The Pinnacle Mohali -->
+        <section class="w-full h-max my-[37.32px] px-[16.3px]">
+            <div class="max-w-[1240px] m-auto flex flex-col gap-[30.83px]">
+                <div class="w-full flex flex-col gap-[26.11px]">
+                    <div class="w-full h-max flex flex-col gap-[48px]">
+                        <div class="flex flex-col items-center gap-[13.5px]">
+                            <h2
+                                class="font-jost font-medium text-[24px] lg:text-[40px] leading-[30.95px] lg:leading-[60px] text-center text-[#173150]">
+                                Construction
+                                Milestones at The Pinnacle Mohali</h2>
+                            <p
+                                class="font-jost font-normal text-[20px] leading-[20px] lg:leading-[28px] tracking-[2%] lg:tracking-[2px] text-[#474A49] lg:text-[#003253] text-center">
+                                Discover how The Pinnacle Mohali is taking shape — from double basement parking to
+                                luxury
+                                high-rise towers, premium clubhouse, and landscaped greens. Construction progressing
+                                towards
+                                an
+                                iconic
+                                2028 handover."
+                            </p>
+                        </div>
+                        <!-- Mobile Progress bar -->
+                        <div class="block sm:hidden w-full relative h-[31.39px] sm:h-[33.56px] bg-[#F1F1F1]">
+                            <div
+                                class="absolute top-0 left-0 h-full w-[40%] bg-[#003253] flex items-center justify-end">
+                                <span
+                                    class="font-jost font-medium text-[12px] lg:text-[15.01px] leading-[20.32px] tracking-[0px] sm:leading-[36.03px] absolute text-nowrap top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-white">30%
+                                    Completed</span>
+                                <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/The Pinnacle PPT short 1.webp"
+                                    alt="pinnacle_logo"
+                                    class="absolute w-[17.17px] h-[18.6px] sm:w-[22.48px] sm:h-[24.35px] right-0 top-1/2 -translate-y-1/2">
+                            </div>
+                        </div>
+                        <div class="w-full h-max flex flex-col gap-y-[16.5px]  md:flex-row">
+                            <figure>
+                                <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Building_tower.webp"
+                                    alt="Building-tower"
+                                    class="w-[356.8px] sm:w-full md:w-[447.87px] h-[216.17px] sm:h-full object-fill object-center">
+                            </figure>
+                            <div class="w-full h-max px-[15.26px]">
+                                <div
+                                    class=" w-full flex flex-col items-center justify-between border-b border-[#F1F1F1]">
+                                    <div class=" flex items-center justify-between w-full">
+                                        <div class="w-max flex items-center gap-[11.65px]">
+                                            <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Pre-Construction.webp"
+                                                alt="Tools_icon" class="w-[22px] h-[22px]">
+                                            <p
+                                                class="font-medium font-jost text-[15px] sm:text-[20px] leading-[60px] text-[#003253]">
+                                                Pre-Construction & Foundation Phase</p>
+                                        </div>
+                                        <div
+                                            class="w-[18.81px] h-[18.81px] sm:w-[31.3px] sm:h-[31.3px] rounded-full bg-[#F5F5F5] flex items-center justify-center cursor-pointer">
+                                            <i
+                                                class="fa-solid fa-angle-down text-[#003253] conTructionMileStoneBtn"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="w-full hidden ConsTructionProgressList">
+                                        <li class="bg-[#FBFBFB] py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class="w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon" class="w-[7.6px] h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Ground Floor Slab</p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/green_check.png"
+                                                        alt="Green_check_icon"
+                                                        class="w-[8.25px] h-[6px] sm:w-[10.77px] sm:h-[7.83px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#0B5E32] tracking-[2%]">Completed</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class=" py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class="w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon" class="w-[7.6px] h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Floors 1 to 10 </p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/time.webp"
+                                                        alt="time_icon"
+                                                        class="w-[10.06px] h-[10.83px] sm:w-[11.13px] sm:h-[11.99px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#165995] tracking-[2%]">Under
+                                                        Progress</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="bg-[#FBFBFB] py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class=" w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon"
+                                                            class="w-[6.41px] h-[4.66px] sm:w-[7.6px] sm:h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Floors 11 to 20 </p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/time_icon_yellow.png"
+                                                        alt="time_icon"
+                                                        class="w-[10.06px] h-[10.83px] sm:w-[11.13px] sm:h-[11.99px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#D4A762] tracking-[2%]">Pending</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class="w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon"
+                                                            class="w-[6.41px] h-[4.66px] sm:w-[7.6px] sm:h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Floors 21 to 36 </p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/green_check.png"
+                                                        alt="Green_check_icon"
+                                                        class="w-[8.25px] h-[6px] sm:w-[10.77px] sm:h-[7.83px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#0B5E32] tracking-[2%]">Completed</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class=" flex flex-col items-center justify-between w-auto border-b border-[#F1F1F1]">
+                                    <div class=" flex items-center justify-between w-full">
+                                        <div class="w-max flex items-center gap-[11.65px]">
+                                            <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Tower_icon.webp"
+                                                alt="tower_icon" class="w-[22px] h-[22px]">
+                                            <p
+                                                class="font-medium font-jost text-[15px] sm:text-[20px] leading-[60px] text-[#003253]">
+                                                Structural Phase (Tower Build-Up)</p>
+                                        </div>
+                                        <div
+                                            class="w-[18.81px] h-[18.81px] sm:w-[31.3px] sm:h-[31.3px] rounded-full bg-[#F5F5F5] flex items-center justify-center cursor-pointer">
+                                            <i
+                                                class="fa-solid fa-angle-down text-[#003253] conTructionMileStoneBtn"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="w-full hidden ConsTructionProgressList">
+                                        <li class="bg-[#FBFBFB] py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class="w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon" class="w-[7.6px] h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Ground Floor Slab</p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/green_check.png"
+                                                        alt="Green_check_icon"
+                                                        class="w-[8.25px] h-[6px] sm:w-[10.77px] sm:h-[7.83px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#0B5E32] tracking-[2%]">Completed</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class=" py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class="w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon" class="w-[7.6px] h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Floors 1 to 10 </p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/time.webp"
+                                                        alt="time_icon"
+                                                        class="w-[10.06px] h-[10.83px] sm:w-[11.13px] sm:h-[11.99px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#165995] tracking-[2%]">Under
+                                                        Progress</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="bg-[#FBFBFB] py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class=" w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon"
+                                                            class="w-[6.41px] h-[4.66px] sm:w-[7.6px] sm:h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Floors 11 to 20 </p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/time_icon_yellow.png"
+                                                        alt="time_icon"
+                                                        class="w-[10.06px] h-[10.83px] sm:w-[11.13px] sm:h-[11.99px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#D4A762] tracking-[2%]">Pending</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class="w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon"
+                                                            class="w-[6.41px] h-[4.66px] sm:w-[7.6px] sm:h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Floors 21 to 36 </p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/green_check.png"
+                                                        alt="Green_check_icon"
+                                                        class="w-[8.25px] h-[6px] sm:w-[10.77px] sm:h-[7.83px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#0B5E32] tracking-[2%]">Completed</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class=" flex flex-col items-center justify-between w-auto border-b border-[#F1F1F1]">
+                                    <div class=" flex items-center justify-between w-full">
+                                        <div class="w-max flex items-center gap-[11.65px]">
+                                            <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/oui_vis-visual-builder.webp"
+                                                alt="Ammenities_icon" class="w-[22px] h-[22px]">
+                                            <p
+                                                class="font-medium font-jost text-[15px] sm:text-[20px] leading-[60px] text-[#003253]">
+                                                Amenities & Outdoor Works</p>
+                                        </div>
+                                        <div
+                                            class="w-[18.81px] h-[18.81px] sm:w-[31.3px] sm:h-[31.3px] rounded-full bg-[#F5F5F5] flex items-center justify-center cursor-pointer">
+                                            <i
+                                                class="fa-solid fa-angle-down text-[#003253] conTructionMileStoneBtn"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="w-full hidden ConsTructionProgressList">
+                                        <li class="bg-[#FBFBFB] py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class="w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon" class="w-[7.6px] h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Ground Floor Slab</p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/green_check.png"
+                                                        alt="Green_check_icon"
+                                                        class="w-[8.25px] h-[6px] sm:w-[10.77px] sm:h-[7.83px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#0B5E32] tracking-[2%]">Completed</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class=" py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class="w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon" class="w-[7.6px] h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Floors 1 to 10 </p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/time.webp"
+                                                        alt="time_icon"
+                                                        class="w-[10.06px] h-[10.83px] sm:w-[11.13px] sm:h-[11.99px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#165995] tracking-[2%]">Under
+                                                        Progress</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="bg-[#FBFBFB] py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class=" w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon"
+                                                            class="w-[6.41px] h-[4.66px] sm:w-[7.6px] sm:h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Floors 11 to 20 </p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/time_icon_yellow.png"
+                                                        alt="time_icon"
+                                                        class="w-[10.06px] h-[10.83px] sm:w-[11.13px] sm:h-[11.99px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#D4A762] tracking-[2%]">Pending</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class="w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon"
+                                                            class="w-[6.41px] h-[4.66px] sm:w-[7.6px] sm:h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Floors 21 to 36 </p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/green_check.png"
+                                                        alt="Green_check_icon"
+                                                        class="w-[8.25px] h-[6px] sm:w-[10.77px] sm:h-[7.83px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#0B5E32] tracking-[2%]">Completed</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class=" flex flex-col items-center justify-between w-auto border-b border-[#F1F1F1]">
+                                    <div class=" flex items-center justify-between w-full">
+                                        <div class="w-max flex items-center gap-[11.65px]">
+                                            <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Finishing_icon.webp"
+                                                alt="finishing_icon" class="w-[22px] h-[22px]">
+                                            <p
+                                                class="font-medium font-jost text-[15px] sm:text-[20px] leading-[60px] text-[#003253]">
+                                                Finishing Phase</p>
+                                        </div>
+                                        <div
+                                            class="w-[18.81px] h-[18.81px] sm:w-[31.3px] sm:h-[31.3px] rounded-full bg-[#F5F5F5] flex items-center justify-center cursor-pointer">
+                                            <i
+                                                class="fa-solid fa-angle-down text-[#003253] conTructionMileStoneBtn"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="w-full hidden ConsTructionProgressList">
+                                        <li class="bg-[#FBFBFB] py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class="w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon" class="w-[7.6px] h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Ground Floor Slab</p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/green_check.png"
+                                                        alt="Green_check_icon"
+                                                        class="w-[8.25px] h-[6px] sm:w-[10.77px] sm:h-[7.83px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#0B5E32] tracking-[2%]">Completed</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class=" py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class="w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon" class="w-[7.6px] h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Floors 1 to 10 </p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/time.webp"
+                                                        alt="time_icon"
+                                                        class="w-[10.06px] h-[10.83px] sm:w-[11.13px] sm:h-[11.99px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#165995] tracking-[2%]">Under
+                                                        Progress</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="bg-[#FBFBFB] py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class=" w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon"
+                                                            class="w-[6.41px] h-[4.66px] sm:w-[7.6px] sm:h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Floors 11 to 20 </p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/time_icon_yellow.png"
+                                                        alt="time_icon"
+                                                        class="w-[10.06px] h-[10.83px] sm:w-[11.13px] sm:h-[11.99px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#D4A762] tracking-[2%]">Pending</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="py-[4.86px]">
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class="w-max flex items-center gap-[11.65px]">
+                                                    <div
+                                                        class="w-[16.24px] h-[16.24px] sm:w-[19.27px] sm:h-[19.27px] border-[0.54px] border-[#173F63] rounded-full flex items-center justify-center">
+                                                        <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/Done.webp"
+                                                            alt="check_icon"
+                                                            class="w-[6.41px] h-[4.66px] sm:w-[7.6px] sm:h-[5.53px]">
+                                                    </div>
+                                                    <p
+                                                        class="font-medium font-jost text-[14px] sm:text-[18px] leading-[25.04px] text-[#2C2C2C]">
+                                                        Floors 21 to 36 </p>
+                                                </div>
+                                                <div
+                                                    class="w-[134.72px] h-max flex gap-[7.33px] items-center justify-start">
+                                                    <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/green_check.png"
+                                                        alt="Green_check_icon"
+                                                        class="w-[8.25px] h-[6px] sm:w-[10.77px] sm:h-[7.83px]">
+                                                    <span
+                                                        class="font-jost font-medium text-[14px] sm:text-[16px] leading-[25.04px] text-[#0B5E32] tracking-[2%]">Completed</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Desktop Progress bar -->
+                    <div class="hidden sm:block w-full relative h-[31.39px] sm:h-[33.56px] bg-[#F1F1F1]">
+                        <div class="absolute top-0 left-0 h-full w-[30%] bg-[#003253] flex items-center justify-end">
+                            <span
+                                class="font-jost font-medium text-[12px] lg:text-[15.01px] leading-[20.32px] tracking-[0px] sm:leading-[36.03px] absolute text-nowrap top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-white">30%
+                                Completed</span>
+                            <img src="./mediaFiles/Home page/Counter number/Construction Milestones at The Pinnacle Mohali/The Pinnacle PPT short 1.webp"
+                                alt="pinnacle_logo"
+                                class="absolute w-[17.17px] h-[18.6px] sm:w-[22.48px] sm:h-[24.35px] right-0 top-1/2 -translate-y-1/2">
+                        </div>
+                    </div>
+                </div>
+                <p
+                    class="text-center font-jost text-[14px] md:text-[20px] leading-[21px] md:leading-[28px] tracking-[2%] teaxt-[#003253]">
+                    Note : The
+                    pinnacle mohali project progress recoded till June 2025*.</p>
+            </div>
+        </section>
+
+        <!-- Own an Ultra-Luxury 3/4/5 BHK by STJ Group’s Pinnacle MCC Mohali’s -->
+        <section class="relative w-full">
+            <!-- Background Image -->
+            <img src="./mediaFiles/Home page/Counter number/Hero section and logos/Frame 2095586641 1.webp"
+                alt="Ultraluxury_tower" class="hidden md:block w-full max-h-[650px] object-cover object-center">
+
+            <!-- Mobile Background with Decorative -->
+            <div class="md:hidden relative h-[700px]">
+                <img src="./mediaFiles/Home page/Counter number/Hero section and logos/Frame 2095586641 1.webp"
+                    alt="Ultraluxury_tower2" class="w-full h-[500px] object-fill object-top">
+                <img src="./mediaFiles/Home page/Counter number/own_a_Luxury/Blue_decorative.png" alt="Decorative"
+                    class="absolute inset-0 w-full h-full">
+            </div>
+
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black/30"></div>
+
+            <!-- Content -->
+            <div class="absolute inset-0 flex items-end justify-center lg:justify-start py-5 px-2 lg:px-16 z-[2]"
+                style="background-image: var(--Buying-Ultralaxuries-bg-Decorative); background-size:cover; background-position:center;">
+                <div class="max-w-lg text-center lg:text-left  flex flex-col items-center">
+                    <!-- Logo + Heading -->
+                    <div class="flex flex-col items-center lg:items-start gap-4">
+                        <img src="./mediaFiles/Home page/Counter number/Start your homebuying Journey/The Pinnacle PPT short 2.png"
+                            alt="pinnacle_PPt" class="w-20 lg:w-32 m-auto">
+                        <h3 class="text-center font-jost font-semibold text-lg lg:text-2xl leading-snug 
+                   bg-gradient-to-b from-[#FFC267] to-[#99753E] bg-clip-text text-transparent">
+                            Own an Ultra-Luxury 3/4/5 BHK by STJ Group’s Pinnacle MCC Mohali’s
+                        </h3>
+                    </div>
+
+                    <!-- Subtext -->
+                    <p class="font-jost text-sm lg:text-xl text-white text-center">
+                        Launch inventory open now <br> at exclusive prices.
+                    </p>
+
+                    <!-- RERA -->
+                    <span class="block w-full max-w-md py-2 border border-white/20 bg-[#16355099] 
+                   font-jost text-xs lg:text-lg uppercase text-white text-center m-auto">
+                        RERA Registered : PBRERA-SAS81-PR1166
+                    </span>
+
+                    <!-- Status + Handover -->
+                    <div class="grid grid-cols-2 gap-[16px] mt-4 relative">
+                        <div class="flex items-center gap-2">
+                            <img src="./mediaFiles/Home page/Counter number/own_a_Luxury/status_icon.png" alt="Icon"
+                                class="w-[19.85px] h-[19.85px] sm:w-6 sm:h-6">
+                            <div class="">
+                                <span class="block font-jost text-white text-start text-[10px] lg:text-xs">Possession Status</span>
+                                <span class="block font-jost text-white font-medium tracking-[0%] text-nowrap text-[13px] lg:text-lg uppercase">Under
+                                    Construction</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <img src="./mediaFiles/Home page/Counter number/own_a_Luxury/key_icon.png" alt="Icon"
+                                class="w-[19.85px] h-[19.85px] sm:w-6 sm:h-6">
+                            <div>
+                                <span class="block font-jost text-white text-start text-[10px] lg:text-xs">Handover</span>
+                                <span class="block font-jost text-white tracking-[0%] font-medium text-[13px] lg:text-lg uppercase">December
+                                    2028</span>
+                            </div>
+                        </div>
+                        <!-- Center Divider -->
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 w-px h-10 bg-gradient-to-b from-[#FFC267] to-[#99753E]">
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <button class="mt-6 px-6 py-2 border border-white text-white font-jost font-semibold text-base">
+                        ENQUIRE NOW
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -874,6 +1973,12 @@
 </body>
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- GSAP libraries -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<!-- Custom JS -->
 <script type="module" src="./script/main.js"></script>
 
 </html>
