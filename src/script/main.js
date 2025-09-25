@@ -1,3 +1,29 @@
+ const header = document.getElementById("transparentBGonScroll");
+  const mainHeader = document.getElementById("mainheaderAppear_disappear");
+  let lastScroll = 0;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    // Hide on scroll down, show on scroll up
+    if (currentScroll > lastScroll && currentScroll > 50) {
+      mainHeader.classList.add("translate-y-[-100%]"); // Tailwind to slide up
+    } else {
+      mainHeader.classList.remove("translate-y-[-100%]");
+    }
+
+    // Background change on scroll
+    if (currentScroll > 50) {
+      header.classList.remove("bg-white", "shadow-md");
+      header.classList.add("sm:bg-transparent");
+    } else {
+      header.classList.add("bg-white", "shadow-md");
+      header.classList.remove("sm:bg-transparent");
+    }
+
+    lastScroll = currentScroll;
+  });
+
 // Initialize Swiper top Banner
 var swiper = new Swiper(".mySwiperBanner", {
   loop: false,
@@ -87,18 +113,28 @@ assistanceremovebtn.addEventListener('click', () => {
 })
 
 // assistance ractangular remver btn
+const assistanceBtn = document.getElementById("assistance_circle_btn");
+const assistanceBox = document.getElementById("assistance_ractangular_box");
+const assistanceCloseBtn = document.getElementById("assistanceBox_close_btn");
 
-const assistanceBoxclosebtn = document.getElementById('assistanceBox_close_btn')
-const assistanceRactangularBox = document.getElementById('assistance_ractangular_box')
-const assistanceCircleBtn = document.getElementById('assistance_circle_btn')
+assistanceBtn.addEventListener("click", () => {
+  // Show box
+  assistanceBox.classList.remove("hidden");
+  assistanceBox.classList.add("scale-0");
+  setTimeout(() => {
+    assistanceBox.classList.remove("scale-0");
+    assistanceBox.classList.add("scale-100", "transition-transform", "duration-500", "ease-in-out");
+  }, 10);
+});
 
-assistanceBoxclosebtn.addEventListener('click', () => {
-  assistanceRactangularBox.classList.add('hidden')
-})
-
-assistanceCircleBtn.addEventListener('click', () => {
-  assistanceRactangularBox.classList.remove('hidden')
-})
+assistanceCloseBtn.addEventListener("click", () => {
+  assistanceBox.classList.remove("scale-100");
+  assistanceBox.classList.add("scale-0");
+  
+  setTimeout(() => {
+    assistanceBox.classList.add("hidden");
+  }, 500); 
+});
 
 // Read More Data
 const readMoreBtn = document.getElementById('readMoreBtn');
@@ -158,7 +194,6 @@ setTimeout(handleOdometerOnScroll, 500);
 
 
 // Crafted for top 1% Banner
-
 const swiper2 = new Swiper(".mySwiperBanner2", {
   loop: false,
   effect: "fade",
@@ -173,8 +208,9 @@ const swiper2 = new Swiper(".mySwiperBanner2", {
   },
 });
 
-const fraction2 = document.querySelector('.swiper-fraction2');
-swiper2.on('slideChange', () => {
+// fraction text update
+const fraction2 = document.querySelector(".swiper-fraction2");
+swiper2.on("slideChange", () => {
   fraction2.textContent = `${swiper2.realIndex + 1} / ${swiper2.slides.length}`;
 });
 fraction2.textContent = `1 / ${swiper2.slides.length}`;
@@ -190,7 +226,7 @@ const residenceData = {
     handover: '2028',
     furnishing: 'To Be Announced',
     availability: 'Price on Request ',
-    image: ['./mediaFiles/Home page/Counter number/Products/4BHK1_image.webp','./mediaFiles/Home page/Counter number/Products/4BHK_image.webp'],
+    image: ['./mediaFiles/Home page/Counter number/Products/4BHK1_image.webp', './mediaFiles/Home page/Counter number/Products/4BHK_image.webp'],
     bg: 'var(--4bhk-bg)'
   },
   '3BHKbtn': {
@@ -234,15 +270,15 @@ let swiperInstance;
 // Select all buttons and dynamic content elements
 const bhkButtons = document.querySelectorAll('.BHKResidence');
 const dynamicElements = {
-    title: document.getElementById('dynamic-title'),
-    area: document.getElementById('dynamic-area'),
-    tower: document.getElementById('dynamic-tower'),
-    status: document.getElementById('dynamic-status'),
-    handover: document.getElementById('dynamic-handover'),
-    furnishing: document.getElementById('dynamic-furnishing'),
-    availability: document.getElementById('dynamic-availability'),
-    infoBg: document.getElementById('dynamic-info-bg'),
-    swiperWrapper: document.querySelector('.SignatureResidenceSwiper .swiper-wrapper')
+  title: document.getElementById('dynamic-title'),
+  area: document.getElementById('dynamic-area'),
+  tower: document.getElementById('dynamic-tower'),
+  status: document.getElementById('dynamic-status'),
+  handover: document.getElementById('dynamic-handover'),
+  furnishing: document.getElementById('dynamic-furnishing'),
+  availability: document.getElementById('dynamic-availability'),
+  infoBg: document.getElementById('dynamic-info-bg'),
+  swiperWrapper: document.querySelector('.SignatureResidenceSwiper .swiper-wrapper')
 };
 
 const activeClasses = ['bg-[#003253]', 'text-[white]'];
@@ -250,74 +286,75 @@ const inactiveClasses = ['bg-white', 'text-[#003253]'];
 
 // Function to update the DOM with new data and dynamically create slides
 const updateDom = (key) => {
-    const data = residenceData[key];
-    if (!data) return;
+  const data = residenceData[key];
+  if (!data) return;
 
-    // Update text content
-    dynamicElements.title.textContent = data.title;
-    dynamicElements.area.textContent = `Area: ${data.area}`;
-    dynamicElements.tower.textContent = `Tower: ${data.tower}`;
-    dynamicElements.status.textContent = `Status: ${data.status}`;
-    dynamicElements.handover.textContent = `Expected Handover: ${data.handover}`;
-    dynamicElements.furnishing.textContent = `FURNISHing: ${data.furnishing}`;
-    dynamicElements.availability.textContent = `Availability: ${data.availability}`;
-    
+  // Update text content
+  dynamicElements.title.textContent = data.title;
+  dynamicElements.area.textContent = `Area: ${data.area}`;
+  dynamicElements.tower.textContent = `Tower: ${data.tower}`;
+  dynamicElements.status.textContent = `Status: ${data.status}`;
+  dynamicElements.handover.textContent = `Expected Handover: ${data.handover}`;
+  dynamicElements.furnishing.textContent = `FURNISHing: ${data.furnishing}`;
+  dynamicElements.availability.textContent = `Availability: ${data.availability}`;
 
-    // Clear existing slides
-    dynamicElements.swiperWrapper.innerHTML = '';
 
-    // Create a new slide for each image
-    data.image.forEach(src => {
-        const slide = document.createElement('div');
-        slide.classList.add('swiper-slide');
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = data.title;
-        img.classList.add('h-full', 'w-full', 'object-cover');
-        slide.appendChild(img);
-        dynamicElements.swiperWrapper.appendChild(slide);
-    });
+  // Clear existing slides
+  dynamicElements.swiperWrapper.innerHTML = '';
 
-    // Destroy and re-initialize Swiper to refresh with new slides
-    if (swiperInstance) {
-        swiperInstance.destroy(true, true);
-    }
-    swiperInstance = new Swiper(".SignatureResidenceSwiper", {
-        navigation: {
-            nextEl: ".SignatureResidence-custom-next-button",
-            prevEl: ".SignatureResidence-custom-prev-button",
-        },
-    });
+  // Create a new slide for each image
+  data.image.forEach(src => {
+    const slide = document.createElement('div');
+    slide.classList.add('swiper-slide');
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = data.title;
+    img.classList.add('h-full', 'w-full', 'object-cover');
+    slide.appendChild(img);
+    dynamicElements.swiperWrapper.appendChild(slide);
+  });
+
+  // Destroy and re-initialize Swiper to refresh with new slides
+  if (swiperInstance) {
+    swiperInstance.destroy(true, true);
+  }
+  swiperInstance = new Swiper(".SignatureResidenceSwiper", {
+    effect: "fade",
+    navigation: {
+      nextEl: ".SignatureResidence-custom-next-button",
+      prevEl: ".SignatureResidence-custom-prev-button",
+    },
+  });
 };
 
 // Function to handle button state and data change on click
 const handleButtonClick = (event) => {
-    // Remove active classes from all buttons
-    bhkButtons.forEach(btn => {
-        btn.classList.remove(...activeClasses);
-        btn.classList.add(...inactiveClasses);
-    });
+  // Remove active classes from all buttons
+  bhkButtons.forEach(btn => {
+    btn.classList.remove(...activeClasses);
+    btn.classList.add(...inactiveClasses);
+  });
 
-    // Add active classes to the clicked button
-    const clickedButton = event.currentTarget;
-    clickedButton.classList.add(...activeClasses);
-    clickedButton.classList.remove(...inactiveClasses);
+  // Add active classes to the clicked button
+  const clickedButton = event.currentTarget;
+  clickedButton.classList.add(...activeClasses);
+  clickedButton.classList.remove(...inactiveClasses);
 
-    // Update the DOM with the new data
-    updateDom(clickedButton.id);
+  // Update the DOM with the new data
+  updateDom(clickedButton.id);
 };
 
 // Add event listeners to all buttons
 bhkButtons.forEach(button => {
-    button.addEventListener('click', handleButtonClick);
+  button.addEventListener('click', handleButtonClick);
 });
 
 // Optional: Set a default button on page load
 const defaultButton = document.getElementById('4BHKbtn');
 if (defaultButton) {
-    defaultButton.classList.add(...activeClasses);
-    defaultButton.classList.remove(...inactiveClasses);
-    updateDom(defaultButton.id);
+  defaultButton.classList.add(...activeClasses);
+  defaultButton.classList.remove(...inactiveClasses);
+  updateDom(defaultButton.id);
 }
 
 // Know More Constructions Milestone
@@ -327,35 +364,107 @@ const ConsTructionProgressList = document.querySelectorAll('.ConsTructionProgres
 // Set one section to be open by default on page load
 const defaultIndex = 0;
 if (ConsTructionProgressList[defaultIndex]) {
-    ConsTructionProgressList[defaultIndex].classList.remove('hidden');
-    conTructionMileStoneBtn[defaultIndex].classList.add('rotate-180');
+  ConsTructionProgressList[defaultIndex].classList.remove('hidden');
+  conTructionMileStoneBtn[defaultIndex].classList.add('rotate-180');
 }
 
 conTructionMileStoneBtn.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
+  btn.addEventListener('click', () => {
 
-        // Check if the section is currently visible before toggling
-        const isCurrentlyVisible = !ConsTructionProgressList[index].classList.contains('hidden');
+    // Check if the section is currently visible before toggling
+    const isCurrentlyVisible = !ConsTructionProgressList[index].classList.contains('hidden');
 
-        // Close all other sections
-        ConsTructionProgressList.forEach((content, i) => {
-            if (i !== index) {
-                content.classList.add('hidden');
-                conTructionMileStoneBtn[i].classList.remove('rotate-180');
-            }
-        });
-
-        // Toggle the visibility of the current section
-        ConsTructionProgressList[index].classList.toggle('hidden');
-        btn.classList.toggle('rotate-180');
-
-        // Check if the section was just closed
-        if (isCurrentlyVisible) {
-            // Find the index of the next button, wrapping around if at the end
-            const nextIndex = (index + 1) % conTructionMileStoneBtn.length;
-
-            // Trigger a click on the next button to open the next section
-            conTructionMileStoneBtn[nextIndex].click();
-        }
+    // Close all other sections
+    ConsTructionProgressList.forEach((content, i) => {
+      if (i !== index) {
+        content.classList.add('hidden');
+        conTructionMileStoneBtn[i].classList.remove('rotate-180');
+      }
     });
+
+    // Toggle the visibility of the current section
+    ConsTructionProgressList[index].classList.toggle('hidden');
+    btn.classList.toggle('rotate-180');
+
+    // Check if the section was just closed
+    if (isCurrentlyVisible) {
+      // Find the index of the next button, wrapping around if at the end
+      const nextIndex = (index + 1) % conTructionMileStoneBtn.length;
+
+      // Trigger a click on the next button to open the next section
+      conTructionMileStoneBtn[nextIndex].click();
+    }
+  });
 });
+
+// Testimonial Swiper
+var testimonialSwiper = new Swiper(".TestimonialSwiper", {
+  loop: true,
+  freeMode: true,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 1,
+  breakpoints: {
+    640: {
+      slidesPerView: 1.7,
+    },
+    730: {
+      slidesPerView: 2.3,
+    },
+  }
+});
+
+
+// FAQS
+const faqButtons = document.querySelectorAll('.FAQButton');
+const faqAnswers = document.querySelectorAll('.MakeVisibleOnclick');
+
+// Default open first FAQ
+const defaultFAQIndex = 0;
+if (faqAnswers[defaultFAQIndex]) {
+  faqAnswers[defaultFAQIndex].classList.remove('hidden');
+  const icon = faqButtons[defaultFAQIndex].querySelector("i");
+  icon.classList.remove("fa-plus");
+  icon.classList.add("fa-minus");
+}
+
+faqButtons.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    const isCurrentlyVisible = !faqAnswers[index].classList.contains('hidden');
+
+    // Close all other FAQs
+    faqAnswers.forEach((answer, i) => {
+      if (i !== index) {
+        answer.classList.add('hidden');
+        const otherIcon = faqButtons[i].querySelector("i");
+        otherIcon.classList.remove("fa-minus");
+        otherIcon.classList.add("fa-plus");
+      }
+    });
+
+    // Toggle current FAQ
+    faqAnswers[index].classList.toggle('hidden');
+
+    const currentIcon = btn.querySelector("i");
+    if (faqAnswers[index].classList.contains("hidden")) {
+      currentIcon.classList.remove("fa-minus");
+      currentIcon.classList.add("fa-plus");
+    } else {
+      currentIcon.classList.remove("fa-plus");
+      currentIcon.classList.add("fa-minus");
+    }
+
+    // If closed → auto open next
+    if (isCurrentlyVisible) {
+      const nextIndex = (index + 1) % faqButtons.length;
+      faqButtons[nextIndex].click();
+    }
+  });
+});
+
+
+
+

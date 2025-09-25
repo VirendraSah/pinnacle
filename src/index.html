@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -81,11 +81,11 @@
                         <div class="flex flex-col items-center justify-center gap-[5.6px] cursor-pointer"
                             id="assistance_circle_btn">
                             <div
-                                class=" w-[92.7px] h-[92.7px] bg-[linear-gradient(180deg,rgba(255,194,103,0.5)_0%,rgba(153,117,62,0.5)_100%)] rounded-full m-auto flex items-center justify-center">
+                                class=" w-[92.7px] h-[92.7px] bg-[linear-gradient(180deg,rgba(255,194,103,0.5)_0%,rgba(153,117,62,0.5)_100%)] rounded-full m-auto flex items-center justify-center gradientBGAssistanceBTN">
                                 <div
-                                    class="w-[81.95px] h-[81.95px] bg-[linear-gradient(270deg,rgba(255,194,103,0.6)_0%,rgba(153,117,62,0.6)_100%)] rounded-full flex items-center justify-center">
+                                    class="w-[81.95px] h-[81.95px] bg-[linear-gradient(270deg,rgba(255,194,103,0.6)_0%,rgba(153,117,62,0.6)_100%)] rounded-full flex items-center justify-center gradientBGAssistanceBTN">
                                     <div
-                                        class="w-[73.82px] h-[73.82px] bg-[linear-gradient(180deg,#FFC267_0%,#99753E_100%)] rounded-full flex items-center justify-center">
+                                        class="w-[73.82px] h-[73.82px] bg-[linear-gradient(180deg,#FFC267_0%,#99753E_100%)] rounded-full flex items-center justify-center gradientBGAssistanceBTN">
                                         <div
                                             class="w-[64.13px] h-[64.13px] m-auto flex items-center justify-center border border-white rounded-full bg-white">
                                             <img src="./mediaFiles/Home page/Counter number/user_profile_pic.png"
@@ -110,8 +110,8 @@
             </div>
         </div>
     </div>
-    <header class="fixed h-[70.12px] sm:h-auto bg-white sm:bg-transparent sm:absolute z-10 w-full overflow-x-clip">
-        <div class="max-w-[1240px] flex items-center m-auto p-4 justify-between">
+    <header class="fixed h-[70.12px] sm:h-auto bg-white sm:bg-transparent sm:absolute z-30 w-full overflow-x-clip" id="transparentBGonScroll">
+        <div class="max-w-[1240px] bg-white sm:bg-transparent flex items-center m-auto p-4 justify-between " id="mainheaderAppear_disappear">
             <!-- desktop logo -->
             <figure class="hidden sm:block">
                 <img src="mediaFiles/Home page/Counter number/Hero section and logos/Logo.webp"
@@ -330,7 +330,7 @@
                             <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
                                 Home</h3>
                             <a href="">
-                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.png"
+                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.svg"
                                     alt="link icon" class="w-[15.09px] h-[11.89px] inline-block">
                             </a>
                         </div>
@@ -340,7 +340,7 @@
                             <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
                                 About</h3>
                             <a href="">
-                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.png"
+                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.svg"
                                     alt="link icon" class="w-[15.09px] h-[11.89px] inline-block">
                             </a>
                         </div>
@@ -481,7 +481,7 @@
                             <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
                                 Amenities </h3>
                             <a href="">
-                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.png"
+                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.svg"
                                     alt="link icon" class="w-[15.09px] h-[11.89px] inline-block">
                             </a>
                         </div>
@@ -490,7 +490,7 @@
                             <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
                                 Specifications </h3>
                             <a href="">
-                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.png"
+                                <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.svg"
                                     alt="link icon" class="w-[15.09px] h-[11.89px] inline-block">
                             </a>
                         </div>
@@ -1126,6 +1126,52 @@
             <div class="w-full h-full relative">
                 <div class="swiper mySwiperBanner2 h-full">
                     <div class="swiper-wrapper h-full">
+                        <div class="swiper-slide relative h-full flex">
+                            <div class="w-full h-auto flex lg:flex-row flex-col">
+                                <!-- image -->
+                                <div class="grow lg:flex-[2.7]">
+                                    <img src="./mediaFiles/Home page/Counter number/slider 01145/Frame 2095588792.webp"
+                                        alt="banner-1" class="w-full h-full">
+                                </div>
+                                <!-- content -->
+                                <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
+                                    style="background-image: var(--paper-crashes-BG);">
+                                    <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[16px]">
+                                        <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
+                                            Crafted by Hafeez Contractor</h3>
+                                        <p class="font-jost font-normal text-[17px] leading-[150%] text-[#003253]">
+                                            India’s most renowned architect — Padma Bhushan awardee Hafeez Contractor —
+                                            has
+                                            envisioned The Pinnacle to redefine the skyline of Mohali. His legacy of
+                                            designing India's most iconic buildings now adds prestige to your address.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide relative h-full flex">
+                            <div class="w-full h-auto flex lg:flex-row flex-col">
+                                <!-- image -->
+                                <div class="grow lg:flex-[2.7]">
+                                    <img src="./mediaFiles/Home page/Counter number/slider 01145/Frame 2095588037-3.webp"
+                                        alt="banner-1" class="w-full h-full">
+                                </div>
+                                <!-- content -->
+                                <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
+                                    style="background-image: var(--paper-crashes-BG);">
+                                    <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[16px]">
+                                        <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
+                                            Interiors by Zafar Choudhary</h3>
+                                        <p class="font-jost font-normal text-[17px] leading-[150%] text-[#003253]">
+                                            From the entrance lobby to the master suite, every space is designed by
+                                            Zafar Choudhary — one of India’s elite luxury interior consultants. Expect
+                                            finely balanced aesthetics, comfort, and timeless class in every corner.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="swiper-slide relative h-full flex">
                             <div class="w-full h-auto flex lg:flex-row flex-col">
                                 <!-- image -->
@@ -1940,8 +1986,10 @@
                             <img src="./mediaFiles/Home page/Counter number/own_a_Luxury/status_icon.png" alt="Icon"
                                 class="w-[19.85px] h-[19.85px] sm:w-6 sm:h-6">
                             <div class="">
-                                <span class="block font-jost text-white text-start text-[10px] lg:text-xs">Possession Status</span>
-                                <span class="block font-jost text-white font-medium tracking-[0%] text-nowrap text-[13px] lg:text-lg uppercase">Under
+                                <span class="block font-jost text-white text-start text-[10px] lg:text-xs">Possession
+                                    Status</span>
+                                <span
+                                    class="block font-jost text-white font-medium tracking-[0%] text-nowrap text-[13px] lg:text-lg uppercase">Under
                                     Construction</span>
                             </div>
                         </div>
@@ -1949,8 +1997,10 @@
                             <img src="./mediaFiles/Home page/Counter number/own_a_Luxury/key_icon.png" alt="Icon"
                                 class="w-[19.85px] h-[19.85px] sm:w-6 sm:h-6">
                             <div>
-                                <span class="block font-jost text-white text-start text-[10px] lg:text-xs">Handover</span>
-                                <span class="block font-jost text-white tracking-[0%] font-medium text-[13px] lg:text-lg uppercase">December
+                                <span
+                                    class="block font-jost text-white text-start text-[10px] lg:text-xs">Handover</span>
+                                <span
+                                    class="block font-jost text-white tracking-[0%] font-medium text-[13px] lg:text-lg uppercase">December
                                     2028</span>
                             </div>
                         </div>
@@ -1968,7 +2018,939 @@
             </div>
         </section>
 
+        <!-- Customer Testimonial -->
+        <section class="w-full mt-[68.32px] mb-[80px] h-max bg-cover bg-no-repeat bg-center"
+            style="background-image: var(--paper-crashes-BG)">
+            <div class="flex flex-wrap items-center justify-center lg:flex-nowrap gap-4 lg:gap-6">
+                <!-- Left Images -->
+                <div class="lg:w-[40%] w-full xl:w-[30%] relative flex items-center">
+                    <!-- Main Image -->
+                    <figure class="max-w-[345px] h-[317px] sm:h-auto relative z-10">
+                        <img src="./mediaFiles/Home page/Counter number/Banner & Testimonial/Building_Tower.webp"
+                            alt="Building_tower" class="w-full h-full object-cover object-center" />
+                    </figure>
+
+                    <!-- Overlap Image -->
+                    <figure
+                        class="max-w-[286px] h-[252px] sm:h-auto -translate-x-1/2 sm:translate-0 sm:max-h-[372px] sm:-ml-[143px] z-20">
+                        <img src="./mediaFiles/Home page/Counter number/Banner & Testimonial/Pool_image.webp"
+                            alt="Pool_image" class="w-full h-full object-cover object-center" />
+                    </figure>
+                </div>
+
+                <!-- Right Content -->
+                <div class="lg:w-[60%] xl:w-[70%] h-full flex items-center overflow-hidden px-[13.52px]">
+                    <div class="w-full">
+                        <div class="flex flex-col gap-3 mb-6">
+                            <h2 class="text-[24px] lg:text-[40px] text-[var(--main-blue)] font-medium">
+                                Customer stories
+                            </h2>
+                            <p class="text-[16px] lg:text-[20px] text-[var(--main-blue)] font-medium">
+                                “Voices of trust, confidence, and satisfaction.”
+                            </p>
+                        </div>
+
+                        <!-- Swiper -->
+                        <div class="swiper TestimonialSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide flex-shrink-0 flex justify-center">
+                                    <div class="max-w-[391px] bg-white border border-[#EAEAEA] flex flex-col h-max">
+                                        <div class="px-[30px] py-[30px]">
+                                            <p class="text-[#1A1B1D] leading-[100%] tracking-[2%]">
+                                                “As an NRI investor, I evaluated several options across Chandigarh and
+                                                Mohali.
+                                                What stood out about The Pinnacle Mohali was the transparency, detailed
+                                                documentation, and long-term value potential. The developer’s commitment
+                                                to
+                                                building a landmark shows at every step.”
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="flex items-center justify-between w-full bg-[#F6F6F6] border-t border-[var-(--main-blue)] px-[26.11px] py-[10.23px]">
+                                            <div class="flex items-center gap-[11.11px]">
+                                                <figure class="w-[61.38px] h-[61.38px]">
+                                                    <img src="./mediaFiles/Home page/Counter number/Banner & Testimonial/men_profile.webp"
+                                                        alt="profile_image"
+                                                        class="w-full h-full object-fill object-center">
+                                                </figure>
+                                                <div class="flex flex-col items-start gap-[2.76px]">
+                                                    <h4
+                                                        class="font-semibold text-[15.77px] leading-[100%] tracking-[2%]">
+                                                        Rajeev
+                                                        Malhotra</h4>
+                                                    <p class="text-[13.14px] leading-[100%] tracking-[2%]">NRI Investor,
+                                                        Singapore
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <figure class="w-[59px] h-[54px] lg:w-[25.80px] lg:h-[54px]">
+                                                <img src="./mediaFiles/Home page/Counter number/Banner & Testimonial/Exclimatry Sign.svg"
+                                                    alt="Exclimatery Sign"
+                                                    class="w-full h-full object-fill object-center">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide flex-shrink-0 flex justify-center">
+                                    <div class="max-w-[391px] bg-white border border-[#EAEAEA] flex flex-col h-max">
+                                        <div class="px-[30px] py-[30px]">
+                                            <p class="text-[#1A1B1D] leading-[100%] tracking-[2%]">
+                                                “As an NRI investor, I evaluated several options across Chandigarh and
+                                                Mohali.
+                                                What stood out about The Pinnacle Mohali was the transparency, detailed
+                                                documentation, and long-term value potential. The developer’s commitment
+                                                to
+                                                building a landmark shows at every step.”
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="flex items-center justify-between w-full bg-[#F6F6F6] border-t border-[var-(--main-blue)] px-[26.11px] py-[10.23px]">
+                                            <div class="flex items-center gap-[11.11px]">
+                                                <figure class="w-[61.38px] h-[61.38px]">
+                                                    <img src="./mediaFiles/Home page/Counter number/Banner & Testimonial/men_profile.webp"
+                                                        alt="profile_image"
+                                                        class="w-full h-full object-fill object-center">
+                                                </figure>
+                                                <div class="flex flex-col items-start gap-[2.76px]">
+                                                    <h4
+                                                        class="font-semibold text-[15.77px] leading-[100%] tracking-[2%]">
+                                                        Rajeev
+                                                        Malhotra</h4>
+                                                    <p class="text-[13.14px] leading-[100%] tracking-[2%]">NRI Investor,
+                                                        Singapore
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <figure class="w-[59px] h-[54px] lg:w-[25.80px] lg:h-[54px]">
+                                                <img src="./mediaFiles/Home page/Counter number/Banner & Testimonial/Exclimatry Sign.svg"
+                                                    alt="Exclimatery Sign"
+                                                    class="w-full h-full object-fill object-center">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide flex-shrink-0 flex justify-center">
+                                    <div class="max-w-[391px] bg-white border border-[#EAEAEA] flex flex-col h-max">
+                                        <div class="px-[30px] py-[30px]">
+                                            <p class="text-[#1A1B1D] leading-[100%] tracking-[2%]">
+                                                “As an NRI investor, I evaluated several options across Chandigarh and
+                                                Mohali.
+                                                What stood out about The Pinnacle Mohali was the transparency, detailed
+                                                documentation, and long-term value potential. The developer’s commitment
+                                                to
+                                                building a landmark shows at every step.”
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="flex items-center justify-between w-full bg-[#F6F6F6] border-t border-[var-(--main-blue)] px-[26.11px] py-[10.23px]">
+                                            <div class="flex items-center gap-[11.11px]">
+                                                <figure class="w-[61.38px] h-[61.38px]">
+                                                    <img src="./mediaFiles/Home page/Counter number/Banner & Testimonial/men_profile.webp"
+                                                        alt="profile_image"
+                                                        class="w-full h-full object-fill object-center">
+                                                </figure>
+                                                <div class="flex flex-col items-start gap-[2.76px]">
+                                                    <h4
+                                                        class="font-semibold text-[15.77px] leading-[100%] tracking-[2%]">
+                                                        Rajeev
+                                                        Malhotra</h4>
+                                                    <p class="text-[13.14px] leading-[100%] tracking-[2%]">NRI Investor,
+                                                        Singapore
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <figure class="w-[59px] h-[54px] lg:w-[25.80px] lg:h-[54px]">
+                                                <img src="./mediaFiles/Home page/Counter number/Banner & Testimonial/Exclimatry Sign.svg"
+                                                    alt="Exclimatery Sign"
+                                                    class="w-full h-full object-fill object-center">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide flex-shrink-0 flex justify-center">
+                                    <div class="max-w-[391px] bg-white border border-[#EAEAEA] flex flex-col h-max">
+                                        <div class="px-[30px] py-[30px]">
+                                            <p class="text-[#1A1B1D] leading-[100%] tracking-[2%]">
+                                                “As an NRI investor, I evaluated several options across Chandigarh and
+                                                Mohali.
+                                                What stood out about The Pinnacle Mohali was the transparency, detailed
+                                                documentation, and long-term value potential. The developer’s commitment
+                                                to
+                                                building a landmark shows at every step.”
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="flex items-center justify-between w-full bg-[#F6F6F6] border-t border-[var-(--main-blue)] px-[26.11px] py-[10.23px]">
+                                            <div class="flex items-center gap-[11.11px]">
+                                                <figure class="w-[61.38px] h-[61.38px]">
+                                                    <img src="./mediaFiles/Home page/Counter number/Banner & Testimonial/men_profile.webp"
+                                                        alt="profile_image"
+                                                        class="w-full h-full object-fill object-center">
+                                                </figure>
+                                                <div class="flex flex-col items-start gap-[2.76px]">
+                                                    <h4
+                                                        class="font-semibold text-[15.77px] leading-[100%] tracking-[2%]">
+                                                        Rajeev
+                                                        Malhotra</h4>
+                                                    <p class="text-[13.14px] leading-[100%] tracking-[2%]">NRI Investor,
+                                                        Singapore
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <figure class="w-[59px] h-[54px] lg:w-[25.80px] lg:h-[54px]">
+                                                <img src="./mediaFiles/Home page/Counter number/Banner & Testimonial/Exclimatry Sign.svg"
+                                                    alt="Exclimatery Sign"
+                                                    class="w-full h-full object-fill object-center">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us BTN -->
+        <section class="hidden md:block w-full h-max px-[100px] bg-[var(--main-blue)]">
+            <div class="w-full h-max py-[29.85px] flex items-center justify-between">
+                <p class="font-medium text-[25px] leading-[51px] text-white">Are you interested in this Property?</p>
+                <button type="button"
+                    class="text-white font-semibold text-[16.37px] leading-[100%] px-[25px] py-[5.5px] bg-gradient-to-b from-[#FFC267] to-[#99753E] rounded-4xl font-jost cursor-pointer">
+                    connect with us
+                </button>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="w-full h-max sm:py-[50px] lg:py-[80px] px-[16px] md:px-[20px] lg:px-[99px] bg-[#F9F9F9]">
+            <div class="w-full max-h-[565px] flex flex-col gap-[24.52px] md:gap-[48px]">
+                <div class="flex flex-col items-start">
+                    <h2
+                        class="font-jost text-[#173150] font-semibold md:font-medium text-[24px] md:text-[40px] leading-[36px] md:leading-[60px] tracking-[0px]">
+                        Frequently asked questions</h2>
+                    <p
+                        class="font-jost font-normal md:font-medium text-[16px] md:text-[20px] leading-[160%] md:leading-[28px] text-[#474A49]">
+                        Get clarity on The Pinnacle Mohali project — everything you need to make an informed decision.
+                    </p>
+                </div>
+                <div
+                    class="relative flex flex-col gap-[23px] w-full h-[565px] overflow-y-scroll custom-scrollbar pr-2.5">
+                    <div
+                        class="flex flex-col py-[12px] w-full border-b-[0.5px] border-[#989797] gap-[6.74px] md:gap-[9px]">
+                        <div class="flex w-full items-center justify-between">
+                            <h3
+                                class="font-jost font-medium text-[17px] md:text-[20px] leading-[100%] text-[var(--main-blue)]">
+                                What
+                                apartment types are available in The Pinnacle Mohali?</h3>
+                            <div
+                                class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
+                                <i class="fa-solid fa-minus text-white md:text-[#173F63] text-[12px] "></i>
+                            </div>
+                        </div>
+                        <p
+                            class="text-[#2C2C2C] font-jost text-[16px] md:text-[18px] leading-[100%] hidden MakeVisibleOnclick">
+                            The
+                            project offers spacious 4 BHK
+                            luxury apartments in Zenith & Crest towers. Upcoming launches include 3 BHK, 5 BHK, and
+                            exclusive Cloud Villas (penthouses).</p>
+                    </div>
+                    <div
+                        class="flex flex-col py-[12px] w-full border-b-[0.5px] border-[#989797] gap-[6.74px] md:gap-[9px]">
+                        <div class="flex w-full items-center justify-between">
+                            <h3
+                                class="font-jost font-medium text-[17px] md:text-[20px] leading-[100%] text-[var(--main-blue)]">
+                                What
+                                apartment types are available in The Pinnacle Mohali?</h3>
+                            <div
+                                class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
+                                <i class="fa-solid fa-plus text-white md:text-[#173F63] text-[12px] "></i>
+                            </div>
+                        </div>
+                        <p
+                            class="text-[#2C2C2C] font-jost text-[16px] md:text-[18px] leading-[100%] hidden MakeVisibleOnclick">
+                            The
+                            project offers spacious 4 BHK
+                            luxury apartments in Zenith & Crest towers. Upcoming launches include 3 BHK, 5 BHK, and
+                            exclusive Cloud Villas (penthouses).</p>
+                    </div>
+                    <div
+                        class="flex flex-col py-[12px] w-full border-b-[0.5px] border-[#989797] gap-[6.74px] md:gap-[9px]">
+                        <div class="flex w-full items-center justify-between">
+                            <h3
+                                class="font-jost font-medium text-[17px] md:text-[20px] leading-[100%] text-[var(--main-blue)]">
+                                What
+                                apartment types are available in The Pinnacle Mohali?</h3>
+                            <div
+                                class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
+                                <i class="fa-solid fa-plus text-white md:text-[#173F63] text-[12px] "></i>
+                            </div>
+                        </div>
+                        <p
+                            class="text-[#2C2C2C] font-jost text-[16px] md:text-[18px] leading-[100%] hidden MakeVisibleOnclick">
+                            The
+                            project offers spacious 4 BHK
+                            luxury apartments in Zenith & Crest towers. Upcoming launches include 3 BHK, 5 BHK, and
+                            exclusive Cloud Villas (penthouses).</p>
+                    </div>
+                    <div
+                        class="flex flex-col py-[12px] w-full border-b-[0.5px] border-[#989797] gap-[6.74px] md:gap-[9px]">
+                        <div class="flex w-full items-center justify-between">
+                            <h3
+                                class="font-jost font-medium text-[17px] md:text-[20px] leading-[100%] text-[var(--main-blue)]">
+                                What
+                                apartment types are available in The Pinnacle Mohali?</h3>
+                            <div
+                                class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
+                                <i class="fa-solid fa-plus text-white md:text-[#173F63] text-[12px] "></i>
+                            </div>
+                        </div>
+                        <p
+                            class="text-[#2C2C2C] font-jost text-[16px] md:text-[18px] leading-[100%] hidden MakeVisibleOnclick">
+                            The
+                            project offers spacious 4 BHK
+                            luxury apartments in Zenith & Crest towers. Upcoming launches include 3 BHK, 5 BHK, and
+                            exclusive Cloud Villas (penthouses).</p>
+                    </div>
+                    <div
+                        class="flex flex-col py-[12px] w-full border-b-[0.5px] border-[#989797] gap-[6.74px] md:gap-[9px]">
+                        <div class="flex w-full items-center justify-between">
+                            <h3
+                                class="font-jost font-medium text-[17px] md:text-[20px] leading-[100%] text-[var(--main-blue)]">
+                                What
+                                apartment types are available in The Pinnacle Mohali?</h3>
+                            <div
+                                class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
+                                <i class="fa-solid fa-plus text-white md:text-[#173F63] text-[12px] "></i>
+                            </div>
+                        </div>
+                        <p
+                            class="text-[#2C2C2C] font-jost text-[16px] md:text-[18px] leading-[100%] hidden MakeVisibleOnclick">
+                            The
+                            project offers spacious 4 BHK
+                            luxury apartments in Zenith & Crest towers. Upcoming launches include 3 BHK, 5 BHK, and
+                            exclusive Cloud Villas (penthouses).</p>
+                    </div>
+                    <div
+                        class="flex flex-col py-[12px] w-full border-b-[0.5px] border-[#989797] gap-[6.74px] md:gap-[9px]">
+                        <div class="flex w-full items-center justify-between">
+                            <h3
+                                class="font-jost font-medium text-[17px] md:text-[20px] leading-[100%] text-[var(--main-blue)]">
+                                What
+                                apartment types are available in The Pinnacle Mohali?</h3>
+                            <div
+                                class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
+                                <i class="fa-solid fa-plus text-white md:text-[#173F63] text-[12px] "></i>
+                            </div>
+                        </div>
+                        <p
+                            class="text-[#2C2C2C] font-jost text-[16px] md:text-[18px] leading-[100%] hidden MakeVisibleOnclick">
+                            The
+                            project offers spacious 4 BHK
+                            luxury apartments in Zenith & Crest towers. Upcoming launches include 3 BHK, 5 BHK, and
+                            exclusive Cloud Villas (penthouses).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DownLoads & Pricing -->
+        <section class="w-full h-max pb-[80px] px-[16px] pt-[30px] md:pt-[0px] md:px-[0px]">
+            <div class="w-full grid grid-cols-1 md:grid-cols-[60%_40%] gap-y-[19.03px]">
+                <figure class="w-full h-full">
+                    <!-- Desktop Image -->
+                    <img src="./mediaFiles/Home page/Counter number/Downloads/Downloads_banner.png" alt="Banner"
+                        class="w-full h-full hidden md:block">
+                    <!--Mobile Image  -->
+                    <img src="./mediaFiles/Home page/Counter number/Downloads/Download_banner_mobile.png" alt="Banner_2"
+                        class="w-full  block md:hidden max-h-[369px] object-fill object-center">
+                </figure>
+                <div class="bg-white flex items-center justify-center relative">
+                    <div class="flex flex-col gap-[22px]">
+                        <div>
+                            <h3
+                                class="text-center md:text-start font-jost font-semibold lg:font-medium text-[24px] lg:text-[40px] leading-[36px] lg:leading-[60px] text-[var(--main-blue)]">
+                                Downloads & Pricing</h3>
+                            <p
+                                class="text-center md:text-start lg:text-[#2C2C2C] text-[#474A49] font-jost text-[16px] lg:text-[20px] leading-[26px] lg:leading-[34px] tracking-[2%]">
+                                Access brochure, site plan, and <br /> price list for The Pinnacle Mohali.</p>
+                        </div>
+                        <div class="flex flex-col gap-[13px]">
+                            <button type="button"
+                                class="w-[278px] h-[46px] flex items-center justify-start gap-[13.17px] border-[0.8787px]  border-[#173F63] rounded-[6.1509px] cursor-pointer px-[32px]">
+                                <img src="./mediaFiles/Home page/Counter number/Downloads/Brochure_icon.webp"
+                                    alt="Brochure_icon" class="w-[19.65px] h-[19.65px]">
+                                <span
+                                    class="font-jost text-[17.57px] leading-[100%] uppercase text-[#003253] text-nowrap">Download
+                                    Brochure</span>
+                            </button>
+                            <button type="button"
+                                class="w-[278px] h-[46px] flex items-center justify-start gap-[13.17px] border-[0.8787px] bg-[var(--main-blue)]  border-[#173F63] rounded-[6.1509px] cursor-pointer px-[32px]">
+                                <img src="./mediaFiles/Home page/Counter number/Downloads/Site_icon.webp"
+                                    alt="Site_icon" class="w-[23.8047px] h-[23.8047px]">
+                                <span
+                                    class="font-jost text-[17.57px] leading-[100%] uppercase text-white text-nowrap">View
+                                    Site Plan</span>
+                            </button>
+                            <button type="button"
+                                class="w-[278px] h-[46px] flex items-center justify-start gap-[13.17px] border-[0.8787px]  border-[#173F63] rounded-[6.1509px] cursor-pointer px-[32px]">
+                                <img src="./mediaFiles/Home page/Counter number/Downloads/Price_icon.webp"
+                                    alt="Price_icon" class="w-[19.65px] h-[19.65px]">
+                                <span
+                                    class="font-jost text-[17.57px] leading-[100%] uppercase text-[#003253] text-nowrap">Get
+                                    Price List</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- decorative items-->
+                    <img src="./mediaFiles/Home page/Counter number/slider 01145/The Pinnacle PPT short 3.png"
+                        alt="decoratives"
+                        class="hidden lg:block w-[45.1px] h-[48.86px] sm:w-[112.27px] sm:h-[121.67px]  lg:w-[45.1px] lg:h-[48.86px] xl:w-[112.27px] xl:h-[121.67px] absolute right-[19.5px] bottom-[20px] z-10">
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Your Homebuying Journey with Us -->
+        <section class="py-[80.59px]">
+            <div class="relative border">
+                <figure class="absolute inset-0">
+                    <img src="./mediaFiles/Home page/Counter number/Start your homebuying Journey/Pool_bg.webp"
+                        alt="Pool_bg-banner" class="w-full h-full object-cover object-center">
+                </figure>
+                <!--Dark background overlap -->
+                <div class="absolute z-0 w-full h-full bg-[#0000004D]"></div>
+                <!-- content -->
+                <div class="flex w-full py-[80px] relative z-10 flex-col items-center gap-[25.75px] md:gap-[48px]">
+                    <div class="w-full flex flex-col items-center justify-center px-[16px] md:px-[0px]">
+                        <h2
+                            class="text-white font-jost font-medium text-[24px] md:text-[40px] leading-[31px] md:leading-[60px]">
+                            Start Your Homebuying
+                            Journey with Us</h2>
+                        <p
+                            class="font-jost text-[white] font-medium text-[16px] md:text-[20px] leading-[160%] md:leading-[28px] tracking-[2%]">
+                            Have a question? Reach out anytime — we're here to assist you.</p>
+                    </div>
+                    <div
+                        class="flex px-[16px] md:px-[0px] items-center gap-x-[77px] gap-y-[28px] w-max m-auto lg:flex-row flex-col">
+                        <div
+                            class="w-[358px] xl:w-[581.28px] h-[100px] xl:h-[145.33px] bg-white px-[20px] flex items-center justify-between">
+                            <div class="w-max flex items-center gap-[20.59px]">
+                                <div
+                                    class="w-[45px] h-[45px] xl:w-[68px] xl:h-[68px] bg-[var(--main-blue)] rounded-full flex items-center justify-center gap-[20.59px] shrink-0">
+                                    <img src="./mediaFiles/Home page/Counter number/Start your homebuying Journey/Telegram_icon.webp"
+                                        alt="Telegram_icon" class="w-[19px] xl:w-[28.81px] h-[19px] xl:h-[29.027px]" />
+                                </div>
+                                <div class="flex flex-col items-start">
+                                    <span
+                                        class="text-[#2C2C2C] font-medium font-jost text-20px xl:text-[25px] leading-[100%] tracking-[2%] ">Let’s
+                                        get in touch</span>
+                                    <span
+                                        class="text-[12px] xl:text-[18px] font-jost leading-[10px] xl:leading-[28px] space-x-[6px] xl:space-x-[9.27px] tracking-[0%] capitalize">Connect
+                                        With our experts. We’re just one form away.</span>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-gradient-to-b from-[#FFC267] to-[#99753E] w-[20px] xl:w-[29.91px] h-[20px] xl:h-[30.11px] flex flex-col items-center justify-center rounded-full">
+                                <i class="fa-solid fa-plus text-white"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="w-[358px] h-[100px] xl:w-[581.28px] xl:h-[145.33px] bg-white px-[20px] flex items-center justify-between">
+                            <div class="w-max flex items-center gap-[20.59px]">
+                                <div
+                                    class="w-[45px] h-[45px] xl:w-[68px] xl:h-[68px] bg-[var(--main-blue)] rounded-full flex items-center justify-center gap-[20.59px] shrink-0">
+                                    <img src="./mediaFiles/Home page/Counter number/Start your homebuying Journey/Telegram_icon.webp"
+                                        alt="Telegram_icon" class="w-[19px] xl:w-[28.81px] h-[19px] xl:h-[29.027px]" />
+                                </div>
+                                <div class="flex flex-col items-start">
+                                    <span
+                                        class="text-[#2C2C2C] font-medium font-jost text-20px xl:text-[25px] leading-[100%] tracking-[2%]">Chats
+                                        via WhatsApp</span>
+                                    <span
+                                        class="text-[12px] xl:text-[18px] font-jost leading-[10px] xl:leading-[28px] space-x-[6px] xl:space-x-[9.27px] tracking-[0%] capitalize">Start
+                                        the conversation directly on WhatsApp</span>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-gradient-to-b from-[#FFC267] to-[#99753E] w-[20px] xl:w-[29.91px] h-[20px] xl:h-[30.11px] flex flex-col items-center justify-center rounded-full">
+                                <i class="fa-solid fa-plus text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full flex items-center justify-between bg-[#FFFFFF1C] border border-[#FFFFFF12] backdrop-blur-[15.6px] py-5 px-[16px] md:px-[100px] lg:flex-row flex-col gap-y-[12px]">
+                        <span
+                            class="font-jost font-medium xl:font-semibold text-[16px] xl:text-[25px] leading-[100%] text-white">Prefer
+                            to call? We're just a ring away!</span>
+                        <div class="flex items-center gap-[17.18px]">
+                            <span
+                                class="text-white text-[19px] xl:text-[25px] font-jost font-medium xl:font-semibold leading-[100%] tracking-[0%] hidden lg:block">Call
+                                us:</span>
+                            <div class="flex flex-col lg:flex-row items-center gap-[10.17px]">
+                                <div class="flex items-center gap-[11.51px]">
+                                    <i class="fa-solid fa-phone-volume text-white text-[19px] xl:text-[25px]"></i>
+                                    <span
+                                        class="text-white font-jost font-medium xl:font-semibold text-[19px] xl:text-[25px] leading-[100%] ">+91
+                                        89680 66698</span>
+                                </div>
+                                <span
+                                    class="text-white font-jost font-medium xl:font-semibold text-[19px] xl:text-[25px] leading-[100%] hidden lg:block">|</span>
+                                <div class="flex items-center gap-[11.51px]">
+                                    <i class="fa-solid fa-phone-volume text-white text-[19px] xl:text-[25px]"></i>
+                                    <span
+                                        class="text-white font-jost font-medium xl:font-semibold text-[19px] xl:text-[25px] leading-[100%]">+91
+                                        99880 10405</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map -->
+        <section class="w-full mb-[80px] h-[500px]">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086757024852!2d-122.41941568468102!3d37.774929779759616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808d6c0e0f5f%3A0xe4f4b8c9a2b8a47b!2sSan%20Francisco%20CA!5e0!3m2!1sen!2sus!4v1695734536645!5m2!1sen!2sus"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
     </main>
+    <footer class="w-full h-max pt-[24px] flex flex-col gap-[15.16px] bg-cover bg-center relative"
+        style="background-image:var(--Crafted-for-Top-bg)">
+        <div class="relative w-full h-auto flex items-center justify-center">
+            <div class="absolute w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                <p class="font-jost font-medium text-[47px] lg:text-[124px] xl:text-[143px] leading-[100%] text-center text-transparent uppercase"
+                    style="-webkit-text-stroke: 2px #DADADA1A;">
+                    Let’s Connect
+                </p>
+            </div>
+            <h3
+                class="font-jost font-medium text-[28px] lg:text-[48px] tracking-[0px] leading-[73px] py-[13px] uppercase text-white text-center">
+                Let’s Connect</h3>
+        </div>
+
+        <div class="w-auto h-max m-auto flex flex-col items-center justify-center gap-[15.16px]">
+            <img src="./mediaFiles/Home page/Counter number/Footer/companies_logo.png" alt="Companies Logo"
+                class="w-[310px] lg:w-[540px] m-auto">
+            <!-- Mobile Contact-->
+            <div class="block sm:hidden bg-white w-full h-auto px-[7.5px] py-[27px]">
+                <div class="flex flex-col  items-center justify-center gap-[16.71px] divide-x-[2px] divide-[#E4E4E480]">
+                    <div class="flex items-center gap-[8.27px] px-4">
+                        <i class="fa-solid fa-phone text-[14px] text-[#003253]"></i>
+                        <p class="text-[14px] font-medium font-jost text-[#474A49]">+91 9697300066</p>
+                    </div>
+
+                    <div class="flex items-center gap-[8.27px] px-4">
+                        <i class="fa-solid fa-envelope text-[14px] text-[#003253]"></i>
+                        <p class="text-[14px] font-medium font-jost text-[#474A49]">info@realtynivesh.com
+                        </p>
+                    </div>
+                    <p class="text-[15px]  text-center font-medium font-jost text-[#474A49]">
+                        Preferred Sales Partner : <br />
+                        REALTY NIVESH Showroom No. 12 level 2,
+                        UPTOWN insignia PR-7 Airport Road, Zirakpur, Punjab
+                    </p>
+                </div>
+            </div>
+            <!-- Desktop contact -->
+            <div class="hidden sm:block">
+                <div class="grid grid-cols-3 items-center gap-[16.71px] divide-x-[2px] divide-[#E4E4E480]">
+                    <div class="flex items-center gap-[8.27px] px-4">
+                        <i class="fa-solid fa-phone text-[14px] xl:text-[15px] text-white"></i>
+                        <p class="text-[14px] xl:text-[18px] font-medium font-jost text-white">+91 9697300066</p>
+                    </div>
+
+                    <div class="flex items-center gap-[8.27px] px-4">
+                        <i class="fa-solid fa-envelope text-[14px] xl:text-[15px] text-white"></i>
+                        <p class="text-[14px] xl:text-[18px] font-medium font-jost text-white">info@realtynivesh.com</p>
+                    </div>
+
+                    <div class="flex items-center gap-[8.27px] px-4">
+                        <figure class="w-[24px] h-[24px]">
+                            <img src="./mediaFiles/Home page/Counter number/Footer/facebook_logo.webp"
+                                alt="facebook_logo" class="w-[24px] h-[24px]">
+                        </figure>
+                        <figure class="w-[24px] h-[24px]">
+                            <img src="./mediaFiles/Home page/Counter number/Footer/youtube_logo.webp" alt="Youtube_logo"
+                                class="w-[24px] h-[24px]">
+                        </figure>
+                        <figure class="w-[24px] h-[24px]">
+                            <img src="./mediaFiles/Home page/Counter number/Footer/instagram_logo.webp"
+                                alt="instagram_logo" class="w-[24px] h-[24px]">
+                        </figure>
+                        <figure class="w-[24px] h-[24px]">
+                            <img src="./mediaFiles/Home page/Counter number/Footer/Linkedin_logo.webp"
+                                alt="Linkedin_logo" class="w-[24px] h-[24px]">
+                        </figure>
+                        <figure class="w-[24px] h-[24px]">
+                            <img src="./mediaFiles/Home page/Counter number/Footer/x.webp" alt="x_logo"
+                                class="w-[24px] h-[24px]">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden sm:block">
+                <div class="flex items-center gap-[8.27px] px-4">
+                    <i class="fa-solid fa-location-dot text-[10px] lg:text-[14px] xl:text-[15px] text-white"></i>
+                    <p class="text-[10px] lg:text-[14px] xl:text-[18px] font-medium font-jost text-white">Preferred
+                        Sales
+                        Partner REALTY NIVESH Showroom No. 12 level 2, UPTOWN insignia PR-7 Airport Road, Zirakpur,
+                        Punjab
+                    </p>
+                </div>
+            </div>
+
+            <!-- MObile menu -->
+            <div class="block sm:hidden w-full">
+                <div class="w-full h-auto px-[15px] py-[13.08px] flex flex-col gap-[8px]">
+                    <div class="flex justify-between items-center cursor-pointer border-b border-[#60606080] py-[6px]">
+                        <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                            Home</h3>
+                        <a href="">
+                            <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.svg" alt="link icon"
+                                class="w-[15.09px] h-[11.89px] inline-block">
+                        </a>
+                    </div>
+
+                    <div class="flex justify-between items-center cursor-pointer border-b border-[#60606080] py-[6px]">
+                        <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                            About</h3>
+                        <a href="">
+                            <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.svg" alt="link icon"
+                                class="w-[15.09px] h-[11.89px] inline-block">
+                        </a>
+                    </div>
+
+                    <div class="flex flex-col border-b border-[#60606080] py-[6px]">
+                        <div class="flex justify-between items-center cursor-pointer">
+                            <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                Products</h3>
+
+                            <img src="./mediaFiles/Home page/Counter number/mobileMenu/arrow-down.png"
+                                alt="arrow-down icon" class="w-[11.95px] h-[5.97px] inline-block mobilearrow-downbtn">
+                        </div>
+                        <div class="hidden mobilearrow-downcontent">
+                            <ul class="flex flex-col mt-[10px] gap-[6px]" id="mobilearrow-downmenu">
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">3
+                                        BHK Apartment</a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">4
+                                        BHK Apartment</a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">5
+                                        BHK Apartment</a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Penthouse</a>
+                                </li>
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col border-b border-[#60606080] py-[6px]">
+                        <div class="flex justify-between items-center cursor-pointer">
+                            <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                Plans</h3>
+
+                            <img src="./mediaFiles/Home page/Counter number/mobileMenu/arrow-down.png"
+                                alt="arrow-down icon" class="w-[11.95px] h-[5.97px] inline-block mobilearrow-downbtn">
+                        </div>
+                        <div class="hidden mobilearrow-downcontent">
+                            <ul class="flex flex-col mt-[10px] gap-[6px] mobilearrow-downmenu">
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Unit
+                                        Plan</a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">
+                                        site Plan</a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">tower
+                                        Plan</a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Amenities</a>
+                                </li>
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col border-b border-[#60606080] py-[6px]">
+                        <div class="flex justify-between items-center cursor-pointer">
+                            <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                Location</h3>
+
+                            <img src="./mediaFiles/Home page/Counter number/mobileMenu/arrow-down.png"
+                                alt="arrow-down icon" class="w-[11.95px] h-[5.97px] inline-block mobilearrow-downbtn">
+                        </div>
+                        <div class="hidden mobilearrow-downcontent">
+                            <ul class="flex flex-col mt-[10px] gap-[6px] mobilearrow-downmenu">
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Near
+                                        by</a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Find
+                                        Distance</a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Key
+                                        Highlights</a>
+                                </li>
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col border-b border-[#60606080] py-[6px]">
+                        <div class="flex justify-between items-center cursor-pointer">
+                            <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                Price</h3>
+
+                            <img src="./mediaFiles/Home page/Counter number/mobileMenu/arrow-down.png"
+                                alt="arrow-down icon" class="w-[11.95px] h-[5.97px] inline-block mobilearrow-downbtn">
+                        </div>
+                        <div class="hidden mobilearrow-downcontent">
+                            <ul class="flex flex-col mt-[10px] gap-[6px] mobilearrow-downmenu">
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Price
+                                        List</a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Payment
+                                        Structure</a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Current
+                                        Offers</a>
+                                </li>
+
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center cursor-pointer border-b border-[#60606080] py-[6px]">
+                        <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                            Amenities </h3>
+                        <a href="">
+                            <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.svg" alt="link icon"
+                                class="w-[15.09px] h-[11.89px] inline-block">
+                        </a>
+                    </div>
+                    <div class="flex justify-between items-center cursor-pointer border-b border-[#60606080] py-[6px]">
+                        <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                            Specifications </h3>
+                        <a href="">
+                            <img src="./mediaFiles/Home page/Counter number/mobileMenu/link-icon.svg" alt="link icon"
+                                class="w-[15.09px] h-[11.89px] inline-block">
+                        </a>
+                    </div>
+
+                    <div class="flex flex-col border-b border-[#60606080] py-[6px]">
+                        <div class="flex justify-between items-center cursor-pointer">
+                            <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                Gallery</h3>
+
+                            <img src="./mediaFiles/Home page/Counter number/mobileMenu/arrow-down.png"
+                                alt="arrow-down icon" class="w-[11.95px] h-[5.97px] inline-block mobilearrow-downbtn">
+                        </div>
+                        <div class="hidden mobilearrow-downcontent">
+                            <ul class="flex flex-col mt-[10px] gap-[6px] mobilearrow-downmenu">
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Project
+                                        Walk-Through</a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Sample
+                                        Flat</a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Project
+                                        gallery </a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="font-jost font-medium text-[14px] text-white leading-[21px] capitalize">Construction
+                                        Updates </a>
+                                </li>
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col border-b border-[#60606080] py-[6px]">
+                        <div class="flex justify-between items-center cursor-pointer">
+                            <h3 class="font-jost font-semibold text-[16px] tracking-[2px] text-white leading-[25.2px]">
+                                Contact us</h3>
+
+                            <img src="./mediaFiles/Home page/Counter number/mobileMenu/arrow-down.png"
+                                alt="arrow-down icon" class="w-[11.95px] h-[5.97px] inline-block mobilearrow-downbtn">
+                        </div>
+                        <div class="hidden mobilearrow-downcontent">
+                            <ul class="flex flex-col mt-[10px] gap-[6px] mobilearrow-downmenu">
+                                <li><a href="" class="text-white">+91 89680 66698</a></li>
+                                <li><a href="" class="text-white">+91 9697300066</a></li>
+                                <li class="mt-[19.15px]">
+                                    <button
+                                        class="w-[142.25px] h-[31.08px] bg-[#21945A] border border-white rounded-[4px] flex items-center gap-2 justify-center cursor-pointer">
+                                        <figure class="w-[17.43px] h-[17.51px]">
+                                            <img src="./mediaFiles/Home page/Counter number/Start your homebuying Journey/Vector.webp"
+                                                alt="">
+                                        </figure>
+                                        <span
+                                            class="font-jost font-medium text-[13.17px] text-white leading-[100%]">Whats
+                                            app
+                                            Now</span>
+                                    </button>
+                                </li>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="sm:block hidden w-[600px] lg:w-[706px] h-0px border border-[#E4E4E4]"></div>
+            <div class="hidden sm:block">
+                <ul class="flex items-center flex-wrap justify-center gap-[16px]">
+                    <li class="text-[14px] xl:text-[18px] font-medium font-jost text-white">
+                        Quick Links :
+                        <a href="" class="text-[14px] xl:text-[18px] font-medium text-white font-jost">Home</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-[14px] xl:text-[18px] font-medium text-white font-jost">About</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-[14px] xl:text-[18px] font-medium text-white font-jost">Projects</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-[14px] xl:text-[18px] font-medium text-white font-jost">Location</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-[14px] xl:text-[18px] font-medium text-white font-jost">Price List</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-[14px] xl:text-[18px] font-medium text-white font-jost">Plans</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-[14px] xl:text-[18px] font-medium text-white font-jost">Amenities</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-[14px] xl:text-[18px] font-medium text-white font-jost">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-[14px] xl:text-[18px] font-medium text-white font-jost">Specification</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-[14px] xl:text-[18px] font-medium text-white font-jost">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-[14px] xl:text-[18px] font-medium text-white font-jost">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-[14px] xl:text-[18px] font-medium text-white font-jost">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sm:block hidden">
+            <div class="w-full py-[7.54px] flex items-center justify-center bg-white">
+                <span class="uppercase text-[#003253] tracking-[2%] leading-[100%] text-[14px] xl:text-[23px]">CALL FOR
+                    THE
+                    BEST
+                    DEALS</span>
+                <div class="w-max grid grid-cols-2 items-center gap-[16.71px] divide-x-[2px] divide-[#003253]">
+                    <div class="flex items-center gap-[8.27px] px-4">
+                        <i class="fa-solid fa-phone-volume text-[14px] xl:text-[15px] text-[#003253]"></i>
+                        <p class="text-[14px] xl:text-[18px] font-medium font-jost text-[#003253]">+91 9697300066</p>
+                    </div>
+                    <div class="flex items-center gap-[8.27px] px-4">
+                        <i class="fa-solid fa-phone-volume text-[14px] xl:text-[15px] text-[#003253]"></i>
+                        <p class="text-[14px] xl:text-[18px] font-medium font-jost text-[#003253]">+91 9697300066</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full bg-white block sm:hidden">
+            <div class="w-full flex flex-col items center justify-center">
+                <div class="flex items-center justify-center gap-[16px] py-[30px] px-4 m-auto text-[#474A49]">
+                    <a href="#" class="hover:text-[#003253] transition-colors duration-300">
+                        <i class="fa-brands fa-facebook-f text-[24px]"></i>
+                    </a>
+                    <a href="#" class="hover:text-[#003253] transition-colors duration-300">
+                        <i class="fa-brands fa-youtube text-[24px]"></i>
+                    </a>
+                    <a href="#" class="hover:text-[#003253] transition-colors duration-300">
+                        <i class="fa-brands fa-instagram text-[24px]"></i>
+                    </a>
+                    <a href="#" class="hover:text-[#003253] transition-colors duration-300">
+                        <i class="fa-brands fa-linkedin-in text-[24px]"></i>
+                    </a>
+                    <a href="#" class="hover:text-[#003253] transition-colors duration-300">
+                        <i class="fa-brands fa-x-twitter text-[24px]"></i>
+                    </a>
+                </div>
+                <p
+                    class="font-jost bg-white py-[17px] text-[#474A49] px-[15px]   tracking-[0%] leading-[160%] text-[14px] text-center">
+                    <span
+                        class=" text-[#003253]  text-center font-medium text-[16px]  leading-[100%] tracking-[2%]">Important
+                        Note :</span> <br class="sm:hidden block"> Realty Nivesh is the Authorized Selling Partner for
+                    The
+                    Pinnacle Mohali—an ultra-luxury
+                    venture by STJ Group under Mohali City Centre (MCC). <br class="hidden lg:block">
+                    This website is a marketing platform & all information is subject to change as per developer's
+                    discretion. RERA No: Rera No - PBRERA-SAS81-PR1166
+                </p>
+            </div>
+
+
+        </div>
+        <p
+            class="hidden sm:block font-jost  py-[0px] transparent text-white   tracking-[0%] leading-[160%] text-[14px] xl:text-[16px] text-center">Important Note : Realty Nivesh is the Authorized Selling Partner for The
+            Pinnacle Mohali—an ultra-luxury
+            venture by STJ Group under Mohali City Centre (MCC). <br class="hidden lg:block">
+            This website is a marketing platform & all information is subject to change as per developer's
+            discretion. RERA No: Rera No - PBRERA-SAS81-PR1166
+        </p>
+        <div class=" w-full lg:px-[100px] py-[7.54px] flex items-center justify-center bg-white">
+            <div class="w-full grid grid-cols-1 sm:grid-cols-2 items-center gap-[16.71px]">
+                <div
+                    class="w-full sm:max-w-[418px] grid grid-cols-3 sm:grid-cols-1 md:grid-cols-3 items-center divide-x-[0px] md:divide-x-[2px] divide-[#434343]">
+                    <p class="text-[15px] xl:text-[16px] font-normal font-jost text-[#434343] text-center">Disclaimer
+                    </p>
+                    <p class="text-[15px] xl:text-[16px] font-normal font-jost text-[#434343] text-center text-nowrap">
+                        Term & Conditions</p>
+                    <p class="text-[15px] xl:text-[16px] font-normal font-jost text-[#434343] text-center">Privacy
+                        Policy</p>
+                </div>
+
+                <div class="flex items-center justify-center gap-[8.27px] px-4">
+                    <p class="text-[14px] xl:text-[16px] font-normal font-jost text-[#434343] text-center">© Copyright
+                        2025 Pinnacle Mohali. <br class="block sm:hidden" /> REALTY NIVESH All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 <!-- Swiper JS -->
