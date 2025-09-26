@@ -1,28 +1,26 @@
- const header = document.getElementById("transparentBGonScroll");
-  const mainHeader = document.getElementById("mainheaderAppear_disappear");
-  let lastScroll = 0;
+const header = document.getElementById("transparentBGonScroll");
+const mainHeader = document.getElementById("mainheaderAppear_disappear");
+let lastScroll = 0;
 
-  window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
 
-    // Hide on scroll down, show on scroll up
-    if (currentScroll > lastScroll && currentScroll > 50) {
-      mainHeader.classList.add("translate-y-[-100%]"); // Tailwind to slide up
-    } else {
-      mainHeader.classList.remove("translate-y-[-100%]");
-    }
+  // Hide on scroll down, show on scroll up
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    mainHeader.classList.add("translate-y-[-100%]");
+  } else {
+    mainHeader.classList.remove("translate-y-[-100%]");
+  }
 
-    // Background change on scroll
-    if (currentScroll > 50) {
-      header.classList.remove("bg-white", "shadow-md");
-      header.classList.add("sm:bg-transparent");
-    } else {
-      header.classList.add("bg-white", "shadow-md");
-      header.classList.remove("sm:bg-transparent");
-    }
+  // Background change on scroll
+  if (currentScroll > 50) {
+    header.classList.remove("bg-white");
+  } else {
+    header.classList.add("bg-white");
+  }
 
-    lastScroll = currentScroll;
-  });
+  lastScroll = currentScroll;
+});
 
 // Initialize Swiper top Banner
 var swiper = new Swiper(".mySwiperBanner", {
@@ -30,37 +28,54 @@ var swiper = new Swiper(".mySwiperBanner", {
   navigation: {
     nextEl: ".custom-button-next",
     prevEl: ".custom-button-prev",
-    disabledClass: "swiper-button-disabled", // default class Swiper adds
+    disabledClass: "swiper-button-disabled",
   },
   pagination: {
-    el: ".swiper-pagination-progress", // main progressbar container
+    el: ".swiper-pagination-progress",
     type: "progressbar",
   },
 });
 
 // Fraction pagination (custom)
 const fractionEl = document.querySelector('.swiper-fraction');
+// Initialize fraction on page load
+if (fractionEl) {
+  fractionEl.textContent = `1 / ${swiper.slides.length}`;
+}
+
+
 swiper.on('slideChange', function () {
-  const totalSlides = swiper.slides.length; // real total slides
-  const activeSlide = swiper.realIndex + 1; // 0-based index to human-readable
+  const totalSlides = swiper.slides.length;
+  const activeSlide = swiper.realIndex + 1;
   fractionEl.textContent = `${activeSlide} / ${totalSlides}`;
 });
 
-fractionEl.innerHTML = `1 / ${swiper.slides.length}`; // Initialize on load
-
 // close megaMenu
-const closeMenu = document.getElementById('closeMenu');
+// Support both megaMenu and megaMenuLocation
 const megaMenu = document.getElementById('megaMenu');
+const megaMenuLocation = document.getElementById('megaMenuLocation');
+const closeMenu = document.getElementById('closeMenu');
+if (closeMenu && (megaMenu || megaMenuLocation)) {
+  closeMenu.addEventListener('click', () => {
+    if (megaMenu) megaMenu.classList.add('hidden');
+    if (megaMenuLocation) megaMenuLocation.classList.add('hidden');
+  });
+}
 
-closeMenu.addEventListener('click', () => {
-  megaMenu.classList.add('hidden');
-});
-
-// open megaMenu
-const desktopmegamenuopenBtn = document.getElementById('desktopmegamenuopenBtn');
-desktopmegamenuopenBtn.addEventListener('click', () => {
-  megaMenu.classList.remove('hidden');
-});
+// open megaMenu (support both class and id)
+const desktopBtns = document.querySelectorAll('.desktopmegamenuopenBtn');
+const desktopBtnId = document.getElementById('desktopmegamenuopenBtn');
+function openMegaMenu() {
+  if (megaMenu) megaMenu.classList.remove('hidden');
+  if (megaMenuLocation) megaMenuLocation.classList.remove('hidden');
+}
+if (desktopBtns.length > 0) {
+  desktopBtns.forEach(btn => {
+    btn.addEventListener('click', openMegaMenu);
+  });
+} else if (desktopBtnId) {
+  desktopBtnId.addEventListener('click', openMegaMenu);
+}
 
 // open megaMenu mobile
 const mobilemegamenuopenBtn = document.getElementById('mobilemegamenuopenBtn');
@@ -130,25 +145,27 @@ assistanceBtn.addEventListener("click", () => {
 assistanceCloseBtn.addEventListener("click", () => {
   assistanceBox.classList.remove("scale-100");
   assistanceBox.classList.add("scale-0");
-  
+
   setTimeout(() => {
     assistanceBox.classList.add("hidden");
-  }, 500); 
+  }, 500);
 });
 
 // Read More Data
 const readMoreBtn = document.getElementById('readMoreBtn');
 const readMoreData = document.getElementById('readMoreData')
 const paragraphBr = document.getElementById('paragraphBr')
-const readMoreBr = readMoreData.previousElementSibling; // <br>
-readMoreBtn.addEventListener('click', () => {
-  const current = readMoreBtn.textContent.trim().toLowerCase();
-  readMoreBtn.textContent = current === 'read more' ? 'read less' : 'read more';
-  readMoreBr.classList.toggle('hidden', current !== 'read more');
-  readMoreData.classList.toggle('hidden', current !== 'read more');
-  paragraphBr.classList.toggle('hidden', current !== 'read less');
+if (readMoreBtn && readMoreData) {
+  const readMoreBr = readMoreData.previousElementSibling; // <br>
+  readMoreBtn.addEventListener('click', () => {
+    const current = readMoreBtn.textContent.trim().toLowerCase();
+    readMoreBtn.textContent = current === 'read more' ? 'read less' : 'read more';
+    readMoreBr.classList.toggle('hidden', current !== 'read more');
+    readMoreData.classList.toggle('hidden', current !== 'read more');
+    paragraphBr.classList.toggle('hidden', current !== 'read less');
 
-});
+  });
+}
 
 
 // Odometer Counter Animation
@@ -211,9 +228,11 @@ const swiper2 = new Swiper(".mySwiperBanner2", {
 // fraction text update
 const fraction2 = document.querySelector(".swiper-fraction2");
 swiper2.on("slideChange", () => {
+  if(fraction2){
+    fraction2.textContent = `1 / ${swiper2.slides.length}`;
+  }
   fraction2.textContent = `${swiper2.realIndex + 1} / ${swiper2.slides.length}`;
 });
-fraction2.textContent = `1 / ${swiper2.slides.length}`;
 
 
 // Data for each button's content
@@ -464,6 +483,47 @@ faqButtons.forEach((btn, index) => {
     }
   });
 });
+
+// Location - why pinnacle Mohali
+var featureSwiper = new Swiper(".featureSwiper", {
+  loop: true,
+  freeMode: true,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 1.1,
+  breakpoints: {
+    640: {
+      slidesPerView: 1.7,
+    },
+    730: {
+      slidesPerView: 2.3,
+    },
+  }
+});
+
+// Location - DestinationSwiper
+
+var DestinationSwiper = new Swiper(".DestinationSwiper", {
+  loop: true,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 1.1,
+  breakpoints: {
+    640: {
+      slidesPerView: 2.7, // show part of next slide
+    },
+    1024: {
+      slidesPerView: 4.3, // for larger screens
+    },
+  }
+});
+
 
 
 

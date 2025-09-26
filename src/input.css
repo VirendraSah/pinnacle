@@ -15,8 +15,9 @@
   --signature_residance-r-BG: url('./mediaFiles/Home page/Counter number/signature_residence_mBG.png');
   --paper-crashes-BG: url('./mediaFiles/Home page/Counter number/slider 01145/template.png');
   --Buying-Ultralaxuries-bg-Decorative: url('./mediaFiles/Home page/Counter number/Decorative_items.png');
-  --Buying-Ultralaxuries-bg-DecorativeTwo: url('././mediaFiles/Home page/Counter number/Hero section and logos/Frame 2095586641 1.webp')
-
+  --Buying-Ultralaxuries-bg-DecorativeTwo: url('./mediaFiles/Home page/Counter number/Hero section and logos/Frame 2095586641 1.webp');
+  --decorativeBGTestimonial: url('./mediaFiles/Home page/Counter number/Banner & Testimonial/decorative_bg.png');
+  --background-decorative-map: url('./mediaFiles/Location/bg-decorative-desktop.svg')
 }
 
 body{
@@ -61,9 +62,8 @@ body{
 }
 
 /* Scroll bar custom */
-
 .custom-scrollbar::-webkit-scrollbar {
-  width: 2.5625px;            /* scrollbar thickness */
+  width: 2.5625px;           
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
@@ -71,9 +71,9 @@ body{
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #D5D5D5;           /* scrollbar color */
+  background: #D5D5D5;          
   border-radius: 9999px;
-  height: 428.2275px;         /* FIXED scrollbar thumb height */
+  height: 428.2275px;        
 }
 
 /* Center scrollbar thumb */
@@ -83,7 +83,6 @@ body{
 }
 
 
-/* <!-- Tailwind animation using style --> */
 
 .gradientBGAssistanceBTN {
     animation: ScaleEffect 1s infinite;
@@ -96,4 +95,15 @@ body{
   50% {
     box-shadow: 0 0 20px rgba(255,194,103,0.5), 0 0 20px rgba(153,117,62,0.5);
   }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper {
+  display: flex;
+}
+.swiper-slide {
+  flex-shrink: 0;
 }
