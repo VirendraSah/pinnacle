@@ -17,7 +17,8 @@
   --Buying-Ultralaxuries-bg-Decorative: url('./mediaFiles/Home page/Counter number/Decorative_items.png');
   --Buying-Ultralaxuries-bg-DecorativeTwo: url('./mediaFiles/Home page/Counter number/Hero section and logos/Frame 2095586641 1.webp');
   --decorativeBGTestimonial: url('./mediaFiles/Home page/Counter number/Banner & Testimonial/decorative_bg.png');
-  --background-decorative-map: url('./mediaFiles/Location/bg-decorative-desktop.svg')
+  --background-decorative-map: url('./mediaFiles/Location/bg-decorative-desktop.svg');
+  --consultat-decorative-bg: url('./mediaFiles/Location/consultant_decorative_bg.svg')
 }
 
 body{
@@ -106,4 +107,46 @@ body{
 }
 .swiper-slide {
   flex-shrink: 0;
+}
+
+.iti__selected-flag > *:first-child {
+  display: none !important;
+}
+.iti{
+  width: 100%;
+}
+
+.checkbox label {
+  display: inline;
+}
+.checkbox .input-assumpte {
+  display: none;
+}
+.input-assumpte + label {
+  width: 19.5686px;
+  height: 19.5686px;
+  -webkit-appearance: none;
+  background: linear-gradient(180deg, #FFC267 0%, #99753E 100%);
+  border-radius: 4px;
+  padding: 9px;
+  display: inline-block;
+  position: relative;
+}
+.input-assumpte:checked + label:after {
+  width: 100%;
+  height: 100%;
+  content: "\f00c";
+  font-weight: 900; 
+  font-family: "Font Awesome 5 Free";
+  background: linear-gradient(180deg, #FFC267 0%, #99753E 100%);
+  color: white;
+  font-size: 10px;
+  left: 0px;
+  border-radius: 4px;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: '12px';
 }

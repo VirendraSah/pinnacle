@@ -80,10 +80,17 @@ if (desktopBtns.length > 0) {
 // open megaMenu mobile
 const mobilemegamenuopenBtn = document.getElementById('mobilemegamenuopenBtn');
 const mobiletogglemenu = document.getElementById('mobiletogglemenu');
+const overlaybottommenu=document.getElementById('overlaybottommenu')
 mobilemegamenuopenBtn.addEventListener('click', () => {
   mobilemegamenuopenBtn.classList.toggle('rotate-[120deg]');
   mobiletogglemenu.classList.toggle('hidden');
+  overlaybottommenu.classList.toggle('hidden')
+})
 
+overlaybottommenu.addEventListener('click',()=>{
+   mobilemegamenuopenBtn.classList.toggle('rotate-[120deg]');
+  mobiletogglemenu.classList.toggle('hidden');
+  overlaybottommenu.classList.toggle('hidden')
 })
 
 // close megaMenu mobile
@@ -228,7 +235,7 @@ const swiper2 = new Swiper(".mySwiperBanner2", {
 // fraction text update
 const fraction2 = document.querySelector(".swiper-fraction2");
 swiper2.on("slideChange", () => {
-  if(fraction2){
+  if (fraction2) {
     fraction2.textContent = `1 / ${swiper2.slides.length}`;
   }
   fraction2.textContent = `${swiper2.realIndex + 1} / ${swiper2.slides.length}`;
@@ -524,7 +531,15 @@ var DestinationSwiper = new Swiper(".DestinationSwiper", {
   }
 });
 
+// jquery country code selection
 
+$(document).ready(function () {
+  const input = document.querySelector("#mobile_code");
+  const iti = window.intlTelInput(input, {
+    separateDialCode: true,
+    initialCountry: "in",
+  });
+});
 
 
 
