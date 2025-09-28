@@ -80,15 +80,15 @@ if (desktopBtns.length > 0) {
 // open megaMenu mobile
 const mobilemegamenuopenBtn = document.getElementById('mobilemegamenuopenBtn');
 const mobiletogglemenu = document.getElementById('mobiletogglemenu');
-const overlaybottommenu=document.getElementById('overlaybottommenu')
+const overlaybottommenu = document.getElementById('overlaybottommenu')
 mobilemegamenuopenBtn.addEventListener('click', () => {
   mobilemegamenuopenBtn.classList.toggle('rotate-[120deg]');
   mobiletogglemenu.classList.toggle('hidden');
   overlaybottommenu.classList.toggle('hidden')
 })
 
-overlaybottommenu.addEventListener('click',()=>{
-   mobilemegamenuopenBtn.classList.toggle('rotate-[120deg]');
+overlaybottommenu.addEventListener('click', () => {
+  mobilemegamenuopenBtn.classList.toggle('rotate-[120deg]');
   mobiletogglemenu.classList.toggle('hidden');
   overlaybottommenu.classList.toggle('hidden')
 })
@@ -542,4 +542,24 @@ $(document).ready(function () {
 });
 
 
+// price--page
+
+
+var priceaprtmentSlider = new Swiper(".priceaprtmentSlider", {
+  loop: true,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 1.1,
+  breakpoints: {
+    640: {
+      slidesPerView: 2.7, // show part of next slide
+    },
+    1024: {
+      slidesPerView: 4.3, // for larger screens
+    },
+  }
+});
 
