@@ -445,6 +445,7 @@ var testimonialSwiper = new Swiper(".TestimonialSwiper", {
 
 
 // FAQS
+// FAQS
 const faqButtons = document.querySelectorAll('.FAQButton');
 const faqAnswers = document.querySelectorAll('.MakeVisibleOnclick');
 
@@ -453,8 +454,8 @@ const defaultFAQIndex = 0;
 if (faqAnswers[defaultFAQIndex]) {
   faqAnswers[defaultFAQIndex].classList.remove('hidden');
   const icon = faqButtons[defaultFAQIndex].querySelector("i");
-  icon.classList.remove("fa-plus");
-  icon.classList.add("fa-minus");
+  icon.classList.replace("fa-plus", "fa-minus");
+  icon.classList.replace("fa-angle-down", "fa-angle-up");
 }
 
 faqButtons.forEach((btn, index) => {
@@ -466,22 +467,20 @@ faqButtons.forEach((btn, index) => {
       if (i !== index) {
         answer.classList.add('hidden');
         const otherIcon = faqButtons[i].querySelector("i");
-        otherIcon.classList.remove("fa-minus");
-        otherIcon.classList.add("fa-plus");
+        otherIcon.classList.replace("fa-minus", "fa-plus");
+        otherIcon.classList.replace("fa-angle-up", "fa-angle-down");
       }
     });
 
     // Toggle current FAQ
     faqAnswers[index].classList.toggle('hidden');
-
     const currentIcon = btn.querySelector("i");
-    if (faqAnswers[index].classList.contains("hidden")) {
-      currentIcon.classList.remove("fa-minus");
-      currentIcon.classList.add("fa-plus");
-    } else {
-      currentIcon.classList.remove("fa-plus");
-      currentIcon.classList.add("fa-minus");
-    }
+
+    faqAnswers[index].classList.contains("hidden")
+      ? (currentIcon.classList.replace("fa-minus", "fa-plus"),
+         currentIcon.classList.replace("fa-angle-up", "fa-angle-down"))
+      : (currentIcon.classList.replace("fa-plus", "fa-minus"),
+         currentIcon.classList.replace("fa-angle-down", "fa-angle-up"));
 
     // If closed → auto open next
     if (isCurrentlyVisible) {
@@ -490,6 +489,7 @@ faqButtons.forEach((btn, index) => {
     }
   });
 });
+
 
 // Location - why pinnacle Mohali
 var featureSwiper = new Swiper(".featureSwiper", {

@@ -19,7 +19,8 @@
   --decorativeBGTestimonial: url('./mediaFiles/Home page/Counter number/Banner & Testimonial/decorative_bg.png');
   --background-decorative-map: url('./mediaFiles/Location/bg-decorative-desktop.svg');
   --consultat-decorative-bg: url('./mediaFiles/Location/consultant_decorative_bg.svg');
-  --paper-crash-decorative-bg: url('./mediaFiles/Price/decorative-bg-price.webp')
+  --paper-crash-decorative-bg: url('./mediaFiles/Price/decorative-bg-price.webp');
+  --bg-frame-price: url('./mediaFiles/Price/bg-frame.svg');
 }
 
 body{
