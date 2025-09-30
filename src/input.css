@@ -21,6 +21,7 @@
   --consultat-decorative-bg: url('./mediaFiles/Location/consultant_decorative_bg.svg');
   --paper-crash-decorative-bg: url('./mediaFiles/Price/decorative-bg-price.webp');
   --bg-frame-price: url('./mediaFiles/Price/bg-frame.svg');
+  --bg-frame-mobile-price: url('./mediaFiles/Price/mobile-bg.png')
 }
 
 body{

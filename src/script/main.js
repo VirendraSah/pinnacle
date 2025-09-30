@@ -553,12 +553,20 @@ var priceaprtmentSlider = new Swiper(".priceaprtmentSlider", {
     disableOnInteraction: false,
   },
   slidesPerView: 1.1,
+});
+
+
+var DestinationSwiper = new Swiper(".ApprovedBankSwiper", {
+  loop: true,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 3.5,
   breakpoints: {
     640: {
-      slidesPerView: 2.7, // show part of next slide
-    },
-    1024: {
-      slidesPerView: 4.3, // for larger screens
+      slidesPerView: 5, // show part of next slide
     },
   }
 });

@@ -12,6 +12,9 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <!-- intl-tel-input CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
 </head>
 
 <body>
@@ -119,8 +122,10 @@
             id="mainheaderAppear_disappear">
             <!-- desktop logo -->
             <figure class="hidden sm:block">
+                <a href="./index.html">
                 <img src="mediaFiles/Home page/Counter number/Hero section and logos/Logo.webp"
                     alt="pinnacle apartment logo" class="w-[162.72px]">
+                </a>
             </figure>
             <!-- Mobile logo -->
             <figure class="block sm:hidden">
@@ -134,8 +139,8 @@
                         <li><a href="#">About</a></li>
                         <li><a href="#">Products</a></li>
                         <li><a href="#">Plans</a></li>
-                        <li><a href="#">Location</a></li>
-                        <li><a href="#">Price</a></li>
+                        <li><a href="./location.html">Location</a></li>
+                        <li><a href="./price.html">Price</a></li>
                         <li><a href="#">Amenities</a></li>
                         <li><a href="#">Specification</a></li>
                         <li><a href="#">Gallery</a></li>
@@ -1282,18 +1287,25 @@
         </section>
 
         <!-- Construction-Linked Payment Plan -->
-
-        <section class="w-full py-[76px] bg-fill bg-no-repeat" style="background-image: var(--bg-frame-price);">
-            <div class="flex flex-col items-center justify-center max-w-[1240px] m-auto gap-[48px]">
-                <div class="m-auto flex flex-col items-center justify-center gap-[8px] max-w-[678px]">
-                    <h2 class="text-white font-jost text-[40px] font-medium ">Construction-Linked Payment Plan</h2>
-                    <p class="text-white text-center text-[20px] tracking-[0.4px]">Enjoy flexible milestone-based
+        <section
+            class="w-full py-[40px] md:py-[76px] bg-size-[100%_auto] bg-fill bg-no-repeat bg-[url('./mediaFiles/Price/mobile-bg.png')] sm:bg-[url('./mediaFiles/Price/bg-frame.svg')]">
+            <div
+                class="flex flex-col items-center justify-center max-w-[1240px] m-auto gap-[20px] md:gap-[48px] px-[16px]">
+                <div class="m-auto flex flex-col items-center justify-center gap-[8px] md:max-w-[678px]">
+                    <h2
+                        class="text-white font-jost text-center text-[24px] md:text-[40px] font-semibold md:font-medium ">
+                        Construction- <br class="block md:hidden" /> Linked Payment Plan</h2>
+                    <p
+                        class="text-white text-center text-[16px] md:text-[20px] tracking-[2%] md:tracking-[0.4px] leading-[25px]">
+                        Enjoy flexible milestone-based
                         payments aligned with construction progress.
                         Structured for ease and transparency.</p>
                 </div>
                 <div
-                    class=" w-full flex flex-col items-center gap-[48px] px-[40px] py-[80px] justify-center bg-white rounded-[11px] border border-[#DFDFDF]">
-                    <h4 class="text-[#003253] text-[40px] font-jost font-medium leading-[130%] capitalize ">Milestone
+                    class=" w-full flex flex-col items-center gap-[18px] md:gap-[48px] px-[7.5px] md:px-[40px] py-[40px] md:py-[80px] justify-center bg-white rounded-[11px] border border-[#DFDFDF]">
+                    <h4
+                        class="text-[#003253] text-[20px] md:text-[40px] font-jost font-medium leading-[130%] capitalize ">
+                        Milestone
                         Details</h4>
                     <div class="w-full flex flex-col items-start justify-start relative gap-[10px]">
                         <!-- bg reflective pinnacle ppt -->
@@ -1302,18 +1314,18 @@
 
                         <div class="w-full flex flex-col items-start justify-start gap-[7.83px] bg-transparent">
                             <div
-                                class="w-full h-[66.281px] pl-[28.88px] pr-[14.86px] flex items-center justify-between bg-transparent border rounded-[3px] border-[#E7E7E7] relative">
+                                class="w-full h-[38px] md:h-[66.281px] pl-[22.28px] md:pl-[28.88px] pr-[11.14px] md:pr-[14.86px] flex items-center justify-between bg-transparent border rounded-[3px] border-[#E7E7E7] relative">
                                 <!-- gold border right side -->
                                 <div
-                                    class="absolute left-0 top-0 w-[10px] h-full bg-gradient-to-b from-[#FFC267] to-[#99753E]">
+                                    class="absolute left-0 top-0 w-[6.73px] md:w-[10px] h-full bg-gradient-to-b from-[#FFC267] to-[#99753E]">
                                 </div>
                                 <!-- content -->
                                 <span
-                                    class="text-[#003253] font-medium leading-[127%] uppercase text-[20px] tracking-[0.6px]">TIME
+                                    class="text-[#003253] font-medium leading-[127%] uppercase text-[14px] md:text-[20px] tracking-[0.6px]">TIME
                                     LINKED PAYMENT PLAN</span>
                                 <div
-                                    class="w-[36.558px] h-[36.558px] rounded-full flex items-center justify-center border border-[#FFC267] shrink-0 cursor-pointer FAQButton">
-                                    <i class="fa-solid fa-angle-down"></i>
+                                    class="w-[22.18px] h-[22.18px] md:w-[36.558px] md:h-[36.558px] rounded-full flex items-center justify-center border border-[#FFC267] shrink-0 cursor-pointer FAQButton">
+                                    <i class="fa-solid fa-angle-down text-[10px] md:text-[16px]"></i>
                                 </div>
 
                             </div>
@@ -1321,199 +1333,522 @@
                                 class=" py-[33.89px] px-[32.8px] w-full border border-[#E7E7E7] rounded-b-[3px] hidden MakeVisibleOnclick">
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
                                             1</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">Booking Amount</span>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">Booking
+                                            Amount</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">25%+GST</span>
+                                    <span
+                                        class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">25%+GST</span>
                                 </div>
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div
+                                        class="flex items-center justify-center gap-[6.69px] md:gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
                                             2</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">On Ground Floor or Club
-                                            house floor</span>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On Ground
+                                            Floor or Club house floor</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">10% +GST</span>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
                                 </div>
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
                                             3</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">On start of 3rd floor
-                                            roof</span>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On start
+                                            of 3rd floor roof</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">10%+GST</span>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
                                 </div>
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
                                             4</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">On half of
-                                            structure</span>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On half
+                                            of structure</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">10%+GST</span>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
                                 </div>
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
                                             5</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">On structure
-                                            complete</span>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On
+                                            structure complete</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">15% + GST</span>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">15%
+                                        +GST</span>
                                 </div>
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
-                                            1</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">On start of finishing
-                                            work</span>
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            5</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On
+                                            structure complete</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">10% +GST</span>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">15%
+                                        +GST</span>
                                 </div>
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
                                             6</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">On start of paint
-                                            work</span>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On start
+                                            of finishing work</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">10% +GST</span>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
                                 </div>
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
-                                            7</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">On offer of Physical
+                                            class="bg-[#003253] w-[18.3px] h-[18.3px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            8</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On offer
+                                            of Physical
                                             possession</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">10% +GST + All
+                                    <span
+                                        class="block lg:hidden text-[#003253] font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
+                                    <span class="hidden lg:block text-[#003253] font-semibold  text-[14.708px] ">10%
+                                        +GST
+                                        + All
                                         additional & applicable Pending charges +maintenance charges</span>
+                                </div>
+                                <div class="block lg:hidden">
+                                    <div
+                                        class="w-full bg-transparent py-[9.07px] px-[10.98px] flex flex-col items-start justify-center ">
+                                        <span class="text-[#003253] font-semibold text-[13px] md:text-[14.708px] ">+ All
+                                            additional &
+                                            applicable Pending charges </span>
+                                        <span class="text-[#003253] font-semibold text-[13px] md:text-[14.708px] ">+
+                                            Maintenance
+                                            charges</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="w-full flex flex-col items-start justify-start gap-[7.83px] bg-transparent">
                             <div
-                                class="w-full h-[66.281px] pl-[28.88px] pr-[14.86px] flex items-center justify-between bg-transparent border rounded-[3px] border-[#E7E7E7] relative">
+                                class="w-full h-[38px] md:h-[66.281px] pl-[22.28px] md:pl-[28.88px] pr-[11.14px] md:pr-[14.86px] flex items-center justify-between bg-transparent border rounded-[3px] border-[#E7E7E7] relative">
                                 <!-- gold border right side -->
                                 <div
-                                    class="absolute left-0 top-0 w-[10px] h-full bg-gradient-to-b from-[#FFC267] to-[#99753E]">
+                                    class="absolute left-0 top-0 w-[6.73px] md:w-[10px] h-full bg-gradient-to-b from-[#FFC267] to-[#99753E]">
                                 </div>
                                 <!-- content -->
                                 <span
-                                    class="text-[#003253] font-medium leading-[127%] uppercase text-[20px] tracking-[0.6px]">TIME
-                                    CONSTRUCTION LINKED PAYMENT PLAN</span>
+                                    class="text-[#003253] font-medium leading-[127%] uppercase text-[14px] md:text-[20px] tracking-[0.6px]">CONSTRUCTION
+                                    LINKED PAYMENT PLAN</span>
                                 <div
-                                    class="w-[36.558px] h-[36.558px] rounded-full flex items-center justify-center border border-[#FFC267] shrink-0 cursor-pointer FAQButton">
-                                    <i class="fa-solid fa-angle-down"></i>
+                                    class="w-[22.18px] h-[22.18px] md:w-[36.558px] md:h-[36.558px] rounded-full flex items-center justify-center border border-[#FFC267] shrink-0 cursor-pointer FAQButton">
+                                    <i class="fa-solid fa-angle-down text-[10px] md:text-[16px]"></i>
                                 </div>
+
                             </div>
                             <div
                                 class=" py-[33.89px] px-[32.8px] w-full border border-[#E7E7E7] rounded-b-[3px] hidden MakeVisibleOnclick">
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
                                             1</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">Booking Amount</span>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">Booking
+                                            Amount</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">25%+GST</span>
+                                    <span
+                                        class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">25%+GST</span>
                                 </div>
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div
+                                        class="flex items-center justify-center gap-[6.69px] md:gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
                                             2</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">On Ground Floor or Club
-                                            house floor</span>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On Ground
+                                            Floor or Club house floor</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">10% +GST</span>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
                                 </div>
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
                                             3</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">On start of 3rd floor
-                                            roof</span>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On start
+                                            of 3rd floor roof</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">10%+GST</span>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
                                 </div>
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
                                             4</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">On half of
-                                            structure</span>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On half
+                                            of structure</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">10%+GST</span>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
                                 </div>
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
                                             5</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">On structure
-                                            complete</span>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On
+                                            structure complete</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">15% + GST</span>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">15%
+                                        +GST</span>
                                 </div>
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
-                                            1</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">On start of finishing
-                                            work</span>
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            5</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On
+                                            structure complete</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">10% +GST</span>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">15%
+                                        +GST</span>
                                 </div>
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
                                             6</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">On start of paint
-                                            work</span>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On start
+                                            of finishing work</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">10% +GST</span>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
                                 </div>
                                 <div
                                     class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
-                                    <div class="flex items-center justify-center gap-[27.248px]">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
                                         <div
-                                            class="bg-[#003253] w-[29.661px] h-[29.661px] text-white text-[11.864px] rounded-full flex items-center justify-center shrink-0">
-                                            7</div>
-                                        <span class="text-[#161616] font-jost text-[15.628px] ">On offer of Physical
+                                            class="bg-[#003253] w-[18.3px] h-[18.3px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            8</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On offer
+                                            of Physical
                                             possession</span>
                                     </div>
-                                    <span class="text-[#003253] font-semibold text-[14.708px] ">10% +GST + All
+                                    <span
+                                        class="block lg:hidden text-[#003253] font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
+                                    <span class="hidden lg:block text-[#003253] font-semibold  text-[14.708px] ">10%
+                                        +GST
+                                        + All
                                         additional & applicable Pending charges +maintenance charges</span>
+                                </div>
+                                <div class="block lg:hidden">
+                                    <div
+                                        class="w-full bg-transparent py-[9.07px] px-[10.98px] flex flex-col items-start justify-center ">
+                                        <span class="text-[#003253] font-semibold text-[13px] md:text-[14.708px] ">+ All
+                                            additional &
+                                            applicable Pending charges </span>
+                                        <span class="text-[#003253] font-semibold text-[13px] md:text-[14.708px] ">+
+                                            Maintenance
+                                            charges</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full flex flex-col items-start justify-start gap-[7.83px] bg-transparent">
+                            <div
+                                class="w-full h-[38px] md:h-[66.281px] pl-[22.28px] md:pl-[28.88px] pr-[11.14px] md:pr-[14.86px] flex items-center justify-between bg-transparent border rounded-[3px] border-[#E7E7E7] relative">
+                                <!-- gold border right side -->
+                                <div
+                                    class="absolute left-0 top-0 w-[6.73px] md:w-[10px] h-full bg-gradient-to-b from-[#FFC267] to-[#99753E]">
+                                </div>
+                                <!-- content -->
+                                <span
+                                    class="text-[#003253] font-medium leading-[127%] uppercase text-[14px] md:text-[20px] tracking-[0.6px]">ADDITIONAL
+                                    CHARGES</span>
+                                <div
+                                    class="w-[22.18px] h-[22.18px] md:w-[36.558px] md:h-[36.558px] rounded-full flex items-center justify-center border border-[#FFC267] shrink-0 cursor-pointer FAQButton">
+                                    <i class="fa-solid fa-angle-down text-[10px] md:text-[16px]"></i>
+                                </div>
+
+                            </div>
+                            <div
+                                class=" py-[33.89px] px-[32.8px] w-full border border-[#E7E7E7] rounded-b-[3px] hidden MakeVisibleOnclick">
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            1</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">Booking
+                                            Amount</span>
+                                    </div>
+                                    <span
+                                        class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">25%+GST</span>
+                                </div>
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div
+                                        class="flex items-center justify-center gap-[6.69px] md:gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            2</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On Ground
+                                            Floor or Club house floor</span>
+                                    </div>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
+                                </div>
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            3</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On start
+                                            of 3rd floor roof</span>
+                                    </div>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
+                                </div>
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            4</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On half
+                                            of structure</span>
+                                    </div>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
+                                </div>
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            5</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On
+                                            structure complete</span>
+                                    </div>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">15%
+                                        +GST</span>
+                                </div>
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            5</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On
+                                            structure complete</span>
+                                    </div>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">15%
+                                        +GST</span>
+                                </div>
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            6</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On start
+                                            of finishing work</span>
+                                    </div>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
+                                </div>
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[18.3px] h-[18.3px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            8</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On offer
+                                            of Physical
+                                            possession</span>
+                                    </div>
+                                    <span
+                                        class="block lg:hidden text-[#003253] font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
+                                    <span class="hidden lg:block text-[#003253] font-semibold  text-[14.708px] ">10%
+                                        +GST
+                                        + All
+                                        additional & applicable Pending charges +maintenance charges</span>
+                                </div>
+                                <div class="block lg:hidden">
+                                    <div
+                                        class="w-full bg-transparent py-[9.07px] px-[10.98px] flex flex-col items-start justify-center ">
+                                        <span class="text-[#003253] font-semibold text-[13px] md:text-[14.708px] ">+ All
+                                            additional &
+                                            applicable Pending charges </span>
+                                        <span class="text-[#003253] font-semibold text-[13px] md:text-[14.708px] ">+
+                                            Maintenance
+                                            charges</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full flex flex-col items-start justify-start gap-[7.83px] bg-transparent">
+                            <div
+                                class="w-full h-[38px] md:h-[66.281px] pl-[22.28px] md:pl-[28.88px] pr-[11.14px] md:pr-[14.86px] flex items-center justify-between bg-transparent border rounded-[3px] border-[#E7E7E7] relative">
+                                <!-- gold border right side -->
+                                <div
+                                    class="absolute left-0 top-0 w-[6.73px] md:w-[10px] h-full bg-gradient-to-b from-[#FFC267] to-[#99753E]">
+                                </div>
+                                <!-- content -->
+                                <span
+                                    class="text-[#003253] font-medium leading-[127%] uppercase text-[14px] md:text-[20px] tracking-[0.6px]">PREFERENTIAL
+                                    LOCATION/FLOOR CHARGES</span>
+                                <div
+                                    class="w-[22.18px] h-[22.18px] md:w-[36.558px] md:h-[36.558px] rounded-full flex items-center justify-center border border-[#FFC267] shrink-0 cursor-pointer FAQButton">
+                                    <i class="fa-solid fa-angle-down text-[10px] md:text-[16px]"></i>
+                                </div>
+
+                            </div>
+                            <div
+                                class=" py-[33.89px] px-[32.8px] w-full border border-[#E7E7E7] rounded-b-[3px] hidden MakeVisibleOnclick">
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            1</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">Booking
+                                            Amount</span>
+                                    </div>
+                                    <span
+                                        class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">25%+GST</span>
+                                </div>
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div
+                                        class="flex items-center justify-center gap-[6.69px] md:gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            2</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On Ground
+                                            Floor or Club house floor</span>
+                                    </div>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
+                                </div>
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            3</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On start
+                                            of 3rd floor roof</span>
+                                    </div>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
+                                </div>
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            4</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On half
+                                            of structure</span>
+                                    </div>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
+                                </div>
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            5</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On
+                                            structure complete</span>
+                                    </div>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">15%
+                                        +GST</span>
+                                </div>
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            5</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On
+                                            structure complete</span>
+                                    </div>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">15%
+                                        +GST</span>
+                                </div>
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[19.03px] h-[19.03px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            6</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On start
+                                            of finishing work</span>
+                                    </div>
+                                    <span class="text-[#003253]  font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
+                                </div>
+                                <div
+                                    class="w-full bg-transparent border-b border-[#BABABA] py-[9.07px] px-[10.98px] flex items-center justify-between">
+                                    <div class="flex items-center justify-center gap-[6.69px] md:gap-[27.248px]">
+                                        <div
+                                            class="bg-[#003253] w-[18.3px] h-[18.3px] md:w-[29.661px] md:h-[29.661px] text-white text-[8.68px] md:text-[11.864px] rounded-full flex items-center justify-center shrink-0">
+                                            8</div>
+                                        <span class="text-[#161616] font-jost text-[14px] md:text-[15.628px] ">On offer
+                                            of Physical
+                                            possession</span>
+                                    </div>
+                                    <span
+                                        class="block lg:hidden text-[#003253] font-semibold text-[13px] md:text-[14.708px] ">10%
+                                        +GST</span>
+                                    <span class="hidden lg:block text-[#003253] font-semibold  text-[14.708px] ">10%
+                                        +GST
+                                        + All
+                                        additional & applicable Pending charges +maintenance charges</span>
+                                </div>
+                                <div class="block lg:hidden">
+                                    <div
+                                        class="w-full bg-transparent py-[9.07px] px-[10.98px] flex flex-col items-start justify-center ">
+                                        <span class="text-[#003253] font-semibold text-[13px] md:text-[14.708px] ">+ All
+                                            additional &
+                                            applicable Pending charges </span>
+                                        <span class="text-[#003253] font-semibold text-[13px] md:text-[14.708px] ">+
+                                            Maintenance
+                                            charges</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1522,6 +1857,394 @@
             </div>
         </section>
 
+        <!-- Own an Ultra-Luxury 3/4/5 BHK by STJ Group’s Pinnacle MCC Mohali’s -->
+        <section class="relative w-full">
+            <!-- Background Image -->
+            <img src="./mediaFiles/Home page/Counter number/Banner & Testimonial/bg-2.png" alt="Ultraluxury_tower"
+                class="hidden md:block w-full max-h-[650px] object-cover object-center">
+
+            <!-- Mobile Background with Decorative -->
+            <div class="md:hidden relative h-[700px]">
+                <img src="./mediaFiles/Home page/Counter number/Hero section and logos/Frame 2095586641 1.webp"
+                    alt="Ultraluxury_tower2" class="w-full h-[500px] object-fill object-top">
+                <img src="./mediaFiles/Home page/Counter number/own_a_Luxury/Blue_decorative.png" alt="Decorative"
+                    class="absolute inset-0 w-full h-full">
+            </div>
+
+            <!-- Content -->
+            <div class="absolute inset-0 flex items-end justify-center md:justify-start py-5 px-2 lg:px-16 z-[2]">
+                <div class=" max-w-lg text-center lg:text-left  flex flex-col items-center">
+                    <!-- Logo + Heading -->
+                    <div class="flex flex-col items-center lg:items-start gap-4">
+                        <img src="./mediaFiles/Home page/Counter number/Start your homebuying Journey/The Pinnacle PPT short 2.png"
+                            alt="pinnacle_PPt" class="w-20 lg:w-32 m-auto">
+                        <h3 class="text-center font-jost font-semibold text-lg lg:text-2xl leading-snug 
+                   bg-gradient-to-b from-[#FFC267] to-[#99753E] bg-clip-text text-transparent">
+                            Own an Ultra-Luxury 3/4/5 BHK by STJ Group’s Pinnacle MCC Mohali’s
+                        </h3>
+                    </div>
+
+                    <!-- Subtext -->
+                    <p class="font-jost text-sm lg:text-xl text-white text-center">
+                        Launch inventory open now <br> at exclusive prices.
+                    </p>
+
+                    <!-- RERA -->
+                    <span class="block w-full max-w-md py-2 border border-white/20 bg-[#16355099] 
+                   font-jost text-xs lg:text-lg uppercase text-white text-center m-auto">
+                        RERA Registered : PBRERA-SAS81-PR1166
+                    </span>
+
+                    <!-- Status + Handover -->
+                    <div class="grid grid-cols-2 gap-[16px] mt-4 relative">
+                        <div class="flex items-center gap-2">
+                            <img src="./mediaFiles/Home page/Counter number/own_a_Luxury/status_icon.png" alt="Icon"
+                                class="w-[19.85px] h-[19.85px] sm:w-6 sm:h-6">
+                            <div class="">
+                                <span class="block font-jost text-white text-start text-[10px] lg:text-xs">Possession
+                                    Status</span>
+                                <span
+                                    class="block font-jost text-white font-medium tracking-[0%] text-nowrap text-[13px] lg:text-lg uppercase">Under
+                                    Construction</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <img src="./mediaFiles/Home page/Counter number/own_a_Luxury/key_icon.png" alt="Icon"
+                                class="w-[19.85px] h-[19.85px] sm:w-6 sm:h-6">
+                            <div>
+                                <span
+                                    class="block font-jost text-white text-start text-[10px] lg:text-xs">Handover</span>
+                                <span
+                                    class="block font-jost text-white tracking-[0%] font-medium text-[13px] lg:text-lg uppercase">December
+                                    2028</span>
+                            </div>
+                        </div>
+                        <!-- Center Divider -->
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 w-px h-10 bg-gradient-to-b from-[#FFC267] to-[#99753E]">
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <button class="mt-6 px-6 py-2 border border-white text-white font-jost font-semibold text-base">
+                        ENQUIRE NOW
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Approed Banks -->
+        <section class="py-[78px]">
+            <div class="flex flex-col items-center justify-center gap-[12px] md:gap-[43px]">
+                <div class="flex flex-col items-center justify-center gap-[8px]">
+                    <h3
+                        class="text-center text-[#173150] text-[24px] md:text-[40px] font-semibold md:font-medium font-jost ">
+                        Approved Banks</h3>
+                    <p
+                        class="text-center capitalize font-jost text-[16px] md:text-[20px] text-[#474A49] tracking-[2%] leading-[28px]">
+                        Trusted Financial Partners: Approved Banks for Home Loans</p>
+                </div>
+                <!-- Approved Bank Swiper -->
+                <div class="swiper ApprovedBankSwiper">
+                    <div class="swiper-wrapper">
+                        <!-- SBI -->
+                        <div class="swiper-slide !flex items-center justify-center w-full !h-auto">
+                            <img src="./mediaFiles/Price/sbi.svg" alt="sbi Bank"
+                                class="max-h-[140px] object-contain mx-auto" />
+                        </div>
+                        <!-- HDFC -->
+                        <div class="swiper-slide !flex items-center justify-center w-full !h-auto">
+                            <img src="./mediaFiles/Price/hdfc.svg" alt="hdfc Bank"
+                                class="max-h-[140px] object-contain mx-auto" />
+                        </div>
+                        <!-- ICICI -->
+                        <div class="swiper-slide !flex items-center justify-center w-full !h-auto">
+                            <img src="./mediaFiles/Price/icici.svg" alt="icici Bank"
+                                class="max-h-[140px] object-contain mx-auto" />
+                        </div>
+                        <!-- BOB -->
+                        <div class="swiper-slide !flex items-center justify-center w-full !h-auto">
+                            <img src="./mediaFiles/Price/bob.svg" alt="bob Bank"
+                                class="max-h-[140px] object-contain mx-auto" />
+                        </div>
+                        <!-- Kotak -->
+                        <div class="swiper-slide !flex items-center justify-center w-full !h-auto">
+                            <img src="./mediaFiles/Price/kotak.svg" alt="kotak Bank"
+                                class="max-h-[140px] object-contain mx-auto" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us BTN -->
+        <section class="hidden md:block w-full h-max px-[100px] bg-[var(--main-blue)]">
+            <div class="w-full h-max py-[29.85px] flex items-center justify-between">
+                <p class="font-medium text-[25px] leading-[51px] text-white">Are you interested in this Property?</p>
+                <button type="button"
+                    class="text-white font-normal text-[16.37px] px-[25px] py-[5.5px] bg-gradient-to-b from-[#FFC267] to-[#99753E] rounded-4xl font-jost cursor-pointer">
+                    connect with us
+                </button>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="w-full h-max sm:py-[50px] lg:py-[80px] px-[16px] md:px-[20px] lg:px-[99px] bg-[#F9F9F9]">
+            <div class="w-full max-h-[565px] flex flex-col gap-[24.52px] md:gap-[48px]">
+                <div class="flex flex-col items-start">
+                    <h2
+                        class="font-jost text-[#173150] font-semibold md:font-medium text-[24px] md:text-[40px] leading-[36px] md:leading-[60px] tracking-[0px]">
+                        Frequently asked questions</h2>
+                    <p
+                        class="font-jost font-normal md:font-medium text-[16px] md:text-[20px] leading-[160%] md:leading-[28px] text-[#474A49]">
+                        “Clear answers to help you make informed decisions.”
+                    </p>
+                </div>
+                <div
+                    class="relative flex flex-col gap-[23px] w-full h-[565px] overflow-y-scroll custom-scrollbar pr-2.5">
+                    <div
+                        class="flex flex-col py-[12px] w-full border-b-[0.5px] border-[#989797] gap-[6.74px] md:gap-[9px]">
+                        <div class="flex w-full items-center justify-between">
+                            <h3
+                                class="font-jost font-medium text-[17px] md:text-[20px] leading-[100%] text-[var(--main-blue)]">
+                                What is included in the price of an apartment at Pinnacle Mohali?
+                            </h3>
+                            <div
+                                class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
+                                <i class="fa-solid fa-minus text-white md:text-[#173F63] text-[12px] "></i>
+                            </div>
+                        </div>
+                        <p class="text-[#2C2C2C] font-jost text-[16px] md:text-[18px] MakeVisibleOnclick">
+                            The price includes the base unit cost, super area, common area charges, and standard
+                            amenities. GST, PLC, registration, and furnishing (if applicable) are additional.
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col py-[12px] w-full border-b-[0.5px] border-[#989797] gap-[6.74px] md:gap-[9px]">
+                        <div class="flex w-full items-center justify-between">
+                            <h3
+                                class="font-jost font-medium text-[17px] md:text-[20px] leading-[100%] text-[var(--main-blue)]">
+                                Is there a payment plan available for new bookings?
+                            </h3>
+                            <div
+                                class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
+                                <i class="fa-solid fa-plus text-white md:text-[#173F63] text-[12px] "></i>
+                            </div>
+                        </div>
+                        <p class="text-[#2C2C2C] font-jost text-[16px] md:text-[18px] hidden MakeVisibleOnclick">
+                            The
+                            project offers spacious 4 BHK
+                            luxury apartments in Zenith & Crest towers. Upcoming launches include 3 BHK, 5 BHK, and
+                            exclusive Cloud Villas (penthouses).</p>
+                    </div>
+                    <div
+                        class="flex flex-col py-[12px] w-full border-b-[0.5px] border-[#989797] gap-[6.74px] md:gap-[9px]">
+                        <div class="flex w-full items-center justify-between">
+                            <h3 class="font-jost font-medium text-[17px] md:text-[20px] text-[var(--main-blue)]">
+                                How do I unlock the apartment price?
+                            </h3>
+                            <div
+                                class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
+                                <i class="fa-solid fa-plus text-white md:text-[#173F63] text-[12px] "></i>
+                            </div>
+                        </div>
+                        <p class="text-[#2C2C2C] font-jost text-[16px] md:text-[18px] hidden MakeVisibleOnclick">
+                            The
+                            project offers spacious 4 BHK
+                            luxury apartments in Zenith & Crest towers. Upcoming launches include 3 BHK, 5 BHK, and
+                            exclusive Cloud Villas (penthouses).</p>
+                    </div>
+                    <div
+                        class="flex flex-col py-[12px] w-full border-b-[0.5px] border-[#989797] gap-[6.74px] md:gap-[9px]">
+                        <div class="flex w-full items-center justify-between">
+                            <h3 class="font-jost font-medium text-[17px] md:text-[20px] text-[var(--main-blue)]">
+                                Are there different prices for the same configuration in different towers?
+                            </h3>
+                            <div
+                                class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
+                                <i class="fa-solid fa-plus text-white md:text-[#173F63] text-[12px] "></i>
+                            </div>
+                        </div>
+                        <p class="text-[#2C2C2C] font-jost text-[16px] md:text-[18px] hidden MakeVisibleOnclick">
+                            The
+                            project offers spacious 4 BHK
+                            luxury apartments in Zenith & Crest towers. Upcoming launches include 3 BHK, 5 BHK, and
+                            exclusive Cloud Villas (penthouses).</p>
+                    </div>
+                    <div
+                        class="flex flex-col py-[12px] w-full border-b-[0.5px] border-[#989797] gap-[6.74px] md:gap-[9px]">
+                        <div class="flex w-full items-center justify-between">
+                            <h3 class="font-jost font-medium text-[17px] md:text-[20px] text-[var(--main-blue)]">
+                                Can I download the floor plan after unlocking the price?
+                            </h3>
+                            <div
+                                class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
+                                <i class="fa-solid fa-plus text-white md:text-[#173F63] text-[12px] "></i>
+                            </div>
+                        </div>
+                        <p class="text-[#2C2C2C] font-jost text-[16px] md:text-[18px] hidden MakeVisibleOnclick">
+                            The
+                            project offers spacious 4 BHK
+                            luxury apartments in Zenith & Crest towers. Upcoming launches include 3 BHK, 5 BHK, and
+                            exclusive Cloud Villas (penthouses).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- DownLoads & Pricing -->
+        <section class="w-full h-max pb-[80px] px-[16px] pt-[30px] md:pt-[0px] md:px-[0px]">
+            <div class="w-full grid grid-cols-1 md:grid-cols-[60%_40%] gap-y-[19.03px]">
+                <figure class="w-full h-full">
+                    <!-- Desktop Image -->
+                    <img src="./mediaFiles/Home page/Counter number/Downloads/Downloads_banner.png" alt="Banner"
+                        class="w-full h-full hidden md:block">
+                    <!--Mobile Image  -->
+                    <img src="./mediaFiles/Home page/Counter number/Downloads/Download_banner_mobile.png" alt="Banner_2"
+                        class="w-full  block md:hidden max-h-[369px] object-fill object-center">
+                </figure>
+                <div class="bg-white flex items-center justify-center relative">
+                    <div class="flex flex-col gap-[22px]">
+                        <div>
+                            <h3
+                                class="text-center md:text-start font-jost font-semibold lg:font-medium text-[24px] lg:text-[40px] leading-[36px] lg:leading-[60px] text-[var(--main-blue)]">
+                                Downloads & Pricing</h3>
+                            <p
+                                class="text-center md:text-start lg:text-[#2C2C2C] text-[#474A49] font-jost text-[16px] lg:text-[20px] leading-[26px] lg:leading-[34px] tracking-[2%]">
+                                Access brochure, site plan, and <br /> price list for The Pinnacle Mohali.</p>
+                        </div>
+                        <div class="flex flex-col gap-[13px]">
+                            <button type="button"
+                                class="w-[278px] h-[46px] flex items-center justify-start gap-[13.17px] border-[0.8787px] border-[#173F63] rounded-[6.1509px] px-[32px] cursor-pointer group hover:bg-[var(--main-blue)] duration-300">
+                                <figure class="relative w-[23.8px] h-[23.8px] flex-shrink-0">
+                                    <!-- Default icon -->
+                                    <img src="./mediaFiles/Home page/Counter number/Downloads/pinnacle apartment/brochure_icon.svg"
+                                        alt="Brochure_icon"
+                                        class="absolute inset-0 w-full h-full block group-hover:hidden">
+                                    <!-- Hover icon -->
+                                    <img src="./mediaFiles/Home page/Counter number/Downloads/pinnacle apartment/Brochure_white_icon.svg"
+                                        alt="Brochure_white_icon"
+                                        class="absolute inset-0 w-full h-full hidden group-hover:block">
+                                </figure>
+                                <span
+                                    class="font-jost text-[17.57px] leading-[100%] uppercase text-[#003253] group-hover:text-white whitespace-nowrap">
+                                    Download Brochure
+                                </span>
+                            </button>
+                            <button type="button"
+                                class="w-[278px] h-[46px] flex items-center justify-start gap-[13.17px] border-[0.8787px] border-[#173F63] rounded-[6.1509px] px-[32px] cursor-pointer group hover:bg-[var(--main-blue)] duration-300">
+                                <figure class="relative w-[23.8px] h-[23.8px]">
+                                    <!-- Default icon -->
+                                    <img src="./mediaFiles/Home page/Counter number/Downloads/pinnacle apartment/site_plan.svg"
+                                        alt="site_plan1_icon"
+                                        class="absolute inset-0 w-full h-full block group-hover:hidden">
+                                    <!-- Hover icon -->
+                                    <img src="./mediaFiles/Home page/Counter number/Downloads/pinnacle apartment/site_plan_white.svg"
+                                        alt="site_plan1_icon"
+                                        class="absolute inset-0 w-full h-full hidden group-hover:block">
+                                </figure>
+                                <span
+                                    class="font-jost text-[17.57px] leading-[100%] uppercase text-[#003253] group-hover:text-white whitespace-nowrap">
+                                    View Site Plan
+                                </span>
+                            </button>
+                            <button type="button"
+                                class="w-[278px] h-[46px] flex items-center justify-start gap-[13.17px] border-[0.8787px] border-[#173F63] rounded-[6.1509px] px-[32px] cursor-pointer group hover:bg-[var(--main-blue)] duration-300">
+                                <figure class="relative w-[23.8px] h-[23.8px]">
+                                    <!-- Default icon -->
+                                    <img src="./mediaFiles/Home page/Counter number/Downloads/pinnacle apartment/price_icon.svg"
+                                        alt="price_icon"
+                                        class="absolute inset-0 w-full h-full block group-hover:hidden">
+                                    <!-- Hover icon -->
+                                    <img src="./mediaFiles/Home page/Counter number/Downloads/pinnacle apartment/price_white_icon.svg"
+                                        alt="price_icon_white"
+                                        class="absolute inset-0 w-full h-full hidden group-hover:block">
+                                </figure>
+                                <span
+                                    class="font-jost text-[17.57px] leading-[100%] uppercase text-[#003253] group-hover:text-white whitespace-nowrap">
+                                    Get Price List
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- decorative items-->
+                    <img src="./mediaFiles/Home page/Counter number/slider 01145/The Pinnacle PPT short 3.png"
+                        alt="decoratives"
+                        class="hidden lg:block w-[45.1px] h-[48.86px] sm:w-[112.27px] sm:h-[121.67px]  lg:w-[45.1px] lg:h-[48.86px] xl:w-[112.27px] xl:h-[121.67px] absolute right-[19.5px] bottom-[20px] z-10">
+                </div>
+            </div>
+        </section>
+
+        <!-- Property consultant -->
+        <section class="py-[80px] bg-cover bg-center" style="background-image: var(--consultat-decorative-bg);">
+            <div class="max-w-[1234px] h-auto m-auto relative">
+                <!-- ppt icon fixed -->
+                <div class="absolute right-0 bottom-0 ">
+                    <figure class="w-[114.9082px] md:block hidden">
+                        <img src="./mediaFiles/Location/The Pinnacle PPT short 1.png" alt="pinnacle PPt"
+                            class="w-full h-full object-fill object-center">
+                    </figure>
+                </div>
+                <div class="w-full px-[16px] lg:px-0 gap-y-[19px] h-auto grid grid-cols-1 md:grid-cols-2">
+                    <div class="flex flex-col items-start justify-start gap-[42.2px]">
+                        <div class="flex flex-col gap-[10px]">
+                            <h3
+                                class="text-[#003253] font-jost font-medium text-[24px] md:text-[36px] leading-[33px] md:leading-[50px] tracking-[0%] ">
+                                <span class="font-normal">Talk to our property</span> <br />
+                                Consultant at Realty Nivesh
+                            </h3>
+                            <p
+                                class="font-normal md:font-medium text-[16px] md:text-[20px] text-[#474A49] leading-[28px] tracking-[2%]">
+                                Get verified details, pricing, and expert guidence for The Pinnacle Mohali.
+                            </p>
+                        </div>
+                        <div class="md:block hidden">
+                            <div class="flex flex-col items-start justify-start">
+                                <figure class="w-[317.0577px] h-[109.9973px]">
+                                    <img src="./mediaFiles/Location/pinnacle_reality_logo.png"
+                                        alt="partnership_comapies_Logo" class="w-full h-full object-fill object-center">
+                                </figure>
+                                <p>* We respect your privacy. Your details are secure.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <form action="" class="flex flex-col items-start justify-start gap-[35px]">
+                            <input type="text" placeholder="Your Name"
+                                class="outline-none border-b border-[#BABABA] w-full placeholder-[#101010] font-normal text-[#101010] text-[16px] md:text-[17px]">
+                            <div class="flex flex-col items-start justify-start w-full gap-[9.56px] relative">
+                                <input id="mobile_code" type="tel" placeholder="Your Phone number* "
+                                    class="w-full px-3 placeholder-[#101010] py-2 text-[#101010] text-[16px] md:text-[17px]  focus:outline-none border-b border-[#BABABA]" />
+                                <span class="text-[#424141] leading-[100%] text-[12.6px] font-jost">You’ll receive OTP
+                                    via WhatsApp and SMS </span>
+                            </div>
+                            <input type="email" placeholder="Email Id"
+                                class="outline-none border-b border-[#BABABA] w-full placeholder-[#101010] font-normal text-[#101010] text-[16px] md:text-[17px]" />
+
+                            <div class="checkbox flex gap-[20px] items-start justify-end flex-row-reverse w-full">
+                                <div class="tag max-w-[383px] text-13px md:text-[16px]">I agree to receive newsletters,
+                                    or relevant marketing
+                                    content and  Pinnacle Terms and Conditions</div>
+                                <input type="checkbox" class="input-assumpte" id="input-confidencial">
+                                <label for="input-confidencial"></label>
+                            </div>
+                            <button type="submit"
+                                class="flex items-center justify-center text-[16px] md:text-[17px] font-medium font-jost w-[141px] md:w-[292px] h-[38px] md:h-[50px] text-white border border-[#F2F9FF] bg-[#003253]">Get
+                                OTP</button>
+                        </form>
+
+                    </div>
+                    <div class="md:hidden block">
+                        <div class="flex gap-[18px] items-start justify-start flex-col-reverse">
+                            <figure class="w-[226px] h-[78px] md:w-[317.0577px] md:h-[109.9973px]">
+                                <img src="./mediaFiles/Location/pinnacle_reality_logo.png"
+                                    alt="partnership_comapies_Logo" class="w-full h-full object-fill object-center">
+                            </figure>
+                            <p class="text-[14px] leading-[100%] tracking-[0%] text-[#514E4E]">* We respect your privacy. Your details are secure.</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
     </main>
 
     <footer class="w-full h-max pt-[24px] flex flex-col gap-[15.16px] bg-cover bg-center relative"
@@ -1961,6 +2684,9 @@
 </body>
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- intl-tel-input JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
