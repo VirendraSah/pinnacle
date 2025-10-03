@@ -157,3 +157,19 @@ body{
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* actie button priceList- pricepage */
+
+ /* fallback gray line */
+  .bg-default { background: #D8D6D5; }
+
+  /* custom gradient for active line (no tailwind purge issues) */
+  .bg-gradient-custom {
+    background: linear-gradient(180deg, #FFC267 0%, #99753E 100%);
+  }
+
+  /* optional: active style for apartment tabs (you may already have this) */
+  .activeBtn {
+    background-color: #003253 !important;
+    color: #fff !important;
+  }
