@@ -445,7 +445,6 @@ var testimonialSwiper = new Swiper(".TestimonialSwiper", {
 
 
 // FAQS
-// FAQS
 const faqButtons = document.querySelectorAll('.FAQButton');
 const faqAnswers = document.querySelectorAll('.MakeVisibleOnclick');
 
@@ -1144,3 +1143,51 @@ var TowerLayoutSwiper = new Swiper(".TowerLayoutSwiper", {
   slidesPerView: 1.2,
 });
 
+
+// lush open space mobile banner
+
+const lushopenspace = new Swiper(".lushopenspace", {
+  loop: false,
+  effect: "scroll",
+  navigation: {
+    nextEl: ".custom-button-next2",
+    prevEl: ".custom-button-prev2",
+  },
+  pagination: {
+    el: ".swiper-pagination-progress2",
+    type: "progressbar",
+  },
+});
+
+// fraction text update
+const lushopenspaceFraction = document.querySelector(".Lush-Open-Spaces-fraction");
+
+// pehle hi set kar do
+lushopenspaceFraction.textContent = `${lushopenspace.realIndex + 1} / ${lushopenspace.slides.length}`;
+
+lushopenspace.on("slideChange", () => {
+  lushopenspaceFraction.textContent = `${lushopenspace.realIndex + 1} / ${lushopenspace.slides.length}`;
+});
+
+
+var ElevatingAmenitiesSwiper = new Swiper(".ElevatingAmenitiesSwiper", {
+  loop: true,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 1.3,
+  breakpoints: {
+    500: {
+      slidesPerView: 2.5, // show part of next slide
+    },
+    768: {
+      slidesPerView: 3.3, // for larger screens
+    },
+    1280: {
+      slidesPerView: 4.3, // for larger screens
+    },
+  }
+
+});
