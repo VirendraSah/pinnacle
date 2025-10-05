@@ -1119,3 +1119,28 @@ var DestinationSwiper = new Swiper(".ApprovedBankSwiper", {
   }
 });
 
+var BrowseAppartment = new Swiper(".BrowseApartmentswiper", {
+  loop: true,
+  spaceBetween: 5,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 2.1,
+  breakpoints: {
+    500: {
+      slidesPerView: 2.5, // show part of next slide
+    },
+  }
+});
+
+var TowerLayoutSwiper = new Swiper(".TowerLayoutSwiper", {
+  loop: true,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 1.2,
+});
+
