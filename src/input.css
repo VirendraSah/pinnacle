@@ -173,3 +173,21 @@ body{
     background-color: #003253 !important;
     color: #fff !important;
   }
+
+  /* width & height of scrollbar */
+.custom-scrollbar-specification::-webkit-scrollbar {
+  height: 12px;   /* horizontal */
+  width: 3.11px;    /* vertical */
+}
+
+/* Track */
+.custom-scrollbar-specification::-webkit-scrollbar-track {
+  background: #D9D9D9;
+  border-radius: 10px;
+}
+
+/* Thumb */
+.custom-scrollbar-specification::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(90deg, #FFC267 0%, #99753E 100%);
+}

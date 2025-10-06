@@ -674,12 +674,18 @@
             <div class="h-full sm:h-vh">
                 <div class="h-full">
                     <div class="relative h-full">
-                        <figure class="absolute inset-0">
-                            <img src="./mediaFiles/Plan/Plan/sllider.webp" alt="Banner"
+                        <!-- desktop -->
+                        <figure class="hidden sm:block absolute inset-0">
+                            <img src="./mediaFiles/Specification/Specification/banner-desktop.webp" alt="Banner"
+                                class="w-full h-full object-cover object-center">
+                        </figure>
+                        <!-- Mobile -->
+                        <figure class="block sm:hidden absolute inset-0">
+                            <img src="./mediaFiles/Specification/Specification/mobile-banner.png" alt="Banner"
                                 class="w-full h-full object-cover object-center">
                         </figure>
                         <!--Dark background overlap -->
-                        <div class="absolute top-0 left-0 z-10 w-full h-full bg-[#13283C33]"></div>
+                        <div class="absolute top-0 left-0 z-10 w-full h-full bg-[#173F63]/50"></div>
                         <!-- content -->
                         <div
                             class="absolute z-20 w-full h-full flex flex-col items-center justify-center gap-0 md:gap-12">
@@ -691,1048 +697,275 @@
                                 </figure>
                                 <h3
                                     class="max-w-[849px] font-jost font-semibold lg:font-medium lg:leading-[61.43px] tracking-[2%] text-[24px] leading-[39px] lg:text-[50px] text-center text-white">
-                                    Get Expert Guidance from <br>
-                                    Realty Nivesh
+                                    Detailed Specifications at <br>
+                                    The Pinnacle, Mohali
                                 </h3>
 
                                 <p
-                                    class="max-w-[816px] font-jost text-[16px] lg:text-[23px] leading-[160%] text-center text-white font-normal">
-                                    Authorised Selling Partner for The Pinnacle by STJ Group, Mohali.
+                                    class="max-w-[885px] font-jost text-[16px] lg:text-[23px] leading-[160%] text-center text-white font-normal">
+                                    Explore the curated list of high-end finishes, smart <br> features, and world-class
+                                    amenities that elevate your lifestyle.
                                 </p>
                             </div>
                             <span class="font-jost text-[18px] leading-[160%] tracking-[0%] text-white mt-[18px]">Home
-                                << Plans</span>
+                                << Specifications</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- View Floor Plans by Tower & Configuration -->
-        <section
-            class="w-full h-auto px-[16.8px] pt-[80px] pb-[40px] md:py-[80px] relative flex flex-col gap-[17.89px] lg:gap-[48px]">
-            <!-- flow buttons -->
-            <div
-                class="flowwrapper max-w-[1012px] pb-[12.14px] pt-[17.14px]  m-auto absolute top-0 left-1/2 -translate-x-1/2 flex items-center justify-center w-full border-t-0 bg-white shadow-[0_0_3.9px_0_#00000040] rounded-none lg:rounded-b-3xl">
-                <div class=" w-full m-auto flex items-center justify-center gap-[10px]">
-                    <button type="button"
-                        class="Price_list rounded-[3px] py-[10px] px-[20px] font-jost font-medium text-[15px] md:text-[18px] bg-[#F2F2F2] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">Unit
-                        Plan</button>
-                    <button type="button"
-                        class="Price_list rounded-[3px] py-[10px] px-[20px] font-jost font-medium text-[15px] md:text-[18px] bg-[#003253] text-white cursor-pointer capitalize">Site
-                        plan</button>
-                    <button type="button"
-                        class="Price_list rounded-[3px] py-[10px] px-[20px] font-jost font-medium text-[15px] md:text-[18px] bg-[#F2F2F2] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">Tower
-                        Plan</button>
-                </div>
-            </div>
-            <!-- plan content -->
-            <div class="flex flex-col items-start justify-start stopontouchend">
-                <h2 class=" text-[#173150] font-semibold md:font-medium text-[24px] md:text-[40px]">
-                    View Floor Plans by Tower & Configuration</h2>
-                <p
-                    class=" text-[#474A49] tracking-[2%] leading-[28px] text-[16px] md:text-[20px] text-start lg:text-center">
-                    Switch between layouts of each tower, compare dimensions, and download detailed plans—all in one
-                    place.</p>
-            </div>
-            <div class="relative max-w-[1240px] gap-[29.03px] m-auto w-full grid grid-cols-1 lg:grid-cols-2 bg-cover bg-center px-[19.05px] py-[22.1px] bg-[url('./mediaFiles/Plan/Plan/chased-paper-bg-plan.svg')]"
-                id="planData">
-                <!-- mobile view only -->
-                <div class="sm:hidden block w-full">
-                    <div class="flex items-start justify-start gap-[10px] overflow-x-scroll scrollbar-none w-full">
-                        <div class="p-[1px] bg-gradient-to-b from-[#FFC267] to-[#99753E] rounded-[3px]">
-                            <button type="button"
-                                class="Price_list rounded-[3px] py-[3.69px] px-[16px] font-jost font-medium text-[16px] bg-white text-[#173F63] cursor-pointer capitalize">
-                                4BHK
-                            </button>
-                        </div>
-                        <div class="p-[1px] hover:bg-gradient-to-b from-[#FFC267] to-[#99753E] rounded-[3px]">
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#BCBCBC] py-[3.69px] px-[16px] font-jost font-medium text-[16px] bg-[#F9F9F9] text-[#173F63] cursor-pointer capitalize">
-                                3BHK
-                            </button>
-                        </div>
-                        <div class="p-[1px] hover:bg-gradient-to-b from-[#FFC267] to-[#99753E] rounded-[3px]">
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#BCBCBC] py-[3.69px] px-[16px] font-jost font-medium text-[16px] bg-[#F9F9F9] text-[#173F63] cursor-pointer capitalize">
-                                5BHK
-                            </button>
-                        </div>
-                        <div class="p-[1px] hover:bg-gradient-to-b from-[#FFC267] to-[#99753E] rounded-[3px]">
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#BCBCBC] py-[3.69px] px-[16px] font-jost font-medium text-[16px] bg-[#F9F9F9] text-[#173F63] cursor-pointer capitalize">
-                                PENTHOUSE
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- plan data will be injected here by JS -->
-                <div class="flex items-center justify-center bg-white sm:bg-[#F1F1F1] pt-[17.42px] pb-[36.67px]">
-                    <div
-                        class=" w-full sm:w-auto flex flex-col-reverse lg:flex-col gap-[29.14px] items-center justify-center lg:items-start lg:justify-start ">
-                        <div class="flex items-start justify-start gap-[6px] md:gap-[18px]">
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#FFC267] py-[3.5px] md:py-[8px] px-[11px] md:px-[40px] font-jost font-medium text-[14.69px] md:text-[16.65px] bg-[#003253] text-white cursor-pointer capitalize">2600
-                                Sqft</button>
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#BCBCBC] py-[3.5px] md:py-[8px] px-[11px] md:px-[40px] font-jost font-medium text-[14.69px] md:text-[16.65px] bg-[#F2F2F2] hover:border-[#FFC267] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">2800
-                                Sqft </button>
-                        </div>
-                        <div
-                            class="bg-white inset-0 sm:border sm:border-[#EDE3E3] w-full sm:px-[38.98px] pt-[22.72px] sm:py-[47px] flex items-center justify-center">
-                            <figure class="w-[206.55px] h-[177.42px] sm:w-[367.7px] sm:h-[315.85px]">
-                                <img src="./mediaFiles/Plan/Plan/map1.webp" alt="map1"
-                                    class="w-full h-full object-fill object-center">
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col items-start justify-start gap-[25.49px] py-[17.42px]">
-                    <div class="sm:block hidden w-full">
-                        <div class="flex items-start justify-start gap-[20px] overflow-x-scroll scrollbar-none w-full">
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#FFC267] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-[#003253] text-white cursor-pointer capitalize">4BHK</button>
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#BCBCBC] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-transparent hover:border-[#FFC267] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">3BHK</button>
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#BCBCBC] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-transparent hover:border-[#FFC267] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">5BHK</button>
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#BCBCBC] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-transparent hover:border-[#FFC267] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">PENTHOUSE</button>
-
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-start justify-start gap-[10px]">
-                        <h3 class="font-jost font-medium text-[20px] sm:text-[27px] tracking-[3%] text-[#003253] ">
-                            Premium 4 BHK
-                            Apartments </h3>
-                        <p class="font-jost text-[#474A49] text-[18px] capitalize">Best-selling 4 BHK layouts with
-                            expansive living and <br class="hidden lg:block">
-                            superior specifications.
-                        </p>
-                    </div>
-                    <div
-                        class="flex items-start justify-start w-full gap-[7.5px] sm:gap-0 overflow-x-scroll scrollbar-none">
-                        <div class="max-w-[210px] w-full flex flex-col items-center justify-center group">
-                            <button
-                                class="cursor-pointer font-jost text-[17px] md:text-[20px] font-medium leading-[150%] text-[#003253]">Zenith
-                                Tower</button>
-                            <div class="w-full h-[3px] bg-gradient-to-b from-[#FFC267] to-[#99753E]">
-                            </div>
-                        </div>
-                        <div class="max-w-[210px] w-full flex flex-col items-center justify-center group">
-                            <button
-                                class="cursor-pointer font-jost text-[17px] md:text-[20px] font-medium leading-[150%] text-[#003253]">Crest
-                                Tower</button>
-                            <div class="w-full h-[3px] bg-[#D8D6D5]">
-                            </div>
-                        </div>
-                        <div class="max-w-[210px] w-full flex flex-col items-center justify-center group">
-                            <button
-                                class="cursor-pointer font-jost text-[17px] md:text-[20px] font-medium leading-[150%] text-[#003253]">Prime
-                                Tower</button>
-                            <div class="w-full h-[3px] bg-[#D8D6D5]">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-max grid grid-cols-2 gap-[30px]">
-                        <div class="flex flex-col items-start justify-start">
-                            <div class="flex flex-col items-start justify-start ">
-                                <h4 class="font-jost text-[15.55px] sm:text-[17.69px] text-[#003253] uppercase">Super
-                                    Area*</h4>
-                                <div class="w-[38.02px] h-[1.41px] bg-gradient-to-b from-[#FFC267] to-[#99753E]"></div>
-                            </div>
-                            <p class="font-jost font-medium text-[19.12px] sm:text-[21.75px] text-[#474A49]">2600-2800
-                                sq.ft.</p>
-                        </div>
-                        <div class="flex flex-col items-start justify-start">
-                            <div class="flex flex-col items-start justify-start ">
-                                <h4 class="font-jost text-[15.55px] sm:text-[17.69px] text-[#003253] uppercase">Built-
-                                    up Area*</h4>
-                                <div
-                                    class="w-[38.02px] h-[1.41px] shrink-0 bg-gradient-to-b from-[#FFC267] to-[#99753E]">
-                                </div>
-                            </div>
-                            <p class="font-jost font-medium text-[19.12px] sm:text-[21.75px] text-[#474A49]">1697.81
-                                sq.ft.</p>
-                        </div>
-                        <div class="flex flex-col items-start justify-start">
-                            <div class="flex flex-col items-start justify-start ">
-                                <h4 class="font-jost text-[15.55px] sm:text-[17.69px] text-[#003253] uppercase">Balcony
-                                    Area*</h4>
-                                <div
-                                    class="w-[38.02px] h-[1.41px] shrink-0 bg-gradient-to-b from-[#FFC267] to-[#99753E]">
-                                </div>
-                            </div>
-                            <p class="font-jost font-medium text-[19.12px] sm:text-[21.75px] text-[#474A49]">389.44
-                                sq.ft.</p>
-                        </div>
-                        <div class="flex flex-col items-start justify-start">
-                            <div class="flex flex-col items-start justify-start ">
-                                <h4 class="font-jost text-[15.55px] sm:text-[17.69px] text-[#003253] uppercase">rera
-                                    carpet Area*</h4>
-                                <div
-                                    class="w-[38.02px] h-[1.41px] shrink-0 bg-gradient-to-b from-[#FFC267] to-[#99753E]">
-                                </div>
-                            </div>
-                            <p class="font-jost font-medium text-[19.12px] sm:text-[21.75px] text-[#474A49]">1592.53
-                                sq.ft.</p>
-                        </div>
-                    </div>
-                    <button
-                        class="px-[20.74px] py-[10.34px] flex items-center gap-[10.37px] justify-center border border-[#FFC267] shadow-[0_0_4px_0_rgba(0,0,0,0.25)]">
-                        <img src="./mediaFiles/Plan/Plan/download_icon.svg" alt="download_icon"
-                            class="w-[13.825px] h-[17.282px]">
-                        <span class="uppercase font-jost text-[#003253] text-[13.825px] font-medium">floor plan</span>
-                    </button>
-                </div>
-                <!-- decorative items-->
-                <img src="./mediaFiles/Home page/Counter number/slider 01145/The Pinnacle PPT short 3.png"
-                    alt="decoratives"
-                    class="w-[67.34px] h-[72.95px] sm:w-[112.27px] sm:h-[121.67px]  lg:w-[45.1px] lg:h-[48.86px] xl:w-[112.27px] xl:h-[121.67px] absolute -right-[12px] bottom-0 z-10">
-            </div>
-        </section>
-
-        <!-- Browse from here -->
-        <section class="w-full py-[70px] px-[18px] xl:px-[0px]">
-            <div class="max-w-[1240px] w-full m-auto flex flex-col gap-[22.81px]">
-                <h2 class="font-jost text-[24px] md:text-[40px] text-[#003253] font-semibold md:font-medium capitalize">
-                    Browse From here</h2>
-                <div class="w-full flex flex-col gap-[37.48px]">
-                    <!-- 1 -->
-                    <div class="w-full flex flex-col gap-[24.28px]">
-                        <div class="w-full flex items-center md:items-end justify-start gap-[13px]">
-                            <div class="block md:hidden w-full border border-[#D8D8D8]"></div>
-                            <h4 class="text-nowrap font-jost text-[20px] md:text-[26.47px] text-[#003253] ">3 BHK
-                                Apartments</h4>
-                            <div class="w-full border border-[#D8D8D8]"></div>
-                        </div>
-                        <!--from md  devices -->
-                        <div class="hidden md:block">
-                            <div class="flex items-center justify-start gap-[13px]">
-                                <div
-                                    class="max-w-[354px] w-full border border-[#E3E3E3] bg-[#F9F9F9] rounded-[4px] flex items-center">
-                                    <figure
-                                        class="w-[102px] h-[80px] bg-white flex items-center justify-center rounded-tl-[4px] rounded-bl-[4px]">
-                                        <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                            class="w-[69.36px] h-[53.25px] object-cover object-center">
-                                    </figure>
-                                    <div class="flex flex-col items-start justify-start ps-[13px]">
-                                        <h3 class="font-jost font-medium text-[20px] tracking-[3%] text-[#003253]">3
-                                            BHK-Apex Tower</h3>
-                                        <p class="font-jost text-[20px] text-[#525252] ">2400-2650 sq. ft.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--to md  devices -->
-                        <div class="md:hidden block w-full">
-                            <div class="swiper BrowseApartmentswiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="flex items-center justify-start gap-[13px]">
-                                            <div
-                                                class="py-[15.01px] px-[12px] w-max border border-[#E3E3E3] bg-white rounded-[4px] flex flex-col items-center">
-                                                <figure
-                                                    class="w-[112.63px] relative h-auto border-b border-[#F0F0F0] flex items-center justify-center pb-[3.35px]">
-                                                    <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                                        class="w-[93.96px] h-[72.14px] object-fill object-center">
-
-                                                    <div
-                                                        class="w-[93.96px] h-[72.14px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                                        <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                            class="w-[48.23px] h-[52.25px] object-fill object-center">
-                                                    </div>
-
-                                                </figure>
-                                                <div
-                                                    class="flex flex-col items-center justify-center pt-[9.11px] gap-[12.33px]">
-                                                    <h3
-                                                        class="text-center font-jost font-medium text-[16px] leading-[95%] tracking-[3%] text-[#003253]">
-                                                        3
-                                                        BHK- <br /> Apex Tower</h3>
-                                                    <p class="font-jost text-[16.7px] text-[#525252] ">2400-2650 sq. ft.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 2 -->
-                    <div class="w-full flex flex-col gap-[24.28px]">
-                        <div class="w-full flex items-center md:items-end justify-start gap-[13px]">
-                            <div class="block md:hidden w-full border border-[#D8D8D8]"></div>
-                            <h4 class="text-nowrap font-jost text-[20px] md:text-[26.47px] text-[#003253] ">4 BHK
-                                Apartments</h4>
-                            <div class="w-full border border-[#D8D8D8]"></div>
-                        </div>
-                        <!--from md  devices -->
-                        <div class="hidden md:block">
-                            <div class="flex items-center justify-start gap-x-[13px] gap-y-[39.13px] flex-wrap">
-                                <div
-                                    class="max-w-[354px] w-full border border-[#E3E3E3] bg-[#F9F9F9] rounded-[4px] flex items-center">
-                                    <figure
-                                        class="w-[102px] h-[80px] bg-white flex items-center justify-center rounded-tl-[4px] rounded-bl-[4px]">
-                                        <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                            class="w-[69.36px] h-[53.25px] object-cover object-center">
-                                    </figure>
-                                    <div class="flex flex-col items-start justify-start ps-[13px]">
-                                        <h3 class="font-jost font-medium text-[20px] tracking-[3%] text-[#003253]">4
-                                            BHK-Zenith Tower</h3>
-                                        <p class="font-jost text-[20px] text-[#525252] ">2600-2800 sq. ft.</p>
-                                    </div>
-                                </div>
-                                <div
-                                    class="max-w-[354px] w-full border border-[#E3E3E3] bg-[#F9F9F9] rounded-[4px] flex items-center">
-                                    <figure
-                                        class="w-[102px] h-[80px] bg-white flex items-center justify-center rounded-tl-[4px] rounded-bl-[4px]">
-                                        <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                            class="w-[69.36px] h-[53.25px] object-cover object-center">
-                                    </figure>
-                                    <div class="flex flex-col items-start justify-start ps-[13px]">
-                                        <h3 class="font-jost font-medium text-[20px] tracking-[3%] text-[#003253]">4
-                                            BHK-Crest Tower</h3>
-                                        <p class="font-jost text-[20px] text-[#525252] ">2600-2800 sq. ft.</p>
-                                    </div>
-                                </div>
-                                <div
-                                    class="max-w-[354px] w-full border border-[#E3E3E3] bg-[#F9F9F9] rounded-[4px] flex items-center">
-                                    <figure
-                                        class="w-[102px] h-[80px] bg-white relative flex items-center justify-center rounded-tl-[4px] rounded-bl-[4px]">
-                                        <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                            class="w-[69.36px] h-[53.25px] object-cover object-center">
-                                        <div
-                                            class="w-[69.36px] h-[53.25px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                            <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                class="w-[35.6px] h-[38.57px] object-fill object-center">
-                                        </div>
-                                    </figure>
-                                    <div class="flex flex-col items-start justify-start ps-[13px]">
-                                        <h3 class="font-jost font-medium text-[20px] tracking-[3%] text-[#003253]">4
-                                            BHK-Prime Tower</h3>
-                                        <p class="font-jost text-[20px] text-[#525252] ">Area: To Be Announced</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--to md  devices -->
-                        <div class="md:hidden block w-full">
-                            <div class="swiper BrowseApartmentswiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="flex items-center justify-start gap-[13px]">
-                                            <div
-                                                class="py-[15.01px] px-[12px] w-max border border-[#E3E3E3] bg-white rounded-[4px] flex flex-col items-center">
-                                                <figure
-                                                    class="w-[112.63px] h-auto border-b border-[#F0F0F0] flex items-center justify-center pb-[3.35px]">
-                                                    <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                                        class="w-[93.96px] h-[72.14px] object-fill object-center">
-                                                </figure>
-                                                <div
-                                                    class="flex flex-col items-center justify-center pt-[9.11px] gap-[12.33px]">
-                                                    <h3
-                                                        class="text-center font-jost font-medium text-[16px] leading-[95%] tracking-[3%] text-[#003253]">
-                                                        4 BHK- <br> Zenith Tower</h3>
-                                                    <p class="font-jost text-[16.7px] text-[#525252] text-nowrap">
-                                                        2600-2800 sq. ft*.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="flex items-center justify-start gap-[13px]">
-                                            <div
-                                                class="py-[15.01px] px-[12px] w-max border border-[#E3E3E3] bg-white rounded-[4px] flex flex-col items-center">
-                                                <figure
-                                                    class="w-[112.63px] h-auto border-b border-[#F0F0F0] flex items-center justify-center pb-[3.35px]">
-                                                    <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                                        class="w-[93.96px] h-[72.14px] object-fill object-center">
-                                                </figure>
-                                                <div
-                                                    class="flex flex-col items-center justify-center pt-[9.11px] gap-[12.33px]">
-                                                    <h3
-                                                        class="text-center font-jost font-medium text-[16px] leading-[95%] tracking-[3%] text-[#003253]">
-                                                        4 BHK- <br> Crest Tower</h3>
-                                                    <p class="font-jost text-[16.7px] text-[#525252] text-nowrap">
-                                                        2600-2800 sq. ft.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="flex items-center justify-start gap-[13px]">
-                                            <div
-                                                class="py-[15.01px] px-[12px] w-max border border-[#E3E3E3] bg-white rounded-[4px] flex flex-col items-center">
-                                                <figure
-                                                    class="relative w-[112.63px] h-auto border-b border-[#F0F0F0] flex items-center justify-center pb-[3.35px]">
-                                                    <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                                        class="w-[93.96px] h-[72.14px] object-fill object-center">
-
-                                                    <div
-                                                        class="w-[93.96px] h-[72.14px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                                        <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                            class="w-[48.23px] h-[52.25px] object-fill object-center">
-                                                    </div>
-                                                </figure>
-                                                <div
-                                                    class="flex flex-col items-center justify-center pt-[9.11px] gap-[12.33px]">
-                                                    <h3
-                                                        class="text-center font-jost font-medium text-[16px] leading-[95%] tracking-[3%] text-[#003253]">
-                                                        4 BHK- <br> Prime Tower</h3>
-                                                    <p class="font-jost text-[15px] text-[#525252] text-nowrap">To Be
-                                                        Announced</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 3 -->
-                    <div class="w-full flex flex-col gap-[24.28px]">
-                        <div class="w-full flex items-center md:items-end justify-start gap-[13px]">
-                            <div class="block md:hidden w-full border border-[#D8D8D8]"></div>
-                            <h4 class="text-nowrap font-jost text-[20px] md:text-[26.47px] text-[#003253] ">5 BHK
-                                Apartments</h4>
-                            <div class="w-full border border-[#D8D8D8]"></div>
-                        </div>
-                        <!--from md  devices -->
-                        <div class="hidden md:block">
-                            <div class="flex items-center justify-start gap-x-[13px] gap-y-[39.13px] flex-wrap">
-                                <div
-                                    class="max-w-[354px] w-full border border-[#E3E3E3] bg-[#F9F9F9] rounded-[4px] flex items-center">
-                                    <figure
-                                        class="w-[102px] h-[80px] bg-white flex items-center justify-center rounded-tl-[4px] rounded-bl-[4px]">
-                                        <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                            class="w-[69.36px] h-[53.25px] object-cover object-center">
-                                    </figure>
-                                    <div class="flex flex-col items-start justify-start ps-[13px]">
-                                        <h3 class="font-jost font-medium text-[20px] tracking-[3%] text-[#003253]">5
-                                            BHK-Everest Tower</h3>
-                                        <p class="font-jost text-[20px] text-[#525252] "> 3400 sq. ft.</p>
-                                    </div>
-                                </div>
-                                <div
-                                    class="max-w-[354px] w-full border border-[#E3E3E3] bg-[#F9F9F9] rounded-[4px] flex items-center">
-                                    <figure
-                                        class="w-[102px] h-[80px] bg-white relative flex items-center justify-center rounded-tl-[4px] rounded-bl-[4px]">
-                                        <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                            class="w-[69.36px] h-[53.25px] object-cover object-center">
-                                        <div
-                                            class="w-[69.36px] h-[53.25px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                            <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                class="w-[35.6px] h-[38.57px] object-fill object-center">
-                                        </div>
-                                    </figure>
-                                    <div class="flex flex-col items-start justify-start ps-[13px]">
-                                        <h3 class="font-jost font-medium text-[20px] tracking-[3%] text-[#003253]">5
-                                            BHK-Crown Tower</h3>
-                                        <p class="font-jost text-[20px] text-[#525252] ">To Be Announced</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--to md  devices -->
-                        <div class="md:hidden block w-full">
-                            <div class="swiper BrowseApartmentswiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="flex items-center justify-start gap-[13px]">
-                                            <div
-                                                class="py-[15.01px] px-[12px] w-max border border-[#E3E3E3] bg-white rounded-[4px] flex flex-col items-center">
-                                                <figure
-                                                    class="w-[112.63px] h-auto border-b border-[#F0F0F0] flex items-center justify-center pb-[3.35px]">
-                                                    <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                                        class="w-[93.96px] h-[72.14px] object-fill object-center">
-                                                </figure>
-                                                <div
-                                                    class="flex flex-col items-center justify-center pt-[9.11px] gap-[12.33px]">
-                                                    <h3
-                                                        class="text-center font-jost font-medium text-[16px] leading-[95%] tracking-[3%] text-[#003253]">
-                                                        5 BHK- <br> Everest Tower</h3>
-                                                    <p class="font-jost text-[16.7px] text-[#525252] text-nowrap">
-                                                        3400 sq. ft.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="flex items-center justify-start gap-[13px]">
-                                            <div
-                                                class="py-[15.01px] px-[12px] w-max border border-[#E3E3E3] bg-white rounded-[4px] flex flex-col items-center">
-                                                <figure
-                                                    class="relative w-[112.63px] h-auto border-b border-[#F0F0F0] flex items-center justify-center pb-[3.35px]">
-                                                    <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                                        class="w-[93.96px] h-[72.14px] object-fill object-center">
-
-                                                    <div
-                                                        class="w-[93.96px] h-[72.14px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                                        <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                            class="w-[48.23px] h-[52.25px] object-fill object-center">
-                                                    </div>
-                                                </figure>
-                                                <div
-                                                    class="flex flex-col items-center justify-center pt-[9.11px] gap-[12.33px]">
-                                                    <h3
-                                                        class="text-center font-jost font-medium text-[16px] leading-[95%] tracking-[3%] text-[#003253]">
-                                                        5 BHK- <br> Crown Tower</h3>
-                                                    <p class="font-jost text-[15px] text-[#525252] text-nowrap">To Be
-                                                        Announced</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 4-->
-                    <div class="w-full flex flex-col gap-[24.28px]">
-                        <div class="w-full flex items-center md:items-end justify-start gap-[13px]">
-                            <div class="block md:hidden w-full border border-[#D8D8D8]"></div>
-                            <h4 class="text-nowrap font-jost text-[20px] md:text-[26.47px] text-[#003253] ">Penthouse
-                            </h4>
-                            <div class="w-full border border-[#D8D8D8]"></div>
-                        </div>
-                        <!--from md  devices -->
-                        <div class="hidden md:block">
-                            <div class="flex items-center justify-start gap-x-[13px] gap-y-[39.13px] flex-wrap">
-                                <div
-                                    class="max-w-[354px] w-full border border-[#E3E3E3] bg-[#F9F9F9] rounded-[4px] flex items-center">
-                                    <figure
-                                        class="w-[102px] h-[80px] bg-white relative flex items-center justify-center rounded-tl-[4px] rounded-bl-[4px]">
-                                        <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                            class="w-[69.36px] h-[53.25px] object-cover object-center">
-                                        <div
-                                            class="w-[69.36px] h-[53.25px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                            <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                class="w-[35.6px] h-[38.57px] object-fill object-center">
-                                        </div>
-                                    </figure>
-                                    <div class="flex flex-col items-start justify-start ps-[13px]">
-                                        <h3 class="font-jost font-medium text-[20px] tracking-[3%] text-[#003253]">3
-                                            BHK-Apex Tower</h3>
-                                        <p class="font-jost text-[20px] text-[#525252] ">To Be Announced</p>
-                                    </div>
-                                </div>
-                                <div
-                                    class="max-w-[354px] w-full border border-[#E3E3E3] bg-[#F9F9F9] rounded-[4px] flex items-center">
-                                    <figure
-                                        class="w-[102px] h-[80px] bg-white relative flex items-center justify-center rounded-tl-[4px] rounded-bl-[4px]">
-                                        <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                            class="w-[69.36px] h-[53.25px] object-cover object-center">
-                                        <div
-                                            class="w-[69.36px] h-[53.25px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                            <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                class="w-[35.6px] h-[38.57px] object-fill object-center">
-                                        </div>
-                                    </figure>
-                                    <div class="flex flex-col items-start justify-start ps-[13px]">
-                                        <h3 class="font-jost font-medium text-[20px] tracking-[3%] text-[#003253]">4
-                                            BHK-Zenith Tower</h3>
-                                        <p class="font-jost text-[20px] text-[#525252] ">To Be Announced</p>
-                                    </div>
-                                </div>
-                                <div
-                                    class="max-w-[354px] w-full border border-[#E3E3E3] bg-[#F9F9F9] rounded-[4px] flex items-center">
-                                    <figure
-                                        class="w-[102px] h-[80px] bg-white relative flex items-center justify-center rounded-tl-[4px] rounded-bl-[4px]">
-                                        <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                            class="w-[69.36px] h-[53.25px] object-cover object-center">
-                                        <div
-                                            class="w-[69.36px] h-[53.25px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                            <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                class="w-[35.6px] h-[38.57px] object-fill object-center">
-                                        </div>
-                                    </figure>
-                                    <div class="flex flex-col items-start justify-start ps-[13px]">
-                                        <h3 class="font-jost font-medium text-[20px] tracking-[3%] text-[#003253]">4
-                                            BHK-Crest Tower</h3>
-                                        <p class="font-jost text-[20px] text-[#525252] ">To Be Announced</p>
-                                    </div>
-                                </div>
-                                <div
-                                    class="max-w-[354px] w-full border border-[#E3E3E3] bg-[#F9F9F9] rounded-[4px] flex items-center">
-                                    <figure
-                                        class="w-[102px] h-[80px] bg-white relative flex items-center justify-center rounded-tl-[4px] rounded-bl-[4px]">
-                                        <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                            class="w-[69.36px] h-[53.25px] object-cover object-center">
-                                        <div
-                                            class="w-[69.36px] h-[53.25px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                            <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                class="w-[35.6px] h-[38.57px] object-fill object-center">
-                                        </div>
-                                    </figure>
-                                    <div class="flex flex-col items-start justify-start ps-[13px]">
-                                        <h3 class="font-jost font-medium text-[20px] tracking-[3%] text-[#003253]">4
-                                            BHK-Prime Tower</h3>
-                                        <p class="font-jost text-[20px] text-[#525252] ">To Be Announced</p>
-                                    </div>
-                                </div>
-                                <div
-                                    class="max-w-[354px] w-full border border-[#E3E3E3] bg-[#F9F9F9] rounded-[4px] flex items-center">
-                                    <figure
-                                        class="w-[102px] h-[80px] bg-white relative flex items-center justify-center rounded-tl-[4px] rounded-bl-[4px]">
-                                        <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                            class="w-[69.36px] h-[53.25px] object-cover object-center">
-                                        <div
-                                            class="w-[69.36px] h-[53.25px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                            <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                class="w-[35.6px] h-[38.57px] object-fill object-center">
-                                        </div>
-                                    </figure>
-                                    <div class="flex flex-col items-start justify-start ps-[13px]">
-                                        <h3 class="font-jost font-medium text-[20px] tracking-[3%] text-[#003253]">5
-                                            BHK-Everest Tower</h3>
-                                        <p class="font-jost text-[20px] text-[#525252] ">To Be Announced</p>
-                                    </div>
-                                </div>
-                                <div
-                                    class="max-w-[354px] w-full border border-[#E3E3E3] bg-[#F9F9F9] rounded-[4px] flex items-center">
-                                    <figure
-                                        class="w-[102px] h-[80px] bg-white relative flex items-center justify-center rounded-tl-[4px] rounded-bl-[4px]">
-                                        <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                            class="w-[69.36px] h-[53.25px] object-cover object-center">
-                                        <div
-                                            class="w-[69.36px] h-[53.25px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                            <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                class="w-[35.6px] h-[38.57px] object-fill object-center">
-                                        </div>
-                                    </figure>
-                                    <div class="flex flex-col items-start justify-start ps-[13px]">
-                                        <h3 class="font-jost font-medium text-[20px] tracking-[3%] text-[#003253]">5
-                                            BHK-Crown Tower</h3>
-                                        <p class="font-jost text-[20px] text-[#525252] ">To Be Announced</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--to md  devices -->
-                        <div class="md:hidden block w-full">
-                            <div class="swiper BrowseApartmentswiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="flex items-center justify-start gap-[13px]">
-                                            <div
-                                                class="py-[15.01px] px-[12px] w-max border border-[#E3E3E3] bg-white rounded-[4px] flex flex-col items-center">
-                                                <figure
-                                                    class="relative w-[112.63px] h-auto border-b border-[#F0F0F0] flex items-center justify-center pb-[3.35px]">
-                                                    <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                                        class="w-[93.96px] h-[72.14px] object-fill object-center">
-
-                                                    <div
-                                                        class="w-[93.96px] h-[72.14px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                                        <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                            class="w-[48.23px] h-[52.25px] object-fill object-center">
-                                                    </div>
-                                                </figure>
-                                                <div
-                                                    class="flex flex-col items-center justify-center pt-[9.11px] gap-[12.33px]">
-                                                    <h3
-                                                        class="text-center font-jost font-medium text-[16px] leading-[95%] tracking-[3%] text-[#003253]">
-                                                        3 BHK- <br> Apex Tower</h3>
-                                                    <p class="font-jost text-[15px] text-[#525252] text-nowrap">To Be
-                                                        Announced</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="flex items-center justify-start gap-[13px]">
-                                            <div
-                                                class="py-[15.01px] px-[12px] w-max border border-[#E3E3E3] bg-white rounded-[4px] flex flex-col items-center">
-                                                <figure
-                                                    class="relative w-[112.63px] h-auto border-b border-[#F0F0F0] flex items-center justify-center pb-[3.35px]">
-                                                    <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                                        class="w-[93.96px] h-[72.14px] object-fill object-center">
-
-                                                    <div
-                                                        class="w-[93.96px] h-[72.14px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                                        <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                            class="w-[48.23px] h-[52.25px] object-fill object-center">
-                                                    </div>
-                                                </figure>
-                                                <div
-                                                    class="flex flex-col items-center justify-center pt-[9.11px] gap-[12.33px]">
-                                                    <h3
-                                                        class="text-center font-jost font-medium text-[16px] leading-[95%] tracking-[3%] text-[#003253]">
-                                                        4 BHK- <br> Zenith Tower</h3>
-                                                    <p class="font-jost text-[15px] text-[#525252] text-nowrap">To Be
-                                                        Announced</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="flex items-center justify-start gap-[13px]">
-                                            <div
-                                                class="py-[15.01px] px-[12px] w-max border border-[#E3E3E3] bg-white rounded-[4px] flex flex-col items-center">
-                                                <figure
-                                                    class="relative w-[112.63px] h-auto border-b border-[#F0F0F0] flex items-center justify-center pb-[3.35px]">
-                                                    <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                                        class="w-[93.96px] h-[72.14px] object-fill object-center">
-
-                                                    <div
-                                                        class="w-[93.96px] h-[72.14px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                                        <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                            class="w-[48.23px] h-[52.25px] object-fill object-center">
-                                                    </div>
-                                                </figure>
-                                                <div
-                                                    class="flex flex-col items-center justify-center pt-[9.11px] gap-[12.33px]">
-                                                    <h3
-                                                        class="text-center font-jost font-medium text-[16px] leading-[95%] tracking-[3%] text-[#003253]">
-                                                        4 BHK- <br> Crest Tower</h3>
-                                                    <p class="font-jost text-[15px] text-[#525252] text-nowrap">To Be
-                                                        Announced</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="flex items-center justify-start gap-[13px]">
-                                            <div
-                                                class="py-[15.01px] px-[12px] w-max border border-[#E3E3E3] bg-white rounded-[4px] flex flex-col items-center">
-                                                <figure
-                                                    class="relative w-[112.63px] h-auto border-b border-[#F0F0F0] flex items-center justify-center pb-[3.35px]">
-                                                    <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                                        class="w-[93.96px] h-[72.14px] object-fill object-center">
-
-                                                    <div
-                                                        class="w-[93.96px] h-[72.14px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                                        <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                            class="w-[48.23px] h-[52.25px] object-fill object-center">
-                                                    </div>
-                                                </figure>
-                                                <div
-                                                    class="flex flex-col items-center justify-center pt-[9.11px] gap-[12.33px]">
-                                                    <h3
-                                                        class="text-center font-jost font-medium text-[16px] leading-[95%] tracking-[3%] text-[#003253]">
-                                                        4 BHK- <br> Prime Tower</h3>
-                                                    <p class="font-jost text-[15px] text-[#525252] text-nowrap">To Be
-                                                        Announced</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="flex items-center justify-start gap-[13px]">
-                                            <div
-                                                class="py-[15.01px] px-[12px] w-max border border-[#E3E3E3] bg-white rounded-[4px] flex flex-col items-center">
-                                                <figure
-                                                    class="relative w-[112.63px] h-auto border-b border-[#F0F0F0] flex items-center justify-center pb-[3.35px]">
-                                                    <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                                        class="w-[93.96px] h-[72.14px] object-fill object-center">
-
-                                                    <div
-                                                        class="w-[93.96px] h-[72.14px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                                        <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                            class="w-[48.23px] h-[52.25px] object-fill object-center">
-                                                    </div>
-                                                </figure>
-                                                <div
-                                                    class="flex flex-col items-center justify-center pt-[9.11px] gap-[12.33px]">
-                                                    <h3
-                                                        class="text-center font-jost font-medium text-[16px] leading-[95%] tracking-[3%] text-[#003253]">
-                                                        5 BHK- <br> Everest Tower</h3>
-                                                    <p class="font-jost text-[15px] text-[#525252] text-nowrap">To Be
-                                                        Announced</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="flex items-center justify-start gap-[13px]">
-                                            <div
-                                                class="py-[15.01px] px-[12px] w-max border border-[#E3E3E3] bg-white rounded-[4px] flex flex-col items-center">
-                                                <figure
-                                                    class="relative w-[112.63px] h-auto border-b border-[#F0F0F0] flex items-center justify-center pb-[3.35px]">
-                                                    <img src="./mediaFiles/Plan/Plan/House_map.svg" alt="3BHK"
-                                                        class="w-[93.96px] h-[72.14px] object-fill object-center">
-
-                                                    <div
-                                                        class="w-[93.96px] h-[72.14px] bg-[#173F63]/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-[4px] flex items-center justify-center">
-                                                        <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo"
-                                                            class="w-[48.23px] h-[52.25px] object-fill object-center">
-                                                    </div>
-                                                </figure>
-                                                <div
-                                                    class="flex flex-col items-center justify-center pt-[9.11px] gap-[12.33px]">
-                                                    <h3
-                                                        class="text-center font-jost font-medium text-[16px] leading-[95%] tracking-[3%] text-[#003253]">
-                                                        5 BHK- <br> Crown Tower</h3>
-                                                    <p class="font-jost text-[15px] text-[#525252] text-nowrap">To Be
-                                                        Announced</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Crafted for Modern Living -->
-        <section
-            class="px-[15px] my-[20px] md:my-[80px] w-full h-lvh bg-cover bg-center bg-no-repeat bg-[url('./mediaFiles/Plan/Plan/pool-bg.webp')] flex items-center justify-center">
-            <div class="w-full flex flex-col items-center justify-center gap-[48.26px]">
-                <div class="flex flex-col items-center justify-center">
-                    <h2 class="font-jost font-medium text-[25.43px] md:text-[50px] tracking-[2%] text-white">Crafted for
-                        Modern Living</h2>
-                    <p class="text-center font-jost text-[16px] md:text-[23px] text-white">Spacious layouts. Luxurious
-                        interiors. A future-ready lifestyle. Preview what <br class="hidden md:block" /> makes The
-                        Pinnacle,
-                        Mohali a landmark address.</p>
-                </div>
-                <div
-                    class="w-[211px] md:w-auto flex flex-col md:flex-row items-center justify-center gap-y-[27px] md:gap-x-[20px]">
-                    <button
-                        class="w-full md:w-auto px-[24px] py-[12px] border border-white bg-[#414141]/50 text-white font-jost font-medium text-[16px] cursor-pointer">View
-                        Site Plan</button>
-                    <button
-                        class="w-full md:w-auto px-[24px] py-[12px] border border-white bg-white text-[#15314B] font-jost font-medium text-[16px] cursor-pointer">Explore
-                        Amenities</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Master Site Plan at a Glance -->
-        <section class="w-full h-auto flex flex-col gap-[26.02px]">
-            <div
-                class="w-full px-[33.05px] md:px-0 bg-cover bg-center h-[238.05px] flex flex-col items-center justify-center bg-[url('./mediaFiles/Plan/Plan/bg-diamondShape.svg')]">
-                <h3
-                    class="font-jost text-[24px] font-semibold md:text-[40px] md:font-medium text-white capitalize text-center">
-                    Master Site Plan <br class="block md:hidden" /> at a Glance</h3>
-                <p
-                    class="max-w-[632px] h-auto text-white text-center text-[16px] md:text-[20px] font-jost tracking-[2%]">
-                    Explore how every tower, amenity and garden is thoughtfully positioned for optimum space and
-                    elegance.</p>
-            </div>
-            <div class="max-w-[1240px] m-auto w-full pb-[31px]">
-                <div
-                    class="flex flex-col-reverse lg:flex-row items-center lg:items-start px-[16px] xl:px-0 justify-center gap-y-[18.72px]">
-                    <div
-                        class="w-full xl:w-auto h-[300px] lg:h-full xl:h-auto rows-1 overflow-y-scroll  lg:columns-2 gap-x-10 capitalize custom-scrollbar pr-2.5">
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">1</span> Entrance</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">2</span> Exit</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">3</span> Swimming Pool</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">4</span> Kid's Play Area</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">5</span> Commercial Plaza</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">6</span> More Than 90% Open Green Area</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">7</span> Clubhouse Drop-Off Area</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">8</span> Driveway</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">9</span> Accent Water Feature</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">10</span> Flower Garden</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">11</span> Aroma Garden</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">12</span> Mini Forest</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">13</span> Entry Portal</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">14</span> Central Lawn</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">15</span> Grand Arrival Plaza</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">16</span> Amphitheatre</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">17</span> Elevated Walking Track</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">18</span> Lounge Sky Deck</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">19</span> Commercial Plaza</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">20</span> EV Charging</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">21</span> Five-Acre Landscaped Zones</p>
-                        <p class="text-[#565555] text-[17px]"><span
-                                class="font-bold text-[#0E3B65] text-[16px]">22</span> Indoor Games Arena</p>
-                        <p class="text-[#565555] text-[17px]"></p>
-                    </div>
-                    <figure class="w-[356px] lg:w-[732px] lg:h-[463px]">
-                        <img src="./mediaFiles/Plan/Plan/master-Layout.webp" alt="Master-layout"
-                            class="w-full h-full object-fill object-center">
-                    </figure>
-                </div>
-            </div>
-        </section>
-
-        <!-- Explore the Project’s Tower Layout -->
-        <section class="w-full h-max py-[50px]">
-            <div
-                class="relative w-full h-auto bg-cover bg-center bg-no-repeat bg-[url('./mediaFiles/Plan/Plan/large_bg_diamond.svg')] py-[67px] flex flex-col items-center justify-center gap-[20px] lg:gap-[78px]">
-                <div class="w-max m-auto">
-                    <h3
-                        class="font-jost text-[24px] font-semibold md:font-normal md:text-[40px] text-white text-center">
-                        Explore the Project’s <br class="block sm:hidden" /> Tower Layout</h3>
-                    <p class="font-jost text-[16px] md:text-[20px] tracking-[2%] text-white text-center">Understand the
-                        vertical layout and distribution <br class="block sm:hidden" /> of apartments within each tower.
+        <!-- Crafted to Perfection:  -->
+        <section class="w-full h-auto py-[75px]">
+            <div class="flex flex-col w-full h-auto gap-[40px]">
+                <div class="w-full h-auto flex flex-col items-center justify-center gap-[11px]">
+                    <h2
+                        class="px-[16px] font-jost font-semibold md:font-medium text-[24px]  md:text-[40px] text-[#173150] text-center">
+                        Crafted to Perfection: <br />
+                        Specifications That Define The Pinnacle of Luxury Living
+                    </h2>
+                    <p class="font-jost text-[16px] md:text-[20px] tracking-[2%] text-[#474A49] text-center">From
+                        refined finishes to future-ready infrastructure — explore every detail that makes The Pinnacle
+                        by <br /> STJ Group an unmatched residential experience in Mohali's luxury landscape.
                     </p>
                 </div>
 
-                <div
-                    class="max-w-[1240px]  w-full m-auto grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-[18px] flex-wrap px-[10px]">
-                    <button
-                        class="cursor-pointer py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">3BHK-Apex
-                        Tower</button>
-                    <button
-                        class="cursor-pointer py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">4BHK-Zenith
-                        & Crest Tower </button>
-                    <button
-                        class="cursor-pointer xl:hidden block py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">3BHK-Prime
-                        Tower</button>
-                    <button
-                        class="cursor-pointer py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">4BHK-Prime
-                        Tower </button>
-                    <button
-                        class="cursor-pointer py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">5BHK-Everest
-                        Tower </button>
-                    <button
-                        class="cursor-pointer py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">5BHK-Crown
-                        Tower </button>
-                </div>
+                <div class="max-w-[1240px] w-full m-auto grid grid-cols-1 lg:grid-cols-[30%_auto] h-auto lg:h-lvh lg:gap-[34px]">
+                    <!-- Left Sidebar -->
+                    <div
+                        class="hidden lg:block h-[inherit] lg:flex lg:flex-col justify-between bg-cover bg-center bg-no-repeat bg-[url('./mediaFiles/Specification/Specification/specification-bg.svg')] p-[20px]">
 
-                <!-- decorative ppt -->
-                <div
-                    class="hidden md:block absolute top-[52px] right-[20px] xl:right-[98px] w-[50px] xl:w-[121.99px] h-[132.16px]">
-                    <img src="./mediaFiles/Plan/Plan/ppt_logo.svg" alt="ppt_logo_decorative"
-                        class="w-full h-full object-contain object-center">
-                </div>
-            </div>
-            <div class="sm:block hidden">
-                <div
-                    class="max-w-[1240px] py-[25.71px] px-2 m-auto h-auto grid grid-cols-2 lg:grid-cols-3 gap-x-[21.62px] gap-y-[37.88px]">
-                    <div class="w-full h-auto">
-                        <figure
-                            class="group relative w-full h-auto border border-[#E0E0E0] px-[20.76px] py-[16.54px] flex items-center justify-center">
-                            <img src="./mediaFiles/Plan/Plan/garden-side.svg" alt="garden-side">
-                            <div
-                                class="group-hover:block hidden px-[20.76px] py-[16.54px] absolute w-full h-full  top-0 left-0">
-                                <div class="w-full h-full bg-[#173F63]/60 flex items-center justify-center">
-                                    <img src="./mediaFiles/Plan/Plan/+sign.svg" alt="+sign"
-                                        class="w-[47.48px] h-[47.48px] object-fill object-center cursor-pointer">
-                                </div>
-                            </div>
-                        </figure>
-                        <div
-                            class="bg-[#173F63] w-full h-auto py-[11.95px] text-center font-medium text-[14px] xl:text-[18px] text-white">
-                            1 St
-                            FLOOR PLAN</div>
-                    </div>
-                    <div class="w-full h-auto">
-                        <figure
-                            class="group relative w-full h-auto border border-[#E0E0E0] px-[20.76px] py-[16.54px] flex items-center justify-center">
-                            <img src="./mediaFiles/Plan/Plan/garden-side.svg" alt="garden-side">
-                            <div
-                                class="group-hover:block hidden px-[20.76px] py-[16.54px] absolute w-full h-full  top-0 left-0">
-                                <div class="w-full h-full bg-[#173F63]/60 flex items-center justify-center">
-                                    <img src="./mediaFiles/Plan/Plan/+sign.svg" alt="+sign"
-                                        class="w-[47.48px] h-[47.48px] object-fill object-center cursor-pointer">
-                                </div>
-                            </div>
-                        </figure>
-                        <div
-                            class="bg-[#173F63] w-full py-[11.95px] text-center font-medium text-[14px] xl:text-[18px] text-white">
-                            2nd.7th 12th, 22nd & 32nd FLOOR PLAN</div>
-                    </div>
-                    <div class="w-full h-auto">
-                        <figure
-                            class="group relative w-full h-auto border border-[#E0E0E0] px-[20.76px] py-[16.54px] flex items-center justify-center">
-                            <img src="./mediaFiles/Plan/Plan/garden-side.svg" alt="garden-side">
-                            <div
-                                class="group-hover:block hidden px-[20.76px] py-[16.54px] absolute w-full h-full  top-0 left-0">
-                                <div class="w-full h-full bg-[#173F63]/60 flex items-center justify-center">
-                                    <img src="./mediaFiles/Plan/Plan/+sign.svg" alt="+sign"
-                                        class="w-[47.48px] h-[47.48px] object-fill object-center cursor-pointer">
-                                </div>
-                            </div>
-                        </figure>
-                        <div
-                            class="bg-[#173F63] w-full py-[11.95px] text-center font-medium text-[14px] xl:text-[18px] text-white">
-                            3rd,8th, 13th, 18th, 23rd & 28th FLOOR PLAN</div>
-                    </div>
-                    <div class="w-full h-auto">
-                        <figure
-                            class="group relative w-full h-auto border border-[#E0E0E0] px-[20.76px] py-[16.54px] flex items-center justify-center">
-                            <img src="./mediaFiles/Plan/Plan/garden-side.svg" alt="garden-side">
-                            <div
-                                class="group-hover:block hidden px-[20.76px] py-[16.54px] absolute w-full h-full  top-0 left-0">
-                                <div class="w-full h-full bg-[#173F63]/60 flex items-center justify-center">
-                                    <img src="./mediaFiles/Plan/Plan/+sign.svg" alt="+sign"
-                                        class="w-[47.48px] h-[47.48px] object-fill object-center cursor-pointer">
-                                </div>
-                            </div>
-                        </figure>
-                        <div
-                            class="bg-[#173F63] w-full py-[11.95px] text-center font-medium text-[14px] xl:text-[18px] text-white">
-                            3rd,8th, 13th, 18th, 23rd & 28th FLOOR PLAN</div>
-                    </div>
-                </div>
-            </div>
+                        <!-- Scrollable List -->
+                        <ul
+                            class="w-full h-auto flex-1 flex flex-col gap-[20px] overflow-y-auto custom-scrollbar-specification pr-2">
+                            <li class="font-jost font-medium text-[24px] text-white capitalize">Electrical fittings</li>
+                            <li class="font-jost font-medium text-[24px] text-white capitalize">Wall Finishes</li>
+                            <li class="font-jost font-medium text-[24px] text-white capitalize">Floor-to-Floor Height
+                            </li>
+                            <li class="font-jost font-medium text-[24px] text-white capitalize">Joinery Doors & Frames
+                            </li>
+                            <li class="font-jost font-medium text-[24px] text-white capitalize">Windows & Glazing</li>
+                            <li class="font-jost font-medium text-[24px] text-white capitalize">Flooring & Cladding</li>
+                            <li class="font-jost font-medium text-[24px] text-white capitalize">Plumbing & Sanitary</li>
+                            <li class="font-jost font-medium text-[24px] text-white capitalize">Connectivity &
+                                Technology</li>
+                            <li class="font-jost font-medium text-[24px] text-white capitalize">Safety & Security</li>
+                        </ul>
 
-            <div class="block sm:hidden ps-[16px] py-[33px]">
-                <div class="swiper TowerLayoutSwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="w-full h-auto">
-                                <figure
-                                    class="group relative w-full h-auto border border-[#E0E0E0] px-[20.76px] py-[16.54px] flex items-center justify-center">
-                                    <img src="./mediaFiles/Plan/Plan/garden-side.svg" alt="garden-side">
-                                    <div
-                                        class="group-hover:block hidden px-[20.76px] py-[16.54px] absolute w-full h-full  top-0 left-0">
-                                        <div class="w-full h-full bg-[#173F63]/60 flex items-center justify-center">
-                                            <img src="./mediaFiles/Plan/Plan/+sign.svg" alt="+sign"
-                                                class="w-[47.48px] h-[47.48px] object-fill object-center cursor-pointer">
-                                        </div>
-                                    </div>
+                        <!-- Download Button -->
+                        <button class="mt-4 p-[1px] bg-gradient-to-b from-[#FFC267] to-[#99753E] cursor-pointer">
+                            <div
+                                class="flex items-center justify-center bg-white gap-[6.91px] px-[20.74px] py-[10.37px]">
+                                <img src="./mediaFiles/Specification/Specification/download-icon.svg"
+                                    alt="download-icon" class="w-[13.33px] h-[15px] object-fill object-center">
+                                <span class="font-jost font-medium text-[15px] text-[#003253]">
+                                    Specifications
+                                </span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Right Content Area -->
+                    <div class="flex-1 h-[inerit] overflow-y-auto scrollbar-none cursor-pointer">
+                        <!-- Right side content -->
+                        <div class="w-full lg:h-lvh grid grid-cols-1 lg:grid-cols-2 gap-x-[70px] mb-[70px]">
+                            <div class="flex px-[16.5px] lg:px-0 flex-col items-start justify-start gap-[16px] lg:gap-[30px] mt-[15px] lg:mt-0 order-2 lg:order-1">
+                                <h3 class="font-jost text-[25px] lg:text-[64px] text-[#003253] capitalize lg:leading-[73px]">Electrical
+                                    fittings</h3>
+                                <div class="flex flex-col gap-[20px]">
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Switches:
+                                        Modular switches by Schneider or <br /> equivalent brand.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Wiring:
+                                        Fire-retardant copper wiring concealed <br /> within conduits.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Power
+                                        Points: Adequate light and power points in <br /> all rooms.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Safety:
+                                        Miniature Circuit Breakers (MCBs) with proper <br /> load distribution.</p>
+                                </div>
+                            </div>
+                            <div class="flex-1 h-full lg:order-1 order-1">
+                                <figure class="w-full h-full">
+                                    <img src="./mediaFiles/Specification/Specification/electrical-fitting.webp"
+                                        alt="electrical-fitting" class="w-full h-full object-cover object-center">
                                 </figure>
-                                <div
-                                    class="bg-[#173F63] w-full h-auto py-[11.95px] text-center font-medium text-[14px] xl:text-[18px] text-white">
-                                    1 St
-                                    FLOOR PLAN</div>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="w-full lg:h-lvh grid grid-cols-1 lg:grid-cols-2 gap-x-[70px] mb-[70px]">
+                            <div class="flex px-[16.5px] lg:px-0 flex-col items-start justify-start gap-[16px] lg:gap-[30px] mt-[15px] lg:mt-0 order-2 lg:order-1">
+                                <h3 class="font-jost text-[25px] lg:text-[64px] text-[#003253] capitalize lg:leading-[73px]">Wall Finishes
+                                </h3>
+                                <div class="flex flex-col gap-[20px]">
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Internal
+                                        Walls: Smooth plaster with acrylic emulsion paint.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">External
+                                        Walls: Weather-resistant exterior finish.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Toilets &
+                                        Kitchens: Ceramic tiles or equivalent on <br /> walls up to ceiling.</p>
+                                </div>
+                            </div>
+                            <div class="flex-1 h-full lg:order-1 order-1">
+                                <figure class="w-full h-full">
+                                    <img src="./mediaFiles/Specification/Specification/Wall-Finishes.webp"
+                                        alt="Wall Finishes" class="w-full h-full object-cover object-center">
+                                </figure>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="w-full lg:h-lvh grid grid-cols-1 lg:grid-cols-2 gap-x-[70px] mb-[70px]">
+                            <div class="flex px-[16.5px] lg:px-0 flex-col items-start justify-start gap-[16px] lg:gap-[30px] mt-[15px] lg:mt-0 order-2 lg:order-1">
+                                <h3 class="font-jost text-[25px] lg:text-[64px] text-[#003253] capitalize lg:leading-[73px]">
+                                    Floor-to-Floor Height
+                                </h3>
+                                <div class="flex flex-col gap-[20px]">
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Internal
+                                        Walls: Smooth plaster with acrylic emulsion paint.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">External
+                                        Walls: Weather-resistant exterior finish.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Toilets &
+                                        Kitchens: Ceramic tiles or equivalent on <br /> walls up to ceiling.</p>
+                                </div>
+                            </div>
+                            <div class="flex-1 h-full lg:order-1 order-1">
+                                <figure class="w-full h-full">
+                                    <img src="./mediaFiles/Specification/Specification/Floor-to-Floor-Height.webp"
+                                        alt="Floor-to-Floor Height" class="w-full h-full object-cover object-center">
+                                </figure>
                             </div>
                         </div>
 
-                        <div class="swiper-slide">
-                            <div class="w-full h-auto">
-                                <figure
-                                    class="group relative w-full h-auto border border-[#E0E0E0] px-[20.76px] py-[16.54px] flex items-center justify-center">
-                                    <img src="./mediaFiles/Plan/Plan/garden-side.svg" alt="garden-side">
-                                    <div
-                                        class="group-hover:block hidden px-[20.76px] py-[16.54px] absolute w-full h-full  top-0 left-0">
-                                        <div class="w-full h-full bg-[#173F63]/60 flex items-center justify-center">
-                                            <img src="./mediaFiles/Plan/Plan/+sign.svg" alt="+sign"
-                                                class="w-[47.48px] h-[47.48px] object-fill object-center cursor-pointer">
-                                        </div>
-                                    </div>
+                        <!-- 4 -->
+                        <div class="w-full lg:h-lvh grid grid-cols-1 lg:grid-cols-2 gap-x-[70px] mb-[70px]">
+                            <div class="flex px-[16.5px] lg:px-0 flex-col items-start justify-start gap-[16px] lg:gap-[30px] mt-[15px] lg:mt-0 order-2 lg:order-1">
+                                <h3 class="font-jost text-[25px] lg:text-[64px] text-[#003253] capitalize lg:leading-[73px]">Joinery Doors
+                                    & Frames
+                                </h3>
+                                <div class="flex flex-col gap-[20px]">
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">ain Door:
+                                        Decorative solid core flush door with <br /> premium polish/veneer.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Internal
+                                        Doors: Laminated flush doors with <br /> quality hardware.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Door
+                                        Frames: Seasoned hardwood frames.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Locks &
+                                        Handles: Premium quality fittings.</p>
+                                </div>
+                            </div>
+                            <div class="flex-1 h-full lg:order-1 order-1">
+                                <figure class="w-full h-full">
+                                    <img src="./mediaFiles/Specification/Specification/Joinery-Doors-&-Frames.webp"
+                                        alt="Joinery Doors & Frames" class="w-full h-full object-cover object-center">
                                 </figure>
-                                <div
-                                    class="bg-[#173F63] w-full py-[11.95px] text-center font-medium text-[14px] xl:text-[18px] text-white">
-                                    2nd.7th 12th, 22nd & 32nd FLOOR PLAN</div>
+                            </div>
+                        </div>
+
+                        <!-- 5 -->
+                        <div class="w-full lg:h-lvh grid grid-cols-1 lg:grid-cols-2 gap-x-[70px] mb-[70px]">
+                            <div class="flex px-[16.5px] lg:px-0 flex-col items-start justify-start gap-[16px] lg:gap-[30px] mt-[15px] lg:mt-0 order-2 lg:order-1">
+                                <h3 class="font-jost text-[25px] lg:text-[64px] text-[#003253] capitalize lg:leading-[73px]">
+                                    Windows & Glazing
+                                </h3>
+                                <div class="flex flex-col gap-[20px]">
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Type: Powder-coated aluminum or UPVC windows.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Glazing: Glass with sound insulation and mosquito <br/> mesh where applicable.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Ventilation: Ample natural light and cross- <br/> ventilation.</p>
+                                </div>
+                            </div>
+                            <div class="flex-1 h-full lg:order-1 order-1">
+                                <figure class="w-full h-full">
+                                    <img src="./mediaFiles/Specification/Specification/Windows-&-Glazing.webp"
+                                        alt="Windows & Glazing" class="w-full h-full object-cover object-center">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <!-- 6 -->
+                        <div class="w-full lg:h-lvh grid grid-cols-1 lg:grid-cols-2 gap-x-[70px] mb-[70px]">
+                            <div class="flex px-[16.5px] lg:px-0 flex-col items-start justify-start gap-[16px] lg:gap-[30px] mt-[15px] lg:mt-0 order-2 lg:order-1">
+                                <h3 class="font-jost text-[25px] lg:text-[64px] text-[#003253] capitalize lg:leading-[73px]">
+                                    Flooring & Cladding
+                                </h3>
+                                <div class="flex flex-col gap-[20px]">
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Living/Dining: Imported marble or high-quality <br/> vitrified tiles.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Bedrooms: Wooden-textured/vitrified tiles.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Bathrooms: Anti-skid ceramic/vitrified tiles.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Balconies: Anti-skid tiles.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Staircases & Common Areas: Natural stone/granite.</p>
+                                </div>
+                            </div>
+                            <div class="flex-1 h-full lg:order-1 order-1">
+                                <figure class="w-full h-full">
+                                    <img src="./mediaFiles/Specification/Specification/Flooring-&-Cladding.webp"
+                                        alt="Flooring & Cladding" class="w-full h-full object-cover object-center">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <!-- 7 -->
+                        <div class="w-full lg:h-lvh grid grid-cols-1 lg:grid-cols-2 gap-x-[70px] mb-[70px]">
+                            <div class="flex px-[16.5px] lg:px-0 flex-col items-start justify-start gap-[16px] lg:gap-[30px] mt-[15px] lg:mt-0 order-2 lg:order-1">
+                                <h3 class="font-jost text-[25px] lg:text-[64px] text-[#003253] capitalize lg:leading-[73px]">
+                                    Plumbing & Sanitary
+                                </h3>
+                                <div class="flex flex-col gap-[20px]">
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Fittings: Premium CP fittings by Jaguar/Kohler <br/> or equivalent.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Sanitaryware: Wall-mounted WC, elegant basins <br/> branded.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Pipes: Concealed CPVC plumbing for hot/cold <br/> water lines.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Hot Water: Provision for geysers and <br/> solar water connections.</p>
+                                </div>
+                            </div>
+                            <div class="flex-1 h-full lg:order-1 order-1">
+                                <figure class="w-full h-full">
+                                    <img src="./mediaFiles/Specification/Specification/Plumbing-&-Sanitary.webp"
+                                        alt="Plumbing & Sanitary" class="w-full h-full object-cover object-center">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <!-- 8 -->
+                        <div class="w-full lg:h-lvh grid grid-cols-1 lg:grid-cols-2 gap-x-[70px] mb-[70px]">
+                            <div class="flex px-[16.5px] lg:px-0 flex-col items-start justify-start gap-[16px] lg:gap-[30px] mt-[15px] lg:mt-0 order-2 lg:order-1">
+                                <h3 class="font-jost text-[25px] lg:text-[64px] text-[#003253] capitalize lg:leading-[73px]">
+                                    Connectivity & Technology
+                                </h3>
+                                <div class="flex flex-col gap-[20px]">
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">TV & Telephone: Points in living and master <br/> bedroom.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Internet: High-speed fiber optic provision.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Pipes: Concealed CPVC plumbing for hot/cold <br/> water lines.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Intercom: Video door phone system and intercom <br/> facility.</p>
+                                </div>
+                            </div>
+                            <div class="flex-1 h-full lg:order-1 order-1">
+                                <figure class="w-full h-full">
+                                    <img src="./mediaFiles/Specification/Specification/Connectivity-&-Technology.webp"
+                                        alt="Connectivity & Technology" class="w-full h-full object-cover object-center">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <!-- 9 -->
+                        <div class="w-full lg:h-lvh grid grid-cols-1 lg:grid-cols-2 gap-x-[70px] mb-[70px]">
+                            <div class="flex px-[16.5px] lg:px-0 flex-col items-start justify-start gap-[16px] lg:gap-[30px] mt-[15px] lg:mt-0 order-2 lg:order-1">
+                                <h3 class="font-jost text-[25px] lg:text-[64px] text-[#003253] capitalize lg:leading-[73px]">
+                                    Safety & Security
+                                </h3>
+                                <div class="flex flex-col gap-[20px]">
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Main Door Lock: Smart digital lock (selected <br/> units).</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Fire Safety: Fire-fighting systems as per norms.</p>
+                                    <p class="font-jost text-[16.08px] text-[#2C2C2C] text-start capitalize">Power Backup: 24/7 power backup for common <br/> areas and essential services.</p>
+                                </div>
+                            </div>
+                            <div class="flex-1 h-full lg:order-1 order-1">
+                                <figure class="w-full h-full">
+                                    <img src="./mediaFiles/Specification/Specification/Safety-&-Security.webp"
+                                        alt="Safety & Security" class="w-full h-full object-cover object-center">
+                                </figure>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </section>
 
         <!-- Contact Us BTN -->
@@ -1752,10 +985,10 @@
                 <div class="flex flex-col items-start">
                     <h2
                         class="font-jost text-[#173150] font-semibold md:font-medium text-[24px] md:text-[40px] leading-[36px] md:leading-[60px] tracking-[0px]">
-                        Floor Plan FAQs – The Pinnacle, Mohali</h2>
+                        Frequently Asked Questions – Specifications</h2>
                     <p
                         class="font-jost font-normal md:font-medium text-[16px] md:text-[20px] leading-[160%] md:leading-[28px] text-[#474A49]">
-                        Answers to common queries about configurations, availability, furnishings, and future launches.
+                        Explore detailed insights about the premium materials, smart features, and luxury fittings that define the essence of The Pinnacle.
                     </p>
                 </div>
                 <div
@@ -1765,7 +998,7 @@
                         <div class="flex w-full items-center justify-between">
                             <h3
                                 class="font-jost font-medium text-[17px] md:text-[20px] leading-[100%] text-[var(--main-blue)]">
-                                What types of apartments are available at The Pinnacle Mohali?
+                                What makes the specifications at The Pinnacle truly luxurious?
                             </h3>
                             <div
                                 class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
@@ -1773,8 +1006,7 @@
                             </div>
                         </div>
                         <p class="text-[#2C2C2C] font-jost text-[16px] md:text-[18px] MakeVisibleOnclick">
-                            We offer luxury 3 BHK, 4 BHK, 5 BHK apartments, and penthouse Sky Villas. Each configuration
-                            is designed to meet varying space and lifestyle needs.
+                            The Pinnacle residences feature high-end specifications such as imported marble flooring, premium wooden doors, modular kitchens with built-in appliances, and fully automated smart home systems — combining comfort with class.
                         </p>
                     </div>
                     <div
@@ -1782,7 +1014,7 @@
                         <div class="flex w-full items-center justify-between">
                             <h3
                                 class="font-jost font-medium text-[17px] md:text-[20px] leading-[100%] text-[var(--main-blue)]">
-                                Are all apartment configurations currently available for booking?
+                                Are the apartments fully furnished or semi-furnished?
                             </h3>
                             <div
                                 class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
@@ -1799,7 +1031,7 @@
                         class="flex flex-col py-[12px] w-full border-b-[0.5px] border-[#989797] gap-[6.74px] md:gap-[9px]">
                         <div class="flex w-full items-center justify-between">
                             <h3 class="font-jost font-medium text-[17px] md:text-[20px] text-[var(--main-blue)]">
-                                What is the typical size range of the apartments?
+                                What kind of flooring and finishes are offered in the project?
                             </h3>
                             <div
                                 class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
@@ -1815,9 +1047,7 @@
                     <div
                         class="flex flex-col py-[12px] w-full border-b-[0.5px] border-[#989797] gap-[6.74px] md:gap-[9px]">
                         <div class="flex w-full items-center justify-between">
-                            <h3 class="font-jost font-medium text-[17px] md:text-[20px] text-[var(--main-blue)]">
-                                Can I download floor plans for each unit type?
-                            </h3>
+                            <h3 class="font-jost font-medium text-[17px] md:text-[20px] text-[var(--main-blue)]">Is there smart home automation in every apartment?</h3>
                             <div
                                 class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
                                 <i class="fa-solid fa-plus text-white md:text-[#173F63] text-[12px] "></i>
@@ -1833,7 +1063,7 @@
                         class="flex flex-col py-[12px] w-full border-b-[0.5px] border-[#989797] gap-[6.74px] md:gap-[9px]">
                         <div class="flex w-full items-center justify-between">
                             <h3 class="font-jost font-medium text-[17px] md:text-[20px] text-[var(--main-blue)]">
-                                Are penthouses or duplex units available?
+                                Which brands are used for electrical and sanitary fittings?
                             </h3>
                             <div
                                 class="shrink-0 w-[25px] h-[25px] md:w-[28.01px] md:h-[28.01px] rounded-full bg-[var(--main-blue)] md:bg-[#F6F6F6] flex items-center justify-center cursor-pointer FAQButton">
@@ -1865,8 +1095,8 @@
                         <div class="flex flex-col gap-[10px]">
                             <h3
                                 class="text-[#003253] font-jost font-medium text-[24px] md:text-[36px] leading-[33px] md:leading-[50px] tracking-[0%] ">
-                                <span class="font-normal">Need Help Choosing</span> <br />
-                                the Right Floor Plan?
+                                <span class="font-normal">Talk to Our Property </span> <br />
+                                Consultant at Realty Nivesh
                             </h3>
                             <p
                                 class="font-normal md:font-medium text-[16px] md:text-[20px] text-[#474A49] leading-[28px] tracking-[2%]">
