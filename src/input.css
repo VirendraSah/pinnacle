@@ -191,3 +191,7 @@ body{
   border-radius: 10px;
   background: linear-gradient(90deg, #FFC267 0%, #99753E 100%);
 }
+
+.clip-triangle {
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}

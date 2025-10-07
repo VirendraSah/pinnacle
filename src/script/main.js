@@ -1163,7 +1163,9 @@ const lushopenspace = new Swiper(".lushopenspace", {
 const lushopenspaceFraction = document.querySelector(".Lush-Open-Spaces-fraction");
 
 // pehle hi set kar do
-lushopenspaceFraction.textContent = `${lushopenspace.realIndex + 1} / ${lushopenspace.slides.length}`;
+if (lushopenspace && lushopenspace.slides && lushopenspaceFraction) {
+  lushopenspaceFraction.textContent = `${lushopenspace.realIndex + 1} / ${lushopenspace.slides.length}`;
+}
 
 lushopenspace.on("slideChange", () => {
   lushopenspaceFraction.textContent = `${lushopenspace.realIndex + 1} / ${lushopenspace.slides.length}`;
@@ -1190,4 +1192,169 @@ var ElevatingAmenitiesSwiper = new Swiper(".ElevatingAmenitiesSwiper", {
     },
   }
 
+});
+
+// Gallery-data and rendering logic
+// 🔹 Data Arrays
+const contentData = [
+  { title: "Project Walkthrough – The Pinnacle Mohali", desc: "Watch a guided visual tour of the lifestyle, architecture, and ambience of our premium residences." },
+  { title: "Step Inside Our Sample Flats", desc: "Get a first-hand look at luxurious interiors, layouts, and design aesthetics of your future home." },
+  { title: "The Pinnacle in Pictures", desc: "Browse curated images of interiors, exteriors, amenities, and landscapes of the development." },
+  { title: "Construction Progress & Site Updates", desc: "See how The Pinnacle Mohali is shaping up — floor-by-floor, tower-by-tower." }
+];
+
+const galleryImages = {
+  1: [
+    { src: "./mediaFiles/Gallery/Sample-flat/1.webp", classes: "w-full h-auto md:h-[600px] aspect-video col-span-2 md:col-span-3" },
+    { src: "./mediaFiles/Gallery/Sample-flat/2.svg", classes: "w-full h-auto" },
+    { src: "./mediaFiles/Gallery/Sample-flat/3.webp", classes: "w-full h-auto" },
+    { src: "./mediaFiles/Gallery/Sample-flat/4.webp", classes: "w-full h-auto" },
+    { src: "./mediaFiles/Gallery/Sample-flat/5.webp", classes: "w-full h-full md:row-span-2 md:aspect-square" },
+    { src: "./mediaFiles/Gallery/Sample-flat/6.webp", classes: "w-full" },
+    { src: "./mediaFiles/Gallery/Sample-flat/7.webp", classes: "w-full" },
+    { src: "./mediaFiles/Gallery/Sample-flat/mobile.svg", classes: "w-full block md:hidden col-span-2" },
+    { src: "./mediaFiles/Gallery/Sample-flat/8.webp", classes: "onclickshowmore w-full hidden md:block" },
+    { src: "./mediaFiles/Gallery/Sample-flat/9.webp", classes: "onclickshowmore w-full hidden md:block" },
+    { src: "./mediaFiles/Gallery/Sample-flat/10.webp", classes: "onclickshowmore w-full hidden md:block" },
+    { src: "./mediaFiles/Gallery/Sample-flat/11.webp", classes: "onclickshowmore w-full hidden md:block" },
+    { src: "./mediaFiles/Gallery/Sample-flat/12.webp", classes: "onclickshowmore w-full hidden md:block" }
+  ],
+  2: [
+    { src: "./mediaFiles/Gallery/Project-gallery/1.webp", classes: "w-full h-auto md:h-[600px] aspect-video col-span-2 md:col-span-3" },
+    { src: "./mediaFiles/Gallery/Project-gallery/2.svg", classes: "w-full h-auto" },
+    { src: "./mediaFiles/Gallery/Project-gallery/3.svg", classes: "w-full h-auto" },
+    { src: "./mediaFiles/Gallery/Project-gallery/4.svg", classes: "w-full h-auto" },
+    { src: "./mediaFiles/Gallery/Project-gallery/5.webp", classes: "w-full h-full md:row-span-2 md:aspect-square" },
+    { src: "./mediaFiles/Gallery/Project-gallery/6.webp", classes: "w-full" },
+    { src: "./mediaFiles/Gallery/Project-gallery/7.webp", classes: "w-full" },
+    { src: "./mediaFiles/Gallery/Project-gallery/8.webp", classes: "onclickshowmore w-full hidden md:block" },
+    { src: "./mediaFiles/Gallery/Project-gallery/9.webp", classes: "onclickshowmore w-full hidden md:block" },
+    { src: "./mediaFiles/Gallery/Project-gallery/10.webp", classes: "onclickshowmore w-full hidden md:block" },
+    { src: "./mediaFiles/Gallery/Project-gallery/11.webp", classes: "onclickshowmore w-full hidden md:block" },
+    { src: "./mediaFiles/Gallery/Project-gallery/12.webp", classes: "onclickshowmore w-full hidden md:block" }
+  ],
+  3: [
+    { src: "./mediaFiles/Gallery/Construction/1.webp", classes: "w-full h-auto md:h-[600px] aspect-video col-span-2 md:col-span-3" },
+    { src: "./mediaFiles/Gallery/Construction/2.svg", classes: "w-full h-auto" },
+    { src: "./mediaFiles/Gallery/Construction/3.svg", classes: "w-full h-auto" },
+    { src: "./mediaFiles/Gallery/Construction/4.svg", classes: "w-full h-auto" },
+    { src: "./mediaFiles/Gallery/Construction/5.webp", classes: "w-full h-full md:row-span-2 md:aspect-square" },
+    { src: "./mediaFiles/Gallery/Construction/6.webp", classes: "w-full" },
+    { src: "./mediaFiles/Gallery/Construction/7.webp", classes: "w-full" },
+    { src: "./mediaFiles/Gallery/Construction/8.webp", classes: "onclickshowmore w-full hidden md:block" },
+    { src: "./mediaFiles/Gallery/Construction/9.webp", classes: "onclickshowmore w-full hidden md:block" },
+    { src: "./mediaFiles/Gallery/Construction/10.svg", classes: "onclickshowmore w-full hidden md:block" },
+    { src: "./mediaFiles/Gallery/Construction/11.svg", classes: "onclickshowmore w-full hidden md:block" },
+    { src: "./mediaFiles/Gallery/Construction/12.svg", classes: "onclickshowmore w-full hidden md:block" }
+  ]
+};
+
+// 🔹 DOM Elements
+const flowButtons = document.querySelectorAll(".flowgallerybtn");
+const dynamicContent = document.querySelector("#dynamicContent");
+const projectWalktrough = document.querySelector('#projectWalktrough');
+const otherswalkthrough = document.querySelector('#otherswalkthrough');
+const mobileButtons = document.querySelectorAll('#threeLayerButtons .btn');
+
+// 🔹 Function to reset desktop buttons
+function resetFlowButtons() {
+  flowButtons.forEach(btn => {
+    btn.classList.remove("bg-[#003253]", "text-white");
+    btn.classList.add("bg-[#F2F2F2]", "text-[#003253]");
+  });
+}
+
+// 🔹 Function to reset mobile buttons
+function resetMobileButtons() {
+  mobileButtons.forEach(btn => {
+    btn.querySelector('.bottomlayer').style.background = '#105686';
+    btn.querySelector('.middlelayer').style.background = '#08436B';
+    btn.querySelector('.toplayer').style.background = '#003253';
+  });
+}
+
+// 🔹 Render content function
+function renderGallery(index) {
+  const { title, desc } = contentData[index];
+  dynamicContent.innerHTML = `
+    <h2 class="text-[#173150] font-semibold md:font-medium text-[24px] md:text-[40px] text-center">${title}</h2>
+    <p class="text-[#474A49] tracking-[2%] leading-[28px] text-[16px] md:text-[20px] text-center">${desc}</p>
+  `;
+
+  if (index === 0) {
+    projectWalktrough.classList.remove("hidden");
+    otherswalkthrough.classList.add("hidden");
+  } else {
+    projectWalktrough.classList.add("hidden");
+    otherswalkthrough.classList.remove("hidden");
+    const galleryData = galleryImages[index];
+    otherswalkthrough.innerHTML = `
+      <div class="w-full grid grid-cols-2 md:grid-cols-3 gap-[6px] md:gap-[20px]">
+        ${galleryData.map(item => `
+          <figure class="${item.classes}">
+            <img src="${item.src}" alt="gallery-image" class="w-full h-full object-cover object-center" />
+          </figure>`).join("")}
+      </div>
+      <button id="gallery-showmore" class="px-[24px] py-[12px] bg-[#003253] uppercase text-white m-auto font-medium cursor-pointer md:hidden block">Show more</button>
+    `;
+  }
+}
+
+// 🔹 Desktop button clicks
+flowButtons.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    resetFlowButtons();
+    btn.classList.remove("bg-[#F2F2F2]", "text-[#003253]");
+    btn.classList.add("bg-[#003253]", "text-white");
+    renderGallery(index);
+  });
+});
+
+// 🔹 Mobile button clicks
+mobileButtons.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    resetMobileButtons();
+    btn.querySelector('.bottomlayer').style.background = '#FFCA7B';
+    btn.querySelector('.middlelayer').style.background = '#EBAF56';
+    btn.querySelector('.toplayer').style.background = 'linear-gradient(to bottom, #FFC267 0%, #99753E 100%)';
+    renderGallery(index + 1); // mobile index: first button corresponds to gallery 1
+    projectWalktrough.classList.remove("hidden");
+  });
+});
+
+// 🔹 Default Rendering
+window.addEventListener("DOMContentLoaded", () => {
+  if (window.innerWidth < 768) {
+    // Mobile default: first button active
+    mobileButtons[0].click();
+    projectWalktrough.classList.remove("hidden");
+  } else {
+    // Desktop default: Project Walkthrough
+    flowButtons[0].click();
+  }
+});
+
+// showMore buttons functionality
+otherswalkthrough.addEventListener('click', (e) => {
+  if (e.target && e.target.id === 'gallery-showmore') {
+    // Find all hidden images
+    const hiddenImages = otherswalkthrough.querySelectorAll('.onclickshowmore');
+    
+    hiddenImages.forEach(img => img.classList.remove('hidden'));
+    
+    // Hide the Show More button
+    e.target.style.display = 'none';
+  }
+});
+
+
+
+const video = document.getElementById("myVideo");
+const playBtn = document.getElementById("playBtn");
+const thumbnailOverlay = document.getElementById("thumbnailOverlay");
+
+playBtn.addEventListener("click", () => {
+  thumbnailOverlay.classList.add("hidden"); // thumbnail hide
+  video.classList.remove("hidden");         // video show
+  video.play();                             // play video
 });
