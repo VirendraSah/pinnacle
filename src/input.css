@@ -2,11 +2,11 @@
 @import "tailwindcss";
 
 @theme {
-  --font-jost: "Jost", sans-serif; 
+  --font-jost: "Jost", sans-serif;
 }
 
 :root {
-    --main-blue: #003253;
+  --main-blue: #003253;
   --homebuying-bg: url('./mediafiles/Home page/Counter number/bg01/bg02.png');
   --assistance-decorative-bg: url('./mediaFiles/Home page/Counter number/assistance_bg_decorative.png');
   --Pinnacle-in-Numbers-bg: url('./mediaFiles/Home page/Counter number/bg01/bg 01.png');
@@ -24,19 +24,19 @@
   --bg-frame-mobile-price: url('./mediaFiles/Price/mobile-bg.png')
 }
 
-body{
-    font-family: "Jost", sans-serif;
+body {
+  font-family: "Jost", sans-serif;
 }
 
 
 .swiper-button-disabled {
-    color: #A3A3A4;       
-    cursor: not-allowed; 
-    pointer-events: none; 
+  color: #A3A3A4;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-    background: linear-gradient(180deg, #FFC267 0%, #99753E 100%) !important;
+  background: linear-gradient(180deg, #FFC267 0%, #99753E 100%) !important;
 }
 
 .scrollbar-none::-webkit-scrollbar {
@@ -47,10 +47,11 @@ body{
   .grid-border {
     position: relative;
   }
+
   .grid-border:not(:last-child)::after {
     content: '';
     position: absolute;
-    top: 10%; 
+    top: 10%;
     right: 0;
     height: 80%;
     border-right: 1px solid #CFCFCF;
@@ -61,13 +62,14 @@ body{
   width: 100% !important;
   max-width: 100vw !important;
 }
+
 .swiper-wrapper {
   width: 100% !important;
 }
 
 /* Scroll bar custom */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 2.5625px;           
+  width: 2.5625px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
@@ -75,9 +77,9 @@ body{
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #D5D5D5;          
+  background: #D5D5D5;
   border-radius: 9999px;
-  height: 428.2275px;        
+  height: 428.2275px;
 }
 
 /* Center scrollbar thumb */
@@ -89,15 +91,18 @@ body{
 
 
 .gradientBGAssistanceBTN {
-    animation: ScaleEffect 1s infinite;
+  animation: ScaleEffect 1s infinite;
 }
 
 @keyframes ScaleEffect {
-    0%, 100% {
-    box-shadow: 0 0 0px rgba(255,194,103,0.5), 0 0 0px rgba(153,117,62,0.5);
+
+  0%,
+  100% {
+    box-shadow: 0 0 0px rgba(255, 194, 103, 0.5), 0 0 0px rgba(153, 117, 62, 0.5);
   }
+
   50% {
-    box-shadow: 0 0 20px rgba(255,194,103,0.5), 0 0 20px rgba(153,117,62,0.5);
+    box-shadow: 0 0 20px rgba(255, 194, 103, 0.5), 0 0 20px rgba(153, 117, 62, 0.5);
   }
 }
 
@@ -105,27 +110,32 @@ body{
   width: 100%;
   height: 100%;
 }
+
 .swiper-wrapper {
   display: flex;
 }
+
 .swiper-slide {
   flex-shrink: 0;
 }
 
-.iti__selected-flag > *:first-child {
+.iti__selected-flag>*:first-child {
   display: none !important;
 }
-.iti{
+
+.iti {
   width: 100%;
 }
 
 .checkbox label {
   display: inline;
 }
+
 .checkbox .input-assumpte {
   display: none;
 }
-.input-assumpte + label {
+
+.input-assumpte+label {
   width: 19.5686px;
   height: 19.5686px;
   -webkit-appearance: none;
@@ -135,11 +145,12 @@ body{
   display: inline-block;
   position: relative;
 }
-.input-assumpte:checked + label:after {
+
+.input-assumpte:checked+label:after {
   width: 100%;
   height: 100%;
   content: "\f00c";
-  font-weight: 900; 
+  font-weight: 900;
   font-family: "Font Awesome 5 Free";
   background: linear-gradient(180deg, #FFC267 0%, #99753E 100%);
   color: white;
@@ -160,24 +171,28 @@ body{
 
 /* actie button priceList- pricepage */
 
- /* fallback gray line */
-  .bg-default { background: #D8D6D5; }
+/* fallback gray line */
+.bg-default {
+  background: #D8D6D5;
+}
 
-  /* custom gradient for active line (no tailwind purge issues) */
-  .bg-gradient-custom {
-    background: linear-gradient(180deg, #FFC267 0%, #99753E 100%);
-  }
+/* custom gradient for active line (no tailwind purge issues) */
+.bg-gradient-custom {
+  background: linear-gradient(180deg, #FFC267 0%, #99753E 100%);
+}
 
-  /* optional: active style for apartment tabs (you may already have this) */
-  .activeBtn {
-    background-color: #003253 !important;
-    color: #fff !important;
-  }
+/* optional: active style for apartment tabs (you may already have this) */
+.activeBtn {
+  background-color: #003253 !important;
+  color: #fff !important;
+}
 
-  /* width & height of scrollbar */
+/* width & height of scrollbar */
 .custom-scrollbar-specification::-webkit-scrollbar {
-  height: 12px;   /* horizontal */
-  width: 3.11px;    /* vertical */
+  height: 12px;
+  /* horizontal */
+  width: 3.11px;
+  /* vertical */
 }
 
 /* Track */
@@ -195,3 +210,39 @@ body{
 .clip-triangle {
   clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
 }
+
+.custom-bullets li::marker {
+  color: #173F63;
+  font-size: 20px;
+}
+
+.tclistdisc {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tclistdisc li {
+  position: relative;
+  padding-left: 24px; /* spacing for bullet */
+}
+
+.tclistdisc li::before {
+  content: "•";
+  color: #173F63;
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* perfect vertical center */
+  line-height: 1;
+}
+
+ .alphalist {
+    list-style-type: upper-alpha; /* A, B, C */
+    padding-left: 1.5rem;
+  }
+  .alphalist li::marker {
+    color: #173F63;
+    font-weight: 600;
+    font-size: 20px;
+  }
