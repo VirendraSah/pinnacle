@@ -1,3 +1,27 @@
+// download buttons
+
+const downloadbrochure=document.getElementById('download-brochure')
+console.log(downloadbrochure)
+
+downloadbrochure.addEventListener("click", function() {
+  console.log(downloadbrochure)
+  // PDF file path
+  const pdfUrl = "./mediaFiles/Specification/Specifications.pdf";  
+
+  // Create a temporary link element
+  const link = document.createElement("a");
+  link.href = pdfUrl;
+  link.download = "specification.pdf";  // name of downloaded file
+  document.body.appendChild(link);
+
+  // Trigger click
+  link.click();
+
+  // Remove the link
+  document.body.removeChild(link);
+});
+
+
 const header = document.getElementById("transparentBGonScroll");
 const mainHeader = document.getElementById("mainheaderAppear_disappear");
 let lastScroll = 0;
@@ -1358,3 +1382,4 @@ playBtn.addEventListener("click", () => {
   video.classList.remove("hidden");         // video show
   video.play();                             // play video
 });
+
