@@ -1,10 +1,8 @@
 // download buttons
 
 const downloadbrochure=document.getElementById('download-brochure')
-console.log(downloadbrochure)
-
+if(downloadbrochure){
 downloadbrochure.addEventListener("click", function() {
-  console.log(downloadbrochure)
   // PDF file path
   const pdfUrl = "./mediaFiles/Specification/Specifications.pdf";  
 
@@ -20,6 +18,7 @@ downloadbrochure.addEventListener("click", function() {
   // Remove the link
   document.body.removeChild(link);
 });
+}
 
 
 const header = document.getElementById("transparentBGonScroll");
@@ -534,6 +533,37 @@ var featureSwiper = new Swiper(".featureSwiper", {
   }
 });
 
+ const locationBtn = document.getElementById("LocationMap");
+  const googleBtn = document.getElementById("googleMap");
+  const locationImages = document.getElementById("locationImages");
+  const googleFrame = document.getElementById("googleMapFrame");
+
+  // Default: show location map, hide Google Map
+  if(locationImages || googleFrame){
+  locationImages.style.display = "block";
+  googleFrame.style.display = "none";
+  }
+
+  // When clicking "Location Map"
+  if(locationBtn){
+  locationBtn.addEventListener("click", () => {
+    locationImages.style.display = "block";
+    googleFrame.style.display = "none";
+    locationBtn.classList.add("bg-[var(--main-blue)]", "text-white");
+    googleBtn.classList.remove("bg-[var(--main-blue)]", "text-white");
+  });
+  }
+
+  // When clicking "Google Map"
+  if(googleBtn){
+  googleBtn.addEventListener("click", () => {
+    locationImages.style.display = "none";
+    googleFrame.style.display = "block";
+    googleBtn.classList.add("bg-[var(--main-blue)]", "text-white");
+    locationBtn.classList.remove("bg-[var(--main-blue)]", "text-white");
+  });
+  }
+
 // Location - DestinationSwiper
 
 var DestinationSwiper = new Swiper(".DestinationSwiper", {
@@ -563,6 +593,35 @@ $(document).ready(function () {
     initialCountry: "in",
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Image Array
+    const imageArray = [
+      "./mediaFiles/Location/highway_circle.webp",      // default
+      "./mediaFiles/Location/OverBridge.webp",
+      "./mediaFiles/Location/highway_infrastructure.webp",
+      "./mediaFiles/Location/investment1.svg",
+    ];
+
+    console.log(imageArray)
+
+    // Target image
+    const mainImage = document.querySelector(".dynamicimageonclickchange img");
+
+    // Set default image
+    let currentIndex = 0;
+    mainImage.src = imageArray[currentIndex];
+
+    // Get all clickable icons
+    const changeBtns = document.querySelectorAll(".onclickchange-image");
+
+    // Add click listener to each
+    changeBtns.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        mainImage.src = imageArray[index] || imageArray[0]; // fallback if index not found
+      });
+    });
+  });
 
 
 // price--page
@@ -958,7 +1017,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderMobileSlider(apartmentType, towerName, data) {
     const swiperWrapper = document.querySelector('.priceaprtmentSlider .swiper-wrapper');
-    console.log(swiperWrapper)
     swiperWrapper.innerHTML = ''; // clear old slides if any
 
     // Create slide dynamically
