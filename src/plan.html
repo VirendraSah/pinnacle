@@ -710,19 +710,19 @@
 
         <!-- View Floor Plans by Tower & Configuration -->
         <section
-            class="w-full h-auto px-[16.8px] pt-[80px] pb-[40px] md:py-[80px] relative flex flex-col gap-[17.89px] lg:gap-[48px]">
+            class="w-full h-auto px-[16.8px] pt-[80px] pb-[40px] md:py-[80px] relative flex flex-col gap-[17.89px] lg:gap-[48px]" id="planSection">
             <!-- flow buttons -->
             <div
                 class="flowwrapper max-w-[1012px] pb-[12.14px] pt-[17.14px]  m-auto absolute top-0 left-1/2 -translate-x-1/2 flex items-center justify-center w-full border-t-0 bg-white shadow-[0_0_3.9px_0_#00000040] rounded-none lg:rounded-b-3xl">
                 <div class=" w-full m-auto flex items-center justify-center gap-[10px]">
                     <button type="button"
-                        class="Price_list rounded-[3px] py-[10px] px-[20px] font-jost font-medium text-[15px] md:text-[18px] bg-[#F2F2F2] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">Unit
+                        class="planFlowBtn rounded-[3px] py-[10px] px-[20px] font-jost font-medium text-[15px] md:text-[18px] bg-[#F2F2F2] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">Unit
                         Plan</button>
                     <button type="button"
-                        class="Price_list rounded-[3px] py-[10px] px-[20px] font-jost font-medium text-[15px] md:text-[18px] bg-[#003253] text-white cursor-pointer capitalize">Site
+                        class="planFlowBtn rounded-[3px] py-[10px] px-[20px] font-jost font-medium text-[15px] md:text-[18px] bg-[#003253] text-white cursor-pointer capitalize">Site
                         plan</button>
                     <button type="button"
-                        class="Price_list rounded-[3px] py-[10px] px-[20px] font-jost font-medium text-[15px] md:text-[18px] bg-[#F2F2F2] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">Tower
+                        class="planFlowBtn rounded-[3px] py-[10px] px-[20px] font-jost font-medium text-[15px] md:text-[18px] bg-[#F2F2F2] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">Tower
                         Plan</button>
                 </div>
             </div>
@@ -738,110 +738,108 @@
             <div class="relative max-w-[1240px] gap-[29.03px] m-auto w-full grid grid-cols-1 lg:grid-cols-2 bg-cover bg-center px-[19.05px] py-[22.1px] bg-[url('./mediaFiles/Plan/Plan/chased-paper-bg-plan.svg')]"
                 id="planData">
                 <!-- mobile view only -->
-                <div class="sm:hidden block w-full">
-                    <div class="flex items-start justify-start gap-[10px] overflow-x-scroll scrollbar-none w-full">
-                        <div class="p-[1px] bg-gradient-to-b from-[#FFC267] to-[#99753E] rounded-[3px]">
-                            <button type="button"
-                                class="Price_list rounded-[3px] py-[3.69px] px-[16px] font-jost font-medium text-[16px] bg-white text-[#173F63] cursor-pointer capitalize">
-                                4BHK
-                            </button>
-                        </div>
-                        <div class="p-[1px] hover:bg-gradient-to-b from-[#FFC267] to-[#99753E] rounded-[3px]">
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#BCBCBC] py-[3.69px] px-[16px] font-jost font-medium text-[16px] bg-[#F9F9F9] text-[#173F63] cursor-pointer capitalize">
-                                3BHK
-                            </button>
-                        </div>
-                        <div class="p-[1px] hover:bg-gradient-to-b from-[#FFC267] to-[#99753E] rounded-[3px]">
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#BCBCBC] py-[3.69px] px-[16px] font-jost font-medium text-[16px] bg-[#F9F9F9] text-[#173F63] cursor-pointer capitalize">
-                                5BHK
-                            </button>
-                        </div>
-                        <div class="p-[1px] hover:bg-gradient-to-b from-[#FFC267] to-[#99753E] rounded-[3px]">
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#BCBCBC] py-[3.69px] px-[16px] font-jost font-medium text-[16px] bg-[#F9F9F9] text-[#173F63] cursor-pointer capitalize">
-                                PENTHOUSE
-                            </button>
+                     <div class="sm:hidden block w-full" id="desktopBHKWrapper">
+                        <div class="flex items-start justify-start gap-[20px] overflow-x-scroll scrollbar-none w-full">
+                            <button data-bhk="4BHK" type="button"
+                                class="bhkBtn rounded-[4px] inset-0 border border-[#FFC267] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-[#003253] text-white cursor-pointer capitalize">4BHK</button>
+                            <button data-bhk="3BHK" type="button"
+                                class="bhkBtn rounded-[4px] inset-0 border border-[#BCBCBC] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-transparent hover:border-[#FFC267] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">3BHK</button>
+                            <button data-bhk="5BHK" type="button"
+                                class="bhkBtn rounded-[4px] inset-0 border border-[#BCBCBC] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-transparent hover:border-[#FFC267] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">5BHK</button>
+                            <button data-bhk="Penthouse" type="button"
+                                class="bhkBtn rounded-[4px] inset-0 border border-[#BCBCBC] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-transparent hover:border-[#FFC267] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">PENTHOUSE</button>
+
                         </div>
                     </div>
-                </div>
                 <!-- plan data will be injected here by JS -->
-                <div class="flex items-center justify-center bg-white sm:bg-[#F1F1F1] pt-[17.42px] pb-[36.67px]">
+                  <!-- left image + sqft buttons -->
+                <div class="flex items-center justify-center bg-white sm:bg-[#F1F1F1] pt-[17.42px] pb-[36.67px] " id="planLeftSide">
                     <div
                         class=" w-full sm:w-auto flex flex-col-reverse lg:flex-col gap-[29.14px] items-center justify-center lg:items-start lg:justify-start ">
-                        <div class="flex items-start justify-start gap-[6px] md:gap-[18px]">
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#FFC267] py-[3.5px] md:py-[8px] px-[11px] md:px-[40px] font-jost font-medium text-[14.69px] md:text-[16.65px] bg-[#003253] text-white cursor-pointer capitalize">2600
+                        <!-- Sqft Buttons -->
+                        <div class="flex items-start justify-start gap-[6px] md:gap-[18px]" id="sqftButtonsContainer">
+                            <button data-size="2600 Sqft" type="button"
+                                class="changePlansimage rounded-[4px] inset-0 border border-[#FFC267] py-[3.5px] md:py-[8px] px-[11px] md:px-[40px] font-jost font-medium text-[14.69px] md:text-[16.65px] bg-[#003253] text-white cursor-pointer capitalize">2600
                                 Sqft</button>
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#BCBCBC] py-[3.5px] md:py-[8px] px-[11px] md:px-[40px] font-jost font-medium text-[14.69px] md:text-[16.65px] bg-[#F2F2F2] hover:border-[#FFC267] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">2800
+                            <button data-size="2800 Sqft" type="button"
+                                class="changePlansimage rounded-[4px] inset-0 border border-[#BCBCBC] py-[3.5px] md:py-[8px] px-[11px] md:px-[40px] font-jost font-medium text-[14.69px] md:text-[16.65px] bg-[#F2F2F2] hover:border-[#FFC267] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">2800
                                 Sqft </button>
                         </div>
+
+                        <!-- Image -->
                         <div
                             class="bg-white inset-0 sm:border sm:border-[#EDE3E3] w-full sm:px-[38.98px] pt-[22.72px] sm:py-[47px] flex items-center justify-center">
                             <figure class="w-[206.55px] h-[177.42px] sm:w-[367.7px] sm:h-[315.85px]">
-                                <img src="./mediaFiles/Plan/Plan/map1.webp" alt="map1"
+                                <img id="planImage" src="./mediaFiles/Plan/Plan/map1.webp" alt="map1"
                                     class="w-full h-full object-fill object-center">
                             </figure>
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col items-start justify-start gap-[25.49px] py-[17.42px]">
-                    <div class="sm:block hidden w-full">
+
+                <!-- right side info -->
+                <div class="flex flex-col items-start justify-start gap-[25.49px] py-[17.42px]" id="planRightSide">
+                    <!-- desktop BHK buttons -->
+                    <div class="sm:block hidden w-full" id="desktopBHKWrapper">
                         <div class="flex items-start justify-start gap-[20px] overflow-x-scroll scrollbar-none w-full">
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#FFC267] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-[#003253] text-white cursor-pointer capitalize">4BHK</button>
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#BCBCBC] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-transparent hover:border-[#FFC267] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">3BHK</button>
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#BCBCBC] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-transparent hover:border-[#FFC267] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">5BHK</button>
-                            <button type="button"
-                                class="Price_list rounded-[4px] inset-0 border border-[#BCBCBC] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-transparent hover:border-[#FFC267] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">PENTHOUSE</button>
+                            <button data-bhk="4BHK" type="button"
+                                class="bhkBtn rounded-[4px] inset-0 border border-[#FFC267] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-[#003253] text-white cursor-pointer capitalize">4BHK</button>
+                            <button data-bhk="3BHK" type="button"
+                                class="bhkBtn rounded-[4px] inset-0 border border-[#BCBCBC] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-transparent hover:border-[#FFC267] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">3BHK</button>
+                            <button data-bhk="5BHK" type="button"
+                                class="bhkBtn rounded-[4px] inset-0 border border-[#BCBCBC] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-transparent hover:border-[#FFC267] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">5BHK</button>
+                            <button data-bhk="Penthouse" type="button"
+                                class="bhkBtn rounded-[4px] inset-0 border border-[#BCBCBC] py-[8px] px-[22px] font-jost font-medium text-[18px] bg-transparent hover:border-[#FFC267] hover:bg-[#003253] duration-200 text-[#003253] hover:text-white cursor-pointer capitalize">PENTHOUSE</button>
 
                         </div>
                     </div>
-                    <div class="flex flex-col items-start justify-start gap-[10px]">
-                        <h3 class="font-jost font-medium text-[20px] sm:text-[27px] tracking-[3%] text-[#003253] ">
+
+                    <!-- heading and description -->
+                    <div class="flex flex-col items-start justify-start gap-[10px]" id="planTextWrapper">
+                        <h3 id="planHeading" class="font-jost font-medium text-[20px] sm:text-[27px] tracking-[3%] text-[#003253] ">
                             Premium 4 BHK
                             Apartments </h3>
-                        <p class="font-jost text-[#474A49] text-[18px] capitalize">Best-selling 4 BHK layouts with
+                        <p id="planDescription" class="font-jost text-[#474A49] text-[18px] capitalize">Best-selling 4 BHK layouts with
                             expansive living and <br class="hidden lg:block">
                             superior specifications.
                         </p>
                     </div>
+
+
+                    <!-- tower buttons -->
                     <div
-                        class="flex items-start justify-start w-full gap-[7.5px] sm:gap-0 overflow-x-scroll scrollbar-none">
+                        class="flex items-start justify-start w-full gap-[7.5px] sm:gap-0 overflow-x-scroll scrollbar-none" id="towerButtonsContainer">
                         <div class="max-w-[210px] w-full flex flex-col items-center justify-center group">
                             <button
-                                class="cursor-pointer font-jost text-[17px] md:text-[20px] font-medium leading-[150%] text-[#003253]">Zenith
+                                class="towerBtn cursor-pointer font-jost text-[17px] md:text-[20px] font-medium leading-[150%] text-[#003253]" data-tower="zenithTower">Zenith
                                 Tower</button>
                             <div class="w-full h-[3px] bg-gradient-to-b from-[#FFC267] to-[#99753E]">
                             </div>
                         </div>
                         <div class="max-w-[210px] w-full flex flex-col items-center justify-center group">
                             <button
-                                class="cursor-pointer font-jost text-[17px] md:text-[20px] font-medium leading-[150%] text-[#003253]">Crest
+                                class="towerBtn cursor-pointer font-jost text-[17px] md:text-[20px] font-medium leading-[150%] text-[#003253]" data-tower="crestTower">Crest
                                 Tower</button>
                             <div class="w-full h-[3px] bg-[#D8D6D5]">
                             </div>
                         </div>
                         <div class="max-w-[210px] w-full flex flex-col items-center justify-center group">
                             <button
-                                class="cursor-pointer font-jost text-[17px] md:text-[20px] font-medium leading-[150%] text-[#003253]">Prime
+                                class="towerBtn cursor-pointer font-jost text-[17px] md:text-[20px] font-medium leading-[150%] text-[#003253]" data-tower="primeTower">Prime
                                 Tower</button>
                             <div class="w-full h-[3px] bg-[#D8D6D5]">
                             </div>
                         </div>
                     </div>
-                    <div class="w-max grid grid-cols-2 gap-[30px]">
+                    <!-- area details -->
+                    <div class="w-max grid grid-cols-2 gap-[30px]" id="areaDetails">
                         <div class="flex flex-col items-start justify-start">
                             <div class="flex flex-col items-start justify-start ">
                                 <h4 class="font-jost text-[15.55px] sm:text-[17.69px] text-[#003253] uppercase">Super
                                     Area*</h4>
                                 <div class="w-[38.02px] h-[1.41px] bg-gradient-to-b from-[#FFC267] to-[#99753E]"></div>
                             </div>
-                            <p class="font-jost font-medium text-[19.12px] sm:text-[21.75px] text-[#474A49]">2600-2800
+                            <p id="superArea" class="font-jost font-medium text-[19.12px] sm:text-[21.75px] text-[#474A49]">2600-2800
                                 sq.ft.</p>
                         </div>
                         <div class="flex flex-col items-start justify-start">
@@ -852,7 +850,7 @@
                                     class="w-[38.02px] h-[1.41px] shrink-0 bg-gradient-to-b from-[#FFC267] to-[#99753E]">
                                 </div>
                             </div>
-                            <p class="font-jost font-medium text-[19.12px] sm:text-[21.75px] text-[#474A49]">1697.81
+                            <p id="builtupArea" class="font-jost font-medium text-[19.12px] sm:text-[21.75px] text-[#474A49]">1697.81
                                 sq.ft.</p>
                         </div>
                         <div class="flex flex-col items-start justify-start">
@@ -863,7 +861,7 @@
                                     class="w-[38.02px] h-[1.41px] shrink-0 bg-gradient-to-b from-[#FFC267] to-[#99753E]">
                                 </div>
                             </div>
-                            <p class="font-jost font-medium text-[19.12px] sm:text-[21.75px] text-[#474A49]">389.44
+                            <p id="balconyArea" class="font-jost font-medium text-[19.12px] sm:text-[21.75px] text-[#474A49]">389.44
                                 sq.ft.</p>
                         </div>
                         <div class="flex flex-col items-start justify-start">
@@ -874,12 +872,13 @@
                                     class="w-[38.02px] h-[1.41px] shrink-0 bg-gradient-to-b from-[#FFC267] to-[#99753E]">
                                 </div>
                             </div>
-                            <p class="font-jost font-medium text-[19.12px] sm:text-[21.75px] text-[#474A49]">1592.53
+                            <p id="reraCarpetArea" class="font-jost font-medium text-[19.12px] sm:text-[21.75px] text-[#474A49]">1592.53
                                 sq.ft.</p>
                         </div>
                     </div>
-                    <button
-                        class="px-[20.74px] py-[10.34px] flex items-center gap-[10.37px] justify-center border border-[#FFC267] shadow-[0_0_4px_0_rgba(0,0,0,0.25)]">
+                    <!-- download button -->
+                    <button id="downloadBtn" 
+                        class="downloadBtn px-[20.74px] py-[10.34px] flex items-center gap-[10.37px] justify-center border border-[#FFC267] shadow-[0_0_4px_0_rgba(0,0,0,0.25)]">
                         <img src="./mediaFiles/Plan/Plan/download_icon.svg" alt="download_icon"
                             class="w-[13.825px] h-[17.282px]">
                         <span class="uppercase font-jost text-[#003253] text-[13.825px] font-medium">floor plan</span>
@@ -1591,23 +1590,17 @@
                 <div
                     class="max-w-[1240px]  w-full m-auto grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-[18px] flex-wrap px-[10px]">
                     <button
-                        class="cursor-pointer py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">3BHK-Apex
-                        Tower</button>
+                        class="projectTower cursor-pointer py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost  bg-white text-[#003253]">3BHK-Apex Tower</button>
                     <button
-                        class="cursor-pointer py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">4BHK-Zenith
-                        & Crest Tower </button>
+                        class="projectTower cursor-pointer py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">4BHK-Zenith & Crest Tower </button>
                     <button
-                        class="cursor-pointer xl:hidden block py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">3BHK-Prime
-                        Tower</button>
+                        class="projectTower cursor-pointer xl:hidden block py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">3BHK-Prime Tower</button>
                     <button
-                        class="cursor-pointer py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">4BHK-Prime
-                        Tower </button>
+                        class="projectTower cursor-pointer py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">4BHK-Prime Tower </button>
                     <button
-                        class="cursor-pointer py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">5BHK-Everest
-                        Tower </button>
+                        class="projectTower cursor-pointer py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">5BHK-Everest Tower </button>
                     <button
-                        class="cursor-pointer py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">5BHK-Crown
-                        Tower </button>
+                        class="projectTower cursor-pointer py-[12px] border border-white rounded-[3px] text-[15px] md:text-[18px] font-medium font-jost bg-transparent text-white hover:bg-white hover:text-[#003253]">5BHK-Crown Tower </button>
                 </div>
 
                 <!-- decorative ppt -->
@@ -1619,7 +1612,7 @@
             </div>
             <div class="sm:block hidden">
                 <div
-                    class="max-w-[1240px] py-[25.71px] px-2 m-auto h-auto grid grid-cols-2 lg:grid-cols-3 gap-x-[21.62px] gap-y-[37.88px]">
+                    class="projectTowerDesktopData max-w-[1240px] py-[25.71px] px-2 m-auto h-auto grid grid-cols-2 lg:grid-cols-3 gap-x-[21.62px] gap-y-[37.88px]">
                     <div class="w-full h-auto">
                         <figure
                             class="group relative w-full h-auto border border-[#E0E0E0] px-[20.76px] py-[16.54px] flex items-center justify-center">
@@ -1690,7 +1683,7 @@
 
             <div class="block sm:hidden ps-[16px] py-[33px]">
                 <div class="swiper TowerLayoutSwiper">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper projectTowermobileData">
                         <div class="swiper-slide">
                             <div class="w-full h-auto">
                                 <figure
