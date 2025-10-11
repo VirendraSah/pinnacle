@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/**/*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/src/index.html"
+    },
+    {
+      "src": "/amenities",
+      "dest": "/src/amenities.html"
+    },
+    {
+      "src": "/gallery",
+      "dest": "/src/gallery.html"
+    },
+    {
+      "src": "/location",
+      "dest": "/src/location.html"
+    },
+    {
+      "src": "/plan",
+      "dest": "/src/plan.html"
+    },
+    {
+      "src": "/price",
+      "dest": "/src/price.html"
+    },
+    {
+      "src": "/specification",
+      "dest": "/src/specification.html"
+    },
+    {
+      "src": "/thankyou",
+      "dest": "/src/thankyou.html"
+    },
+    {
+      "src": "/disclaimer",
+      "dest": "/src/common-pages/disclaimer.html"
+    },
+    {
+      "src": "/privacypolicy",
+      "dest": "/src/common-pages/privacypolicy.html"
+    },
+    {
+      "src": "/termscondition",
+      "dest": "/src/common-pages/termscondition.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/src/$1"
+    }
+  ]
+}
