@@ -1,22 +1,26 @@
 // download buttons
 
-const downloadbrochure = document.getElementById('download-brochure')
-if (downloadbrochure) {
-  downloadbrochure.addEventListener("click", function () {
-    // PDF file path
-    const pdfUrl = "./mediaFiles/Specification/Specifications.pdf";
+const downloadbrochures = document.querySelectorAll('.download-brochure');
 
-    // Create a temporary link element
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "specification.pdf";  // name of downloaded file
-    document.body.appendChild(link);
+if (downloadbrochures) {
+  downloadbrochures.forEach((btn) => {
+    btn.addEventListener('click', function () {
+      // Get brochure file from data attribute or use default
+      const pdfUrl = btn.dataset.pdf || "./mediaFiles/Home page/Pinnacle brochure.pdf";
+      const fileName = pdfUrl.split('/').pop();
 
-    // Trigger click
-    link.click();
+      // Create temporary link element
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.download = fileName;
+      document.body.appendChild(link);
 
-    // Remove the link
-    document.body.removeChild(link);
+      // Trigger download
+      link.click();
+
+      // Remove temporary element
+      document.body.removeChild(link);
+    });
   });
 }
 
@@ -344,7 +348,7 @@ const updateDom = (key) => {
   dynamicElements.tower.textContent = `Tower: ${data.tower}`;
   dynamicElements.status.textContent = `Status: ${data.status}`;
   dynamicElements.handover.textContent = `Expected Handover: ${data.handover}`;
-  dynamicElements.furnishing.textContent = `FURNISHing: ${data.furnishing}`;
+  dynamicElements.furnishing.textContent = `Furnishing: ${data.furnishing}`;
   dynamicElements.availability.textContent = `Availability: ${data.availability}`;
 
 
@@ -481,7 +485,8 @@ if (faqAnswers[defaultFAQIndex]) {
 }
 
 faqButtons.forEach((btn, index) => {
-  btn.addEventListener('click', () => {
+  const parent=btn.parentElement;
+  parent.addEventListener('click', () => {
     const isCurrentlyVisible = !faqAnswers[index].classList.contains('hidden');
 
     // Close all other FAQs
@@ -585,14 +590,18 @@ var DestinationSwiper = new Swiper(".DestinationSwiper", {
 });
 
 // jquery country code selection
-
+if (typeof $ !== "undefined"){
 $(document).ready(function () {
-  const input = document.querySelector("#mobile_code");
-  const iti = window.intlTelInput(input, {
-    separateDialCode: true,
-    initialCountry: "in",
+  const inputs = document.querySelectorAll(".mobile_code");
+
+  inputs.forEach((input) => {
+    window.intlTelInput(input, {
+      separateDialCode: true,
+      initialCountry: "in",
+    });
   });
 });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   // Image Array
@@ -1975,3 +1984,20 @@ const projectTowerLayot={
     renderTowerData(currentTower);
 
 });
+
+// contactus openoverlap
+const contactusBtn=document.querySelector('#contactusBtn')
+const overlapform=document.querySelector('.overlapform')
+if(contactusBtn){
+  contactusBtn.addEventListener('click',()=>{
+    overlapform.classList.remove('-translate-y-[110%]')
+  })
+}
+
+const closeoverlapform=document.querySelector('.closeoverlapform')
+
+if(closeoverlapform){
+  closeoverlapform.addEventListener('click',()=>{
+    overlapform.classList.add('-translate-y-[110%]')
+  })
+}
