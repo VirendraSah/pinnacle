@@ -452,7 +452,7 @@ const residenceDataMobile = {
       handover: '2028',
       furnishing: 'To Be Announced',
       availability: 'Price on Request ',
-      image: './mediaFiles/Home page/Counter number/Products/4bhkMobile2.svg',
+      image: './mediaFiles/Home page/Counter number/Products/Prime 4 BHk.svg',
       bg: 'var(--4bhk-bg)'
     },
   ],
@@ -474,7 +474,7 @@ const residenceDataMobile = {
     status: 'Under Construction',
     furnishing: 'To Be Announced',
     availability: 'Coming Soon',
-    image: './mediaFiles/Home page/Counter number/Products/3bhkmobile.svg',
+    image: './mediaFiles/Home page/Counter number/Products/Tower_ Everest.svg',
     bg: 'var(--5bhk-bg)'
   },
   {
@@ -484,7 +484,7 @@ const residenceDataMobile = {
     status: 'Under Construction',
     furnishing: 'To Be Announced',
     availability: 'Coming Soon',
-    image: './mediaFiles/Home page/Counter number/Products/3bhkmobile.svg',
+    image: './mediaFiles/Home page/Counter number/Products/Presidential Sky Homes 5 BHK Apartments.svg',
     bg: 'var(--5bhk-bg)'
   }
   ],
@@ -495,7 +495,7 @@ const residenceDataMobile = {
     status: 'Under Construction',
     furnishing: 'To Be Announced',
     availability: 'Coming Soon',
-    image: './mediaFiles/Home page/Counter number/Products/pentahouse.svg',
+    image: './mediaFiles/Home page/Counter number/Products/Cloud Villas  Sky Penthouses.svg',
     bg: 'var(--penthouse-bg)'
   }
 };
