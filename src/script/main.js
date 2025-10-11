@@ -271,17 +271,30 @@ swiper2.on("slideChange", () => {
 
 // Data for each button's content
 const residenceData = {
-  '4BHKbtn': {
-    title: 'Elite Residences 4 BHK Apartments',
-    area: 'To Be Announced',
-    tower: 'Prime',
-    status: 'Under Construction',
-    handover: '2028',
-    furnishing: 'To Be Announced',
-    availability: 'Price on Request ',
-    image: ['./mediaFiles/Home page/Counter number/Products/4BHK1_image.webp', './mediaFiles/Home page/Counter number/Products/4BHK_image.webp'],
-    bg: 'var(--4bhk-bg)'
-  },
+  '4BHKbtn': [
+    {
+      title: 'Elite Residences 4 BHK Apartments',
+      area: 'Approx. 2,600–2,800sq.ft',
+      tower: 'Zenith & Crest',
+      status: 'Under Construction',
+      handover: '2028',
+      furnishing: 'SEMI FURNISHED',
+      availability: 'Price on Request',
+      image: './mediaFiles/Home page/Counter number/Products/4BHK1_image.webp',
+      bg: 'var(--4bhk-bg)'
+    }
+    , {
+      title: 'Elite Residences 4 BHK Apartments',
+      area: 'To Be Announced',
+      tower: 'Prime',
+      status: 'Under Construction',
+      handover: '2028',
+      furnishing: 'To Be Announced',
+      availability: 'Price on Request ',
+      image: './mediaFiles/Home page/Counter number/Products/4BHK_image.webp',
+      bg: 'var(--4bhk-bg)'
+    },
+  ],
   '3BHKbtn': {
     title: 'Executive Residences 3 BHK Apartments',
     area: 'Approx. 2,400–2,650sq.ft',
@@ -293,23 +306,32 @@ const residenceData = {
     image: ['./mediaFiles/Home page/Counter number/Products/3BHK_image.webp'],
     bg: 'var(--3bhk-bg)'
   },
-  '5BHKbtn': {
+  '5BHKbtn': [{
     title: 'Presidential Sky Homes 5 BHK Apartments',
     area: 'To Be Announced',
     tower: 'Everest',
-    status: 'Ready To Move',
-    handover: '2025',
-    furnishing: 'Fully Furnished',
-    availability: 'Sold Out',
-    image: ['./mediaFiles/Home page/Counter number/Products/5BHK_image.webp', './mediaFiles/Home page/Counter number/Products/5BHK1_image.webp'],
+    status: 'Under Construction',
+    furnishing: 'To Be Announced',
+    availability: 'Coming Soon',
+    image: './mediaFiles/Home page/Counter number/Products/5BHK_image.webp',
     bg: 'var(--5bhk-bg)'
   },
+  {
+    title: 'Presidential Sky Homes 5 BHK Apartments',
+    area: 'To Be Announced',
+    tower: 'Crown',
+    status: 'Under Construction',
+    furnishing: 'To Be Announced',
+    availability: 'Coming Soon',
+    image: ['./mediaFiles/Home page/Counter number/Products/5BHK1_image.webp'],
+    bg: 'var(--5bhk-bg)'
+  }
+  ],
   'pentHouse': {
     title: 'Cloud Villas Sky Penthouses',
-    area: 'Under Construction',
-    tower: 'Apex',
-    status: 'Ready To Move',
-    handover: '2025',
+    area: 'To Be Announced',
+    tower: 'All Towers – 36th Floor Duplex',
+    status: 'Under Construction',
     furnishing: 'To Be Announced',
     availability: 'Coming Soon',
     image: ['./mediaFiles/Home page/Counter number/Products/penthouse_image.webp'],
@@ -317,98 +339,346 @@ const residenceData = {
   }
 };
 
-// Swiper instance variable
-let swiperInstance;
-
-// Select all buttons and dynamic content elements
+// ============ DOM SELECTORS ============
 const bhkButtons = document.querySelectorAll('.BHKResidence');
-const dynamicElements = {
-  title: document.getElementById('dynamic-title'),
-  area: document.getElementById('dynamic-area'),
-  tower: document.getElementById('dynamic-tower'),
-  status: document.getElementById('dynamic-status'),
-  handover: document.getElementById('dynamic-handover'),
-  furnishing: document.getElementById('dynamic-furnishing'),
-  availability: document.getElementById('dynamic-availability'),
-  infoBg: document.getElementById('dynamic-info-bg'),
-  swiperWrapper: document.querySelector('.SignatureResidenceSwiper .swiper-wrapper')
-};
+const dynamicImg = document.querySelector('.dynamic-image');
+const dynamicTitle = document.getElementById('dynamic-title');
+const dynamicArea = document.getElementById('dynamic-area');
+const dynamicTower = document.getElementById('dynamic-tower');
+const dynamicStatus = document.getElementById('dynamic-status');
+const dynamicHandover = document.getElementById('dynamic-handover');
+const dynamicFurnishing = document.getElementById('dynamic-furnishing');
+const dynamicAvailability = document.getElementById('dynamic-availability');
+const rightArrow = document.querySelector('.SignatureResidence-custom-next-button');
+const leftArrow = document.querySelector('.SignatureResidence-custom-prev-button');
 
-const activeClasses = ['bg-[#003253]', 'text-[white]'];
-const inactiveClasses = ['bg-white', 'text-[#003253]'];
+// ============ STATE ============
+let currentButton = '3BHKbtn';
+let currentIndex = 0;
 
-// Function to update the DOM with new data and dynamically create slides
-const updateDom = (key) => {
-  const data = residenceData[key];
-  if (!data) return;
+// ============ FUNCTION TO UPDATE DOM ============
+function updateDom() {
+  const data = residenceData[currentButton];
+  let currentData = Array.isArray(data) ? data[currentIndex] : data;
 
-  // Update text content
-  dynamicElements.title.textContent = data.title;
-  dynamicElements.area.textContent = `Area: ${data.area}`;
-  dynamicElements.tower.textContent = `Tower: ${data.tower}`;
-  dynamicElements.status.textContent = `Status: ${data.status}`;
-  dynamicElements.handover.textContent = `Expected Handover: ${data.handover}`;
-  dynamicElements.furnishing.textContent = `Furnishing: ${data.furnishing}`;
-  dynamicElements.availability.textContent = `Availability: ${data.availability}`;
+  if (!currentData) return;
 
+  // Update DOM content
+  dynamicImg.src = currentData.image;
+  dynamicTitle.textContent = currentData.title;
+  dynamicArea.textContent = `Area: ${currentData.area}`;
+  dynamicTower.textContent = `Tower: ${currentData.tower}`;
+  dynamicStatus.textContent = `Status: ${currentData.status}`;
+  dynamicHandover.textContent = `Expected Handover: ${currentData.handover || '—'}`;
+  dynamicFurnishing.textContent = `Furnishing: ${currentData.furnishing}`;
+  dynamicAvailability.textContent = `Availability: ${currentData.availability}`;
 
-  // Clear existing slides
-  dynamicElements.swiperWrapper.innerHTML = '';
+  // Optional background update
+  document.querySelector('.dynamicData').style.background = currentData.bg;
 
-  // Create a new slide for each image
-  data.image.forEach(src => {
-    const slide = document.createElement('div');
-    slide.classList.add('swiper-slide');
-    const img = document.createElement('img');
-    img.src = src;
-    img.alt = data.title;
-    img.classList.add('h-full', 'w-full', 'object-cover');
-    slide.appendChild(img);
-    dynamicElements.swiperWrapper.appendChild(slide);
-  });
+  // Toggle arrow visibility
+  toggleArrowVisibility();
+}
 
-  // Destroy and re-initialize Swiper to refresh with new slides
-  if (swiperInstance) {
-    swiperInstance.destroy(true, true);
+// ============ TOGGLE ARROW VISIBILITY ============
+function toggleArrowVisibility() {
+  const data = residenceData[currentButton];
+
+  if (Array.isArray(data) && data.length > 1) {
+    rightArrow.classList.remove('hidden');
+    leftArrow.classList.remove('hidden');
+  } else {
+    rightArrow.classList.add('hidden');
+    leftArrow.classList.add('hidden');
   }
-  swiperInstance = new Swiper(".SignatureResidenceSwiper", {
-    effect: "fade",
-    navigation: {
-      nextEl: ".SignatureResidence-custom-next-button",
-      prevEl: ".SignatureResidence-custom-prev-button",
-    },
-  });
-};
+}
 
-// Function to handle button state and data change on click
-const handleButtonClick = (event) => {
-  // Remove active classes from all buttons
-  bhkButtons.forEach(btn => {
-    btn.classList.remove(...activeClasses);
-    btn.classList.add(...inactiveClasses);
-  });
-
-  // Add active classes to the clicked button
-  const clickedButton = event.currentTarget;
-  clickedButton.classList.add(...activeClasses);
-  clickedButton.classList.remove(...inactiveClasses);
-
-  // Update the DOM with the new data
-  updateDom(clickedButton.id);
-};
-
-// Add event listeners to all buttons
+// ============ BUTTON CLICK EVENT ============
 bhkButtons.forEach(button => {
-  button.addEventListener('click', handleButtonClick);
+  button.addEventListener('click', () => {
+    // Button active state
+    bhkButtons.forEach(btn => {
+      btn.classList.remove('bg-[#003253]', 'text-white');
+      btn.classList.add('bg-white', 'text-[#003253]');
+    });
+
+    button.classList.add('bg-[#003253]', 'text-white');
+    button.classList.remove('bg-white', 'text-[#003253]');
+
+    currentButton = button.id;
+    currentIndex = 0;
+    updateDom();
+  });
 });
 
-// Optional: Set a default button on page load
-const defaultButton = document.getElementById('4BHKbtn');
-if (defaultButton) {
-  defaultButton.classList.add(...activeClasses);
-  defaultButton.classList.remove(...inactiveClasses);
-  updateDom(defaultButton.id);
+// ============ ARROW BUTTON EVENTS ============
+rightArrow.addEventListener('click', () => {
+  const data = residenceData[currentButton];
+  if (Array.isArray(data)) {
+    currentIndex = (currentIndex + 1) % data.length;
+    updateDom();
+  }
+});
+
+leftArrow.addEventListener('click', () => {
+  const data = residenceData[currentButton];
+  if (Array.isArray(data)) {
+    currentIndex = (currentIndex - 1 + data.length) % data.length;
+    updateDom();
+  }
+});
+
+// ============ DEFAULT LOAD ============
+updateDom();
+
+const residenceDataMobile = {
+  '4BHKbtn': [
+    {
+      title: 'Elite Residences 4 BHK Apartments',
+      area: 'Approx. 2,600–2,800sq.ft',
+      tower: 'Zenith & Crest',
+      status: 'Under Construction',
+      handover: '2028',
+      furnishing: 'SEMI FURNISHED',
+      availability: 'Price on Request',
+      image: './mediaFiles/Home page/Counter number/Products/signatureresidencemobile1.svg',
+      bg: 'var(--4bhk-bg)'
+    }
+    , {
+      title: 'Elite Residences 4 BHK Apartments',
+      area: 'To Be Announced',
+      tower: 'Prime',
+      status: 'Under Construction',
+      handover: '2028',
+      furnishing: 'To Be Announced',
+      availability: 'Price on Request ',
+      image: './mediaFiles/Home page/Counter number/Products/4bhkMobile2.svg',
+      bg: 'var(--4bhk-bg)'
+    },
+  ],
+  '3BHKbtn': {
+    title: 'Executive Residences 3 BHK Apartments',
+    area: 'Approx. 2,400–2,650sq.ft',
+    tower: 'Apex',
+    status: 'Under Construction',
+    handover: '2028',
+    furnishing: 'Semi Furnished',
+    availability: 'Coming Soon',
+    image: './mediaFiles/Home page/Counter number/Products/3bhkmobile.svg',
+    bg: 'var(--3bhk-bg)'
+  },
+  '5BHKbtn': [{
+    title: 'Presidential Sky Homes 5 BHK Apartments',
+    area: 'To Be Announced',
+    tower: 'Everest',
+    status: 'Under Construction',
+    furnishing: 'To Be Announced',
+    availability: 'Coming Soon',
+    image: './mediaFiles/Home page/Counter number/Products/3bhkmobile.svg',
+    bg: 'var(--5bhk-bg)'
+  },
+  {
+    title: 'Presidential Sky Homes 5 BHK Apartments',
+    area: 'To Be Announced',
+    tower: 'Crown',
+    status: 'Under Construction',
+    furnishing: 'To Be Announced',
+    availability: 'Coming Soon',
+    image: './mediaFiles/Home page/Counter number/Products/3bhkmobile.svg',
+    bg: 'var(--5bhk-bg)'
+  }
+  ],
+  'pentHouse': {
+    title: 'Cloud Villas Sky Penthouses',
+    area: 'To Be Announced',
+    tower: 'All Towers – 36th Floor Duplex',
+    status: 'Under Construction',
+    furnishing: 'To Be Announced',
+    availability: 'Coming Soon',
+    image: './mediaFiles/Home page/Counter number/Products/pentahouse.svg',
+    bg: 'var(--penthouse-bg)'
+  }
+};
+
+
+const buttons = document.querySelectorAll('.BHKResidenceMobile');
+const swiperWrapper = document.querySelector('.SignatureResidenceSwiper .swiper-wrapper');
+
+let swiperInstance;
+
+function updateSlides(dataKey) {
+  let key = dataKey.replace('mobile', '');
+  let data = residenceDataMobile[key];
+  if (!Array.isArray(data)) data = [data];
+
+  const slidesHTML = data.map(item => `
+    <div class="swiper-slide">
+                                <div class=" flex h-max lg:flex-row flex-col dynamicData">
+                                    <div class="grow w-auto lg:max-w-[909.67px]">
+                                        <!-- image -->
+                                        <div class="w-full h-full">
+                                            <img src="${item.image}" alt=${item.title} class=" h-full w-full object-cover dynamic-image">
+                                        </div>
+                                    </div>
+                                    <!-- data -->
+                                    <div class=" bg-no-repeat bg-cover lg:w-[331.18px] h-auto flex flex-col gap-[21.97px] pt-[29.67px] pb-[15px] items-start lg:items-center"
+                                        style="background-image: var(--signature_residance-r-BG);">
+                                        <div
+                                            class="w-full lg:w-full h-full flex flex-col items-center sm:items-start lg:items-center justify-center gap-[22.32px]">
+                                            <h3 id="dynamic-title"
+                                                class="px-[12px] font-jost text-center sm:text-start font-medium text-[28px] lg:px-[18.2px] leading-[127%] tracking-[3%] space-y-[3.8px] text-white">
+                                                ${item.title} </h3>
+                                            <div
+                                                class="w-full flex flex-col gap-[22.32px] items-center justify-center">
+                                                <div class="w-full h-max bg-white flex flex-col">
+                                                    <div
+                                                        class="w-full h-[47.3px] py-[13.64px] px-[8.5px] flex gap-[11.88px] items-center justify-start shadow-[0px_3.1px_3.1px_0px_#00000040]">
+                                                        <figure
+                                                            class="w-[22.25px] h-[22.25px] flex items-center justify-center">
+                                                            <img src="./mediaFiles/Home page/Counter number/signature_Residance/Area_icon.png"
+                                                                alt="Area icon" class="w-[22.25px] h-[22.25px]">
+                                                        </figure>
+
+                                                        <p id="dynamic-area"
+                                                            class="font-jost font-semibold text-[17px] leading-[100%] -tracking-[2%] text-[#003253]">
+                                                            Area: ${item.area}</p>
+                                                    </div>
+                                                    <div
+                                                        class="w-full h-[47.3px] flex gap-[11.88px] px-[8.5px] items-center justify-start border-b border-[#CACACA4D]">
+                                                        <figure
+                                                            class="w-[22.25px] h-[22.25px] flex items-center justify-center">
+                                                            <img src="./mediaFiles/Home page/Counter number/signature_Residance/Tower_icon.png"
+                                                                alt="Tower icon" class="w-[22.25px] h-[22.25px]">
+                                                        </figure>
+                                                        <p id="dynamic-tower"
+                                                            class="font-jost font-normal text-[17px] leading-[100%] -tracking-[2%] text-[#003253] capitalize">
+                                                            Tower: ${item.tower}</p>
+                                                    </div>
+                                                    <div
+                                                        class="w-full h-[47.3px] flex gap-[11.88px] px-[8.5px] items-center justify-start border-b border-[#CACACA4D]">
+                                                        <figure
+                                                            class="w-[22.25px] h-[22.25px] flex items-center justify-center">
+                                                            <img src="./mediaFiles/Home page/Counter number/signature_Residance/status_icon.png"
+                                                                alt="Status icon" class="w-[22.25px] h-[22.25px]">
+                                                        </figure>
+                                                        <p id="dynamic-status"
+                                                            class="font-jost font-normal text-[17px] leading-[100%] -tracking-[2%] text-[#003253] capitalize">
+                                                            Status: ${item.status}</p>
+                                                    </div>
+                                                    <div
+                                                        class="w-full h-[47.3px] flex gap-[11.88px] px-[8.5px] items-center justify-start border-b border-[#CACACA4D]">
+                                                        <figure
+                                                            class="w-[22.25px] h-[22.25px] flex items-center justify-center">
+                                                            <img src="./mediaFiles/Home page/Counter number/signature_Residance/key_icon.png"
+                                                                alt="Key icon" class="w-[11.9px] h-[23.98px]">
+                                                        </figure>
+
+                                                        <p id="dynamic-handover"
+                                                            class="font-jost font-normal text-[17px] leading-[100%] -tracking-[2%] text-[#003253] capitalize">
+                                                            Expected Handover: ${item.handover}</p>
+                                                    </div>
+                                                    <div
+                                                        class="w-full h-[47.3px] flex gap-[11.88px] px-[8.5px] items-center justify-start border-b border-[#CACACA4D]">
+                                                        <figure
+                                                            class="w-[22.25px] h-[22.25px] flex items-center justify-center">
+                                                            <img src="./mediaFiles/Home page/Counter number/signature_Residance/furnishing_icon.png"
+                                                                alt="furnishing_icon" class="w-[25px] h-[14.53px]">
+                                                        </figure>
+
+                                                        <p id="dynamic-furnishing"
+                                                            class="font-jost font-normal text-[17px] leading-[100%] -tracking-[2%] text-[#003253] capitalize">
+                                                            Furnishing: ${item.furnishing}</p>
+                                                    </div>
+                                                    <div
+                                                        class="w-full h-[47.3px] flex gap-[11.88px] px-[8.5px] items-center justify-start border-b border-[#CACACA4D]">
+                                                        <figure
+                                                            class="w-[22.25px] h-[22.25px] flex items-center justify-center">
+                                                            <img src="./mediaFiles/Home page/Counter number/signature_Residance/rupees_icon.png"
+                                                                alt="rupees_icon" class="w-[12.68px] h-[19.2px]">
+                                                        </figure>
+
+                                                        <p id="dynamic-availability"
+                                                            class="font-jost font-normal text-[17px] leading-[100%] -tracking-[2%] text-[#003253] capitalize">
+                                                            Availability: ${item.availability}</p>
+                                                    </div>
+
+                                                </div>
+                                                <div class="w-max h-[102.74px] flex-col items-center">
+                                                    <!-- Swiper Buttons -->
+                                                    <div class="flex gap-[13.91px] items-center">
+                                                        <button
+                                                            class="cursor-pointer w-[133.24px] h-[39.62px] text-[#173F63] font-jost font-medium text-[13.08px] leading-[19.62px] uppercase border bg-white">
+                                                            Enquire Now
+                                                        </button>
+                                                        <button
+                                                            class="cursor-pointer w-[133.24px] h-[39.62px] text-white font-jost font-medium text-[13.08px] leading-[19.62px] uppercase border bg-transparent flex items-center justify-center gap-[6.54px]">
+                                                            <img src="./mediaFiles/Home page/Counter number/ri_download-line.png"
+                                                                alt="download_icon" class="w-[18px] h-[18px]">
+                                                            Floor Plan
+                                                        </button>
+                                                    </div>
+                                                    <div class="hidden lg:block ">
+                                                        <div
+                                                            class="flex py-[27.26px] items-center gap-[21.26px] carousel-controls">
+                                                            <button type="button"
+                                                                class=" left_arrow_btn SignatureResidence-custom-prev-button cursor-pointer w-[35.89px] h-[35.89px] border border-white rounded-full">
+                                                                <i class="fa-solid fa-arrow-left text-white"></i>
+                                                            </button>
+                                                            <button type="button"
+                                                                class="right_arrow_btn SignatureResidence-custom-next-button cursor-pointer  w-[35.89px] h-[35.89px] border border-white rounded-full">
+                                                                <i class="fa-solid fa-arrow-right text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+  `).join('');
+
+  if (swiperInstance) swiperInstance.destroy(true, true);
+  swiperWrapper.innerHTML = slidesHTML;
+
+  function initSwiper() {
+  const totalSlides = document.querySelectorAll('.SignatureResidenceSwiper .swiper-slide').length;
+
+  swiperInstance = new Swiper(".SignatureResidenceSwiper", {
+    loop: totalSlides > 1,           // loop only if more than 1 slide            // always center the active slide
+    spaceBetween: 20,
+    slidesPerView: totalSlides > 1 ? 1.1 : 1,  // if more than 1 slide, use 1.1
+    autoplay: totalSlides > 1 ? { delay: 3000, disableOnInteraction: false } : false,
+    breakpoints: totalSlides > 1 ? {
+      640: { slidesPerView: 1.1 },
+      730: { slidesPerView: 1.7 },
+      1024: { slidesPerView: 2.3 },
+    } : {},
+  });
+  }
+  initSwiper();
 }
+
+// Buttons click
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    buttons.forEach(b => b.classList.remove('bg-[#003253]', 'text-white'));
+    buttons.forEach(b => b.classList.add('text-[#003253]', 'bg-transparent'));
+
+    btn.classList.add('bg-[#003253]', 'text-white');
+    btn.classList.remove('text-[#003253]', 'bg-transparent');
+
+    updateSlides(btn.id);
+  });
+});
+
+// Initialize first view
+updateSlides('3BHKbtnmobile');
+
+
+
+
+
 
 // Know More Constructions Milestone
 const conTructionMileStoneBtn = document.querySelectorAll('.conTructionMileStoneBtn');
@@ -449,6 +719,7 @@ conTructionMileStoneBtn.forEach((btn, index) => {
     }
   });
 });
+
 
 // Testimonial Swiper
 var testimonialSwiper = new Swiper(".TestimonialSwiper", {
@@ -858,12 +1129,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const key = keys[index];
     if (!key) return;
     currentApartmentType = key;
-      if (dynamicheader) {
+    if (dynamicheader) {
       dynamicheader.textContent = PricingOverViewData?.Heading[index] || '';
-      }
-      if (dynamicbuttoninnerbtn) {
+    }
+    if (dynamicbuttoninnerbtn) {
       dynamicbuttoninnerbtn.innerHTML = '';
-      }
+    }
     // Inside renderButtons
     PricingOverViewData.InnerBtn[key].forEach((tower, i) => {
       const wrapper = document.createElement('div');
@@ -881,9 +1152,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       wrapper.appendChild(btn);
       wrapper.appendChild(line);
-      if(dynamicbuttoninnerbtn){
-      dynamicbuttoninnerbtn.appendChild(wrapper);
-        }
+      if (dynamicbuttoninnerbtn) {
+        dynamicbuttoninnerbtn.appendChild(wrapper);
+      }
       // 👇 ADD CLICK HANDLER
       btn.addEventListener('click', () => {
         const apartmentType = btn.dataset.apartment;
@@ -912,11 +1183,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function setActiveLineWrapper(wrapper) {
-    if(dynamicbuttoninnerbtn){
-    dynamicbuttoninnerbtn.querySelectorAll('.bg_gradient_line').forEach(l => {
-      l.classList.remove('bg-gradient-custom');
-      l.classList.add('bg-default');
-    });
+    if (dynamicbuttoninnerbtn) {
+      dynamicbuttoninnerbtn.querySelectorAll('.bg_gradient_line').forEach(l => {
+        l.classList.remove('bg-gradient-custom');
+        l.classList.add('bg-default');
+      });
     }
     if (!wrapper) return;
     const line = wrapper.querySelector('.bg_gradient_line');
@@ -927,16 +1198,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function setActiveInnerButton(btn) {
-    if(dynamicbuttoninnerbtn){
-    dynamicbuttoninnerbtn.querySelectorAll('.innerBtn').forEach(b => b.classList.remove('inner-active'));
+    if (dynamicbuttoninnerbtn) {
+      dynamicbuttoninnerbtn.querySelectorAll('.innerBtn').forEach(b => b.classList.remove('inner-active'));
     }
     if (btn) btn.classList.add('inner-active');
   }
-  
+
   function setActiveLineIndex(i) {
     if (!dynamicbuttoninnerbtn) {
-    return;
-  }
+      return;
+    }
 
     const wrapper = dynamicbuttoninnerbtn.children[i];
     if (wrapper) setActiveLineWrapper(wrapper);
@@ -946,8 +1217,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderTowerData(apartmentType, towerName) {
     const data = PricingOverViewData.mainData?.[apartmentType]?.[towerName];
     if (data) {
-      if(desktopMainData){
-      desktopMainData.innerHTML = `
+      if (desktopMainData) {
+        desktopMainData.innerHTML = `
      <figure class="w-full md:w-[40%] h-[-webkit-fill-available]">
                                 <img src="${data.image}" alt="${towerName}"
                                     class="w-full h-full object-fill object-center">
@@ -1039,9 +1310,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderMobileSlider(apartmentType, towerName, data) {
     const swiperWrapper = document.querySelector('.priceaprtmentSlider .swiper-wrapper');
-    if(swiperWrapper){
-    swiperWrapper.innerHTML = ''; // clear old slides if any
-      }
+    if (swiperWrapper) {
+      swiperWrapper.innerHTML = ''; // clear old slides if any
+    }
     // Create slide dynamically
     const slide = document.createElement('div');
     slide.className = 'swiper-slide group';
@@ -1141,9 +1412,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </div>
   `;
 
-      if(swiperWrapper){
-    swiperWrapper.appendChild(slide);
-        }
+    if (swiperWrapper) {
+      swiperWrapper.appendChild(slide);
+    }
     // Re-init Swiper after DOM update
     if (window.priceaprtmentSlider) {
       window.priceaprtmentSlider.update();
@@ -1154,22 +1425,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial load
   renderButtons(0);
   if (Apartmentbtn[0]) {
-  Apartmentbtn[0].classList.add('activeBtn');
+    Apartmentbtn[0].classList.add('activeBtn');
   }
   setTimeout(() => {
     setActiveLineIndex(0);
 
     // 👇 First Apartment + First Tower ka data show kare
-    if(dynamicbuttoninnerbtn){
-    const firstBtn = dynamicbuttoninnerbtn.querySelector('.innerBtn');
-    
-    if (firstBtn) {
-      setActiveInnerButton(firstBtn);
-      renderTowerData(firstBtn.dataset.apartment, firstBtn.dataset.tower);
-    }
+    if (dynamicbuttoninnerbtn) {
+      const firstBtn = dynamicbuttoninnerbtn.querySelector('.innerBtn');
+
+      if (firstBtn) {
+        setActiveInnerButton(firstBtn);
+        renderTowerData(firstBtn.dataset.apartment, firstBtn.dataset.tower);
+      }
     }
   }, 0);
-  
+
 
   // Apartment Tab Click
   Apartmentbtn.forEach((tab, index) => {
@@ -1191,17 +1462,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Tower Click
-  if(dynamicbuttoninnerbtn){
-  dynamicbuttoninnerbtn.addEventListener('click', (e) => {
-    const clickedBtn = e.target.closest('.innerBtn');
-    if (!clickedBtn) return;
+  if (dynamicbuttoninnerbtn) {
+    dynamicbuttoninnerbtn.addEventListener('click', (e) => {
+      const clickedBtn = e.target.closest('.innerBtn');
+      if (!clickedBtn) return;
 
-    const wrapper = clickedBtn.closest('.group');
-    setActiveLineWrapper(wrapper);
-    setActiveInnerButton(clickedBtn);
+      const wrapper = clickedBtn.closest('.group');
+      setActiveLineWrapper(wrapper);
+      setActiveInnerButton(clickedBtn);
 
-    renderTowerData(clickedBtn.dataset.apartment, clickedBtn.dataset.tower);
-  });
+      renderTowerData(clickedBtn.dataset.apartment, clickedBtn.dataset.tower);
+    });
   }
 });
 
@@ -1440,16 +1711,16 @@ mobileButtons.forEach((btn, index) => {
 window.addEventListener("DOMContentLoaded", () => {
   if (window.innerWidth < 768) {
     // Mobile default: first button active
-    if(mobileButtons[0]){
-    mobileButtons[0].click();
+    if (mobileButtons[0]) {
+      mobileButtons[0].click();
     }
-    if(projectWalktrough){
-    projectWalktrough.classList.remove("hidden");
+    if (projectWalktrough) {
+      projectWalktrough.classList.remove("hidden");
     }
   } else {
     // Desktop default: Project Walkthrough
-    if(flowButtons[0]){
-    flowButtons[0].click();
+    if (flowButtons[0]) {
+      flowButtons[0].click();
     }
   }
 });
@@ -1705,8 +1976,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Update tower buttons container dynamically
   function updateTowerButtonsContainer() {
-    if(towerButtonsContainer){
-    towerButtonsContainer.innerHTML = '';
+    if (towerButtonsContainer) {
+      towerButtonsContainer.innerHTML = '';
     }
 
     const bhkData = plansqftimages[currentBHK];
@@ -1725,8 +1996,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="w-full h-[3px] ${isActive ? 'bg-gradient-to-b from-[#FFC267] to-[#99753E]' : 'bg-[#D8D6D5]'}"></div>
         `;
 
-      if(towerButtonsContainer){
-      towerButtonsContainer.appendChild(buttonGroup);
+      if (towerButtonsContainer) {
+        towerButtonsContainer.appendChild(buttonGroup);
       }
     });
 
@@ -1736,8 +2007,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Update sqft buttons container dynamically
   function updateSqftButtonsContainer(sizes) {
-    if(sqftButtonsContainer){
-    sqftButtonsContainer.innerHTML = '';
+    if (sqftButtonsContainer) {
+      sqftButtonsContainer.innerHTML = '';
     }
 
     sizes.forEach((size, index) => {
@@ -1756,8 +2027,8 @@ document.addEventListener('DOMContentLoaded', function () {
           'hover:border-[#FFC267]', 'hover:bg-[#003253]', 'hover:text-white', 'duration-200'
         );
       }
-      if(sqftButtonsContainer){
-      sqftButtonsContainer.appendChild(button);
+      if (sqftButtonsContainer) {
+        sqftButtonsContainer.appendChild(button);
       }
     });
 
@@ -1840,29 +2111,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // Update content
-  
+
   function updateContent() {
     const bhkData = plansqftimages[currentBHK];
     const towerData = bhkData.buttonsData[currentTower];
-    if(planHeading){
-    planHeading.textContent = bhkData.heading;
+    if (planHeading) {
+      planHeading.textContent = bhkData.heading;
     }
-    if(planDescription){
-    planDescription.textContent = bhkData.desc;
+    if (planDescription) {
+      planDescription.textContent = bhkData.desc;
     }
 
     updateTowerButtonsContainer(bhkData.buttons);
     updateSqftButtonsContainer(towerData.imagebtn);
-    if(superArea||builtupArea || balconyArea|| reraCarpetArea){
-    superArea.textContent = towerData.SuperArea;
-    builtupArea.textContent = towerData.BuiltupArea;
-    balconyArea.textContent = towerData.BalconyArea;
-    reraCarpetArea.textContent = towerData.RERACarpetArea;
-}
+    if (superArea || builtupArea || balconyArea || reraCarpetArea) {
+      superArea.textContent = towerData.SuperArea;
+      builtupArea.textContent = towerData.BuiltupArea;
+      balconyArea.textContent = towerData.BalconyArea;
+      reraCarpetArea.textContent = towerData.RERACarpetArea;
+    }
     const sizeKey = currentSize.toLowerCase().replace(/[\s–]/g, '');
-    if(planImage){
-    planImage.src = towerData.images[sizeKey] || towerData.images[Object.keys(towerData.images)[0]];
-    planImage.alt = `${currentBHK} ${currentTower} ${currentSize} floor plan`;
+    if (planImage) {
+      planImage.src = towerData.images[sizeKey] || towerData.images[Object.keys(towerData.images)[0]];
+      planImage.alt = `${currentBHK} ${currentTower} ${currentSize} floor plan`;
     }
 
     updateDownloadButton();
@@ -1874,19 +2145,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const sizeKey = currentSize.toLowerCase().replace(/[\s–]/g, '');
     const imageUrl = towerData.images[sizeKey];
 
-    if(downloadBtn){
-    downloadBtn.onclick = function () {
-      if (imageUrl && !imageUrl.includes('comming-soon')) {
-        const link = document.createElement('a');
-        link.href = imageUrl;
-        link.download = `${currentBHK}-${currentTower}-${currentSize}-floor-plan.webp`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      } else {
-        alert('Floor plan download will be available soon!');
-      }
-    };
+    if (downloadBtn) {
+      downloadBtn.onclick = function () {
+        if (imageUrl && !imageUrl.includes('comming-soon')) {
+          const link = document.createElement('a');
+          link.href = imageUrl;
+          link.download = `${currentBHK}-${currentTower}-${currentSize}-floor-plan.webp`;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } else {
+          alert('Floor plan download will be available soon!');
+        }
+      };
     }
   }
 
@@ -1963,11 +2234,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!data) return;
 
     // Clear previous
-    if(desktopContainer){
-    desktopContainer.innerHTML = '';
+    if (desktopContainer) {
+      desktopContainer.innerHTML = '';
     }
-    if(mobileContainer){
-    mobileContainer.innerHTML = '';
+    if (mobileContainer) {
+      mobileContainer.innerHTML = '';
     }
 
     // Render Desktop
@@ -1985,8 +2256,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 </figure>
                 <div class="bg-[#173F63] w-full h-auto py-[11.95px] text-center font-medium text-[14px] xl:text-[18px] text-white">${item.name}</div>
             `;
-      if(desktopContainer){
-      desktopContainer.appendChild(div);
+      if (desktopContainer) {
+        desktopContainer.appendChild(div);
       }
     });
 
@@ -2007,8 +2278,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="bg-[#173F63] w-full h-auto py-[11.95px] text-center font-medium text-[14px] xl:text-[18px] text-white">${item.name}</div>
                 </div>
             `;
-      if(mobileContainer){
-      mobileContainer.appendChild(div);
+      if (mobileContainer) {
+        mobileContainer.appendChild(div);
       }
     });
   }
