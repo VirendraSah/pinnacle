@@ -163,12 +163,13 @@
                         </a>
                     </div>
                 </div>
+
                 <!-- decorative items -->
                 <div
                     class="absolute bottom-[3px] right-1/2 translate-1/2 w-[350.68px] h-[7.36px] rounded-t-[5px] bg-gradient-to-b from-[#FFC267] to-[#99753E]">
                 </div>
             </div>
-            <div class="w-[122px] h-[175.31px]  flex items-start" id="assistancebtn">
+            <div class="w-[122px] h-[175.31px]  flex items-start " id="assistancebtn">
                 <div class="w-full h-full flex flex-col items-end">
                     <div class="w-[103px] h-[167.84px] ">
                         <p class="font-jost font-medium text-[13.47px] leading-[119%] text-center text-[#003253]">Need
@@ -204,6 +205,11 @@
                     <img src="./mediaFiles/Home page/Counter number/mdi_remove.png" alt="remove_btn">
                 </button>
             </div>
+            <div
+                class="hidden w-[30px] h-[30px] m-auto border border-white rounded-full bg-white assistancebtnsmall cursor-pointer">
+                <img src="./mediaFiles/Home page/Counter number/user_profile_pic.png" alt="user_profile_img">
+            </div>
+
         </div>
     </div>
     <header class="fixed h-[70.12px] sm:h-auto bg-white sm:bg-transparent sm:absolute z-30 w-full overflow-x-clip"
@@ -279,10 +285,10 @@
                                         Products</h3>
                                     <ul
                                         class="text-white font-jost font-medium text-[16px] leading-[25px] capitalize flex flex-col gap-2">
-                                        <li><a href="" class="">3 BHK Apartment</a></li>
-                                        <li><a href="">4 BHK Apartment</a></li>
-                                        <li><a href="">5 BHK Apartment</a></li>
-                                        <li><a href="">Penthouse</a></li>
+                                        <li><a href="#products" class="">3 BHK Apartment</a></li>
+                                        <li><a href="#products">4 BHK Apartment</a></li>
+                                        <li><a href="#products">5 BHK Apartment</a></li>
+                                        <li><a href="#products">Penthouse</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -296,10 +302,10 @@
                                         Plans</h3>
                                     <ul
                                         class="text-white font-jost font-medium text-[16px] leading-[25px] flex flex-col gap-2 capitalize ">
-                                        <li><a href="" class="">Unit Plan</a></li>
-                                        <li><a href="">site Plan</a></li>
-                                        <li><a href="">tower Plan</a></li>
-                                        <li><a href="">Amenities</a></li>
+                                        <li><a href="./plan.html#planunitplan" class="">Unit Plan</a></li>
+                                        <li><a href="./plan.html#plansiteplan">site Plan</a></li>
+                                        <li><a href="./plan.html#plantowerplan">tower Plan</a></li>
+                                        <li><a href="./amenities.html">Amenities</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -365,7 +371,7 @@
                                         <li><a href="" class="">+91 89680 66698</a></li>
                                         <li><a href="">+91 9697300066</a></li>
                                         <li class="mt-[19.15px]">
-                                            <button
+                                            <a href="https://wa.me/918968066698" target="_blank"
                                                 class="w-[142.25px] h-[31.08px] bg-[#21945A] border border-white rounded-[4px] flex items-center gap-2 justify-center cursor-pointer">
                                                 <figure class="w-[17.43px] h-[17.51px]">
                                                     <img src="./mediaFiles/Home page/Counter number/Start your homebuying Journey/vector.webp"
@@ -374,7 +380,7 @@
                                                 <span class="font-jost font-medium text-[13.17px] leading-[100%]">Whats
                                                     app
                                                     Now</span>
-                                            </button>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1389,48 +1395,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Controls Row -->
-                <div
-                    class="w-full max-w-[1280px] absolute bottom-[103.4px] sm:bottom-[10px] left-1/2 -translate-x-1/2 z-10 text-white flex">
-
-                    <div class=" max-w-[357px] flex items-center gap-6 m-auto sm:mr-[10px]">
-                        <div class=" z-10">
-                            <div class="flex items-center gap-4">
-                                <div class="sm:hidden block">
-                                    <!-- Prev Button -->
-                                    <div
-                                        class="custom-button-prev flex items-center gap-1 cursor-pointer font-normal text-[15.31px] max-w-[39.69px]">
-                                        <i class="fa-solid fa-caret-right rotate-180 text-xs"></i>
-                                        Prev
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <!-- Fraction Pagination -->
-                                    <div class="gsap-swiper-fractionjs swiper-fraction  text-white z-10"></div>
-                                    <!-- Progressbar -->
-                                    <div class="gsap-swiper-pagination-progress swiper-pagination-progress !relative !w-[178.55px] bg-[#EDE9E9]">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sm:w-[100px] w-max flex justify-between">
-                            <!-- Prev Button -->
-                            <div class="hidden sm:block">
-                                <div
-                                    class="custom-button-prev flex items-center cursor-pointer font-jost font-normal max-w-[39.69px] ">
-                                    <i class="fa-solid fa-caret-right rotate-180 text-xs"></i>
-                                    Prev
-                                </div>
-                            </div>
-                            <!-- Next Button -->
-                            <div
-                                class="custom-button-next font-normal flex items-center font-jost max-w-[39.69px]  cursor-pointer text-[15.31px]">
-                                Next
-                                <i class="fa-solid fa-caret-right text-xs font-normal"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Explore Our Signature Residence -->
@@ -2310,7 +2274,7 @@
                     </div>
 
                     <!-- Subtext -->
-                    <p class="font-jost text-sm lg:text-xl text-white text-center">
+                    <p class="font-jost text-sm lg:text-xl text-white text-center" style="margin-bottom: 20px;">
                         Launch inventory open now <br> at exclusive prices.
                     </p>
 
@@ -2948,29 +2912,27 @@
                             </div>
                         </div>
                     </div>
-                    <div
-                        class="w-full flex items-center justify-between bg-[#FFFFFF1C] border border-[#FFFFFF12] backdrop-blur-[15.6px] py-5 px-[16px] md:px-[100px] lg:flex-row flex-col gap-y-[12px]">
-                        <span
-                            class="font-jost font-medium xl:font-semibold text-[16px] xl:text-[25px] leading-[100%] text-white">Prefer
-                            to call? We're just a ring away!</span>
-                        <div class="flex items-center gap-[17.18px]">
-                            <span
-                                class="text-white text-[19px] xl:text-[25px] font-jost font-medium xl:font-semibold leading-[100%] tracking-[0%] hidden lg:block">Call
-                                us:</span>
-                            <div class="flex flex-col lg:flex-row items-center gap-[10.17px]">
-                                <div class="flex items-center gap-[11.51px]">
-                                    <i class="fa-solid fa-phone-volume text-white text-[19px] xl:text-[25px]"></i>
-                                    <span
-                                        class="text-white font-jost font-medium xl:font-semibold text-[19px] xl:text-[25px] leading-[100%] ">+91
-                                        89680 66698</span>
-                                </div>
+                    <div class="w-full bg-[#FFFFFF1C] border border-[#FFFFFF12] backdrop-blur-[15.6px] py-5 px-[16px]">
+                        <div class="max-w-[1240px] m-auto w-full  gap-y-[12px] grid grid-cols-1 lg:grid-cols-2 items-center"
+                            style="column-gap: 100px;">
+                            <span class="font-jost font-medium text-[16px] md:text-[23px] text-white">Prefer
+                                to call? We're just a ring away!</span>
+                            <div class="flex items-center gap-[17.18px]">
                                 <span
-                                    class="text-white font-jost font-medium xl:font-semibold text-[19px] xl:text-[25px] leading-[100%] hidden lg:block">|</span>
-                                <div class="flex items-center gap-[11.51px]">
-                                    <i class="fa-solid fa-phone-volume text-white text-[19px] xl:text-[25px]"></i>
-                                    <span
-                                        class="text-white font-jost font-medium xl:font-semibold text-[19px] xl:text-[25px] leading-[100%]">+91
-                                        99880 10405</span>
+                                    class="text-white text-[19px]  font-jost font-medium tracking-[0%] hidden lg:block">Call
+                                    us:</span>
+                                <div class="flex flex-col lg:flex-row items-center gap-[10.17px]">
+                                    <div class="flex items-center gap-[11.51px]">
+                                        <i class="fa-solid fa-phone-volume text-white text-[19px] "></i>
+                                        <span class="text-white font-jost font-medium text-[19px]  ">+91
+                                            89680 66698</span>
+                                    </div>
+                                    <span class="text-white font-jost font-medium text-[19px]  hidden lg:block">|</span>
+                                    <div class="flex items-center gap-[11.51px]">
+                                        <i class="fa-solid fa-phone-volume text-white text-[19px] "></i>
+                                        <span class="text-white font-jost font-medium text-[19px] ">+91
+                                            99880 10405</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -3354,7 +3316,9 @@
         </div>
         <div class="sm:block hidden">
             <div class="w-full py-[7.54px] flex items-center justify-center bg-white">
-                <span class="uppercase text-[#003253] tracking-[2%] leading-[100%] text-[14px] xl:text-[23px]">CALL FOR
+                <span
+                    class="uppercase text-[#003253] font-medium tracking-[2%] leading-[100%] text-[14px] xl:text-[23px]">CALL
+                    FOR
                     THE
                     BEST
                     DEALS</span>

@@ -155,9 +155,16 @@ mobilearrowDownbtns.forEach((btn, index) => {
 // assistance circuar btn Remover
 
 const assistanceremovebtn = document.getElementById('assistanceremovebtn')
+const assistancebtnsmall = document.querySelector('.assistancebtnsmall')
 const assistancebtn = document.getElementById('assistancebtn')
 assistanceremovebtn.addEventListener('click', () => {
   assistancebtn.classList.add('hidden')
+  assistancebtnsmall.classList.remove('hidden')
+})
+
+assistancebtnsmall.addEventListener('click', () => {
+  assistancebtn.classList.remove('hidden')
+  assistancebtnsmall.classList.add('hidden')
 })
 
 // assistance ractangular remver btn
@@ -167,6 +174,7 @@ const assistanceCloseBtn = document.getElementById("assistanceBox_close_btn");
 
 assistanceBtn.addEventListener("click", () => {
   // Show box
+  assistancebtn.classList.add('hidden')
   assistanceBox.classList.remove("hidden");
   assistanceBox.classList.add("scale-0");
   setTimeout(() => {
@@ -176,6 +184,7 @@ assistanceBtn.addEventListener("click", () => {
 });
 
 assistanceCloseBtn.addEventListener("click", () => {
+  assistancebtn.classList.remove('hidden')
   assistanceBox.classList.remove("scale-100");
   assistanceBox.classList.add("scale-0");
 
