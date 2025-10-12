@@ -1,5 +1,4 @@
 // download buttons
-
 const downloadbrochures = document.querySelectorAll('.download-brochure');
 
 if (downloadbrochures) {
@@ -244,29 +243,8 @@ window.addEventListener('scroll', handleOdometerOnScroll);
 setTimeout(handleOdometerOnScroll, 500);
 
 
-// Crafted for top 1% Banner
-const swiper2 = new Swiper(".mySwiperBanner2", {
-  loop: false,
-  effect: "fade",
-  mousewheel: true,
-  navigation: {
-    nextEl: ".custom-button-next2",
-    prevEl: ".custom-button-prev2",
-  },
-  pagination: {
-    el: ".swiper-pagination-progress2",
-    type: "progressbar",
-  },
-});
 
-// fraction text update
-const fraction2 = document.querySelector(".swiper-fraction2");
-swiper2.on("slideChange", () => {
-  if (fraction2) {
-    fraction2.textContent = `1 / ${swiper2.slides.length}`;
-  }
-  fraction2.textContent = `${swiper2.realIndex + 1} / ${swiper2.slides.length}`;
-});
+
 
 
 // Data for each button's content
@@ -642,19 +620,19 @@ function updateSlides(dataKey) {
   swiperWrapper.innerHTML = slidesHTML;
 
   function initSwiper() {
-  const totalSlides = document.querySelectorAll('.SignatureResidenceSwiper .swiper-slide').length;
+    const totalSlides = document.querySelectorAll('.SignatureResidenceSwiper .swiper-slide').length;
 
-  swiperInstance = new Swiper(".SignatureResidenceSwiper", {
-    loop: totalSlides > 1,           // loop only if more than 1 slide            // always center the active slide
-    spaceBetween: 20,
-    slidesPerView: totalSlides > 1 ? 1.1 : 1,  // if more than 1 slide, use 1.1
-    autoplay: totalSlides > 1 ? { delay: 3000, disableOnInteraction: false } : false,
-    breakpoints: totalSlides > 1 ? {
-      640: { slidesPerView: 1.1 },
-      730: { slidesPerView: 1.7 },
-      1024: { slidesPerView: 2.3 },
-    } : {},
-  });
+    swiperInstance = new Swiper(".SignatureResidenceSwiper", {
+      loop: totalSlides > 1,           // loop only if more than 1 slide            // always center the active slide
+      spaceBetween: 20,
+      slidesPerView: totalSlides > 1 ? 1.1 : 1,  // if more than 1 slide, use 1.1
+      autoplay: totalSlides > 1 ? { delay: 3000, disableOnInteraction: false } : false,
+      breakpoints: totalSlides > 1 ? {
+        640: { slidesPerView: 1.1 },
+        730: { slidesPerView: 1.7 },
+        1024: { slidesPerView: 2.3 },
+      } : {},
+    });
   }
   initSwiper();
 }
@@ -2326,3 +2304,71 @@ if (closeoverlapform) {
     overlapform.classList.add('-translate-y-[110%]')
   })
 }
+
+
+// register plugin
+gsap.registerPlugin(ScrollTrigger);
+
+// get slides array and compute dynamic end
+const slides = gsap.utils.toArray(".craftedbannerslide");
+const numSlides = slides.length;
+
+// set all slides overlapping via grid-area
+gsap.set(".craftedbannerslide:not(:last-child)", { clipPath: "inset(0 0 0 0)" });
+
+// master timeline
+const tl = gsap.timeline();
+
+/* -----------------------------
+   🔁 CHANGE STARTS HERE
+   Vertical → Horizontal change
+-------------------------------- */
+// Instead of revealing vertically (bottom to top),
+// we'll slide horizontally (right to left).
+
+tl.to(".craftedbannerslide:not(:last-child)", {
+  ease: "none",
+  // move clipPath horizontally: reveal from right to left
+  clipPath: "inset(0 100% 0 0)", // ⬅️ hides from right side
+  stagger: 1,
+  duration: 1,
+}).to(
+  ".craftedbannerslide .heading",
+  {
+    opacity: 1,
+    duration: 0.6,
+    stagger: 1,
+  },
+  "<"
+);
+/* -----------------------------
+   🔁 CHANGE ENDS HERE
+-------------------------------- */
+
+// create ScrollTrigger that pins and scrubs the timeline
+ScrollTrigger.create({
+  trigger: ".craftedBannerslides",
+  start: "top top",
+  // proportional scroll distance
+  end: () => "+=" + numSlides * 100 + "%",
+  scrub: true,
+  pin: true,
+  animation: tl,
+  // markers: true
+});
+
+// stack slides visually (topmost last)
+gsap.set(".craftedbannerslide", {
+  zIndex: (i, target, targets) => targets.length - i,
+});
+
+// Button navigation (same as before)
+$(".btnPrev").on("click", function (e) {
+  e.preventDefault();
+  goToPrevSlide();
+});
+
+$(".btnNext").on("click", function (e) {
+  e.preventDefault();
+  goToNextSlide();
+});
