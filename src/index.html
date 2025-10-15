@@ -680,7 +680,7 @@
         </section>
 
         <!-- mobile fixed bottom menu -->
-        <section class="fixed bottom-[9.56px]  w-full z-20 sm:hidden">
+        <section class="fixed bottom-[9.56px]  w-full z-20 sm:hidden transition-transform duration-300 ease-in-out" id="mobileBottomMenu_disappear">
             <div class="w-max relative m-auto">
                 <figure class="m-auto">
                     <img src="./mediaFiles/Home page/Counter number/Vector.svg" alt="bottom fixed bg" class="m-auto">
@@ -924,19 +924,20 @@
                 </div>
             </div>
         </section>
+
         <!-- start home buying journey -->
         <section id="about" class="w-full h-max">
-            <div class="w-full h-full relative  bg-cover bg-center py-[40px]"
+            <div class=" w-full h-lvh relative  bg-cover bg-center py-[40px] md:py-[80px] AboutusData"
                 style="background-image: var(--homebuying-bg);">
-                <div class="w-full h-full flex xl:flex-row flex-col gap-y-[23.2px] items-center justify-center">
+                <!-- bg-opacity-50% -->
+                <div class="absolute top-0 left-0 w-full h-full bg-white opacity-[50%] z-0"></div>
+
+                <div class="relative z-10 w-full h-full flex xl:flex-row flex-col gap-y-[23.2px] items-center justify-center">
                     <div class="w-full h-full grow-[1] flex flex-col gap-y-[18.15px] items-center justify-center">
                         <figure class="w-max">
                             <img src="./mediaFiles/Home page/Counter number/Hero section and logos/Frame 2095587590.webp"
-                                alt="" class="z-10 w-[243.42px] md:w-[361.54px] h-[253.42px] md:h-[375.83px] m-auto">
+                                alt="" class="z-10 w-auto md:w-[361.54px] h-[218px] md:h-[375.83px] m-auto">
                         </figure>
-                        <p
-                            class="font-jost font-medium text-[26px] md:text-[38.62px] uppercase space-y-[14.29px] md:space-y-[21.22px] text-[#003253] leading-[28.6px] md:leading-[42.48px]">
-                            Luxury Apartments</p>
                     </div>
                     <div class="w-full grow-[1] flex justify-center items-center">
                         <div class="max-w-[634px] m-auto flex flex-col gap-[24px] pb-[40px] px-[16.2px]">
@@ -960,15 +961,21 @@
                                     styled by
                                     celebrity interior designer Zafar Choudhary, The Pinnacle sets a new standard in
                                     urban
-                                    living. <br class="" id="paragraphBr" />With expansive 3 BHK, 4 BHK apartments, and
+                                    living. <br class="" id="paragraphBr" /> <span class="hidden md:block"> With expansive 3 BHK, 4 BHK apartments, and
                                     exclusive penthouses starting from ₹3
                                     Crore,
                                     this G+35 icon offers breathtaking views, modern engineering, and unmatched
-                                    elegance.
+                                    elegance.</span>
                                 </p>
                                 <br class="hidden">
                                 <p class="hidden font-jost font-normal text-[16px] leading-[137%] text-[#2C2C2C]"
                                     id="readMoreData">
+                                    <span class="block md:hidden"> With expansive 3 BHK, 4 BHK apartments, and
+                                    exclusive penthouses starting from ₹3
+                                    Crore,
+                                    this G+35 icon offers breathtaking views, modern engineering, and unmatched
+                                    elegance.</span>
+
                                     Step into a world where every detail is crafted to impress—from the grand
                                     double-height entrance lobby to the stunning 36th-floor Sky Walk offering panoramic
                                     views of Mohali and the Shivalik range. Residents enjoy access to a 1 lakh sq.ft
@@ -983,10 +990,12 @@
                                     (MCC)* ecosystem.
                                 </p>
                             </div>
-                            <button id="readMoreBtn"
-                                class="w-[117px] h-[38px] md:w-[139px] md:h-[48px] px-[13px] py-[7px] md:px-[24px] md:py-[12px] bg-[#003253] uppercase font-jost font-medium text-[16px] leading-[24px] text-white cursor-pointer">
-                                read more
-                            </button>
+                            <div class="p-[1px] bg-gradient-to-b from-[#FFC267] to-[#99753E] w-max">
+                                <button id="readMoreBtn"
+                                    class="w-[117px] h-[38px] md:w-[139px] md:h-[48px] px-[13px] py-[7px] md:px-[24px] md:py-[12px] text-[#003253] uppercase font-jost font-medium text-[16px] leading-[24px] bg-white cursor-pointer hover:bg-[#003253] hover:text-white transition-all duration-300 ease-in-out">
+                                    read more
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1213,8 +1222,8 @@
         </section>
 
         <!-- Crafted For the Top 1% -->
-        <section class="w-full h-max">
-            <div class="w-full h-max px-[16px] bg-cover bg-center bg-no-repeat pt-[40.55px] md:pt-[85.63px] pb-[21.69px] md:pb-[61.37px]"
+        <section class="w-full h-lvh lg:h-max">
+            <div class="w-full h-max px-[16px] bg-cover bg-center bg-no-repeat pt-[10px] md:pt-[85.63px] pb-[21.69px] md:pb-[61.37px]"
                 style="background-image: var(--Crafted-for-Top-bg);">
                 <div class="m-auto max-w-[1006px] flex flex-col items-center md:gap-[24px]">
                     <h3
@@ -1228,176 +1237,205 @@
                         modern Indian luxury. Designed by icons, defined by vision, delivered with precision.</p>
                 </div>
             </div>
-
-            <!-- Crafted Banner -->
-            <div class="section-slides">
-                <div class="slides craftedBannerslides">
-                    <div class="slide craftedbannerslide relative h-full flex">
-                        <div class="w-full h-auto flex lg:flex-row flex-col">
-                            <!-- image -->
-                            <div class="grow lg:flex-[2.7]">
-                                <img src="./mediaFiles/Home page/Counter number/slider 01145/Frame 2095588792.webp"
-                                    alt="banner-1" class="w-full h-full">
-                            </div>
-                            <!-- content -->
-                            <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
-                                style="background-image: var(--paper-crashes-BG);">
-                                <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[16px]">
-                                    <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
-                                        Crafted by Hafeez Contractor</h3>
-                                    <p class="font-jost font-normal text-[17px] leading-[150%] text-[#003253]">
-                                        India’s most renowned architect — Padma Bhushan awardee Hafeez Contractor —
-                                        has
-                                        envisioned The Pinnacle to redefine the skyline of Mohali. His legacy of
-                                        designing India's most iconic buildings now adds prestige to your address.
-                                    </p>
+            <div class="w-full h-auto lg:h-lvh relative">
+                <div class="swiper carftedBanner">
+                    <div class="swiper-wrapper h-full">
+                        <div class="swiper-slide relative h-full">
+                            <div class="w-full h-full grid grid-cols-1 lg:grid-cols-[65%_auto]">
+                                <!-- image -->
+                                <div class="lg:grow lg:flex-[2.7]">
+                                    <img src="./mediaFiles/Home page/Counter number/slider 01145/Frame 2095588792.webp"
+                                        alt="banner-1" class="w-full h-auto lg:h-full  object-contain lg:object-cover">
+                                </div>
+                                <!-- content -->
+                                <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
+                                    style="background-image: var(--paper-crashes-BG);">
+                                    <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[16px]">
+                                        <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
+                                            Crafted by Hafeez Contractor</h3>
+                                        <p class="font-jost font-normal text-[17px] leading-[150%] text-[#003253]">
+                                            India’s most renowned architect — Padma Bhushan awardee Hafeez Contractor —
+                                            has
+                                            envisioned The Pinnacle to redefine the skyline of Mohali. His legacy of
+                                            designing India's most iconic buildings now adds prestige to your address.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="slide craftedbannerslide relative h-full flex">
-                        <div class="w-full h-auto flex lg:flex-row flex-col">
-                            <!-- image -->
-                            <div class="grow lg:flex-[2.7]">
-                                <img src="./mediaFiles/Home page/Counter number/slider 01145/Frame 2095588037-3.webp"
-                                    alt="banner-1" class="w-full h-full">
-                            </div>
-                            <!-- content -->
-                            <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
-                                style="background-image: var(--paper-crashes-BG);">
-                                <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[16px]">
-                                    <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
-                                        Interiors by Zafar Choudhary</h3>
-                                    <p class="font-jost font-normal text-[17px] leading-[150%] text-[#003253]">
-                                        From the entrance lobby to the master suite, every space is designed by
-                                        Zafar Choudhary — one of India’s elite luxury interior consultants. Expect
-                                        finely balanced aesthetics, comfort, and timeless class in every corner.
-                                    </p>
+                        <div class="swiper-slide relative h-full">
+                            <div class="w-full h-full grid grid-cols-1 lg:grid-cols-[65%_auto]">
+                                <!-- image -->
+                                <div class="lg:grow lg:flex-[2.7]">
+                                    <img src="./mediaFiles/Home page/Counter number/slider 01145/Frame 2095588037-3.webp"
+                                        alt="banner-1" class="w-full h-auto lg:h-full object-contain lg:object-cover">
+                                </div>
+                                <!-- content -->
+                                <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
+                                    style="background-image: var(--paper-crashes-BG);">
+                                    <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[16px]">
+                                        <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
+                                            Interiors by Zafar Choudhary</h3>
+                                        <p class="font-jost font-normal text-[17px] leading-[150%] text-[#003253]">
+                                            From the entrance lobby to the master suite, every space is designed by
+                                            Zafar Choudhary — one of India’s elite luxury interior consultants. Expect
+                                            finely balanced aesthetics, comfort, and timeless class in every corner.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="slide craftedbannerslide relative h-full flex">
-                        <div class="w-full h-auto flex lg:flex-row flex-col">
-                            <!-- image -->
-                            <div class="grow lg:flex-[2.7]">
-                                <img src="./mediaFiles/Home page/Counter number/Crafted for the top 1/skywalkRooftop-garden.svg"
-                                    alt="Skywalk & Rooftop Garden" class="w-full h-full">
-                            </div>
-                            <!-- content -->
-                            <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
-                                style="background-image: var(--paper-crashes-BG);">
-                                <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[16px]">
-                                    <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
-                                        Skywalk & Rooftop Garden</h3>
-                                    <p class="font-jost font-normal text-[17px] leading-[150%] text-[#003253]">
-                                        Introducing Tricity’s first-ever rooftop Skywalk — a seamless experience in
-                                        the clouds. Surrounded by lush gardens and skyline views, it’s more than an
-                                        amenity; it’s a moment to own the sky.
-                                    </p>
+                        <div class="swiper-slide relative h-full">
+                            <div class="w-full h-full grid grid-cols-1 lg:grid-cols-[65%_auto]">
+                                <!-- image -->
+                                <div class="lg:grow lg:flex-[2.7]">
+                                    <img src="./mediaFiles/Home page/Counter number/Crafted for the top 1/skywalkRooftop-garden.svg"
+                                        alt="Skywalk & Rooftop Garden" class="w-full h-auto lg:h-full object-contain lg:object-cover">
+                                </div>
+                                <!-- content -->
+                                <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
+                                    style="background-image: var(--paper-crashes-BG);">
+                                    <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[16px]">
+                                        <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
+                                            Interiors by Zafar Choudhary</h3>
+                                        <p class="font-jost font-normal text-[17px] leading-[150%] text-[#003253]">
+                                            From the entrance lobby to the master suite, every space is designed by
+                                            Zafar Choudhary — one of India’s elite luxury interior consultants. Expect
+                                            finely balanced aesthetics, comfort, and timeless class in every corner.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="slide craftedbannerslide relative h-full flex">
-                        <div class="w-full h-auto flex lg:flex-row flex-col">
-                            <!-- image -->
-                            <div class="grow lg:flex-[2.7]">
-                                <img src="./mediaFiles/Home page/Counter number/Crafted for the top 1/clubhouse.svg"
-                                    alt="banner-1" class="w-full h-full">
-                            </div>
-                            <!-- content -->
-                            <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
-                                style="background-image: var(--paper-crashes-BG);">
-                                <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[16px]">
-                                    <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
-                                        Grand 1 Lakh Sq.ft Clubhouse</h3>
-                                    <p class="font-jost font-normal text-[17px] leading-[150%] text-[#003253]">
-                                        A lifestyle destination in itself — with wellness spa, infinity pool, sports
-                                        lounge, banquet, gym, and 5-star hospitality services — the 1 lakh sq.ft
-                                        clubhouse redefines community living.
-                                    </p>
+                        <div class="swiper-slide relative h-full">
+                            <div class="w-full h-full grid grid-cols-1 lg:grid-cols-[65%_auto]">
+                                <!-- image -->
+                                <div class="lg:grow lg:flex-[2.7]">
+                                    <img src="./mediaFiles/Home page/Counter number/Crafted for the top 1/clubhouse.svg"
+                                        alt="clubhouse" class="w-full h-auto lg:h-full object-contain lg:object-cover">
+                                </div>
+                                <!-- content -->
+                                <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
+                                    style="background-image: var(--paper-crashes-BG);">
+                                    <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[16px]">
+                                        <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
+                                            Grand 1 Lakh Sq.ft Clubhouse</h3>
+                                        <p class="font-jost font-normal text-[17px] leading-[150%] text-[#003253]">
+                                            A lifestyle destination in itself — with wellness spa, infinity pool, sports
+                                            lounge, banquet, gym, and 5-star hospitality services — the 1 lakh sq.ft
+                                            clubhouse redefines community living.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="slide craftedbannerslide relative h-full flex">
-                        <div class="w-full h-auto flex lg:flex-row flex-col">
-                            <!-- image -->
-                            <div class="grow lg:flex-[2.7]">
-                                <img src="./mediaFiles/Home page/Counter number/Crafted for the top 1/TripleHeight-Reception-Lobby.svg"
-                                    alt="Triple-Height Reception Lobby" class="w-full h-full">
-                            </div>
-                            <!-- content -->
-                            <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
-                                style="background-image: var(--paper-crashes-BG);">
-                                <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[16px]">
-                                    <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
-                                        Triple-Height Reception Lobby</h3>
-                                    <p class="font-jost font-normal text-[17px] leading-[150%] text-[#003253]">
-                                        Arrive to grandeur every day. The hotel-style triple-height lobby welcomes
-                                        you with rich materials, ambient lighting, and a quiet sense of power —
-                                        elevating the entrance experience.
-                                    </p>
+                        <div class="swiper-slide relative h-full">
+                            <div class="w-full h-full grid grid-cols-1 lg:grid-cols-[65%_auto]">
+                                <!-- image -->
+                                <div class="lg:grow lg:flex-[2.7]">
+                                    <img src="./mediaFiles/Home page/Counter number/Crafted for the top 1/Prime-Location–IT-City-Mohali.svg"
+                                        alt="Prime Location – IT City Mohali" class="w-full h-auto lg:h-full object-contain lg:object-cover">
+                                </div>
+                                <!-- content -->
+                                <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
+                                    style="background-image: var(--paper-crashes-BG);">
+                                    <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[16px]">
+                                        <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
+                                            Prime Location – IT City Mohali</h3>
+                                        <p class="font-jost font-normal text-[17px] leading-[150%] text-[#003253]">
+                                            Located in Sector 83 Alpha, opposite Plaksha University — just minutes from
+                                            Infosys, Amity, and Chandigarh International Airport. In the heart of
+                                            Mohali’s rising luxury & tech corridor.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="slide craftedbannerslide relative h-full flex">
-                        <div class="w-full h-auto flex lg:flex-row flex-col">
-                            <!-- image -->
-                            <div class="grow lg:flex-[2.7]">
-                                <img src="./mediaFiles/Home page/Counter number/Crafted for the top 1/Prime-Location–IT-City-Mohali.svg"
-                                    alt="Prime Location – IT City Mohali" class="w-full h-full">
-                            </div>
-                            <!-- content -->
-                            <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
-                                style="background-image: var(--paper-crashes-BG);">
-                                <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[16px]">
-                                    <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
-                                        Prime Location – IT City Mohali</h3>
-                                    <p class="font-jost font-normal text-[17px] leading-[150%] text-[#003253]">
-                                        Located in Sector 83 Alpha, opposite Plaksha University — just minutes from
-                                        Infosys, Amity, and Chandigarh International Airport. In the heart of
-                                        Mohali’s rising luxury & tech corridor.
-                                    </p>
+                        <div class="swiper-slide relative h-full">
+                            <div class="w-full h-full grid grid-cols-1 lg:grid-cols-[65%_auto]">
+                                <!-- image -->
+                                <div class="lg:grow lg:flex-[2.7]">
+                                    <img src="./mediaFiles/Home page/Counter number/Crafted for the top 1/Crafted for those-who-live-above-the-ordinary.svg"
+                                        alt="Crafted for those who live above the ordinary"
+                                        class="w-full h-auto lg:h-full object-contain lg:object-cover">
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide craftedbannerslide relative h-full flex">
-                        <div class="w-full h-auto flex lg:flex-row flex-col">
-                            <!-- image -->
-                            <div class="grow lg:flex-[2.7]">
-                                <img src="./mediaFiles/Home page/Counter number/Crafted for the top 1/Crafted for those-who-live-above-the-ordinary.svg"
-                                    alt="Crafted for those who live above the ordinary" class="w-full h-full">
-                            </div>
-                            <!-- content -->
-                            <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
-                                style="background-image: var(--paper-crashes-BG);">
-                                <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[30px]">
-                                    <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
-                                        Crafted for those who live above the ordinary</h3>
-                                    <div class="w-full flex flex-col items-start justify-start" style="row-gap:20px">
-                                        <button type="button"
-                                            class="w-[153px] w-full py-[16px] cursor-pointer hover:bg-[#003253] hover:text-white bg-white flex items-center justify-center gap-[6px] font-jost font-semibold text-[#003253] border border-[#003253] rounded-[4px]">
-                                            Schedule Private Visit
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </button>
-                                        <button type="button"
-                                            class="download-brochure w-[153px] w-full py-[16px] cursor-pointer hover:bg-[#003253] hover:text-white bg-white flex items-center justify-center gap-[6px] font-jost font-semibold text-[#003253] border border-[#003253] rounded-[4px]">
-                                            Download Brochure
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </button>
+                                <!-- content -->
+                                <div class="relative grow lg:flex-[1.3]  w-full h-auto z-10 bg-no-repeat bg-center bg-cover sm:px-[27.62px] pb-[71.81px] pt-[21.05px] lg:py-[123.09px]"
+                                    style="background-image: var(--paper-crashes-BG);">
+                                    <div class="w-[329.12px] m-auto sm:m-0 h-full flex flex-col gap-[30px]">
+                                        <h3 class="font-jost font-medium text-[25px] leading-[140%] text-[#003253]">
+                                            Crafted for those who live above the ordinary</h3>
+                                        <div class="w-full flex flex-col items-start justify-start"
+                                            style="row-gap:20px">
+                                            <button type="button"
+                                                class="w-[153px] w-full py-[16px] cursor-pointer hover:bg-[#003253] hover:text-white bg-white flex items-center justify-center gap-[6px] font-jost font-semibold text-[#003253] border border-[#003253] rounded-[4px]">
+                                                Schedule Private Visit
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </button>
+                                            <button type="button"
+                                                class="download-brochure w-[153px] w-full py-[16px] cursor-pointer hover:bg-[#003253] hover:text-white bg-white flex items-center justify-center gap-[6px] font-jost font-semibold text-[#003253] border border-[#003253] rounded-[4px]">
+                                                Download Brochure
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Controls Row -->
+                    <div
+                        class="w-full absolute bottom-[35.46px] lg:bottom-[103.4px] left-1/2 -translate-x-1/2 z-10 text-white flex">
+
+                        <div class=" max-w-[357px] flex items-center gap-6 m-auto sm:mr-[10px] relative">
+                            <div class=" z-10">
+                                <div class="flex items-center gap-4">
+                                    <div class="sm:hidden block">
+                                        <!-- Prev Button -->
+                                        <div
+                                            class="custom-button-prev-f2 flex items-center gap-1 cursor-pointer font-normal text-[15.31px] max-w-[39.69px]">
+                                            <i class="fa-solid fa-caret-right rotate-180 text-xs"></i>
+                                            Prev
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <!-- Fraction Pagination -->
+                                        <div class="swiper-fraction-craftedBanner  text-[#003253] z-10"></div>
+                                        <!-- Progressbar -->
+                                        <div class="swiper-pagination-progress !relative !w-[178.55px] bg-[#EDE9E9]">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sm:w-[100px] w-max flex justify-between">
+                                <!-- Prev Button -->
+                                <div class="hidden sm:block">
+                                    <div
+                                        class="custom-button-prev-f2 flex items-center cursor-pointer font-jost font-normal max-w-[39.69px] ">
+                                        <i class="fa-solid fa-caret-right rotate-180 text-xs"></i>
+                                        Prev
+                                    </div>
+                                </div>
+                                <!-- Next Button -->
+                                <div
+                                    class="custom-button-next-f2 font-normal flex items-center font-jost max-w-[39.69px]  cursor-pointer text-[15.31px]">
+                                    Next
+                                    <i class="fa-solid fa-caret-right text-xs font-normal"></i>
+                                </div>
+                            </div>
+
+                            <!-- decorative items-->
+                                <img src="./mediaFiles/Home page/Counter number/slider 01145/The Pinnacle PPT short 3.png"
+                                    alt="decoratives"
+                                    class="w-[45.1px] h-[48.86px] sm:w-[112.27px] sm:h-[121.67px]  lg:w-[45.1px] lg:h-[48.86px] xl:w-[112.27px] xl:h-[121.67px] absolute -right-[12px] bottom-[100%] z-10">
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Explore Our Signature Residence -->
+        <!-- Explore Our Signature Residence -->
+        <section class="w-full h-max">
             <div id="products"
                 class="max-w-[1243.63px] p-[inherit] xl:px-0 h-max m-auto pt-[40px] lg:pt-[106.85px] flex flex-col gap-[15.67px]">
                 <div class="flex lg:flex-row flex-col gap-y-[24px] px-[16px] lg:px-0 items-center">
@@ -1440,19 +1478,19 @@
                     <div class="block md:hidden">
                         <div class="flex grow gap-[10.14px] sm:gap-4 justify-center items-center">
                             <button id="4BHKbtnmobile" type="button"
-                                class="sm:w-max  h-[29.77]  sm:h-[36px] px-[19.85px] sm:px-[24px] border border-[#173F63] cursor-pointer text-[#003253] text-[13.23px] sm:text-[16px] font-jost BHKResidenceMobile">
+                                class="sm:w-max  py-[5px]  sm:h-[36px] px-[19.85px] sm:px-[24px] border border-[#173F63] cursor-pointer text-[#003253] text-[13.23px] sm:text-[16px] font-jost BHKResidenceMobile">
                                 4BHK
                             </button>
                             <button id="3BHKbtnmobile" type="button"
-                                class="sm:w-max  h-[29.77]  sm:h-[36px] px-[19.85px] sm:px-[24px] border border-[#173F63] cursor-pointer  bg-[#003253] text-white leading-[150%] font-jost text-[13.23px] sm:text-[16px] BHKResidenceMobile">
+                                class="sm:w-max  py-[5px]  sm:h-[36px] px-[19.85px] sm:px-[24px] border border-[#173F63] cursor-pointer  bg-[#003253] text-white leading-[150%] font-jost text-[13.23px] sm:text-[16px] BHKResidenceMobile">
                                 3BHK
                             </button>
                             <button id="5BHKbtnmobile" type="button"
-                                class="sm:w-max  h-[29.77]  sm:h-[36px] px-[19.85px] sm:px-[24px] border border-[#173F63] cursor-pointer text-[#003253] leading-[150%] font-jost text-[13.23px] sm:text-[16px] BHKResidenceMobile">
+                                class="sm:w-max  py-[5px]  sm:h-[36px] px-[19.85px] sm:px-[24px] border border-[#173F63] cursor-pointer text-[#003253] leading-[150%] font-jost text-[13.23px] sm:text-[16px] BHKResidenceMobile">
                                 5BHK
                             </button>
                             <button id="pentHousemobile" type="button"
-                                class="sm:w-max  h-[29.77]  sm:h-[36px] px-[19.85px] sm:px-[24px] border border-[#173F63] cursor-pointer text-[#003253] leading-[150%] font-jost text-[13.23px] sm:text-[16px] BHKResidenceMobile">
+                                class="sm:w-max  py-[5px]  sm:h-[36px] px-[19.85px] sm:px-[24px] border border-[#173F63] cursor-pointer text-[#003253] leading-[150%] font-jost text-[13.23px] sm:text-[16px] BHKResidenceMobile">
                                 PENTHOUSE
                             </button>
                         </div>
@@ -1543,7 +1581,7 @@
                                         </div>
 
                                     </div>
-                                    <div class="w-max h-[102.74px] flex-col items-center">
+                                    <div class="w-max lg:h-[102.74px] flex-col items-center">
                                         <!-- Swiper Buttons -->
                                         <div class="flex gap-[13.91px] items-center">
                                             <button
@@ -1670,15 +1708,15 @@
                                                     </div>
 
                                                 </div>
-                                                <div class="w-max h-[102.74px] flex-col items-center">
+                                                <div class="w-max h-auto flex-col items-center">
                                                     <!-- Swiper Buttons -->
                                                     <div class="flex gap-[13.91px] items-center">
                                                         <button
-                                                            class="cursor-pointer w-[133.24px] h-[39.62px] text-[#173F63] font-jost font-medium text-[13.08px] leading-[19.62px] uppercase border bg-white">
+                                                            class="cursor-pointer w-[133.24px] py-[5px] text-[#173F63] font-jost font-medium text-[13.08px] leading-[19.62px] uppercase border bg-white">
                                                             Enquire Now
                                                         </button>
                                                         <button
-                                                            class="cursor-pointer w-[133.24px] h-[39.62px] text-white font-jost font-medium text-[13.08px] leading-[19.62px] uppercase border bg-transparent flex items-center justify-center gap-[6.54px]">
+                                                            class="cursor-pointer w-[133.24px] py-[5px] text-white font-jost font-medium text-[13.08px] leading-[19.62px] uppercase border bg-transparent flex items-center justify-center gap-[6.54px]">
                                                             <img src="./mediaFiles/Home page/Counter number/ri_download-line.png"
                                                                 alt="download_icon" class="w-[18px] h-[18px]">
                                                             Floor Plan
@@ -1834,7 +1872,7 @@
                 </div>
 
                 <span
-                    class="font-jost md:px-[10px] lg:px-0 text-center md:text-start font-normal text-[14px] lg:text-[17px] leading-[28px] tracking-[2%] text-[#474A49] ">A
+                    class="font-jost bg-white md:px-[10px] lg:px-0 text-center md:text-start font-normal text-[14px] lg:text-[17px] leading-[28px] tracking-[2%] text-[#474A49] ">A
                     Signature Residence by STJ Group, part of <br class="block md:hidden"> MCC Mohali’s elite
                     portfolio</span>
             </div>
@@ -1851,7 +1889,7 @@
                                 Construction
                                 Milestones at The Pinnacle Mohali</h2>
                             <p
-                                class="font-jost font-normal text-[20px] leading-[20px] lg:leading-[28px] tracking-[2%] lg:tracking-[2px] text-[#474A49] lg:text-[#003253] text-center">
+                                class="font-jost capitalize font-normal text-[15px] md:text-[20px] lg:tracking-[2px] text-[#474A49] lg:text-[#003253] text-center">
                                 Discover how The Pinnacle Mohali is taking shape — from double basement parking to
                                 luxury high-rise towers, premium clubhouse, and landscaped greens. Construction
                                 progressing towards an iconic 2028 handover."
@@ -2880,7 +2918,7 @@
                                         class="text-[#2C2C2C] font-medium font-jost text-20px xl:text-[25px] leading-[100%] tracking-[2%] ">Let’s
                                         get in touch</span>
                                     <span
-                                        class="text-[12px] xl:text-[18px] font-jost leading-[10px] xl:leading-[28px] space-x-[6px] xl:space-x-[9.27px] tracking-[0%] capitalize">Connect
+                                        class="text-[12px] xl:text-[18px] font-jost space-x-[6px] xl:space-x-[9.27px] tracking-[0%] capitalize">Connect
                                         With our experts. We’re just one form away.</span>
                                 </div>
                             </div>
@@ -2902,7 +2940,7 @@
                                         class="text-[#2C2C2C] font-medium font-jost text-20px xl:text-[25px] leading-[100%] tracking-[2%]">Chats
                                         via WhatsApp</span>
                                     <span
-                                        class="text-[12px] xl:text-[18px] font-jost leading-[10px] xl:leading-[28px] space-x-[6px] xl:space-x-[9.27px] tracking-[0%] capitalize">Start
+                                        class="text-[12px] xl:text-[18px] font-jost space-x-[6px] xl:space-x-[9.27px] tracking-[0%] capitalize">Start
                                         the conversation directly on WhatsApp</span>
                                 </div>
                             </div>

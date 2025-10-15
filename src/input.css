@@ -246,3 +246,25 @@ body {
     font-weight: 600;
     font-size: 20px;
   }
+
+
+  /* Base button style */
+.custom-button-next-f2,
+.custom-button-prev-f2 {
+  color: #999; /* default gray */
+  transition: color 0.3s ease;
+}
+
+/* When active (clickable) */
+.custom-button-next-f2:not(.swiper-button-disabled),
+.custom-button-prev-f2:not(.swiper-button-disabled) {
+  color: #003253; /* active button color */
+}
+
+/* When disabled */
+.custom-button-next-f2.swiper-button-disabled,
+.custom-button-prev-f2.swiper-button-disabled {
+  color: #ccc; /* faded gray when inactive */
+}
+
+  

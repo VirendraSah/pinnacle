@@ -26,6 +26,7 @@ if (downloadbrochures) {
 
 const header = document.getElementById("transparentBGonScroll");
 const mainHeader = document.getElementById("mainheaderAppear_disappear");
+const mobileBottomMenu = document.getElementById("mobileBottomMenu_disappear");
 let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
@@ -34,8 +35,10 @@ window.addEventListener("scroll", () => {
   // Hide on scroll down, show on scroll up
   if (currentScroll > lastScroll && currentScroll > 50) {
     mainHeader.classList.add("translate-y-[-100%]");
+    mobileBottomMenu.classList.add("translate-y-[200%]");
   } else {
     mainHeader.classList.remove("translate-y-[-100%]");
+    mobileBottomMenu.classList.remove("translate-y-[200%]");
   }
 
   // Background change on scroll
@@ -194,18 +197,32 @@ assistanceCloseBtn.addEventListener("click", () => {
 });
 
 // Read More Data
+// Read More Data
+const aboutSection = document.getElementById('about');
 const readMoreBtn = document.getElementById('readMoreBtn');
-const readMoreData = document.getElementById('readMoreData')
-const paragraphBr = document.getElementById('paragraphBr')
-if (readMoreBtn && readMoreData) {
-  const readMoreBr = readMoreData.previousElementSibling; // <br>
-  readMoreBtn.addEventListener('click', () => {
-    const current = readMoreBtn.textContent.trim().toLowerCase();
-    readMoreBtn.textContent = current === 'read more' ? 'read less' : 'read more';
-    readMoreBr.classList.toggle('hidden', current !== 'read more');
-    readMoreData.classList.toggle('hidden', current !== 'read more');
-    paragraphBr.classList.toggle('hidden', current !== 'read less');
+const readMoreData = document.getElementById('readMoreData');
+const paragraphBr = document.getElementById('paragraphBr');
+const AboutusData = document.querySelector('.AboutusData');
 
+if (readMoreBtn && readMoreData && AboutusData) {
+  readMoreBtn.addEventListener('click', () => {
+    const isReadMore = readMoreBtn.textContent.trim().toLowerCase() === 'read more';
+
+    // Toggle button text
+    readMoreBtn.textContent = isReadMore ? 'Read Less' : 'Read More';
+
+    // Toggle hidden content
+    readMoreData.classList.toggle('hidden', !isReadMore);
+    paragraphBr.classList.toggle('hidden', isReadMore);
+
+    // Height toggle
+    if (isReadMore) {
+      AboutusData.classList.remove('h-lvh');
+      AboutusData.classList.add('h-auto');
+    } else {
+      AboutusData.classList.remove('h-auto');
+      AboutusData.classList.add('h-lvh');
+    }
   });
 }
 
@@ -590,7 +607,7 @@ function updateSlides(dataKey) {
                                                     </div>
 
                                                 </div>
-                                                <div class="w-max h-[102.74px] flex-col items-center">
+                                                <div class="w-max h-auto py-[5px] flex-col items-center">
                                                     <!-- Swiper Buttons -->
                                                     <div class="flex gap-[13.91px] items-center">
                                                         <button
@@ -2328,13 +2345,6 @@ gsap.set(".craftedbannerslide:not(:last-child)", { clipPath: "inset(0 0 0 0)" })
 // master timeline
 const tl = gsap.timeline();
 
-/* -----------------------------
-   🔁 CHANGE STARTS HERE
-   Vertical → Horizontal change
--------------------------------- */
-// Instead of revealing vertically (bottom to top),
-// we'll slide horizontally (right to left).
-
 tl.to(".craftedbannerslide:not(:last-child)", {
   ease: "none",
   // move clipPath horizontally: reveal from right to left
@@ -2350,9 +2360,6 @@ tl.to(".craftedbannerslide:not(:last-child)", {
   },
   "<"
 );
-/* -----------------------------
-   🔁 CHANGE ENDS HERE
--------------------------------- */
 
 // create ScrollTrigger that pins and scrubs the timeline
 ScrollTrigger.create({
@@ -2371,13 +2378,32 @@ gsap.set(".craftedbannerslide", {
   zIndex: (i, target, targets) => targets.length - i,
 });
 
-// Button navigation (same as before)
-$(".btnPrev").on("click", function (e) {
-  e.preventDefault();
-  goToPrevSlide();
+// Initialize Swiper top Banner
+var swiper = new Swiper(".carftedBanner", {
+  effect:'fade',
+  loop: false,
+  navigation: {
+    nextEl: ".custom-button-next-f2",
+    prevEl: ".custom-button-prev-f2",
+    disabledClass: "swiper-button-disabled",
+  },
+  pagination: {
+    el: ".swiper-pagination-progress",
+    type: "progressbar",
+  },
 });
 
-$(".btnNext").on("click", function (e) {
-  e.preventDefault();
-  goToNextSlide();
+// Fraction pagination (custom)
+const fractionE2 = document.querySelector('.swiper-fraction-craftedBanner');
+
+// Initialize fraction on page load
+if (fractionE2) {
+  fractionE2.textContent = `1 / ${swiper.slides.length}`;
+}
+
+
+swiper.on('slideChange', function () {
+  const totalSlides = swiper.slides.length;
+  const activeSlide = swiper.realIndex + 1;
+  fractionE2.textContent = `${activeSlide} / ${totalSlides}`;
 });
