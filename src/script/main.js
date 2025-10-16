@@ -2406,11 +2406,18 @@ var swiper = new Swiper(".carftedBanner", {
     prevEl: ".custom-button-prev-f2",
     disabledClass: "swiper-button-disabled",
   },
+  // 👇 Touch swipe enable for mobile
+  simulateTouch: true,
+  allowTouchMove: true,
+  grabCursor: true,
+
+  // 👇 Mouse wheel enable for desktop
   mousewheel: {
-      forceToAxis: true,
-      sensitivity: 1,
-      releaseOnEdges: true,
-    },
+    forceToAxis: true,
+    sensitivity: 1,
+    releaseOnEdges: true,
+  },
+
   pagination: {
     el: ".swiper-pagination-progress",
     type: "progressbar",
