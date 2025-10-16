@@ -110,13 +110,13 @@ if (desktopBtns.length > 0) {
 const mobilemegamenuopenBtn = document.getElementById('mobilemegamenuopenBtn');
 const mobiletogglemenu = document.getElementById('mobiletogglemenu');
 const overlaybottommenu = document.getElementById('overlaybottommenu')
-mobilemegamenuopenBtn.addEventListener('click', () => {
+mobilemegamenuopenBtn?.addEventListener('click', () => {
   mobilemegamenuopenBtn.classList.toggle('rotate-[120deg]');
   mobiletogglemenu.classList.toggle('hidden');
   overlaybottommenu.classList.toggle('hidden')
 })
 
-overlaybottommenu.addEventListener('click', () => {
+overlaybottommenu?.addEventListener('click', () => {
   mobilemegamenuopenBtn.classList.toggle('rotate-[120deg]');
   mobiletogglemenu.classList.toggle('hidden');
   overlaybottommenu.classList.toggle('hidden')
@@ -125,12 +125,12 @@ overlaybottommenu.addEventListener('click', () => {
 // close megaMenu mobile
 const MobilemegacloseIcon = document.getElementById('MobilemegacloseIcon');
 const mobilemegaMenu = document.getElementById('mobilemegaMenu');
-MobilemegacloseIcon.addEventListener('click', () => {
+MobilemegacloseIcon?.addEventListener('click', () => {
   mobilemegaMenu.classList.add('hidden');
 })
 
 const mobilemegamenutoggleBtn = document.getElementById('mobilemegamenutoggleBtn');
-mobilemegamenutoggleBtn.addEventListener('click', () => {
+mobilemegamenutoggleBtn?.addEventListener('click', () => {
   mobilemegaMenu.classList.toggle('hidden');
 })
 
@@ -160,12 +160,12 @@ mobilearrowDownbtns.forEach((btn, index) => {
 const assistanceremovebtn = document.getElementById('assistanceremovebtn')
 const assistancebtnsmall = document.querySelector('.assistancebtnsmall')
 const assistancebtn = document.getElementById('assistancebtn')
-assistanceremovebtn.addEventListener('click', () => {
+assistanceremovebtn?.addEventListener('click', () => {
   assistancebtn.classList.add('hidden')
   assistancebtnsmall.classList.remove('hidden')
 })
 
-assistancebtnsmall.addEventListener('click', () => {
+assistancebtnsmall?.addEventListener('click', () => {
   assistancebtn.classList.remove('hidden')
   assistancebtnsmall.classList.add('hidden')
 })
@@ -175,7 +175,7 @@ const assistanceBtn = document.getElementById("assistance_circle_btn");
 const assistanceBox = document.getElementById("assistance_ractangular_box");
 const assistanceCloseBtn = document.getElementById("assistanceBox_close_btn");
 
-assistanceBtn.addEventListener("click", () => {
+assistanceBtn?.addEventListener("click", () => {
   // Show box
   assistancebtn.classList.add('hidden')
   assistanceBox.classList.remove("hidden");
@@ -186,7 +186,7 @@ assistanceBtn.addEventListener("click", () => {
   }, 10);
 });
 
-assistanceCloseBtn.addEventListener("click", () => {
+assistanceCloseBtn?.addEventListener("click", () => {
   assistancebtn.classList.remove('hidden')
   assistanceBox.classList.remove("scale-100");
   assistanceBox.classList.add("scale-0");
@@ -362,19 +362,35 @@ let currentIndex = 0;
 
 // ============ FUNCTION TO UPDATE DOM ============
 function updateDom() {
+  try{
+    
   const data = residenceData[currentButton];
   let currentData = Array.isArray(data) ? data[currentIndex] : data;
 
   if (!currentData) return;
-
   // Update DOM content
-  dynamicImg.src = currentData.image;
-  dynamicTitle.textContent = currentData.title;
-  dynamicArea.textContent = `Area: ${currentData.area}`;
+
+
+  if(dynamicImg?.src){
+    dynamicImg.src = currentData?.image;
+  }
+
+   if(dynamicTitle?.textContent){
+      dynamicTitle.textContent = currentData?.title + '';
+   }
+
+   if(dynamicArea?.textContent){
+      dynamicArea.textContent = `Area: ${currentData.area}`;
+   }
+
   dynamicTower.textContent = `Tower: ${currentData.tower}`;
+  
   dynamicStatus.textContent = `Status: ${currentData.status}`;
+  
   dynamicHandover.textContent = `Expected Handover: ${currentData.handover || '—'}`;
+  
   dynamicFurnishing.textContent = `Furnishing: ${currentData.furnishing}`;
+  
   dynamicAvailability.textContent = `Availability: ${currentData.availability}`;
 
   // Optional background update
@@ -382,6 +398,9 @@ function updateDom() {
 
   // Toggle arrow visibility
   toggleArrowVisibility();
+  }catch(e){
+    console.error(e)
+  }
 }
 
 // ============ TOGGLE ARROW VISIBILITY ============
@@ -416,7 +435,7 @@ bhkButtons.forEach(button => {
 });
 
 // ============ ARROW BUTTON EVENTS ============
-rightArrow.addEventListener('click', () => {
+rightArrow?.addEventListener('click', () => {
   const data = residenceData[currentButton];
   if (Array.isArray(data)) {
     currentIndex = (currentIndex + 1) % data.length;
@@ -424,7 +443,7 @@ rightArrow.addEventListener('click', () => {
   }
 });
 
-leftArrow.addEventListener('click', () => {
+leftArrow?.addEventListener('click', () => {
   const data = residenceData[currentButton];
   if (Array.isArray(data)) {
     currentIndex = (currentIndex - 1 + data.length) % data.length;
@@ -2391,6 +2410,12 @@ var swiper = new Swiper(".carftedBanner", {
     el: ".swiper-pagination-progress",
     type: "progressbar",
   },
+  // 👇 enable touch scroll/swipe
+  simulateTouch: true,
+  allowTouchMove: true,
+  touchRatio: 1,
+  touchAngle: 45,
+  grabCursor: true,
 });
 
 // Fraction pagination (custom)

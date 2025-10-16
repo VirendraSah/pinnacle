@@ -10,6 +10,10 @@
   ],
   "routes": [
     {
+      "src": "/swiper",
+      "dest": "/src/swiper.html"
+    },
+    {
       "src": "/",
       "dest": "/src/index.html"
     },
