@@ -2406,16 +2406,16 @@ var swiper = new Swiper(".carftedBanner", {
     prevEl: ".custom-button-prev-f2",
     disabledClass: "swiper-button-disabled",
   },
+  mousewheel: {
+      forceToAxis: true,
+      sensitivity: 1,
+      releaseOnEdges: true,
+    },
   pagination: {
     el: ".swiper-pagination-progress",
     type: "progressbar",
   },
-  // 👇 enable touch scroll/swipe
-  simulateTouch: true,
-  allowTouchMove: true,
-  touchRatio: 1,
-  touchAngle: 45,
-  grabCursor: true,
+  
 });
 
 // Fraction pagination (custom)
