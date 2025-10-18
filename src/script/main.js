@@ -761,6 +761,9 @@ var testimonialSwiper = new Swiper(".TestimonialSwiper", {
     730: {
       slidesPerView: 2.3,
     },
+    1240: {
+      slidesPerView: 2.7,
+    },
   }
 });
 
