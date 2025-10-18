@@ -49,7 +49,89 @@
 
 </head>
 
-<body>
+<body class="body-model">
+    <div id="blackmodelOverlap" class="scale-0 bg-black/50 fixed top-0 left-0 w-full h-lvh z-50"></div>
+    <!-- pop up panel (smooth open) -->
+    <div id="enquiryFormModel"
+        class="enquiryFormModel h-lvh md:h-auto  z-[60] scale-0 fixed left-1/2 top-1/2 -translate-1/2 w-full max-w-[1234px] bg-white rounded-md transition-all duration-300 px-[16px] md:px-[40px] py-[40px] sm:py-[80px] bg-cover bg-center"
+        style="background-image: var(--consultat-decorative-bg); ">
+        <!-- close btn -->
+        <button id="closeEnquiryform" class="cursor-pointer absolute right-3 top-3 md:right-4 md:top-4 left-auto
+         w-10 h-10 md:w-12 md:h-12 flex items-center justify-center" aria-label="Close">
+            <span class="text-2xl md:text-3xl leading-none">×</span>
+        </button>
+        <div class="max-w-[1234px] h-auto m-auto relative">
+            <!-- ppt icon fixed -->
+            <div class="absolute right-0 bottom-0 ">
+                <figure class="w-[114.9082px] md:block hidden">
+                    <img src="./mediaFiles/Location/The Pinnacle PPT short 1.png" alt="pinnacle PPt"
+                        class="w-full h-full object-fill object-center">
+                </figure>
+            </div>
+            <div class="w-full px-[16px] lg:px-0 gap-y-[19px] h-auto grid grid-cols-1 md:grid-cols-2">
+                <div class="flex flex-col items-start justify-start gap-[42.2px]">
+                    <div class="flex flex-col gap-[10px]">
+                        <h3
+                            class="text-[#003253] font-jost font-medium text-[24px] md:text-[36px] leading-[33px] md:leading-[50px] tracking-[0%] capitalize">
+                            <span class="font-normal">we are </span> <br>
+                            Excited To Meet You!
+                        </h3>
+                        <p
+                            class="font-normal hidden md:block md:font-medium text-[16px] md:text-[20px] text-[#474A49] leading-[28px] tracking-[2%]">
+                            Get verified details, pricing, and expert guidence for The Pinnacle Mohali.
+                        </p>
+                    </div>
+                    <div class="md:block hidden">
+                        <div class="flex flex-col items-start justify-start">
+                            <figure class="w-[317.0577px] h-[109.9973px]">
+                                <img src="./mediaFiles/Location/pinnacle_reality_logo.png"
+                                    alt="partnership_comapies_Logo" class="w-full h-full object-fill object-center">
+                            </figure>
+                            <p>* We respect your privacy. Your details are secure.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <form action="" class="flex flex-col items-start justify-start gap-[35px]">
+                        <input type="text" placeholder="Your Name"
+                            class="outline-none border-b border-[#BABABA] w-full placeholder-[#101010] font-normal text-[#101010] text-[16px] md:text-[17px]">
+                        <div class="flex flex-col items-start justify-start w-full gap-[9.56px] relative">
+                            <input type="tel" placeholder="Your Phone number*"
+                                class="mobile_code w-full px-3 placeholder-[#101010] py-2 text-[#101010] text-[16px] md:text-[17px] focus:outline-none border-b border-[#BABABA]">
+                            <span class="text-[#424141] leading-[100%] text-[12.6px] font-jost">You’ll
+                                receive OTP
+                                via WhatsApp and SMS </span>
+                        </div>
+                        <input type="email" placeholder="Email Id"
+                            class="outline-none border-b border-[#BABABA] w-full placeholder-[#101010] font-normal text-[#101010] text-[16px] md:text-[17px]">
+
+                        <div class="checkbox flex gap-[20px] items-start justify-end flex-row-reverse w-full">
+                            <div class="tag max-w-[383px] text-13px md:text-[16px]">I agree to receive
+                                newsletters,
+                                or relevant marketing
+                                content and&nbsp; Pinnacle Terms and Conditions</div>
+                            <input type="checkbox" class="input-assumpte" id="input-confidencial">
+                            <label for="input-confidencial"></label>
+                        </div>
+                        <button type="submit"
+                            class="flex items-center justify-center text-[16px] md:text-[17px] font-medium font-jost w-[141px] md:w-[292px] h-[38px] md:h-[50px] text-white border border-[#F2F9FF] bg-[#003253]">Get
+                            OTP</button>
+                    </form>
+
+                </div>
+                <div class="md:hidden block">
+                    <div class="flex gap-[18px] items-start justify-start flex-col-reverse">
+                        <figure class="w-[226px] h-[78px] md:w-[317.0577px] md:h-[109.9973px]">
+                            <img src="./mediaFiles/Location/pinnacle_reality_logo.png" alt="partnership_comapies_Logo"
+                                class="w-full h-full object-fill object-center">
+                        </figure>
+                        <p class="text-[14px] leading-[100%] tracking-[0%] text-[#514E4E]">* We respect your
+                            privacy. Your details are secure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- overlap form1 -->
     <section
@@ -934,7 +1016,7 @@
                 <div class="absolute top-0 left-0 w-full h-full bg-white opacity-[50%] z-0"></div>
 
                 <div
-                    class="relative z-10 w-full h-full flex xl:flex-row flex-col gap-y-[23.2px] items-center justify-center">
+                    class="relative z-10 w-full h-full flex xl:flex-row flex-col gap-y-[23.2px] items-start justify-center">
                     <div class="w-full h-full grow-[1] flex flex-col gap-y-[18.15px] items-center justify-center">
                         <figure class="w-max">
                             <img src="./mediaFiles/Home page/Counter number/Hero section and logos/Frame 2095587590.webp"
@@ -2401,7 +2483,7 @@
 
 
                     <!-- Button -->
-                    <button
+                    <button id="enquiryNowBtn"
                         class="cursor-pointer hover:bg-white hover:text-[#003253] mt-6 px-6 py-2 border border-white text-white font-jost font-semibold text-base">
                         ENQUIRE NOW
                     </button>
@@ -2844,7 +2926,7 @@
         </section>
 
         <!-- DownLoads & Pricing -->
-        <section class="w-full h-max pb-[80px] px-[16px] pt-[30px] md:pt-[0px] md:px-[0px]">
+        <section class="w-full h-max pb-0 md:pb-[40px] px-[16px] pt-[30px] md:pt-[0px] md:px-[0px]">
             <div class="w-full grid grid-cols-1 md:grid-cols-[60%_40%] gap-y-[19.03px]">
                 <figure class="w-full h-full">
                     <!-- Desktop Image -->
@@ -2949,8 +3031,8 @@
                     <div
                         class="flex px-[16px] md:px-[0px] items-center gap-x-[77px] gap-y-[28px] w-max m-auto lg:flex-row flex-col">
                         <div
-                            class="w-[358px] xl:w-[581.28px] h-[100px] xl:h-[145.33px] bg-white px-[20px] flex items-center justify-between">
-                            <div class="w-max flex items-center gap-[20.59px]">
+                            class="w-[358px] xl:w-[581.28px] h-[100px] xl:h-[145.33px] bg-white px-[20px] flex items-center justify-between cursor-pointer">
+                            <div class="w-max flex items-center gap-[20.59px]" id="openEnqiryform">
                                 <div
                                     class="w-[45px] h-[45px] xl:w-[68px] xl:h-[68px] bg-[var(--main-blue)] rounded-full flex items-center justify-center gap-[20.59px] shrink-0">
                                     <img src="./mediaFiles/Home page/Counter number/Start your homebuying Journey/Telegram_icon.webp"
@@ -2970,8 +3052,8 @@
                                 <i class="fa-solid fa-plus text-white"></i>
                             </div>
                         </div>
-                        <div
-                            class="w-[358px] h-[100px] xl:w-[581.28px] xl:h-[145.33px] bg-white px-[20px] flex items-center justify-between">
+                        <a href="https://wa.me/919988010405" target="_blank"
+                            class="w-[358px] h-[100px] xl:w-[581.28px] xl:h-[145.33px] bg-white px-[20px] flex items-center justify-between cursor-pointer">
                             <div class="w-max flex items-center gap-[20.59px]">
                                 <div
                                     class="w-[45px] h-[45px] xl:w-[68px] xl:h-[68px] bg-[var(--main-blue)] rounded-full flex items-center justify-center gap-[20.59px] shrink-0">
@@ -2991,7 +3073,7 @@
                                 class="bg-gradient-to-b from-[#FFC267] to-[#99753E] w-[20px] xl:w-[29.91px] h-[20px] xl:h-[30.11px] flex flex-col items-center justify-center rounded-full">
                                 <i class="fa-solid fa-plus text-white"></i>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="w-full bg-[#FFFFFF1C] border border-[#FFFFFF12] backdrop-blur-[15.6px] py-5 px-[16px]">
                         <div class="max-w-[1240px] m-auto w-full  gap-y-[12px] grid grid-cols-1 lg:grid-cols-2 items-center justify-center"
@@ -3037,9 +3119,12 @@
         <div
             class="w-full h-max m-auto flex flex-col items-center justify-center pt-[24px] pb-[15.16px] sm:pt-[0px] bg-[url('./mediaFiles/footer--mb-bg.svg')] sm:bg-none bg-cover bg-no-repeat">
             <div class="relative w-full h-auto flex items-center justify-center">
-                <div class="absolute w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 flex items-center justify-center px-[10px] md:px-[50px]">
-                    <img src="./mediaFiles/Let’s Connect.svg" alt="Let’s connect svg" class="object-contain h-full block md:hidden"/>
-                    <img src="./mediaFiles/Lets-Connect-desktop.svg" alt="Let’s connect svg" class="object-contain h-full md:block hidden"/>
+                <div
+                    class="absolute w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 flex items-center justify-center px-[10px] md:px-[50px]">
+                    <img src="./mediaFiles/Let’s Connect.svg" alt="Let’s connect svg"
+                        class="object-contain h-full block md:hidden" />
+                    <img src="./mediaFiles/Lets-Connect-desktop.svg" alt="Let’s connect svg"
+                        class="object-contain h-full md:block hidden" />
                 </div>
                 <h3
                     class="font-jost font-medium text-[28px] lg:text-[48px] tracking-[0px] leading-[73px] py-[13px] uppercase text-white text-center">
@@ -3413,11 +3498,11 @@
                 <div class="w-max grid grid-cols-2 items-center gap-[16.71px] divide-x-[2px] divide-[#003253]">
                     <div class="flex items-center gap-[8.27px] px-4">
                         <i class="fa-solid fa-phone-volume text-[14px] xl:text-[15px] text-[#003253]"></i>
-                        <p class="text-[14px] xl:text-[18px] font-medium font-jost text-[#003253]">+91 89680 66698</p>
+                        <p class="text-[14px] xl:text-[18px] font-semibold font-jost text-[#003253]">+91 89680 66698</p>
                     </div>
                     <div class="flex items-center gap-[8.27px] px-4">
                         <i class="fa-solid fa-phone-volume text-[14px] xl:text-[15px] text-[#003253]"></i>
-                        <p class="text-[14px] xl:text-[18px] font-medium font-jost text-[#003253]">+91 99880 10405</p>
+                        <p class="text-[14px] xl:text-[18px] font-semibold font-jost text-[#003253]">+91 99880 10405</p>
                     </div>
                 </div>
             </div>

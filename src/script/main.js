@@ -2442,3 +2442,41 @@ swiper.on('slideChange', function () {
   const activeSlide = swiper.realIndex + 1;
   fractionE2.textContent = `${activeSlide} / ${totalSlides}`;
 });
+
+const enquiryformModel = document.getElementById('enquiryFormModel');
+const blackmodelOverlap = document.getElementById('blackmodelOverlap');
+const openEnqiryform = document.getElementById('openEnqiryform');
+const enquiryNowBtn = document.getElementById('enquiryNowBtn');
+const body = document.body;
+
+// Common function for opening the popup
+function openEnquiryForm() {
+  blackmodelOverlap.classList.add('scale-[1]');
+  blackmodelOverlap.classList.remove('scale-0');
+
+  enquiryformModel.classList.add('scale-[1]');
+  enquiryformModel.classList.remove('scale-0');
+
+  // 🔒 Disable background scroll
+  body.classList.add('overflow-hidden');
+}
+
+// ✅ Add event listener to both buttons
+[openEnqiryform, enquiryNowBtn].forEach(btn => {
+  if (btn) btn.addEventListener('click', openEnquiryForm);
+});
+
+// Example close button (optional)
+const enquiryModelcloseBtn = document.getElementById('closeEnquiryform');
+if (enquiryModelcloseBtn) {
+  enquiryModelcloseBtn.addEventListener('click', () => {
+    blackmodelOverlap.classList.remove('scale-[1]');
+    blackmodelOverlap.classList.add('scale-0');
+
+    enquiryformModel.classList.remove('scale-[1]');
+    enquiryformModel.classList.add('scale-0');
+
+    // 🔓 Enable scroll again
+    body.classList.remove('overflow-hidden');
+  });
+}
